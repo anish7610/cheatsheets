@@ -1,0 +1,121 @@
+<html>
+ <body>
+  <h1>
+   Get-ChildItem Command Overview
+  </h1>
+  <p>
+   The
+   <code>
+    Get-ChildItem
+   </code>
+   command in Windows PowerShell retrieves the items and child items in one or more specified locations.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -Path
+      </code>
+     </td>
+     <td>
+      Specifies the path to the directory.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Recurse
+      </code>
+     </td>
+     <td>
+      Gets items in all child directories.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -File
+      </code>
+     </td>
+     <td>
+      Lists only files.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Directory
+      </code>
+     </td>
+     <td>
+      Lists only directories.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Filter
+      </code>
+     </td>
+     <td>
+      Specifies a filter for the items.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Include
+      </code>
+     </td>
+     <td>
+      Includes only items that match the specified pattern.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Exclude
+      </code>
+     </td>
+     <td>
+      Excludes items that match the specified pattern.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code>Get-ChildItem -Path C:\Documents
+Get-ChildItem -Path C:\Documents -Recurse
+Get-ChildItem -Path C:\Documents -File
+Get-ChildItem -Path C:\Documents -Directory
+Get-ChildItem -Path C:\Documents -Filter *.txt
+Get-ChildItem -Path C:\Documents -Include *.txt, *.docx
+Get-ChildItem -Path C:\Documents -Exclude *.tmp</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>Get-ChildItem [options] -Path <path>
+-Recurse: Include subdirectories
+-File: Only files
+-Directory: Only directories
+-Filter: Filter items
+-Include: Include patterns
+-Exclude: Exclude patterns</path></code></pre>
+ </body>
+</html>

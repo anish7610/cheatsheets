@@ -1,0 +1,97 @@
+<html>
+ <body>
+  <h1>
+   Add-LocalGroupMember Command
+  </h1>
+  <p>
+   The
+   <code>
+    Add-LocalGroupMember
+   </code>
+   command is used to add users or groups to a local security group in Windows.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -Group
+      </code>
+     </td>
+     <td>
+      Specifies the name of the local group.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Member
+      </code>
+     </td>
+     <td>
+      Identifies the users or groups to add to the group.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Credential
+      </code>
+     </td>
+     <td>
+      Specifies the user credentials to use for the command.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Confirm
+      </code>
+     </td>
+     <td>
+      Prompts for confirmation before executing the command.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -WhatIf
+      </code>
+     </td>
+     <td>
+      Shows what would happen if the command runs, without executing it.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Adds a user to the Administrators group
+Add-LocalGroupMember -Group "Administrators" -Member "Username"</code></pre>
+  <pre><code># Adds multiple users to the Users group
+Add-LocalGroupMember -Group "Users" -Member "User1","User2"</code></pre>
+  <pre><code># Using -WhatIf to simulate adding a user
+Add-LocalGroupMember -Group "Remote Desktop Users" -Member "Username" -WhatIf</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code># Add user to group
+Add-LocalGroupMember -Group "GroupName" -Member "Username"</code></pre>
+  <pre><code># Simulate adding
+Add-LocalGroupMember -Group "GroupName" -Member "Username" -WhatIf</code></pre>
+ </body>
+</html>

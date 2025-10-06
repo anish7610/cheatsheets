@@ -1,0 +1,65 @@
+<html>
+ <body>
+  <h1>
+   Windows Command: rmdir
+  </h1>
+  <p>
+   The
+   <code>
+    rmdir
+   </code>
+   command is used to delete directories from the file system. It can only remove empty directories unless specific options are used.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       /S
+      </code>
+     </td>
+     <td>
+      Removes all directories and files in the specified directory, including the specified directory itself.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       /Q
+      </code>
+     </td>
+     <td>
+      Quiet mode, does not prompt for confirmation when using
+      <code>
+       /S
+      </code>
+      .
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code>rmdir /S /Q C:\example\directory</code></pre>
+  <pre><code>rmdir C:\empty\directory</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>rmdir /S /Q [directory]   # Remove directory and contents without confirmation
+rmdir [directory]        # Remove empty directory</code></pre>
+ </body>
+</html>

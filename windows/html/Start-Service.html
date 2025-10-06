@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Start-Service Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   Start-Service Command
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    Start-Service
+   </code>
+   command in Windows PowerShell is used to start a stopped service.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -Name
+      </code>
+     </td>
+     <td>
+      Specifies the service name to start.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -DisplayName
+      </code>
+     </td>
+     <td>
+      Starts the service with the specified display name.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -InputObject
+      </code>
+     </td>
+     <td>
+      Specifies the service object to start.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -PassThru
+      </code>
+     </td>
+     <td>
+      Returns an object representing the service.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Verbose
+      </code>
+     </td>
+     <td>
+      Provides detailed information about the command execution.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Start a specific service by name
+Start-Service -Name "wuauserv"
+
+# Start a service using its display name
+Start-Service -DisplayName "Windows Update"
+
+# Start a service and return the service object
+Start-Service -Name "wuauserv" -PassThru
+</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>Start-Service -Name &lt;ServiceName&gt;
+Start-Service -DisplayName &lt;DisplayName&gt;
+Start-Service -Name &lt;ServiceName&gt; -PassThru
+</code></pre>
+ </body>
+</html>

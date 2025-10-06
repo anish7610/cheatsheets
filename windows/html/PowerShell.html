@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   PowerShell Command Guide
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Guide to PowerShell Command
+   </h1>
+  </header>
+  <section>
+   <h2>
+    Description
+   </h2>
+   <p>
+    PowerShell is a task automation and configuration management framework consisting of a command-line shell and scripting language.
+   </p>
+  </section>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       -NoExit
+      </td>
+      <td>
+       Does not exit after running startup commands.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       -Command
+      </td>
+      <td>
+       Executes specified commands and exits.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       -File
+      </td>
+      <td>
+       Executes a script.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       -ExecutionPolicy
+      </td>
+      <td>
+       Changes the user preference for the PowerShell script execution policy.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       -WindowStyle
+      </td>
+      <td>
+       Sets the window style (Normal, Minimized, Maximized, Hidden).
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code>
+# Open PowerShell and keep it running
+powershell -NoExit
+
+# Execute a simple command
+powershell -Command "Get-Process"
+
+# Run a script file
+powershell -File "C:\Path\To\Script.ps1"
+
+# Open PowerShell with a minimized window
+powershell -WindowStyle Minimized
+
+# Set the execution policy for the session
+powershell -ExecutionPolicy Bypass
+        </code></pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code>
+# PowerShell Cheat Sheet
+powershell -NoExit
+powershell -Command "<command/>"
+powershell -File "<path\to\script.ps1>"
+powershell -ExecutionPolicy <policy>
+powershell -WindowStyle <style>
+        </code></pre>
+    </section>
+
+</body>
+</html></style></policy></path\to\script.ps1></code></pre>
+  </section>
+ </body>
+</html>

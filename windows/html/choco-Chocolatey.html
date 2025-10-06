@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Chocolatey Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   Chocolatey (`choco`) Command Guide
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   Chocolatey is a package manager for Windows which allows users to install, update, and manage software packages from the command line.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      install &lt;package&gt;
+     </td>
+     <td>
+      Installs the specified package.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      upgrade &lt;package&gt;
+     </td>
+     <td>
+      Upgrades the specified package.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      uninstall &lt;package&gt;
+     </td>
+     <td>
+      Uninstalls the specified package.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      list
+     </td>
+     <td>
+      Lists installed packages.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      search &lt;package&gt;
+     </td>
+     <td>
+      Searches for a package.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      help
+     </td>
+     <td>
+      Displays help information.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code>
+# Install a package
+choco install git
+
+# Upgrade a package
+choco upgrade git
+
+# Uninstall a package
+choco uninstall git
+
+# List installed packages
+choco list --local-only
+
+# Search for a package
+choco search git
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+# Install: choco install package
+# Upgrade: choco upgrade package
+# Uninstall: choco uninstall package
+# List: choco list --local-only
+# Search: choco search package
+    </code></pre>
+ </body>
+</html>

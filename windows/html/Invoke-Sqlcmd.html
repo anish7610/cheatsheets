@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Invoke-Sqlcmd Cheat Sheet
+  </title>
+ </head>
+ <body>
+  <h1>
+   Invoke-Sqlcmd
+  </h1>
+  <p>
+   <code>
+    Invoke-Sqlcmd
+   </code>
+   is a command-line tool in PowerShell used to run T-SQL commands on SQL Server. It allows for automation of database tasks and queries directly from a script.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <tr>
+    <th>
+     Option
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      -Query
+     </code>
+    </td>
+    <td>
+     Specifies the T-SQL query to be executed.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      -ServerInstance
+     </code>
+    </td>
+    <td>
+     Specifies the SQL Server instance.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      -Database
+     </code>
+    </td>
+    <td>
+     Specifies the target database.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      -Username
+     </code>
+    </td>
+    <td>
+     Specifies the SQL Server login account.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      -Password
+     </code>
+    </td>
+    <td>
+     Specifies the password for the SQL Server account.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      -InputFile
+     </code>
+    </td>
+    <td>
+     Specifies a file containing the T-SQL script to execute.
+    </td>
+   </tr>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code>
+# Example 1: Run a simple query
+Invoke-Sqlcmd -ServerInstance "ServerName" -Database "DatabaseName" -Query "SELECT * FROM TableName"
+
+# Example 2: Run a query with authentication
+Invoke-Sqlcmd -ServerInstance "ServerName" -Database "DatabaseName" -Username "User" -Password "Pass" -Query "SELECT * FROM TableName"
+
+# Example 3: Run a query from a file
+Invoke-Sqlcmd -ServerInstance "ServerName" -Database "DatabaseName" -InputFile "C:\Path\To\Script.sql"
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre>
+Invoke-Sqlcmd -ServerInstance "Server" -Database "DB" -Query "T-SQL"
+Invoke-Sqlcmd -ServerInstance "Server" -Database "DB" -InputFile "File.sql"
+    </pre>
+ </body>
+</html>

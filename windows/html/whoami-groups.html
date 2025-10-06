@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   whoami /groups
+  </title>
+ </head>
+ <body>
+  <h1>
+   Description
+  </h1>
+  <p>
+   The
+   <code>
+    whoami /groups
+   </code>
+   command in Windows displays group membership information for the current user, listing all the groups that the user belongs to and their attributes.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      /groups
+     </td>
+     <td>
+      Displays all the groups a user is a member of, along with group attributes.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      /fo list
+     </td>
+     <td>
+      Formats the output as a list.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      /fo table
+     </td>
+     <td>
+      Formats the output as a table.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      /nh
+     </td>
+     <td>
+      Omit the header row from the output.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Examples
+  </h2>
+  <pre><code>whoami /groups
+whoami /groups /fo list
+whoami /groups /fo table /nh</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>whoami /groups         # Show user group membership
+whoami /groups /fo list  # List format
+whoami /groups /fo table # Table format
+whoami /groups /nh       # No header</code></pre>
+ </body>
+</html>

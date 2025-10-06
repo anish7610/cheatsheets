@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   ipconfig Command Guide
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    ipconfig Command Guide
+   </h1>
+  </header>
+  <section>
+   <h2>
+    Description
+   </h2>
+   <p>
+    The
+    <strong>
+     ipconfig
+    </strong>
+    command is used in Windows to display and manage the network configuration of the local computer.
+   </p>
+  </section>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       /all
+      </td>
+      <td>
+       Displays detailed information about the network configuration.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       /release
+      </td>
+      <td>
+       Releases the current DHCP configuration for all adapters.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       /renew
+      </td>
+      <td>
+       Renews the DHCP configuration for all adapters.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       /flushdns
+      </td>
+      <td>
+       Clears the DNS resolver cache.
+      </td>
+      <tr>
+       <td>
+        /displaydns
+       </td>
+       <td>
+        Displays the contents of the DNS resolver cache.
+       </td>
+      </tr>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre>
+            <code>
+ipconfig /all
+ipconfig /release
+ipconfig /renew
+ipconfig /flushdns
+ipconfig /displaydns
+            </code>
+        </pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre>
+            <code>
+ipconfig /all         # View detailed config
+ipconfig /release     # Release DHCP lease
+ipconfig /renew       # Renew DHCP lease
+ipconfig /flushdns    # Clear DNS cache
+ipconfig /displaydns  # Show DNS cache
+            </code>
+        </pre>
+  </section>
+ </body>
+</html>

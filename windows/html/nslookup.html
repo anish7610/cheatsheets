@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   nslookup Command Overview
+  </title>
+ </head>
+ <body>
+  <h1>
+   nslookup Command
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    nslookup
+   </code>
+   command is a network administration tool used to query the Domain Name System (DNS) to obtain domain name or IP address mapping information.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      -type=
+      <em>
+       TYPE
+      </em>
+     </td>
+     <td>
+      Specify the query type (e.g., A, MX, TXT).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -debug
+     </td>
+     <td>
+      Print debugging information.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -timeout=
+      <em>
+       SECONDS
+      </em>
+     </td>
+     <td>
+      Set the time to wait for a reply.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -query=
+      <em>
+       CLASS
+      </em>
+     </td>
+     <td>
+      Specify the query class (e.g., IN).
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code>nslookup google.com
+nslookup -type=MX domain.com
+nslookup -debug example.com
+nslookup -timeout=10 example.com</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+nslookup [host]
+nslookup -type=MX [domain]
+nslookup -timeout=10 [host]
+</code></pre>
+ </body>
+</html>

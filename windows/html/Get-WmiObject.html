@@ -1,0 +1,100 @@
+<h1>
+ Get-WmiObject Command
+</h1>
+<p>
+ The
+ <code>
+  Get-WmiObject
+ </code>
+ command in Windows PowerShell retrieves management information from local and remote computers using Windows Management Instrumentation (WMI).
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -Class
+    </code>
+   </td>
+   <td>
+    Specifies the WMI class to query.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Namespace
+    </code>
+   </td>
+   <td>
+    Specifies the WMI namespace.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -ComputerName
+    </code>
+   </td>
+   <td>
+    Specifies the target computer(s).
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Filter
+    </code>
+   </td>
+   <td>
+    Provides a query string to narrow the retrieval.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Credential
+    </code>
+   </td>
+   <td>
+    Specifies credentials for remote connections.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<h3>
+ Retrieve System Information
+</h3>
+<pre><code>Get-WmiObject -Class Win32_OperatingSystem</code></pre>
+<h3>
+ Get Processor Info on a Remote Machine
+</h3>
+<pre><code>Get-WmiObject -Class Win32_Processor -ComputerName RemotePC -Credential Domain\User</code></pre>
+<h3>
+ List Services with a Filter
+</h3>
+<pre><code>Get-WmiObject -Class Win32_Service -Filter "State='Running'"</code></pre>
+<h2>
+ Compact Cheat Sheet
+</h2>
+<pre><code>
+Get-WmiObject -Class <classname>
+Get-WmiObject -Class <classname> -ComputerName <name>
+Get-WmiObject -Class <classname> -Filter "<query>"
+</query></classname></name></classname></classname></code></pre>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Get-NetFirewallRule Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   Get-NetFirewallRule Command Overview
+  </h1>
+  <p>
+   The
+   <code>
+    Get-NetFirewallRule
+   </code>
+   command is a Windows PowerShell cmdlet used to retrieve information about firewall rules on the local computer.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -DisplayName
+      </code>
+     </td>
+     <td>
+      Filters results by the rule's display name.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Enabled
+      </code>
+     </td>
+     <td>
+      Specifies whether to retrieve only enabled or disabled rules.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Direction
+      </code>
+     </td>
+     <td>
+      Filters rules by the direction of network traffic (Inbound/Outbound).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Action
+      </code>
+     </td>
+     <td>
+      Filters rules by action taken (Allow/Block).
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># View all firewall rules
+Get-NetFirewallRule
+
+# View all enabled firewall rules
+Get-NetFirewallRule -Enabled True
+
+# Find a rule by display name
+Get-NetFirewallRule -DisplayName "My Firewall Rule"
+
+# List all outbound rules that block traffic
+Get-NetFirewallRule -Direction Outbound -Action Block</code></pre>
+  <h2>
+   Quick Cheat Sheet
+  </h2>
+  <pre><code># List all rules
+Get-NetFirewallRule
+
+# List enabled rules
+Get-NetFirewallRule -Enabled True
+
+# Filter by display name
+Get-NetFirewallRule -DisplayName "Name"
+
+# Outbound block rules
+Get-NetFirewallRule -Direction Outbound -Action Block</code></pre>
+ </body>
+</html>

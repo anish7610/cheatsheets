@@ -1,0 +1,87 @@
+<h1>
+ Windows Command: Get-Acl
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  Get-Acl
+ </code>
+ command retrieves the access control list (ACL) of a specified file or resource, showing permissions and security information.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -Path
+    </code>
+   </td>
+   <td>
+    Specifies the path to the file or resource.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -LiteralPath
+    </code>
+   </td>
+   <td>
+    Specifies a path that is used exactly as typed.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Audit
+    </code>
+   </td>
+   <td>
+    Retrieves the audit rules of the specified path.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -AllCentralAccessPolicies
+    </code>
+   </td>
+   <td>
+    Retrieves all central access policies of the specified path.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Retrieve ACL of a file
+Get-Acl -Path "C:\example\file.txt"
+
+# Retrieve ACL using LiteralPath to handle special characters
+Get-Acl -LiteralPath "C:\path[with]special#chars?.txt"
+
+# View ACL with audit information
+Get-Acl -Path "C:\example\file.txt" -Audit</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>Get-Acl -Path "file_or_directory_path"
+Get-Acl -LiteralPath "exact_path"
+Get-Acl -Path "path" -Audit</code></pre>

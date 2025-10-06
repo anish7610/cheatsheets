@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Get-PackageSource Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   Get-PackageSource Command
+  </h1>
+  <p>
+   <code>
+    Get-PackageSource
+   </code>
+   is a PowerShell command used to list software package sources registered on a system.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -ProviderName
+      </code>
+     </td>
+     <td>
+      Specifies the package provider name.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Name
+      </code>
+     </td>
+     <td>
+      Filters results by package source name.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -IsTrusted
+      </code>
+     </td>
+     <td>
+      Returns only package sources that are trusted.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Examples
+  </h2>
+  <h3>
+   List All Package Sources
+  </h3>
+  <pre><code>Get-PackageSource</code></pre>
+  <h3>
+   Filter by Provider Name
+  </h3>
+  <pre><code>Get-PackageSource -ProviderName NuGet</code></pre>
+  <h3>
+   Get Trusted Package Sources
+  </h3>
+  <pre><code>Get-PackageSource -IsTrusted</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre>
+Get-PackageSource
+Get-PackageSource -ProviderName &lt;ProviderName&gt;
+Get-PackageSource -Name &lt;SourceName&gt;
+Get-PackageSource -IsTrusted
+    </pre>
+ </body>
+</html>

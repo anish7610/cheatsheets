@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   New-WebApp Command Overview
+  </title>
+ </head>
+ <body>
+  <h1>
+   New-WebApp Command Overview
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    New-WebApp
+   </code>
+   command is used in Windows environments to create a new web application in IIS (Internet Information Services).
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -Name
+      </code>
+     </td>
+     <td>
+      Specifies the name of the web application.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Site
+      </code>
+     </td>
+     <td>
+      Indicates the site to which the application belongs.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -PhysicalPath
+      </code>
+     </td>
+     <td>
+      Defines the physical path for the web application's files.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -ApplicationPool
+      </code>
+     </td>
+     <td>
+      Specifies the application pool for the web application.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Create a new web application
+New-WebApp -Name "MyApp" -Site "Default Web Site" -PhysicalPath "C:\inetpub\wwwroot\myapp"
+
+# Create a web application with a specific application pool
+New-WebApp -Name "MyApp" -Site "Default Web Site" -PhysicalPath "C:\inetpub\wwwroot\myapp" -ApplicationPool "MyAppPool"
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+New-WebApp -Name "AppName" -Site "SiteName" -PhysicalPath "Path" [-ApplicationPool "PoolName"]
+    </code></pre>
+ </body>
+</html>

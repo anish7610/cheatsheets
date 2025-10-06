@@ -1,0 +1,91 @@
+<h1>
+ Import-Module Command Overview
+</h1>
+<p>
+ The
+ <code>
+  Import-Module
+ </code>
+ command in Windows PowerShell is used to import specified modules into the current session, enabling access to the cmdlets, functions, and aliases that the module contains.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -Name
+    </code>
+   </td>
+   <td>
+    Specifies the name of the module to import.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Force
+    </code>
+   </td>
+   <td>
+    Forces the module to be reloaded even if it is already imported.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -PassThru
+    </code>
+   </td>
+   <td>
+    Returns a module object representing the imported module.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Scope
+    </code>
+   </td>
+   <td>
+    Indicates the scope in which the module is imported (e.g., Global).
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Verbose
+    </code>
+   </td>
+   <td>
+    Provides detailed information about the import operation.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code>Import-Module -Name 'ActiveDirectory'</code></pre>
+<pre><code>Import-Module -Name 'Azure' -Force</code></pre>
+<pre><code>$module = Import-Module -Name 'PSReadline' -PassThru</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+Import-Module -Name 'ModuleName'
+Import-Module -Name 'ModuleName' -Force
+Import-Module -Name 'ModuleName' -Verbose
+</code></pre>

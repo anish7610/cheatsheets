@@ -1,0 +1,60 @@
+<h1>
+ Get-LocalUser Command Overview
+</h1>
+<p>
+ Get-LocalUser is a Windows PowerShell command used to retrieve information about local user accounts on a system.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    -Name
+   </td>
+   <td>
+    Specifies the name of the user to retrieve details for.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -SID
+   </td>
+   <td>
+    Displays the security identifier for a user.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code>
+# List all local users
+Get-LocalUser
+
+# Get details for a specific user by name
+Get-LocalUser -Name "Username"
+
+# Get the security identifier (SID) of a user
+(Get-LocalUser -Name "Username").SID
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+Get-LocalUser              # List all users
+Get-LocalUser -Name "User" # Details for specific user
+(Get-LocalUser -Name "User").SID # Get user SID
+</code></pre>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   winget Command Overview
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    winget Command
+   </h1>
+   <p>
+    Windows Package Manager for installing, upgrading, configuring, and removing software.
+   </p>
+  </header>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       install
+      </td>
+      <td>
+       Install a package by name.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       show
+      </td>
+      <td>
+       Display information about a package.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       search
+      </td>
+      <td>
+       Search for a package by name or keyword.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       list
+      </td>
+      <td>
+       List installed packages.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       upgrade
+      </td>
+      <td>
+       Upgrade the specified package or all packages.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       uninstall
+      </td>
+      <td>
+       Uninstall a package.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       help
+      </td>
+      <td>
+       Show help information for the command.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code>
+# Install a package
+winget install "7zip"
+
+# Show information about a package
+winget show "notepad++"
+
+# Search for a package
+winget search "Visual Studio Code"
+
+# List installed packages
+winget list
+
+# Upgrade all packages
+winget upgrade --all
+
+# Uninstall a package
+winget uninstall "Google Chrome"
+        </code></pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code>
+winget install [package]
+winget show [package]
+winget search [keyword]
+winget list
+winget upgrade [package|--all]
+winget uninstall [package]
+        </code></pre>
+  </section>
+ </body>
+</html>

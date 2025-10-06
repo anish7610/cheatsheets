@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Backup-SqlDatabase Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   Backup-SqlDatabase Command
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    Backup-SqlDatabase
+   </code>
+   cmdlet in Windows is used to create a backup of a SQL Server database. It supports full, differential, and log backups.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -ServerInstance
+      </code>
+     </td>
+     <td>
+      Specifies the SQL Server instance to connect to.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Database
+      </code>
+     </td>
+     <td>
+      Specifies the name of the database to back up.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -BackupFile
+      </code>
+     </td>
+     <td>
+      Specifies the file path to store the backup.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -BackupAction
+      </code>
+     </td>
+     <td>
+      Specifies the type of backup: Full, Differential, or Log.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -CompressionOption
+      </code>
+     </td>
+     <td>
+      Controls whether or not the backup is compressed.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Full backup of a database
+Backup-SqlDatabase -ServerInstance "MyServer" -Database "MyDatabase" -BackupFile "C:\Backups\MyDatabase.bak" -BackupAction Database
+
+# Differential backup of a database
+Backup-SqlDatabase -ServerInstance "MyServer" -Database "MyDatabase" -BackupFile "C:\Backups\MyDatabase_Diff.bak" -BackupAction Differential
+
+# Log backup of a database with compression
+Backup-SqlDatabase -ServerInstance "MyServer" -Database "MyDatabase" -BackupFile "C:\Backups\MyDatabase_Log.trn" -BackupAction Log -CompressionOption On
+</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>Backup-SqlDatabase -ServerInstance "Server" -Database "DB" -BackupFile "Path" -BackupAction {Database|Differential|Log} [-CompressionOption {On|Off}]
+</code></pre>
+ </body>
+</html>

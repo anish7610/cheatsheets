@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Set-Content Command Overview
+  </title>
+ </head>
+ <body>
+  <h1>
+   Set-Content Command
+  </h1>
+  <p>
+   The
+   <code>
+    Set-Content
+   </code>
+   command in Windows PowerShell writes data to a file, replacing existing content.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -Path
+      </code>
+     </td>
+     <td>
+      Specifies the file path to write content to.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Value
+      </code>
+     </td>
+     <td>
+      The content to be written into the file.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -NoNewline
+      </code>
+     </td>
+     <td>
+      Prevents a newline from being added after the content.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Encoding
+      </code>
+     </td>
+     <td>
+      Specifies the file's text encoding, such as UTF8, ASCII.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Write "Hello, World!" to a file
+Set-Content -Path "example.txt" -Value "Hello, World!"
+
+# Write without a newline
+Set-Content -Path "example.txt" -Value "Hello, World!" -NoNewline
+
+# Write with UTF8 encoding
+Set-Content -Path "example.txt" -Value "Hello, World!" -Encoding UTF8
+</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+# Basic Usage
+Set-Content -Path "file.txt" -Value "Content"
+
+# No Newline
+Set-Content -Path "file.txt" -Value "Content" -NoNewline
+
+# Encoding Example
+Set-Content -Path "file.txt" -Value "Content" -Encoding UTF8
+</code></pre>
+ </body>
+</html>

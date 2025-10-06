@@ -1,0 +1,89 @@
+<html>
+ <body>
+  <h1>
+   WMIC Command in Windows
+  </h1>
+  <p>
+   WMIC (Windows Management Instrumentation Command-line) is a command-line utility for interacting with Windows Management Instrumentation (WMI). It allows users to perform administrative tasks and query system information.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      /node:
+     </td>
+     <td>
+      Specify the target computer.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      /user:
+     </td>
+     <td>
+      Specify the user to use for the command.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      /password:
+     </td>
+     <td>
+      Specify the user's password.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      process
+     </td>
+     <td>
+      Query, terminate or display processes.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      os
+     </td>
+     <td>
+      Retrieve operating system information.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      product
+     </td>
+     <td>
+      List installed products and software.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code>wmic process list brief
+wmic os get caption, version
+wmic product get name, version
+wmic process where "name='notepad.exe'" call terminate</code></pre>
+  <h2>
+   Quick Cheat Sheet
+  </h2>
+  <pre><code>wmic process list brief
+wmic os get caption, version
+wmic product get name
+wmic process where "name='example.exe'" call terminate</code></pre>
+ </body>
+</html>

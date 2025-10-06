@@ -1,0 +1,75 @@
+<html>
+ <body>
+  <h1>
+   Get-SqlDatabase Command Overview
+  </h1>
+  <p>
+   The
+   <code>
+    Get-SqlDatabase
+   </code>
+   command in Windows PowerShell is used to retrieve information about SQL Server databases. It is part of the SQL Server module for PowerShell.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <tr>
+    <th>
+     Option
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      -ServerInstance
+     </code>
+    </td>
+    <td>
+     Specifies the SQL Server instance to query.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      -DatabaseName
+     </code>
+    </td>
+    <td>
+     Filters to a specific database by name.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      -Credential
+     </code>
+    </td>
+    <td>
+     Provides login credentials for accessing the server.
+    </td>
+   </tr>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code class="language-powershell"># Retrieve all databases on a specific server instance
+Get-SqlDatabase -ServerInstance "MyServer\SQLInstance"
+
+# Retrieve a specific database using name
+Get-SqlDatabase -ServerInstance "MyServer\SQLInstance" -DatabaseName "MyDatabase"
+
+# Using credentials to access the server
+Get-SqlDatabase -ServerInstance "MyServer\SQLInstance" -Credential (Get-Credential)
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+Get-SqlDatabase -ServerInstance "Server\Instance" [-DatabaseName "Name"] [-Credential (Get-Credential)]
+    </code></pre>
+ </body>
+</html>

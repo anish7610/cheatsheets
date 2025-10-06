@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Get-WinEvent Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   Get-WinEvent Command
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    Get-WinEvent -LogName Security
+   </code>
+   command retrieves events from the Windows Security event log, allowing administrators to monitor and analyze security-related activities.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -MaxEvents
+      </code>
+     </td>
+     <td>
+      Specifies the maximum number of events to return.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -FilterXPath
+      </code>
+     </td>
+     <td>
+      Applies an XPath query to filter specific events.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -FilterHashTable
+      </code>
+     </td>
+     <td>
+      Uses a hash table to filter events based on criteria like ID or provider.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Oldest
+      </code>
+     </td>
+     <td>
+      Retrieves events from oldest to newest.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Retrieve the 10 most recent security events
+Get-WinEvent -LogName Security -MaxEvents 10
+
+# Retrieve events with a specific ID (e.g., 4624)
+Get-WinEvent -LogName Security -FilterHashTable @{ID=4624}
+
+# Use XPath to filter events related to login failures
+Get-WinEvent -LogName Security -FilterXPath "*[System[EventID=4625]]"
+    
+# Get the oldest 5 security events
+Get-WinEvent -LogName Security -MaxEvents 5 -Oldest
+</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>Get-WinEvent -LogName Security -MaxEvents <num>
+Get-WinEvent -LogName Security -FilterHashTable @{<criteria>}
+Get-WinEvent -LogName Security -FilterXPath "<query>"
+Get-WinEvent -LogName Security -Oldest
+</query></criteria></num></code></pre>
+ </body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Get-SqlTable Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   Get-SqlTable Command Overview
+  </h1>
+  <p>
+   The
+   <code>
+    Get-SqlTable
+   </code>
+   command in PowerShell is used to retrieve metadata and information about tables in a SQL Server database.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -ServerInstance
+      </code>
+     </td>
+     <td>
+      Specifies the SQL Server instance to connect to.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Database
+      </code>
+     </td>
+     <td>
+      Specifies the database name from which the table information is retrieved.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Schema
+      </code>
+     </td>
+     <td>
+      Filters the tables by a specific schema.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Name
+      </code>
+     </td>
+     <td>
+      Specifies the name of the table to retrieve information for.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Credential
+      </code>
+     </td>
+     <td>
+      Provides a credential object for authentication.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Retrieve all tables in a specific database
+Get-SqlTable -ServerInstance "MyServer" -Database "MyDatabase"
+
+# Retrieve details of a specific table
+Get-SqlTable -ServerInstance "MyServer" -Database "MyDatabase" -Name "MyTable"
+
+# Retrieve tables within a specific schema
+Get-SqlTable -ServerInstance "MyServer" -Database "MyDatabase" -Schema "MySchema"
+</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>-ServerInstance : SQL Server instance
+-Database      : Target database
+-Schema        : Table schema filter
+-Name          : Specific table name
+-Credential    : Authentication info
+</code></pre>
+ </body>
+</html>

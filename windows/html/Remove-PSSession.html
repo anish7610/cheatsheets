@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Remove-PSSession Command Overview
+  </title>
+ </head>
+ <body>
+  <h1>
+   Remove-PSSession Command
+  </h1>
+  <p>
+   <code>
+    Remove-PSSession
+   </code>
+   is a PowerShell cmdlet used to close and remove one or more PowerShell sessions from a local or remote computer.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -Id
+      </code>
+     </td>
+     <td>
+      Specifies the session ID to remove.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Session
+      </code>
+     </td>
+     <td>
+      Specifies the session objects to remove.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -InstanceId
+      </code>
+     </td>
+     <td>
+      Specifies the instance ID of the session to remove.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -ComputerName
+      </code>
+     </td>
+     <td>
+      Specifies the names of the computers where the sessions are stored.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -ThrottleLimit
+      </code>
+     </td>
+     <td>
+      Limits the number of simultaneous operations.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Remove a session by ID
+Remove-PSSession -Id 2
+
+# Remove multiple sessions by session object
+$sessions = Get-PSSession | Where-Object { $_.State -eq "Open" }
+Remove-PSSession -Session $sessions
+
+# Remove a session from a specific computer
+Remove-PSSession -Id 3 -ComputerName "Server01"
+</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code># Remove session by ID
+Remove-PSSession -Id <id>
+
+# Remove session by object
+Remove-PSSession -Session <sessionobject>
+
+# Remove session by instance ID
+Remove-PSSession -InstanceId <instanceid>
+</instanceid></sessionobject></id></code></pre>
+ </body>
+</html>

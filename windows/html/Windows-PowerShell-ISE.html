@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Windows PowerShell ISE
+  </title>
+ </head>
+ <body>
+  <h1>
+   Windows PowerShell ISE
+  </h1>
+  <p>
+   Windows PowerShell Integrated Scripting Environment (ISE) is a host application for Windows PowerShell. It enables users to run commands, write, test, and debug scripts in a user-friendly environment.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      -NoProfile
+     </td>
+     <td>
+      Starts ISE without running profiles.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -ExecutionPolicy
+     </td>
+     <td>
+      Sets the script execution policy (e.g., RemoteSigned, Unrestricted).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -File
+     </td>
+     <td>
+      Opens a specific PowerShell script in ISE.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -Help
+     </td>
+     <td>
+      Displays help about the ISE command-line options.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code>
+# Open PowerShell ISE
+PowerShell_ISE.exe
+
+# Open PowerShell ISE without running profiles
+PowerShell_ISE.exe -NoProfile
+
+# Open a specific script in PowerShell ISE
+PowerShell_ISE.exe -File "C:\Scripts\myscript.ps1"
+
+# Set execution policy and open ISE
+PowerShell_ISE.exe -ExecutionPolicy RemoteSigned
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+PowerShell_ISE.exe                # Start ISE
+PowerShell_ISE.exe -NoProfile     # Ignore profiles
+PowerShell_ISE.exe -File "path"   # Open file
+    </code></pre>
+ </body>
+</html>

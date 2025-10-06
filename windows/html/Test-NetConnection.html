@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Test-NetConnection Command Overview
+  </title>
+ </head>
+ <body>
+  <main>
+   <h1>
+    Test-NetConnection Command Overview
+   </h1>
+   <section>
+    <h2>
+     Description
+    </h2>
+    <p>
+     The
+     <code>
+      Test-NetConnection
+     </code>
+     command is a versatile Windows cmdlet used to diagnose network connectivity. It provides details about network connection status, latency, and more.
+    </p>
+   </section>
+   <section>
+    <h2>
+     Common Options
+    </h2>
+    <table>
+     <thead>
+      <tr>
+       <th>
+        Option
+       </th>
+       <th>
+        Description
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        <code>
+         -ComputerName
+        </code>
+       </td>
+       <td>
+        Specifies the remote system to test.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <code>
+         -Port
+        </code>
+       </td>
+       <td>
+        Tests the connection to a specific port.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <code>
+         -TraceRoute
+        </code>
+       </td>
+       <td>
+        Performs a tracert to the specified destination.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <code>
+         -InformationLevel
+        </code>
+       </td>
+       <td>
+        Controls the amount of output information (e.g.,
+        <code>
+         Detailed
+        </code>
+        ).
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </section>
+   <section>
+    <h2>
+     Usage Examples
+    </h2>
+    <pre><code># Test network connectivity to google.com
+Test-NetConnection -ComputerName google.com
+
+# Test connectivity to a specific port on google.com
+Test-NetConnection -ComputerName google.com -Port 443
+
+# Perform a traceroute to google.com
+Test-NetConnection -ComputerName google.com -TraceRoute
+
+# Get detailed connection information to google.com
+Test-NetConnection -ComputerName google.com -InformationLevel Detailed
+            </code></pre>
+   </section>
+   <section>
+    <h2>
+     Cheat Sheet
+    </h2>
+    <pre><code># Basic connectivity test
+Test-NetConnection [-ComputerName] <name>
+
+# Test specific port
+Test-NetConnection -ComputerName <name> -Port <portnumber>
+
+# Perform traceroute
+Test-NetConnection -ComputerName <name> -TraceRoute
+            </name></portnumber></name></name></code></pre>
+   </section>
+  </main>
+ </body>
+</html>

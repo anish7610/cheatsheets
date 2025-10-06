@@ -1,0 +1,88 @@
+<h1>
+ Get-PackageProvider Command in Windows
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  Get-PackageProvider
+ </code>
+ command in Windows PowerShell retrieves package providers that are available for Package Management, allowing you to interact with different types of package sources.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -Name
+    </code>
+   </td>
+   <td>
+    Specifies the name of the package provider to retrieve.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -ListAvailable
+    </code>
+   </td>
+   <td>
+    Lists all package providers available for installation.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -ForceBootstrap
+    </code>
+   </td>
+   <td>
+    Installs the provider if it is not currently installed.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<h3>
+ Get All Installed Package Providers
+</h3>
+<pre><code>Get-PackageProvider</code></pre>
+<h3>
+ Find a Specific Package Provider by Name
+</h3>
+<pre><code>Get-PackageProvider -Name NuGet</code></pre>
+<h3>
+ List All Available Providers for Installation
+</h3>
+<pre><code>Get-PackageProvider -ListAvailable</code></pre>
+<h3>
+ Install a Package Provider if Not Present
+</h3>
+<pre><code>Get-PackageProvider -Name NuGet -ForceBootstrap</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre>
+Get-PackageProvider            # List installed providers
+Get-PackageProvider -Name <name>   # Find by name
+Get-PackageProvider -ListAvailable # List available providers
+Get-PackageProvider -Name <name> -ForceBootstrap # Install if missing
+</name></name></pre>

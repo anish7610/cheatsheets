@@ -1,0 +1,128 @@
+<h1>
+ Windows Command: tasklist
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  tasklist
+ </code>
+ command provides a list of currently running processes on a local or remote system, displaying useful information such as process ID, session name, and memory usage.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     /s &lt;system&gt;
+    </code>
+   </td>
+   <td>
+    Specifies the remote system to connect to.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     /u &lt;username&gt;
+    </code>
+   </td>
+   <td>
+    Runs the command with the account permissions of the specified user.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     /p &lt;password&gt;
+    </code>
+   </td>
+   <td>
+    Specifies the password for the user account.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     /fi &lt;filter&gt;
+    </code>
+   </td>
+   <td>
+    Displays a set of tasks that match the given filter criteria.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     /fo &lt;format&gt;
+    </code>
+   </td>
+   <td>
+    Specifies the output format, such as
+    <code>
+     TABLE
+    </code>
+    ,
+    <code>
+     LIST
+    </code>
+    , or
+    <code>
+     CSV
+    </code>
+    .
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     /v
+    </code>
+   </td>
+   <td>
+    Displays detailed information about each task.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     /m
+    </code>
+   </td>
+   <td>
+    Lists all tasks currently using loaded DLL modules.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code>C:\&gt; tasklist
+C:\&gt; tasklist /fi "imagename eq notepad.exe"
+C:\&gt; tasklist /v /fo csv
+C:\&gt; tasklist /s remotePC /u admin /p password /fo list
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>tasklist                    # List all tasks
+tasklist /v                 # Detailed task list
+tasklist /fi "status eq running" # Filter running tasks
+tasklist /fo csv            # Output in CSV format
+</code></pre>

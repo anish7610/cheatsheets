@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   IIS Command Cheat Sheet
+  </title>
+ </head>
+ <body>
+  <h1>
+   IIS (Internet Information Services) Command Overview
+  </h1>
+  <p>
+   IIS is a flexible, secure, and manageable Web server for hosting anything on the Web. It can be administered through the command line with various options for managing sites, applications, and more.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      start
+      <i>
+       site_name
+      </i>
+     </td>
+     <td>
+      Starts the specified website.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      stop
+      <i>
+       site_name
+      </i>
+     </td>
+     <td>
+      Stops the specified website.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      restart
+      <i>
+       site_name
+      </i>
+     </td>
+     <td>
+      Restarts the specified website.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      appcmd list site
+     </td>
+     <td>
+      Lists all sites running on the IIS server.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      appcmd list app
+     </td>
+     <td>
+      Lists all applications configured on the IIS server.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Start a website
+iisreset /start "MyWebsite"
+
+# Stop a website
+iisreset /stop "MyWebsite"
+
+# Restart a website
+iisreset /restart "MyWebsite"
+
+# List all sites
+appcmd list site
+
+# List all applications
+appcmd list app
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>Start site:    iisreset /start "site_name"
+Stop site:     iisreset /stop "site_name"
+Restart site:  iisreset /restart "site_name"
+List sites:    appcmd list site
+List apps:     appcmd list app
+    </code></pre>
+ </body>
+</html>

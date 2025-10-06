@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Invoke-Command Cheat Sheet
+  </title>
+ </head>
+ <body>
+  <h1>
+   Invoke-Command Overview
+  </h1>
+  <p>
+   The
+   <code>
+    Invoke-Command
+   </code>
+   cmdlet in Windows PowerShell is used to run a command or script on a local or remote computer, allowing for automation across multiple systems.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -ScriptBlock
+      </code>
+     </td>
+     <td>
+      Specifies the command or script to run.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -ComputerName
+      </code>
+     </td>
+     <td>
+      Defines the target computer(s) to run the command on.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Credential
+      </code>
+     </td>
+     <td>
+      Supplies user credentials for authentication.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -FilePath
+      </code>
+     </td>
+     <td>
+      Points to a script file to be executed.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -ArgumentList
+      </code>
+     </td>
+     <td>
+      Provides arguments for the script or command.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Run a script block on a remote computer
+Invoke-Command -ScriptBlock { Get-Process } -ComputerName "Server01"
+
+# Execute a script file on multiple computers
+Invoke-Command -FilePath "C:\Scripts\Update.ps1" -ComputerName "Server01", "Server02"
+
+# Using credentials for authentication
+Invoke-Command -ScriptBlock { Get-Service } -ComputerName "Server01" -Credential (Get-Credential)
+</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+# Execute a command locally
+Invoke-Command -ScriptBlock { <command/> }
+
+# Execute a command on a remote computer
+Invoke-Command -ScriptBlock { <command/> } -ComputerName "RemotePC"
+
+# Run a script with arguments
+Invoke-Command -FilePath "C:\MyScript.ps1" -ArgumentList <args>
+
+# Use specific user credentials
+Invoke-Command -ScriptBlock { <command/> } -ComputerName "RemotePC" -Credential (Get-Credential)
+</args></code></pre>
+ </body>
+</html>

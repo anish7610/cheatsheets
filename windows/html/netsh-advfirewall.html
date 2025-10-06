@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   netsh advfirewall Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   netsh advfirewall Overview
+  </h1>
+  <p>
+   The
+   <code>
+    netsh advfirewall
+   </code>
+   command is a Windows tool used to manage and configure the Windows Firewall with Advanced Security, providing control over firewall settings for network profiles, rules, and more.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      set allprofiles state
+     </td>
+     <td>
+      Enable or disable the firewall for all profiles (Domain, Private, Public)
+     </td>
+    </tr>
+    <tr>
+     <td>
+      add rule
+     </td>
+     <td>
+      Add a new inbound or outbound rule
+     </td>
+    </tr>
+    <tr>
+     <td>
+      delete rule
+     </td>
+     <td>
+      Remove an existing rule by name
+     </td>
+    </tr>
+    <tr>
+     <td>
+      show currentprofile
+     </td>
+     <td>
+      Display the current active firewall profile settings
+     </td>
+    </tr>
+    <tr>
+     <td>
+      set logging
+     </td>
+     <td>
+      Configure logging options for the firewall
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code>netsh advfirewall set allprofiles state on
+netsh advfirewall set allprofiles state off
+netsh advfirewall firewall add rule name="Allow SSH" protocol=TCP dir=in localport=22 action=allow
+netsh advfirewall firewall delete rule name="Allow SSH"
+netsh advfirewall show currentprofile</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>Enable all: netsh advfirewall set allprofiles state on
+Disable all: netsh advfirewall set allprofiles state off
+Add rule: netsh advfirewall firewall add rule name="[RuleName]" protocol=[Protocol] dir=[in|out] localport=[Port] action=[allow|block]
+Delete rule: netsh advfirewall firewall delete rule name="[RuleName]"
+Show profile: netsh advfirewall show currentprofile</code></pre>
+ </body>
+</html>

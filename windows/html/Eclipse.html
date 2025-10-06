@@ -1,0 +1,101 @@
+<h1>
+ Eclipse Command on Windows
+</h1>
+<p>
+ The
+ <code>
+  Eclipse
+ </code>
+ command is used to start the Eclipse IDE from the command line, allowing developers to manage projects, workspaces, and plugins efficiently.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -data &lt;workspace-path&gt;
+    </code>
+   </td>
+   <td>
+    Specifies the workspace location.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -nosplash
+    </code>
+   </td>
+   <td>
+    Starts Eclipse without showing the splash screen.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -clean
+    </code>
+   </td>
+   <td>
+    Clears the configuration area before starting.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -vm &lt;jvm-path&gt;
+    </code>
+   </td>
+   <td>
+    Specifies the JVM to run Eclipse.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -application &lt;id&gt;
+    </code>
+   </td>
+   <td>
+    Runs the specified application within the workspace.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Start Eclipse with a specific workspace
+eclipse -data "C:\path\to\workspace"
+
+# Start Eclipse without splash screen
+eclipse -nosplash
+
+# Start Eclipse with a clean configuration
+eclipse -clean
+
+# Start Eclipse with a specific JVM
+eclipse -vm "C:\path\to\jvm\bin\javaw.exe"
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>-data &lt;workspace&gt;  # Set workspace
+-nosplash              # No splash screen
+-clean                 # Clean config
+-vm &lt;jvm-path&gt;      # Specify JVM
+-application &lt;id&gt;    # Run application
+</code></pre>

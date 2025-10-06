@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Get-PnpDevice Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   Get-PnpDevice Command
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    Get-PnpDevice
+   </code>
+   command in Windows PowerShell retrieves information about Plug and Play (PnP) devices on a system.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -Status
+      </code>
+     </td>
+     <td>
+      Filters devices by status (e.g., OK, Error).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -FriendlyName
+      </code>
+     </td>
+     <td>
+      Specifies devices by their friendly name.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Class
+      </code>
+     </td>
+     <td>
+      Filters devices by their class (e.g., Display, USB).
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code>Get-PnpDevice</code></pre>
+  <pre><code>Get-PnpDevice -Status OK</code></pre>
+  <pre><code>Get-PnpDevice -Class USB</code></pre>
+  <pre><code>Get-PnpDevice -FriendlyName "Intel(R) Wireless"</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>Get-PnpDevice                  # Lists all PnP devices
+Get-PnpDevice -Status OK       # Lists devices with status OK
+Get-PnpDevice -Class USB       # Lists USB devices
+Get-PnpDevice -FriendlyName "Name" # Lists devices by friendly name</code></pre>
+ </body>
+</html>

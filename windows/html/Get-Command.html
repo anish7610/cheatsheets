@@ -1,0 +1,119 @@
+<h1>
+ Get-Command
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  Get-Command
+ </code>
+ cmdlet is used in PowerShell to retrieve information about cmdlets, functions, workflows, aliases, and applications. It's a powerful tool for discovering system capabilities and available commands.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -Name
+    </code>
+   </td>
+   <td>
+    Specifies the name of the command to get.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Noun
+    </code>
+   </td>
+   <td>
+    Filters commands based on the noun part of their names.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Verb
+    </code>
+   </td>
+   <td>
+    Filters commands based on the verb part of their names.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Module
+    </code>
+   </td>
+   <td>
+    Filters commands from a specific module.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -CommandType
+    </code>
+   </td>
+   <td>
+    Limits the results to a specified command type (e.g., cmdlet, function).
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre>
+<code>
+# Get information about a specific command
+Get-Command -Name Get-Process
+
+# List all cmdlets with the verb 'Get'
+Get-Command -Verb Get
+
+# List all commands from a specific module
+Get-Command -Module Microsoft.PowerShell.Management
+
+# Find all functions with a specific noun
+Get-Command -Noun Item
+</code>
+</pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre>
+<code>
+# Find by name
+Get-Command -Name <name>
+
+# Filter by verb
+Get-Command -Verb <verb>
+
+# Filter by noun
+Get-Command -Noun <noun>
+
+# Filter by module
+Get-Command -Module <module>
+
+# Specify command type
+Get-Command -CommandType <type>
+</type></module></noun></verb></name></code>
+</pre>

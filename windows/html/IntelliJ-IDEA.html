@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   IntelliJ IDEA Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   IntelliJ IDEA Command
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    idea
+   </code>
+   command is used to open IntelliJ IDEA from the command line, allowing you to manage and develop projects efficiently.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -h
+      </code>
+      ,
+      <code>
+       --help
+      </code>
+     </td>
+     <td>
+      Show help message and exit.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --line &lt;line_number&gt;
+      </code>
+     </td>
+     <td>
+      Open a file and move the caret to the specified line.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       &lt;file&gt;
+      </code>
+     </td>
+     <td>
+      Specify a file to open in IntelliJ IDEA.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       &lt;project_directory&gt;
+      </code>
+     </td>
+     <td>
+      Open a specific project directory.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code>
+# Open IntelliJ IDEA
+idea
+
+# Open a specific file in the editor
+idea path/to/file.java
+
+# Open a project directory
+idea path/to/project/
+
+# Open a file at a specific line number
+idea --line 42 path/to/file.java
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+idea                    # Open IntelliJ IDEA
+idea <file>             # Open a specific file
+idea <project_dir>      # Open a project directory
+idea --line <n> <file>  # Open file at specific line
+    </file></n></project_dir></file></code></pre>
+ </body>
+</html>

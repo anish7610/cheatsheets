@@ -1,0 +1,108 @@
+<html>
+ <body>
+  <h1>
+   Windows Command: Update-Package
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    Update-Package
+   </code>
+   command in Windows PowerShell updates an installed package to its latest available version, typically used with NuGet packages in development environments.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -ProjectName
+      </code>
+     </td>
+     <td>
+      Specifies the project to update the package for.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Id
+      </code>
+     </td>
+     <td>
+      Updates a specific package by its identifier.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Source
+      </code>
+     </td>
+     <td>
+      Specifies the package source to use for the update.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Version
+      </code>
+     </td>
+     <td>
+      Specifies the version to update the package to.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -WhatIf
+      </code>
+     </td>
+     <td>
+      Shows what would happen if the command runs, without executing it.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre>
+      <code>
+# Update all packages in a project
+Update-Package
+
+# Update a specific package in a single project
+Update-Package -Id <em>ExamplePackage</em> -ProjectName <em>MyProject</em>
+
+# Update to a specific version from a specific source
+Update-Package -Id <em>ExamplePackage</em> -Version <em>2.0.0</em> -Source <em>MySource</em>
+      </code>
+    </pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre>
+      <code>
+Update-Package -Id <em>PackageId</em> -ProjectName <em>Project</em>
+Update-Package -Id <em>PackageId</em> -Version <em>Version</em> -Source <em>Source</em>
+      </code>
+    </pre>
+ </body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   AWS CLI Overview
+  </title>
+ </head>
+ <body>
+  <h1>
+   AWS CLI Overview
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The AWS Command Line Interface (CLI) is a unified tool to manage AWS services. With just one tool to download and configure, you can control multiple AWS services from the command line and automate them through scripts.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <tr>
+    <th>
+     Option
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      --region
+     </code>
+    </td>
+    <td>
+     Specifies the AWS region to send requests to.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      --output
+     </code>
+    </td>
+    <td>
+     Specifies the output format (json, text, table).
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      --profile
+     </code>
+    </td>
+    <td>
+     Uses a specific profile from your credential file.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      --help
+     </code>
+    </td>
+    <td>
+     Displays help information for a command.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      --version
+     </code>
+    </td>
+    <td>
+     Displays the version of the AWS CLI.
+    </td>
+   </tr>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># List s3 buckets
+aws s3 ls
+
+# Upload a file to a specific bucket
+aws s3 cp myfile.txt s3://mybucket/
+
+# Describe EC2 instances
+aws ec2 describe-instances --region us-west-1
+
+# Use a specific profile
+aws s3 ls --profile myprofile
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code># Configure CLI
+aws configure
+
+# List AWS services
+aws s3 ls
+aws ec2 describe-instances
+
+# Specify region
+aws &lt;command&gt; --region &lt;region&gt;
+
+# Use specific profile
+aws &lt;command&gt; --profile &lt;profile-name&gt;
+
+# Display help
+aws &lt;command&gt; --help
+    </code></pre>
+ </body>
+</html>

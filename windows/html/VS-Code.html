@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   VS Code Command Usage
+  </title>
+ </head>
+ <body>
+  <main>
+   <h1>
+    VS Code Command
+   </h1>
+   <section>
+    <h2>
+     Description
+    </h2>
+    <p>
+     VS Code command is used to launch and control the Visual Studio Code editor from the terminal or command line interface.
+    </p>
+   </section>
+   <section>
+    <h2>
+     Common Options
+    </h2>
+    <table>
+     <thead>
+      <tr>
+       <th>
+        Option
+       </th>
+       <th>
+        Description
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        <code>
+         code .
+        </code>
+       </td>
+       <td>
+        Open the current directory in VS Code.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <code>
+         code [file]
+        </code>
+       </td>
+       <td>
+        Open a specific file in VS Code.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <code>
+         --new-window
+        </code>
+       </td>
+       <td>
+        Force opening a new instance of VS Code.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <code>
+         --reuse-window
+        </code>
+       </td>
+       <td>
+        Force opening the file or folder in an already opened window.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <code>
+         --wait
+        </code>
+       </td>
+       <td>
+        Wait for the files to be closed before returning.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <code>
+         --list-extensions
+        </code>
+       </td>
+       <td>
+        List installed extensions.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <code>
+         --install-extension
+        </code>
+       </td>
+       <td>
+        Install an extension.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <code>
+         --uninstall-extension
+        </code>
+       </td>
+       <td>
+        Uninstall an extension.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </section>
+   <section>
+    <h2>
+     Usage Examples
+    </h2>
+    <pre><code># Open the current directory
+code .
+
+# Open a specific file
+code example.txt
+
+# Open a directory in a new window
+code /path/to/folder --new-window
+
+# Install an extension
+code --install-extension ms-python.python
+
+# Uninstall an extension
+code --uninstall-extension ms-python.python
+
+# List all installed extensions
+code --list-extensions</code></pre>
+   </section>
+   <section>
+    <h2>
+     Cheat Sheet
+    </h2>
+    <pre><code>code .              # Open current dir
+code [file]         # Open file
+--new-window        # New window
+--install-extension # Install ext</code></pre>
+   </section>
+  </main>
+ </body>
+</html>

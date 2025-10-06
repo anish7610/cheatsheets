@@ -1,0 +1,78 @@
+<html>
+ <head>
+  <title>
+   Invoke-Expression Command Overview
+  </title>
+ </head>
+ <body>
+  <h1>
+   Invoke-Expression Command Overview
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    Invoke-Expression
+   </code>
+   command in Windows PowerShell is used to evaluate or run a string as a command or expression.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      -Command
+     </td>
+     <td>
+      Specifies the command or expression to be executed.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -NoNewScope
+     </td>
+     <td>
+      Executes the command in the current scope.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Run a simple command
+Invoke-Expression "Get-Date"
+
+# Execute a stored command in a variable
+$command = "Get-Process"
+Invoke-Expression $command
+
+# Run a PowerShell script from a string
+$script = "Write-Output 'Hello, World!'"
+Invoke-Expression $script
+</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code># Execute a string as a command
+Invoke-Expression "command"
+
+# From a variable
+Invoke-Expression $variable
+</code></pre>
+ </body>
+</html>

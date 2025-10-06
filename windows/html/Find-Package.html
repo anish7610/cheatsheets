@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Find-Package Command Overview
+  </title>
+ </head>
+ <body>
+  <h1>
+   Find-Package Command Overview
+  </h1>
+  <p>
+   The
+   <code>
+    Find-Package
+   </code>
+   command is used in Windows PowerShell to search for software packages from software package providers.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -Name
+      </code>
+     </td>
+     <td>
+      Specifies the name of the package to find.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -ProviderName
+      </code>
+     </td>
+     <td>
+      Specifies the provider to search in (e.g.
+      <code>
+       NuGet
+      </code>
+      ).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Source
+      </code>
+     </td>
+     <td>
+      Specifies the source repository to search.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -AllVersions
+      </code>
+     </td>
+     <td>
+      Shows all available versions of the package.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -RequiredVersion
+      </code>
+     </td>
+     <td>
+      Specifies an exact version of the package to be found.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Find a specific package by name
+Find-Package -Name "PackageName"
+
+# Find a package using a specific provider
+Find-Package -Name "PackageName" -ProviderName "NuGet"
+
+# List all versions of a specific package
+Find-Package -Name "PackageName" -AllVersions
+
+# Find a package in a specific repository
+Find-Package -Name "PackageName" -Source "RepositoryURL"
+</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+Find-Package -Name "PackageName"
+Find-Package -ProviderName "Provider"
+Find-Package -Source "RepoURL"
+Find-Package -AllVersions
+Find-Package -RequiredVersion "1.0.0"
+</code></pre>
+ </body>
+</html>

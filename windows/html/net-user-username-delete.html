@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Windows Command: net user [username] /delete
+  </title>
+ </head>
+ <body>
+  <h1>
+   net user [username] /delete
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    net user [username] /delete
+   </code>
+   command is used to remove a user account from a Windows system.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       [username]
+      </code>
+     </td>
+     <td>
+      The account name of the user to delete.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       /domain
+      </code>
+     </td>
+     <td>
+      Perform operation on the domain controller rather than the local machine.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code>
+net user johndoe /delete
+net user janedoe /delete /domain
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+net user [username] /delete
+net user [username] /delete /domain
+    </code></pre>
+ </body>
+</html>

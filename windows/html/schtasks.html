@@ -1,0 +1,95 @@
+<html>
+ <body>
+  <h1>
+   Windows `schtasks` Command
+  </h1>
+  <p>
+   The `schtasks` command is used to create, delete, query, change, run, and end scheduled tasks on a Windows machine.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      /Create
+     </td>
+     <td>
+      Create a new scheduled task.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      /Delete
+     </td>
+     <td>
+      Delete an existing scheduled task.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      /Query
+     </td>
+     <td>
+      Display all scheduled tasks or detailed information about specific tasks.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      /Change
+     </td>
+     <td>
+      Modify a scheduled task's settings.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      /Run
+     </td>
+     <td>
+      Execute a scheduled task on demand.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      /End
+     </td>
+     <td>
+      Stop a running scheduled task.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code>s:&gt; schtasks /Create /SC DAILY /TN "Backup" /TR "C:\Backup.bat" /ST 02:00
+s:&gt; schtasks /Delete /TN "Backup"
+s:&gt; schtasks /Query /TN "Backup"
+s:&gt; schtasks /Change /TN "Backup" /ST 03:00
+s:&gt; schtasks /Run /TN "Backup"
+s:&gt; schtasks /End /TN "Backup"</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+Create: schtasks /Create /SC {FREQ} /TN {NAME} /TR {TASK} /ST {TIME}
+Delete: schtasks /Delete /TN {NAME}
+Query:  schtasks /Query /TN {NAME}
+Change: schtasks /Change /TN {NAME} /ST {TIME}
+Run:    schtasks /Run /TN {NAME}
+End:    schtasks /End /TN {NAME}
+    </code></pre>
+ </body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Docker Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   Docker Command
+  </h1>
+  <p>
+   The
+   <code>
+    docker
+   </code>
+   command is used to interact with Docker containers and images. It allows you to manage containers, create images, and perform other container-related tasks.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       docker run
+      </code>
+     </td>
+     <td>
+      Start a new container from an image.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       docker ps
+      </code>
+     </td>
+     <td>
+      List running containers.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       docker images
+      </code>
+     </td>
+     <td>
+      List all images.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       docker stop
+      </code>
+     </td>
+     <td>
+      Stop a running container.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       docker rm
+      </code>
+     </td>
+     <td>
+      Remove a container.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       docker rmi
+      </code>
+     </td>
+     <td>
+      Remove an image.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       docker pull
+      </code>
+     </td>
+     <td>
+      Download an image from a registry.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       docker exec
+      </code>
+     </td>
+     <td>
+      Execute a command inside a running container.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Start a new container from an image (e.g., nginx)
+docker run -d -p 80:80 nginx
+
+# List running containers
+docker ps
+
+# Stop a running container
+docker stop container_id
+
+# Remove a container
+docker rm container_id
+
+# Pull the latest image of Ubuntu
+docker pull ubuntu:latest
+
+# Execute a shell inside a running container
+docker exec -it container_id /bin/bash
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>docker run       # Start a container
+docker ps         # List containers
+docker stop       # Stop a container
+docker rm         # Remove a container
+docker rmi        # Remove an image
+docker pull       # Pull an image
+docker exec       # Execute command in container
+    </code></pre>
+ </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   System Restore Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   System Restore Command Guide
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The `System Restore` command in Windows allows users to roll back system files, program files, and registry settings to a previous state using restore points, aiding in system recovery.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      /r
+     </td>
+     <td>
+      Restarts the computer and initiates System Restore.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      /create
+     </td>
+     <td>
+      Creates a new restore point manually.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      /status
+     </td>
+     <td>
+      Displays the current status of System Restore.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      /disable
+     </td>
+     <td>
+      Disables System Restore for all drives.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      /enable
+     </td>
+     <td>
+      Enables System Restore for all drives.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <h3>
+   Create a Restore Point
+  </h3>
+  <pre><code>systemrestore /create</code></pre>
+  <h3>
+   Initiate System Restore
+  </h3>
+  <pre><code>systemrestore /r</code></pre>
+  <h3>
+   Check System Restore Status
+  </h3>
+  <pre><code>systemrestore /status</code></pre>
+  <h3>
+   Disable System Restore
+  </h3>
+  <pre><code>systemrestore /disable</code></pre>
+  <h3>
+   Enable System Restore
+  </h3>
+  <pre><code>systemrestore /enable</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+    Create     : systemrestore /create
+    Restore    : systemrestore /r
+    Status     : systemrestore /status
+    Disable    : systemrestore /disable
+    Enable     : systemrestore /enable
+    </code></pre>
+ </body>
+</html>

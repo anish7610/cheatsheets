@@ -1,0 +1,86 @@
+<h1>
+ Remove-WebApp Command Overview
+</h1>
+<p>
+ The
+ <code>
+  Remove-WebApp
+ </code>
+ command is used in Windows to delete a web application from a specified Internet Information Services (IIS) site.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -Name
+    </code>
+   </td>
+   <td>
+    Specifies the name of the web application to remove.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Site
+    </code>
+   </td>
+   <td>
+    Specifies the site from which the web application will be removed.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -WhatIf
+    </code>
+   </td>
+   <td>
+    Shows what would happen if the command is run, without executing the removal.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Confirm
+    </code>
+   </td>
+   <td>
+    Prompts for confirmation before executing the removal.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Remove a web application named 'BlogApp' from the 'Default Web Site'
+Remove-WebApp -Name 'BlogApp' -Site 'Default Web Site'
+
+# Simulate removal of 'ShopApp' from 'E-commerce Site' without executing
+Remove-WebApp -Name 'ShopApp' -Site 'E-commerce Site' -WhatIf
+
+# Remove 'AdminApp' from 'Corporate Site' with confirmation prompt
+Remove-WebApp -Name 'AdminApp' -Site 'Corporate Site' -Confirm
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>Remove-WebApp -Name &lt;AppName&gt; -Site &lt;SiteName&gt;
+Remove-WebApp -Name &lt;AppName&gt; -Site &lt;SiteName&gt; -WhatIf
+Remove-WebApp -Name &lt;AppName&gt; -Site &lt;SiteName&gt; -Confirm
+</code></pre>

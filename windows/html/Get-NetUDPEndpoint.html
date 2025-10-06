@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Get-NetUDPEndpoint Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   Get-NetUDPEndpoint Command
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    Get-NetUDPEndpoint
+   </code>
+   command retrieves information about UDP endpoints on a system, including the local IP address, local port, and owning process.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -LocalAddress
+      </code>
+     </td>
+     <td>
+      Specifies the local IP address to filter the results.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -LocalPort
+      </code>
+     </td>
+     <td>
+      Filters endpoints by a specific local port number.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -OwningProcess
+      </code>
+     </td>
+     <td>
+      Limits results to UDP connections owned by a specific process ID.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># List all UDP endpoints
+Get-NetUDPEndpoint
+
+# Filter by local IP address
+Get-NetUDPEndpoint -LocalAddress 192.168.1.10
+
+# Filter by specific local port
+Get-NetUDPEndpoint -LocalPort 53
+
+# Filter by owning process ID
+Get-NetUDPEndpoint -OwningProcess 1234
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+# Get all UDP endpoints
+Get-NetUDPEndpoint
+
+# Filter by local address
+Get-NetUDPEndpoint -LocalAddress <ip_address>
+
+# Filter by port
+Get-NetUDPEndpoint -LocalPort <port_number>
+
+# Filter by process ID
+Get-NetUDPEndpoint -OwningProcess <process_id>
+    </process_id></port_number></ip_address></code></pre>
+ </body>
+</html>

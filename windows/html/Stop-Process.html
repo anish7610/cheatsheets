@@ -1,0 +1,98 @@
+<html>
+ <body>
+  <h1>
+   Stop-Process Command in Windows
+  </h1>
+  <p>
+   The
+   <code>
+    Stop-Process
+   </code>
+   command is used to terminate processes on a Windows system. It can target processes by process ID (PID) or by name.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -Id
+      </code>
+     </td>
+     <td>
+      Specifies the process ID (PID) of the process to stop.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Name
+      </code>
+     </td>
+     <td>
+      Specifies the name of the process to stop.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Force
+      </code>
+     </td>
+     <td>
+      Forces the termination of the process.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -PassThru
+      </code>
+     </td>
+     <td>
+      Returns the process object for each stopped process.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Stop a process by PID
+Stop-Process -Id 1234
+
+# Stop a process by name
+Stop-Process -Name "notepad"
+
+# Force stop a process by PID
+Stop-Process -Id 5678 -Force
+
+# Stop a process by name and return process object
+Stop-Process -Name "explorer" -PassThru
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code># Stop by ID
+Stop-Process -Id <pid>
+
+# Stop by Name
+Stop-Process -Name "<processname>"
+
+# Force Stop
+Stop-Process -Id <pid> -Force
+    </pid></processname></pid></code></pre>
+ </body>
+</html>

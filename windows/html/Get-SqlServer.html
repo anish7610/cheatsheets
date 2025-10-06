@@ -1,0 +1,96 @@
+<h1>
+ Get-SqlServer Command
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  Get-SqlServer
+ </code>
+ command in PowerShell is used to retrieve information about SQL Server instances. It is commonly utilized for database management tasks.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -Name
+    </code>
+   </td>
+   <td>
+    Specifies the SQL Server instance name to retrieve.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Credential
+    </code>
+   </td>
+   <td>
+    Allows specifying user credentials to access the SQL Server instance.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Version
+    </code>
+   </td>
+   <td>
+    Returns only instances of a specific SQL Server version.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -ServerInstance
+    </code>
+   </td>
+   <td>
+    Specifies the server and instance name in a network.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Force
+    </code>
+   </td>
+   <td>
+    Forces the command to ignore warnings and proceed with execution.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code>Get-SqlServer -Name "MyServerInstance"</code></pre>
+<pre><code>Get-SqlServer -ServerInstance "MyServer\Instance"</code></pre>
+<pre><code>Get-SqlServer -Name "MyServerInstance" -Version "2019"</code></pre>
+<pre><code>Get-SqlServer -ServerInstance "MyServer\Instance" -Credential (Get-Credential)</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+Get-SqlServer -Name "InstanceName"
+Get-SqlServer -ServerInstance "Server\Instance"
+Get-SqlServer -Version "Year"
+Get-SqlServer -Credential (Get-Credential)
+</code></pre>

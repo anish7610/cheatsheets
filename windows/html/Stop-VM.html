@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Stop-VM Command Reference
+  </title>
+ </head>
+ <body>
+  <h1>
+   Stop-VM Command
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    Stop-VM
+   </code>
+   command is used in Windows PowerShell to stop a running virtual machine (VM) on a Hyper-V server.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -Name
+      </code>
+     </td>
+     <td>
+      Specifies the name of the VM to stop.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Force
+      </code>
+     </td>
+     <td>
+      Forces the VM to stop immediately without a graceful shutdown.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -AsJob
+      </code>
+     </td>
+     <td>
+      Runs the command as a background job.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -PassThru
+      </code>
+     </td>
+     <td>
+      Returns an object that represents the VM.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Gracefully stop a VM by name
+Stop-VM -Name "MyVirtualMachine"
+
+# Force stop a VM
+Stop-VM -Name "MyVirtualMachine" -Force
+
+# Stop a VM and run the command as a background job
+Stop-VM -Name "MyVirtualMachine" -AsJob
+
+# Stop a VM and return the VM object
+Stop-VM -Name "MyVirtualMachine" -PassThru
+</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>Stop-VM -Name "VMName"
+Stop-VM -Name "VMName" -Force
+Stop-VM -Name "VMName" -AsJob
+Stop-VM -Name "VMName" -PassThru
+</code></pre>
+ </body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Register-ScheduledTask Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   Register-ScheduledTask Command
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    Register-ScheduledTask
+   </code>
+   command in Windows PowerShell is used to create and register a scheduled task, allowing automation of tasks on a set schedule or event.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -Action
+      </code>
+     </td>
+     <td>
+      Specifies the action to execute. Use
+      <code>
+       New-ScheduledTaskAction
+      </code>
+      to define it.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Trigger
+      </code>
+     </td>
+     <td>
+      Specifies the task trigger. Use
+      <code>
+       New-ScheduledTaskTrigger
+      </code>
+      to define it.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -TaskPath
+      </code>
+     </td>
+     <td>
+      Defines the folder path for the task in Task Scheduler.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -User
+      </code>
+     </td>
+     <td>
+      Specifies the user account under which the task runs.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Description
+      </code>
+     </td>
+     <td>
+      Provides a description for the task.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -RunLevel
+      </code>
+     </td>
+     <td>
+      Sets the privileges for the task (
+      <code>
+       Limited
+      </code>
+      or
+      <code>
+       Highest
+      </code>
+      ).
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Examples
+  </h2>
+  <h3>
+   Create a Daily Backup Task
+  </h3>
+  <pre><code>Register-ScheduledTask -Action (New-ScheduledTaskAction -Execute "backup.bat") -Trigger (New-ScheduledTaskTrigger -Daily -At "3AM") -TaskPath "\Maintenance" -User "SYSTEM" -Description "Daily backup task"</code></pre>
+  <h3>
+   Run a Script at User Login
+  </h3>
+  <pre><code>Register-ScheduledTask -Action (New-ScheduledTaskAction -Execute "C:\Scripts\loginscript.ps1") -Trigger (New-ScheduledTaskTrigger -AtLogOn) -User "DOMAIN\User" -Description "Run script at user login"</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+Register-ScheduledTask -Action <action> -Trigger <trigger> [-TaskPath <path>] [-User <user>] [-Description <desc>] [-RunLevel <level>]
+    </level></desc></user></path></trigger></action></code></pre>
+ </body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Get-WinEvent Command Overview
+  </title>
+ </head>
+ <body>
+  <h1>
+   Get-WinEvent Command Overview
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    Get-WinEvent
+   </code>
+   command retrieves event log data from local and remote computers, supporting both classic and Windows Event logs.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -LogName
+      </code>
+     </td>
+     <td>
+      Specifies the name of the event log to query.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -ProviderName
+      </code>
+     </td>
+     <td>
+      Filters events by provider.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -MaxEvents
+      </code>
+     </td>
+     <td>
+      Limits the number of events returned.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -FilterHashtable
+      </code>
+     </td>
+     <td>
+      Uses a hashtable to filter events.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Oldest
+      </code>
+     </td>
+     <td>
+      Sorts events in oldest-first order.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Newest
+      </code>
+     </td>
+     <td>
+      Sorts events in newest-first order.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -ComputerName
+      </code>
+     </td>
+     <td>
+      Specifies the remote computer(s) to query.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Credential
+      </code>
+     </td>
+     <td>
+      Specifies a user account for the connection.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Examples
+  </h2>
+  <pre><code>
+# Retrieve the last 10 events from the System log
+Get-WinEvent -LogName System -MaxEvents 10
+
+# Retrieve events from the Application log, filtered by a specific provider
+Get-WinEvent -LogName Application -ProviderName "Microsoft-Windows-Security-Auditing"
+
+# Get events from a remote computer
+Get-WinEvent -LogName Security -ComputerName "RemotePC" -Credential (Get-Credential)
+
+# Filter events using a hashtable for EventID 4624
+Get-WinEvent -FilterHashtable @{LogName='Security'; ID=4624}
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+Get-WinEvent -LogName <name> -MaxEvents <n>
+Get-WinEvent -FilterHashtable @{<key>=<value>}
+Get-WinEvent -LogName <name> -ComputerName <remotepc> -Credential <user>
+    </user></remotepc></name></value></key></n></name></code></pre>
+ </body>
+</html>

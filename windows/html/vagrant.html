@@ -1,0 +1,129 @@
+<h1>
+ Vagrant Command Overview
+</h1>
+<p>
+ Vagrant is a command-line tool for building and managing virtualized development environments. It provides a consistent workflow for development teams and simplifies the setup of environments.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     up
+    </code>
+   </td>
+   <td>
+    Starts and provisions the Vagrant environment.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     ssh
+    </code>
+   </td>
+   <td>
+    Connects to machine via SSH.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     halt
+    </code>
+   </td>
+   <td>
+    Stops the running Vagrant machine.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     destroy
+    </code>
+   </td>
+   <td>
+    Stops and deletes all traces of the Vagrant machine.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     status
+    </code>
+   </td>
+   <td>
+    Outputs status of the current Vagrant environment.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     box list
+    </code>
+   </td>
+   <td>
+    Lists all available Vagrant boxes.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     provision
+    </code>
+   </td>
+   <td>
+    Re-runs the provisioning on a running Vagrant machine.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Start the Vagrant environment
+vagrant up
+
+# Connect to the Vagrant machine via SSH
+vagrant ssh
+
+# Halt the Vagrant environment
+vagrant halt
+
+# Destroy the Vagrant environment
+vagrant destroy
+
+# Check the status of the Vagrant environment
+vagrant status
+
+# Re-run provisioning scripts
+vagrant provision
+
+# List all available boxes
+vagrant box list
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+vagrant up        # Start and setup VM
+vagrant ssh       # SSH into VM
+vagrant halt      # Stop the VM
+vagrant destroy   # Remove the VM
+vagrant status    # Check VM status
+vagrant box list  # List Vagrant boxes
+vagrant provision # Run provision scripts
+</code></pre>

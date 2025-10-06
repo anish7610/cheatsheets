@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Get-Container Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   Get-Container Command
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    Get-Container
+   </code>
+   command is used in Windows PowerShell to retrieve information about containers running on a system.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -Name
+      </code>
+     </td>
+     <td>
+      Specifies the name of the container to get.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Id
+      </code>
+     </td>
+     <td>
+      Specifies the ID of the container to get.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Status
+      </code>
+     </td>
+     <td>
+      Filters containers by their status (e.g., Running, Stopped).
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Retrieve all containers
+Get-Container
+
+# Retrieve a container by name
+Get-Container -Name "myContainer"
+
+# Retrieve a container by ID
+Get-Container -Id "container123"
+
+# Retrieve only running containers
+Get-Container | Where-Object {$_.Status -eq "Running"}
+</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>Get-Container               # List all containers
+Get-Container -Name <name>    # Get container by name
+Get-Container -Id <id>        # Get container by ID
+</id></name></code></pre>
+ </body>
+</html>

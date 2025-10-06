@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Get-Job Command Overview
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            overflow-x: auto;
+        }
+  </style>
+ </head>
+ <body>
+  <h1>
+   Get-Job Command Overview
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    Get-Job
+   </code>
+   command in PowerShell retrieves information about jobs that are running in the background. It allows you to check the status of these jobs and access their results.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -Id
+      </code>
+     </td>
+     <td>
+      Specifies an array of job IDs to retrieve information about specific jobs.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Name
+      </code>
+     </td>
+     <td>
+      Specifies an array of job names to retrieve information about specific jobs by name.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -State
+      </code>
+     </td>
+     <td>
+      Filters jobs based on their state, e.g., Running, Completed, Failed.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -InstanceId
+      </code>
+     </td>
+     <td>
+      Specifies an array of job instance IDs for retrieval.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Retrieve all background jobs
+Get-Job
+
+# Retrieve a specific job by ID
+Get-Job -Id 1
+
+# Retrieve jobs by name
+Get-Job -Name "Job1"
+
+# Retrieve jobs that are completed
+Get-Job -State Completed
+</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>Get-Job                  # List all jobs
+Get-Job -Id <id>          # Get job by ID
+Get-Job -Name <name>      # Get job by Name
+Get-Job -State <state>    # Filter by State
+</state></name></id></code></pre>
+ </body>
+</html>

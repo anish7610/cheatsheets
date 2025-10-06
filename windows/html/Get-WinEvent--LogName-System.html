@@ -1,0 +1,119 @@
+<html>
+ <body>
+  <h1>
+   Get-WinEvent -LogName System
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    Get-WinEvent -LogName System
+   </code>
+   command retrieves events from the System log on Windows. It's used for monitoring system events, troubleshooting, and auditing.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -MaxEvents
+      </code>
+     </td>
+     <td>
+      Specifies the maximum number of events to return.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -FilterXPath
+      </code>
+     </td>
+     <td>
+      Filters events using an XPath query.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Oldest
+      </code>
+     </td>
+     <td>
+      Retrieves the oldest events first.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -ComputerName
+      </code>
+     </td>
+     <td>
+      Specifies the target computer; defaults to the local computer.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Credential
+      </code>
+     </td>
+     <td>
+      Uses specified credentials for remote access.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code>
+# Retrieve the last 50 system events
+Get-WinEvent -LogName System -MaxEvents 50
+
+# Get system events from the oldest to the newest
+Get-WinEvent -LogName System -Oldest
+
+# Filter events for a specific event ID (e.g., ID 7045)
+Get-WinEvent -LogName System | Where-Object { $_.Id -eq 7045 }
+
+# Retrieve system events from a remote machine
+Get-WinEvent -LogName System -ComputerName "RemotePC"
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+# Basic command
+Get-WinEvent -LogName System
+
+# Limit returned events
+-MaxEvents <number>
+
+# Filter using XPath
+-FilterXPath <query>
+
+# Oldest events first
+-Oldest
+
+# Remote access
+-ComputerName <name> -Credential <creds>
+    </creds></name></query></number></code></pre>
+ </body>
+</html>

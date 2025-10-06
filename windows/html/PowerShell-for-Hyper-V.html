@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   PowerShell for Hyper-V
+  </title>
+ </head>
+ <body>
+  <h1>
+   PowerShell for Hyper-V
+  </h1>
+  <p>
+   <strong>
+    PowerShell for Hyper-V
+   </strong>
+   is a command-line tool used to manage, configure, and automate tasks related to Hyper-V virtualization on Windows.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -VMName &lt;String&gt;
+      </code>
+     </td>
+     <td>
+      Specifies the name of the virtual machine.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Path &lt;String&gt;
+      </code>
+     </td>
+     <td>
+      Specifies the path for configuration files.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -MemoryStartupBytes &lt;Int64&gt;
+      </code>
+     </td>
+     <td>
+      Configures the initial memory assigned to the VM.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Credential &lt;PSCredential&gt;
+      </code>
+     </td>
+     <td>
+      Provides user credentials for authentication.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -ComputerName &lt;String&gt;
+      </code>
+     </td>
+     <td>
+      Specifies the name of the computer to connect to.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code>New-VM -Name "TestVM" -MemoryStartupBytes 2GB -Path "C:\VMs\TestVM"
+Start-VM -Name "TestVM"
+Stop-VM -Name "TestVM"
+Get-VM -Name "TestVM"
+Remove-VM -Name "TestVM"</code></pre>
+  <h2>
+   Quick Reference Cheat Sheet
+  </h2>
+  <pre><code># Create a VM
+New-VM -Name "VMName" -MemoryStartupBytes 4GB -Path "Path"
+
+# Start a VM
+Start-VM -Name "VMName"
+
+# Stop a VM
+Stop-VM -Name "VMName"
+
+# List VMs
+Get-VM
+
+# Delete a VM
+Remove-VM -Name "VMName"</code></pre>
+ </body>
+</html>

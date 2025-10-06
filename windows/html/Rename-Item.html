@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Linux Expert: Rename-Item Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   Rename-Item Command
+  </h1>
+  <p>
+   The
+   <code>
+    Rename-Item
+   </code>
+   cmdlet in PowerShell is used to rename files, directories, or other items.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -Path
+      </code>
+     </td>
+     <td>
+      Specifies the path to the item being renamed.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -NewName
+      </code>
+     </td>
+     <td>
+      Specifies the new name for the item.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Force
+      </code>
+     </td>
+     <td>
+      Forces the command to rename an item, even read-only files or files in use.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -PassThru
+      </code>
+     </td>
+     <td>
+      Returns an object that represents the renamed item.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <h3>
+   Basic File Rename
+  </h3>
+  <pre><code>Rename-Item -Path "C:\Example\oldname.txt" -NewName "newname.txt"</code></pre>
+  <h3>
+   Directory Rename with Force
+  </h3>
+  <pre><code>Rename-Item -Path "C:\Example\OldFolder" -NewName "NewFolder" -Force</code></pre>
+  <h3>
+   Renaming and Returning the New Name
+  </h3>
+  <pre><code>Rename-Item -Path "C:\Example\oldfile.txt" -NewName "newfile.txt" -PassThru</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+- Basic Rename: Rename-Item -Path &lt;old_name&gt; -NewName &lt;new_name&gt;
+- With Force: Rename-Item -Path &lt;old_name&gt; -NewName &lt;new_name&gt; -Force
+- Return Object: Rename-Item -Path &lt;old_name&gt; -NewName &lt;new_name&gt; -PassThru
+    </code></pre>
+ </body>
+</html>

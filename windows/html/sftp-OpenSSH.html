@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   sftp Command Overview
+  </title>
+ </head>
+ <body>
+  <h1>
+   sftp (OpenSSH) Command Overview
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    sftp
+   </code>
+   command in OpenSSH is a secure file transfer program that operates over SSH, enabling secure file transfers between a local and a remote system.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <tr>
+    <th>
+     Option
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     -b
+     <em>
+      batchfile
+     </em>
+    </td>
+    <td>
+     Runs commands from the specified batch file.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     -C
+    </td>
+    <td>
+     Enables compression.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     -i
+     <em>
+      identity_file
+     </em>
+    </td>
+    <td>
+     Specifies a private key for user authentication.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     -P
+     <em>
+      port
+     </em>
+    </td>
+    <td>
+     Specifies the port to connect to on the remote host.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     -r
+    </td>
+    <td>
+     Recursively copies entire directories.
+    </td>
+   </tr>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <h3>
+   Connect to Remote Host
+  </h3>
+  <pre><code>sftp user@host</code></pre>
+  <h3>
+   Download a File
+  </h3>
+  <pre><code>sftp user@host:/path/to/remote/file /local/destination</code></pre>
+  <h3>
+   Upload a File
+  </h3>
+  <pre><code>sftp /local/file user@host:/path/to/remote/destination</code></pre>
+  <h3>
+   Download a Directory
+  </h3>
+  <pre><code>sftp -r user@host:/path/to/remote/dir /local/destination</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+# Connect
+sftp user@host
+
+# Download file
+sftp user@host:/remote/file /local/path
+
+# Upload file
+sftp /local/file user@host:/remote/path
+
+# Use specific port
+sftp -P port user@host
+    </code></pre>
+ </body>
+</html>

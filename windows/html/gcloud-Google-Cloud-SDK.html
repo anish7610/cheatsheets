@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   gcloud Command Overview
+  </title>
+ </head>
+ <body>
+  <main>
+   <h1>
+    gcloud (Google Cloud SDK)
+   </h1>
+   <section>
+    <h2>
+     Description
+    </h2>
+    <p>
+     The
+     <code>
+      gcloud
+     </code>
+     command is a part of the Google Cloud SDK used for managing Google Cloud resources and applications from the command line.
+    </p>
+   </section>
+   <section>
+    <h2>
+     Common Options
+    </h2>
+    <table>
+     <thead>
+      <tr>
+       <th>
+        Option
+       </th>
+       <th>
+        Description
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        <code>
+         --project
+        </code>
+       </td>
+       <td>
+        Specifies the Google Cloud project to use.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <code>
+         --quiet
+        </code>
+        or
+        <code>
+         -q
+        </code>
+       </td>
+       <td>
+        Disables all interactive prompts.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <code>
+         --help
+        </code>
+       </td>
+       <td>
+        Displays help information for a specific command.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <code>
+         --format
+        </code>
+       </td>
+       <td>
+        Specifies the output format (e.g.,
+        <code>
+         json
+        </code>
+        ,
+        <code>
+         yaml
+        </code>
+        ).
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <code>
+         --zone
+        </code>
+       </td>
+       <td>
+        Specifies the zone of the resource.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </section>
+   <section>
+    <h2>
+     Usage Examples
+    </h2>
+    <pre>
+<code>
+<!-- Authenticate the gcloud tool -->
+gcloud auth login
+
+<!-- Set a default project -->
+gcloud config set project my-project-id
+
+<!-- List all compute instances in a project -->
+gcloud compute instances list --project=my-project-id
+
+<!-- Create a new compute instance -->
+gcloud compute instances create instance-1 --zone=us-central1-a
+
+<!-- Delete a compute instance -->
+gcloud compute instances delete instance-1 --zone=us-central1-a
+</code>
+            </pre>
+   </section>
+   <section>
+    <h2>
+     Cheat Sheet
+    </h2>
+    <pre>
+<code>
+# Authenticate
+gcloud auth login
+
+# Set project
+gcloud config set project [PROJECT_ID]
+
+# List instances
+gcloud compute instances list
+
+# Create instance
+gcloud compute instances create [INSTANCE_NAME] --zone=[ZONE]
+
+# Delete instance
+gcloud compute instances delete [INSTANCE_NAME] --zone=[ZONE]
+</code>
+            </pre>
+   </section>
+  </main>
+ </body>
+</html>

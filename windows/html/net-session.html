@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Net Session Command Reference
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Net Session Command
+   </h1>
+  </header>
+  <section>
+   <h2>
+    Description
+   </h2>
+   <p>
+    The
+    <code>
+     net session
+    </code>
+    command is used to manage server computer connections. It displays active connections or sessions to the computer.
+   </p>
+  </section>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       /delete
+      </td>
+      <td>
+       Ends a session with a specific computer and closes all open files on the computer for the session.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       /?
+      </td>
+      <td>
+       Displays help for the command.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Examples
+   </h2>
+   <pre><code>net session
+net session \\ComputerName /delete</code></pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code>net session        # List all active sessions
+net session /delete  # Delete all sessions
+net session \\Name /delete  # End session with specific computer</code></pre>
+  </section>
+ </body>
+</html>

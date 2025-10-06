@@ -1,0 +1,104 @@
+<h1>
+ Get-SqlAgentJobHistory Command
+</h1>
+<p>
+ The
+ <code>
+  Get-SqlAgentJobHistory
+ </code>
+ command retrieves the history of SQL Server Agent jobs, providing details on job execution, duration, and status.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -ServerInstance
+    </code>
+   </td>
+   <td>
+    Specifies the SQL Server instance to connect to.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -JobName
+    </code>
+   </td>
+   <td>
+    Filters results by the job name.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -StartRunDate
+    </code>
+   </td>
+   <td>
+    Filters history to include entries from this date onward.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -EndRunDate
+    </code>
+   </td>
+   <td>
+    Filters history to include entries up to this date.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -MaxRows
+    </code>
+   </td>
+   <td>
+    Limits the number of history entries returned.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<h3>
+ Retrieve All Job History
+</h3>
+<pre><code>Get-SqlAgentJobHistory -ServerInstance "ServerName"</code></pre>
+<h3>
+ Filter by Job Name
+</h3>
+<pre><code>Get-SqlAgentJobHistory -ServerInstance "ServerName" -JobName "BackupJob"</code></pre>
+<h3>
+ Limit Returned Rows
+</h3>
+<pre><code>Get-SqlAgentJobHistory -ServerInstance "ServerName" -MaxRows 10</code></pre>
+<h3>
+ Filter by Date Range
+</h3>
+<pre><code>Get-SqlAgentJobHistory -ServerInstance "ServerName" -StartRunDate "2023-10-01" -EndRunDate "2023-10-31"</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+Get-SqlAgentJobHistory -ServerInstance "Name" [-JobName "Name"] 
+                       [-StartRunDate "YYYY-MM-DD"] [-EndRunDate "YYYY-MM-DD"] 
+                       [-MaxRows N]
+</code></pre>

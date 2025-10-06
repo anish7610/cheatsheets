@@ -1,0 +1,86 @@
+<h1>
+ Start-Container Command
+</h1>
+<p>
+ The
+ <code>
+  Start-Container
+ </code>
+ command in Windows is used to start an existing container that has been created but is currently stopped.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -Name
+    </code>
+   </td>
+   <td>
+    Specifies the name of the container to start.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Id
+    </code>
+   </td>
+   <td>
+    Specifies the ID of the container to start.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Wants
+    </code>
+   </td>
+   <td>
+    Start containers that “want” a specified state.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -WhatIf
+    </code>
+   </td>
+   <td>
+    Shows what would happen if the command runs without executing.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Start a container by name
+Start-Container -Name "MyContainer"
+
+# Start a container by ID
+Start-Container -Id "12345678"
+
+# Check what would happen without actually starting
+Start-Container -Name "MyContainer" -WhatIf
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>Start-Container -Name "ContainerName"
+Start-Container -Id "ContainerID"
+Start-Container -Name "ContainerName" -WhatIf
+</code></pre>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Get-SqlInstance Command
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Get-SqlInstance Command Overview
+   </h1>
+  </header>
+  <section>
+   <h2>
+    Description
+   </h2>
+   <p>
+    The
+    <code>
+     Get-SqlInstance
+    </code>
+    command retrieves a list of SQL Server instances and their properties. It is part of the SQLServer module in PowerShell.
+   </p>
+  </section>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        -ServerInstance
+       </code>
+      </td>
+      <td>
+       Specifies the SQL Server instance to query.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -Credential
+       </code>
+      </td>
+      <td>
+       Provides credentials when connecting to the SQL Server.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -ComputerName
+       </code>
+      </td>
+      <td>
+       Specifies the remote computer's name where the SQL instances are checked.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -Version
+       </code>
+      </td>
+      <td>
+       Filters results by SQL Server version.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code># List all SQL instances on the local machine
+Get-SqlInstance
+
+# Retrieve SQL instances on a specific server
+Get-SqlInstance -ComputerName "SERVER01"
+
+# Get SQL instances using specific credentials
+$cred = Get-Credential
+Get-SqlInstance -Credential $cred -ComputerName "SERVER02"
+
+# Filter instances by SQL Server version
+Get-SqlInstance -Version "15.0"
+        </code></pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code>
+# Basic Usage
+Get-SqlInstance
+
+# With Server
+Get-SqlInstance -ComputerName "ServerName"
+
+# With Credentials
+Get-SqlInstance -Credential (Get-Credential) -ComputerName "ServerName"
+
+# Filter by Version
+Get-SqlInstance -Version "15.0"
+        </code></pre>
+  </section>
+ </body>
+</html>

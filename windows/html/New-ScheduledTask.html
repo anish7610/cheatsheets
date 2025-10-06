@@ -1,0 +1,118 @@
+<h1>
+ New-ScheduledTask Command
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  New-ScheduledTask
+ </code>
+ command in PowerShell creates a scheduled task definition object, which can be used to register new tasks with
+ <code>
+  Register-ScheduledTask
+ </code>
+ . It is primarily used to automate repetitive tasks on Windows systems.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -Action
+    </code>
+   </td>
+   <td>
+    Specifies the action (script or program) to execute when the task runs.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Trigger
+    </code>
+   </td>
+   <td>
+    Defines the conditions that trigger the task, such as a daily schedule.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Principal
+    </code>
+   </td>
+   <td>
+    Sets the user account context in which the task runs.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Settings
+    </code>
+   </td>
+   <td>
+    Specifies additional settings for the task, like waking the computer to run the task.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Description
+    </code>
+   </td>
+   <td>
+    Adds a description to the scheduled task.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Examples
+</h2>
+<h3>
+ Daily Backup Task
+</h3>
+<pre><code>
+$action = New-ScheduledTaskAction -Execute "C:\Scripts\backup.ps1"
+$trigger = New-ScheduledTaskTrigger -Daily -At 3AM
+$principal = New-ScheduledTaskPrincipal -UserId "DOMAIN\User" -LogonType Password
+$task = New-ScheduledTask -Action $action -Trigger $trigger -Principal $principal
+Register-ScheduledTask -TaskName "DailyBackup" -InputObject $task
+</code></pre>
+<h3>
+ Weekly Log Cleanup
+</h3>
+<pre><code>
+$action = New-ScheduledTaskAction -Execute "C:\Scripts\cleanup_logs.ps1"
+$trigger = New-ScheduledTaskTrigger -Weekly -DaysOfWeek Sunday -At 2AM
+$settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries
+$task = New-ScheduledTask -Action $action -Trigger $trigger -Settings $settings
+Register-ScheduledTask -TaskName "WeeklyLogCleanup" -InputObject $task
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+Action    =&gt; New-ScheduledTaskAction -Execute "command"
+Trigger   =&gt; New-ScheduledTaskTrigger -Daily|-Weekly -At time
+Principal =&gt; New-ScheduledTaskPrincipal -UserId "user" -LogonType type
+Settings  =&gt; New-ScheduledTaskSettingsSet -Option
+Task      =&gt; New-ScheduledTask -Action act -Trigger trig -Principal prin -Settings set
+Register  =&gt; Register-ScheduledTask -TaskName "name" -InputObject task
+</code></pre>

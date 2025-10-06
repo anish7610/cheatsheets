@@ -1,0 +1,64 @@
+<h1>
+ Windows Command: stop
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <strong>
+  stop
+ </strong>
+ command is typically used to halt and stop services running on a Windows operating system.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    /y
+   </td>
+   <td>
+    Confirms the stopping of a service without prompt.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    /force
+   </td>
+   <td>
+    Forces the service to stop if it does not respond.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    /nowait
+   </td>
+   <td>
+    Returns immediately without waiting for stop confirmation.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code>stop someServiceName /y</code></pre>
+<pre><code>stop someServiceName /force</code></pre>
+<pre><code>stop someServiceName /nowait</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>stop [serviceName] [/y] [/force] [/nowait]</code></pre>

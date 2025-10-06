@@ -1,0 +1,108 @@
+<html>
+ <body>
+  <h1>
+   Start-Process Command
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    Start-Process
+   </code>
+   command in PowerShell is used to start one or more processes on the local computer.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -FilePath
+      </code>
+     </td>
+     <td>
+      Specifies the program or document to start.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -ArgumentList
+      </code>
+     </td>
+     <td>
+      Specifies the parameters to pass to the executable.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Wait
+      </code>
+     </td>
+     <td>
+      Waits for the process to complete before returning.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -NoNewWindow
+      </code>
+     </td>
+     <td>
+      Starts the process in the current console window.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -PassThru
+      </code>
+     </td>
+     <td>
+      Returns a process object for each process started.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Examples
+  </h2>
+  <h3>
+   Open a Text File in Notepad
+  </h3>
+  <pre><code>Start-Process -FilePath "notepad.exe" -ArgumentList "C:\example.txt"</code></pre>
+  <h3>
+   Run a Program and Wait for Completion
+  </h3>
+  <pre><code>Start-Process -FilePath "C:\Program Files\App\app.exe" -Wait</code></pre>
+  <h3>
+   Open a URL in Default Browser
+  </h3>
+  <pre><code>Start-Process -FilePath "https://www.example.com"</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+Start-Process -FilePath "program.exe"
+Start-Process -FilePath "program.exe" -ArgumentList "arg1 arg2"
+Start-Process -FilePath "program.exe" -Wait
+Start-Process -FilePath "program.exe" -NoNewWindow
+    </code></pre>
+ </body>
+</html>

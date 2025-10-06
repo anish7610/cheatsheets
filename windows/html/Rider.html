@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Rider Command Overview
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Rider Command Overview
+   </h1>
+  </header>
+  <section>
+   <h2>
+    Description
+   </h2>
+   <p>
+    The `rider` command is used to launch and control JetBrains Rider, a cross-platform .NET IDE, from the command line.
+   </p>
+  </section>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        --line NUMBER
+       </code>
+      </td>
+      <td>
+       Open a file at a specific line number.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        --project PATH
+       </code>
+      </td>
+      <td>
+       Specify the project or solution file to open.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        --help
+       </code>
+      </td>
+      <td>
+       Show help information and exit.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        --version
+       </code>
+      </td>
+      <td>
+       Show Rider version and exit.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code># Open a specific file at line 10
+rider --line 10 /path/to/file.cs
+
+# Open a specific project or solution
+rider --project /path/to/solution.sln
+
+# Display Rider version
+rider --version
+</code></pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code>
+rider --line [NUM] [FILE]     # Open file at line NUM
+rider --project [PATH]        # Open project/solution
+rider --version               # Show version
+rider --help                  # Show help
+</code></pre>
+  </section>
+ </body>
+</html>

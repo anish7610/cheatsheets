@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Get-SqlAgentJob Cheat Sheet
+  </title>
+ </head>
+ <body>
+  <h1>
+   Get-SqlAgentJob Command Overview
+  </h1>
+  <p>
+   The
+   <code>
+    Get-SqlAgentJob
+   </code>
+   cmdlet retrieves SQL Server Agent jobs and their properties from an instance of SQL Server.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -ServerInstance
+      </code>
+     </td>
+     <td>
+      Specifies the SQL Server instance to connect to.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Name
+      </code>
+     </td>
+     <td>
+      Filters to retrieve a specific job by name.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -JobId
+      </code>
+     </td>
+     <td>
+      Filters to retrieve a specific job by job ID.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -AsJob
+      </code>
+     </td>
+     <td>
+      Runs the command in the background as a job.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Retrieve all jobs from a SQL Server instance
+Get-SqlAgentJob -ServerInstance "YourSqlServerInstance"
+
+# Retrieve jobs with the specific name
+Get-SqlAgentJob -ServerInstance "YourSqlServerInstance" -Name "BackupDatabase"
+
+# Retrieve jobs using job ID
+Get-SqlAgentJob -ServerInstance "YourSqlServerInstance" -JobId "00000000-0000-0000-0000-000000000000"</code></pre>
+  <h2>
+   Quick Reference
+  </h2>
+  <pre><code># Get all jobs
+Get-SqlAgentJob -ServerInstance "InstanceName"
+
+# Get job by name
+Get-SqlAgentJob -ServerInstance "InstanceName" -Name "JobName"
+
+# Get job by ID
+Get-SqlAgentJob -ServerInstance "InstanceName" -JobId "JobId"</code></pre>
+ </body>
+</html>

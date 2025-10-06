@@ -1,0 +1,85 @@
+<h1>
+ Get-VM Command Overview
+</h1>
+<p>
+ The
+ <code>
+  Get-VM
+ </code>
+ command is used in Windows PowerShell to retrieve information about virtual machines (VMs) on a Hyper-V server.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -Name
+    </code>
+   </td>
+   <td>
+    Specifies the name of the virtual machine to retrieve.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -ComputerName
+    </code>
+   </td>
+   <td>
+    Specifies the Hyper-V host from which to retrieve virtual machines.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Id
+    </code>
+   </td>
+   <td>
+    Specifies the unique identifier of the virtual machine.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<h3>
+ Retrieve All Virtual Machines
+</h3>
+<pre><code>Get-VM</code></pre>
+<h3>
+ Retrieve a Specific Virtual Machine by Name
+</h3>
+<pre><code>Get-VM -Name "MyVM"</code></pre>
+<h3>
+ Retrieve Virtual Machines from a Specific Host
+</h3>
+<pre><code>Get-VM -ComputerName "HyperVHost"</code></pre>
+<h3>
+ Retrieve a Virtual Machine by ID
+</h3>
+<pre><code>Get-VM -Id "12345-abcde-67890"</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre>
+Get-VM                      # List all VMs
+Get-VM -Name "Name"         # List VM by name
+Get-VM -ComputerName "Host" # List VMs from a host
+Get-VM -Id "ID"             # List VM by ID
+</pre>

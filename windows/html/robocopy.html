@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Robocopy Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   Robocopy Command Guide
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   Robocopy is a robust file copy command for Windows, designed to handle large file transfers, and provide options for retrying, mirroring directories, and more.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      /S
+     </td>
+     <td>
+      Copy subdirectories, excluding empty ones.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      /E
+     </td>
+     <td>
+      Copy all subdirectories, including empty ones.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      /MIR
+     </td>
+     <td>
+      Mirror a directory tree (equivalent to combining /E and /PURGE).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      /PURGE
+     </td>
+     <td>
+      Delete destination files and directories that no longer exist in the source.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      /MOV
+     </td>
+     <td>
+      Move files (delete from source after copying).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      /ETA
+     </td>
+     <td>
+      Show estimated time of arrival of copied files.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      /R:n
+     </td>
+     <td>
+      Number of retries on failed copies (default is 1 million).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      /W:n
+     </td>
+     <td>
+      Wait time between retries in seconds (default is 30).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      /LOG:file
+     </td>
+     <td>
+      Log output to a specified file.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Basic copy with subdirectories
+robocopy C:\Source D:\Destination /S
+
+# Mirror directories
+robocopy C:\Source D:\Destination /MIR
+
+# Move files and log the action
+robocopy C:\Source D:\Destination /MOV /LOG:C:\logfile.txt
+
+# Retry 3 times and wait 5 seconds between retries
+robocopy C:\Source D:\Destination /R:3 /W:5
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>robocopy <source/> <destination> [options]
+/S          # Copy subdirectories
+/E          # Include empty directories
+/MIR        # Mirror directories
+/PURGE      # Remove non-existent files/directories
+/MOV        # Move files
+/ETA        # Show ETA
+/R:n        # Retry count
+/W:n        # Wait time between retries
+/LOG:file   # Output log file</destination></code></pre>
+ </body>
+</html>

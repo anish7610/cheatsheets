@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Taskkill Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   Taskkill Command Guide
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    taskkill
+   </code>
+   command is used in Windows to terminate tasks or processes by their process ID (PID) or image name.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      /F
+     </td>
+     <td>
+      Forcefully terminate the process.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      /IM
+     </td>
+     <td>
+      Terminate by image name (e.g., notepad.exe).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      /PID
+     </td>
+     <td>
+      Terminate by process ID.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      /T
+     </td>
+     <td>
+      Terminate the specified process and any child processes.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code>taskkill /IM notepad.exe /F</code></pre>
+  <pre><code>taskkill /PID 1234</code></pre>
+  <pre><code>taskkill /IM chrome.exe /T</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+taskkill /IM [imagename] /F
+taskkill /PID [processid]
+taskkill /IM [imagename] /T
+    </code></pre>
+ </body>
+</html>

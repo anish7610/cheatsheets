@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   netsh http Command Overview
+  </title>
+  <style>
+   table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+        }
+  </style>
+ </head>
+ <body>
+  <h1>
+   netsh http Command Overview
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    netsh http
+   </code>
+   command allows for managing HTTP configurations on Windows, providing control over settings such as URL reservations, SSL certificates, and more.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      add urlacl
+     </td>
+     <td>
+      Reserves a URL namespace for a particular user or group.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      delete urlacl
+     </td>
+     <td>
+      Deletes a previously reserved URL namespace.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      show urlacl
+     </td>
+     <td>
+      Displays all reserved URL namespaces.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      add sslcert
+     </td>
+     <td>
+      Binds an SSL certificate to an IP address and port.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      delete sslcert
+     </td>
+     <td>
+      Removes an SSL certificate binding from an IP address and port.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      show sslcert
+     </td>
+     <td>
+      Displays all SSL certificate bindings.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Reserve a URL for a specific user
+netsh http add urlacl url=http://+:8080/ user=DOMAIN\username
+
+# Delete a reserved URL
+netsh http delete urlacl url=http://+:8080/
+
+# Display all URL reservations
+netsh http show urlacl
+
+# Add an SSL certificate binding
+netsh http add sslcert ipport=0.0.0.0:443 certhash=YOURCERTTHUMBPRINT appid={YOURAPPID}
+
+# Remove an SSL certificate binding
+netsh http delete sslcert ipport=0.0.0.0:443
+
+# Display all SSL certificate bindings
+netsh http show sslcert
+</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code># URL Reservation
+netsh http add urlacl url=... user=...
+netsh http delete urlacl url=...
+netsh http show urlacl
+
+# SSL Certificate Management
+netsh http add sslcert ipport=... certhash=... appid=...
+netsh http delete sslcert ipport=...
+netsh http show sslcert
+</code></pre>
+ </body>
+</html>

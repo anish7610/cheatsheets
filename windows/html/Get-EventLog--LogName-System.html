@@ -1,0 +1,113 @@
+<h1>
+ Get-EventLog -LogName System
+</h1>
+<p>
+ The
+ <code>
+  Get-EventLog
+ </code>
+ command retrieves event log entries from the specified log on a Windows system. The
+ <code>
+  -LogName System
+ </code>
+ option targets the system log, providing information on hardware and system components.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -Newest
+    </code>
+   </td>
+   <td>
+    Displays the most recent event log entries.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -EntryType
+    </code>
+   </td>
+   <td>
+    Filters events by type (e.g., Error, Warning).
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Before
+    </code>
+   </td>
+   <td>
+    Shows entries before a specific date/time.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -After
+    </code>
+   </td>
+   <td>
+    Shows entries after a specific date/time.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Source
+    </code>
+   </td>
+   <td>
+    Filters events from a specific source.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code>
+# Retrieve the 10 most recent events
+Get-EventLog -LogName System -Newest 10
+
+# Get all error events from the system log
+Get-EventLog -LogName System -EntryType Error
+
+# List events after January 1, 2023
+Get-EventLog -LogName System -After 01/01/2023
+
+# Find events from a specific source
+Get-EventLog -LogName System -Source "Service Control Manager"
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+# Latest 10 events
+Get-EventLog -LogName System -Newest 10
+
+# Error events
+Get-EventLog -LogName System -EntryType Error
+
+# Events after a date
+Get-EventLog -LogName System -After [date]
+
+# Events from a source
+Get-EventLog -LogName System -Source [source]
+</code></pre>

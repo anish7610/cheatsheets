@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Get-NetFirewallProfile Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   Get-NetFirewallProfile Command
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    Get-NetFirewallProfile
+   </code>
+   command retrieves the current settings of the Windows Firewall profile, including domain, private, and public profiles.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -Profile
+      </code>
+     </td>
+     <td>
+      Specifies which firewall profile(s) to retrieve (Domain, Private, Public).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -CimSession
+      </code>
+     </td>
+     <td>
+      Runs the command on a remote session or computer.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -PolicyStore
+      </code>
+     </td>
+     <td>
+      Specifies the policy store location from which to retrieve the profiles.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Retrieve all firewall profiles
+Get-NetFirewallProfile
+
+# Retrieve only the private profile settings
+Get-NetFirewallProfile -Profile Private
+
+# Retrieve firewall profiles from a remote computer
+Get-NetFirewallProfile -CimSession RemotePCName
+
+# Retrieve specific profiles from a specified policy store
+Get-NetFirewallProfile -Profile Domain -PolicyStore PersistentStore</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code># List all profiles
+Get-NetFirewallProfile
+
+# List a specific profile
+Get-NetFirewallProfile -Profile [Domain|Private|Public]
+
+# Remote session usage
+Get-NetFirewallProfile -CimSession [ComputerName]</code></pre>
+ </body>
+</html>

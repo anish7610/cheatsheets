@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Windows `more` Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   Windows
+   <code>
+    more
+   </code>
+   Command
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    more
+   </code>
+   command displays the contents of a file or output from another command, one screen at a time.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       /C
+      </code>
+     </td>
+     <td>
+      Clear screen before displaying page.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       /P
+      </code>
+     </td>
+     <td>
+      Pauses after each screen of information.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       /S
+      </code>
+     </td>
+     <td>
+      Squeeze multiple blank lines into a single one.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       /Tn
+      </code>
+     </td>
+     <td>
+      Set tab stops every n spaces (default is 8).
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <ul>
+   <li>
+    <pre><code>more filename.txt</code></pre>
+    <p>
+     Displays the file
+     <code>
+      filename.txt
+     </code>
+     page by page.
+    </p>
+   </li>
+   <li>
+    <pre><code>dir | more</code></pre>
+    <p>
+     Displays the output of the
+     <code>
+      dir
+     </code>
+     command one page at a time.
+    </p>
+   </li>
+   <li>
+    <pre><code>type filename.txt | more /C</code></pre>
+    <p>
+     Clears the screen and displays
+     <code>
+      filename.txt
+     </code>
+     page by page.
+    </p>
+   </li>
+  </ul>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+more [options] [filename]
+dir | more
+more /C /T4 filename.txt
+</code></pre>
+ </body>
+</html>

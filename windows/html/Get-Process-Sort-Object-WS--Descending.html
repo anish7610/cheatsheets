@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Get-Process Command
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Understanding `Get-Process | Sort-Object WS -Descending`
+   </h1>
+  </header>
+  <section>
+   <h2>
+    Command Description
+   </h2>
+   <p>
+    The command retrieves a list of active processes on a Windows system, sorts them by memory usage (Working Set), and displays them in descending order.
+   </p>
+  </section>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        -Name
+       </code>
+      </td>
+      <td>
+       Filters processes by name.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -Id
+       </code>
+      </td>
+      <td>
+       Filters processes by process ID.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -FileVersionInfo
+       </code>
+      </td>
+      <td>
+       Includes file version information for process modules.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -Module
+       </code>
+      </td>
+      <td>
+       Includes module information for the processes.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -ComputerName
+       </code>
+      </td>
+      <td>
+       Specifies the name of a remote computer.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code>Get-Process | Sort-Object WS -Descending</code></pre>
+   <p>
+    Lists processes sorted by descending memory usage.
+   </p>
+   <pre><code>Get-Process -Name chrome | Sort-Object WS -Descending</code></pre>
+   <p>
+    Filters and sorts Chrome processes by memory usage.
+   </p>
+   <pre><code>Get-Process -Id 1234</code></pre>
+   <p>
+    Displays process details for a specific process ID.
+   </p>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code>
+Get-Process -Name &lt;ProcessName&gt;
+Get-Process -Id &lt;ProcessID&gt;
+Get-Process | Sort-Object WS -Descending</code></pre>
+  </section>
+ </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Clear-EventLog Command Guide
+  </title>
+ </head>
+ <body>
+  <main>
+   <h1>
+    Clear-EventLog Command
+   </h1>
+   <h2>
+    Description
+   </h2>
+   <p>
+    The
+    <code>
+     Clear-EventLog
+    </code>
+    command in Windows PowerShell is used to clear all entries from specified event logs on the local or remote computers.
+   </p>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        -LogName
+       </code>
+      </td>
+      <td>
+       Specifies the names of the event logs to clear.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -ComputerName
+       </code>
+      </td>
+      <td>
+       Specifies the target computer(s) from which to clear the event logs.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code># Clear the Application event log on the local computer
+Clear-EventLog -LogName Application
+
+# Clear the System and Security event logs on the local computer
+Clear-EventLog -LogName System, Security
+
+# Clear the Application event log on a remote computer
+Clear-EventLog -LogName Application -ComputerName Server01
+</code></pre>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code>Clear-EventLog -LogName [LogName]
+Clear-EventLog -LogName [LogName1, LogName2] -ComputerName [ServerName]
+</code></pre>
+  </main>
+ </body>
+</html>

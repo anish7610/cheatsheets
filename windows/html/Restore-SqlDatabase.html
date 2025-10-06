@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Restore-SqlDatabase Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   Restore-SqlDatabase Command
+  </h1>
+  <p>
+   The
+   <code>
+    Restore-SqlDatabase
+   </code>
+   command is used in Windows to restore a SQL database backup from a backup file.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -ServerInstance
+      </code>
+     </td>
+     <td>
+      Specifies the SQL Server instance to connect to.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Database
+      </code>
+     </td>
+     <td>
+      Names the database to restore.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -BackupFile
+      </code>
+     </td>
+     <td>
+      Provides the path to the backup file.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -NoRecovery
+      </code>
+     </td>
+     <td>
+      Leaves the database in a restoring state.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -ReplaceDatabase
+      </code>
+     </td>
+     <td>
+      Overwrites an existing database of the same name.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Restore a database from a backup file
+Restore-SqlDatabase -ServerInstance "MYSERVER" -Database "MyDatabase" -BackupFile "C:\Backups\MyDatabase.bak"
+
+# Restore a database and leave it in restoring state (useful for log shipping)
+Restore-SqlDatabase -ServerInstance "MYSERVER" -Database "MyDatabase" -BackupFile "C:\Backups\MyDatabase.bak" -NoRecovery
+
+# Restore and overwrite an existing database
+Restore-SqlDatabase -ServerInstance "MYSERVER" -Database "MyDatabase" -BackupFile "C:\Backups\MyDatabase.bak" -ReplaceDatabase
+</code></pre>
+  <h2>
+   Quick Reference Cheat Sheet
+  </h2>
+  <pre><code>-ServerInstance: SQL Server name
+-Database: Target database name
+-BackupFile: Path to backup
+-NoRecovery: Restore state without recovery
+-ReplaceDatabase: Overwrite existing db
+</code></pre>
+ </body>
+</html>

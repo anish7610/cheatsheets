@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Set-Acl Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   Set-Acl Command in Windows
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    Set-Acl
+   </code>
+   command in Windows PowerShell is used to modify the access control list (ACL) of a file or directory. This command allows you to set permissions and control access to file system objects.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      -Path
+     </td>
+     <td>
+      Specifies the path to the item to update the ACL on.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -AclObject
+     </td>
+     <td>
+      Provides the access control list to apply to the specified path.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -LiteralPath
+     </td>
+     <td>
+      Specifies the path to the item, without wildcard expansion.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -WhatIf
+     </td>
+     <td>
+      Shows what would happen if the command is executed, without making changes.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <h3>
+   Example 1: Set ACL on a File
+  </h3>
+  <pre><code>Get-Acl -Path "C:\example\file.txt" | Set-Acl -Path "C:\example\file.txt"</code></pre>
+  <h3>
+   Example 2: Set ACL on a Directory using a Saved ACL
+  </h3>
+  <pre><code>
+$acl = Get-Acl -Path "C:\example\template\"
+Set-Acl -Path "C:\example\newfolder\" -AclObject $acl
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+Set-Acl -Path &lt;path&gt; -AclObject &lt;acl&gt;
+Set-Acl -LiteralPath &lt;path&gt; -AclObject &lt;acl&gt;
+    </code></pre>
+ </body>
+</html>

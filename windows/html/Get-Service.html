@@ -1,0 +1,95 @@
+<h1>
+ Windows `Get-Service` Command
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  Get-Service
+ </code>
+ command in Windows PowerShell retrieves status information about services on a local or remote machine.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -Name
+    </code>
+   </td>
+   <td>
+    Specifies the service name. Wildcards are supported.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -ComputerName
+    </code>
+   </td>
+   <td>
+    Queries services on a remote computer.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -DisplayName
+    </code>
+   </td>
+   <td>
+    Filters services by their display name.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Status
+    </code>
+   </td>
+   <td>
+    Filters services by their status (e.g., Running, Stopped).
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># List all services on the local machine
+Get-Service
+
+# Get services by name with wildcard
+Get-Service -Name "W*"
+
+# Check the status of a specific service
+Get-Service -Name "Spooler"
+
+# List all running services
+Get-Service -Status Running
+
+# Query services on a remote machine
+Get-Service -ComputerName "REMOTE-PC" -Name "Spooler"
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>Get-Service -Name "ServiceName"
+Get-Service -Status Running
+Get-Service -ComputerName "Name"
+</code></pre>

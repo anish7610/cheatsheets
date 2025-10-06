@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Remove-LocalGroupMember Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   Remove-LocalGroupMember Command
+  </h1>
+  <p>
+   The
+   <code>
+    Remove-LocalGroupMember
+   </code>
+   command removes users or groups from a local security group on a Windows system.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -Group
+      </code>
+     </td>
+     <td>
+      Specifies the name or SID of the local group.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Member
+      </code>
+     </td>
+     <td>
+      Specifies the users or groups to remove (name or SID).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Confirm
+      </code>
+     </td>
+     <td>
+      Prompts for confirmation before executing the command.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -WhatIf
+      </code>
+     </td>
+     <td>
+      Shows what would happen if the command runs, without executing it.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Remove a single user from the Administrators group
+Remove-LocalGroupMember -Group "Administrators" -Member "JohnDoe"
+
+# Remove multiple users from the Users group
+Remove-LocalGroupMember -Group "Users" -Member "User1", "User2"
+
+# Remove a user with confirmation prompt
+Remove-LocalGroupMember -Group "Guests" -Member "GuestUser" -Confirm
+
+# Simulate removing a user to see potential changes
+Remove-LocalGroupMember -Group "Power Users" -Member "TestUser" -WhatIf
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>Remove-LocalGroupMember -Group &lt;GroupName&gt; -Member &lt;UserName&gt; [-Confirm] [-WhatIf]</code></pre>
+ </body>
+</html>

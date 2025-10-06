@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Get-Disk Command Summary
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Get-Disk Command Overview
+   </h1>
+  </header>
+  <section>
+   <h2>
+    Description
+   </h2>
+   <p>
+    The
+    <code>
+     Get-Disk
+    </code>
+    command retrieves information about physical disk drives in a Windows system.
+   </p>
+  </section>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        -Number
+       </code>
+      </td>
+      <td>
+       Specifies the number of a particular disk to retrieve.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -CimSession
+       </code>
+      </td>
+      <td>
+       Runs the command on a remote computer.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -PartitionStyle
+       </code>
+      </td>
+      <td>
+       Filters disks by partition style (MBR or GPT).
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -BusType
+       </code>
+      </td>
+      <td>
+       Filters disks by bus type (e.g., USB, SATA).
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code># List all physical disks
+Get-Disk
+
+# Get information about disk number 0
+Get-Disk -Number 0
+
+# List all GPT partition style disks
+Get-Disk -PartitionStyle GPT
+
+# List all USB connected disks
+Get-Disk -BusType USB</code></pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code>Get-Disk                  # List all disks
+Get-Disk -Number 0       # Get details of disk 0
+Get-Disk -PartitionStyle # Filter by partition (MBR/GPT)
+Get-Disk -BusType        # Filter by bus type (USB, SATA)</code></pre>
+  </section>
+ </body>
+</html>

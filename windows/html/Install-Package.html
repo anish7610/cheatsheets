@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Install-Package Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   Install-Package Command
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    Install-Package
+   </code>
+   command in Windows PowerShell is used to install software packages from various package sources. It integrates with package management solutions to streamline software installations and updates.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <tr>
+    <th>
+     Option
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      -Name
+     </code>
+    </td>
+    <td>
+     The name of the package to install.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      -Source
+     </code>
+    </td>
+    <td>
+     The source repository from which to get the package.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      -RequiredVersion
+     </code>
+    </td>
+    <td>
+     The specific version of the package to install.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      -Force
+     </code>
+    </td>
+    <td>
+     Forces the installation even if the package is already installed.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      -Credential
+     </code>
+    </td>
+    <td>
+     Provides the user credentials for the package source.
+    </td>
+   </tr>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Install the latest version of a package
+Install-Package -Name "packageName"
+
+# Install a specific version of a package
+Install-Package -Name "packageName" -RequiredVersion "1.2.3"
+
+# Install a package from a specific source
+Install-Package -Name "packageName" -Source "SourceRepository"
+
+# Force installation of a package
+Install-Package -Name "packageName" -Force
+</code></pre>
+  <h2>
+   Quick Reference Cheat Sheet
+  </h2>
+  <pre><code>Install-Package -Name "name" [-Source "source"] [-RequiredVersion "version"] [-Force]</code></pre>
+ </body>
+</html>

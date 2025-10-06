@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Get-Package Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   Get-Package Command Overview
+  </h1>
+  <p>
+   The
+   <code>
+    Get-Package
+   </code>
+   command in Windows PowerShell retrieves a list of software packages that are installed on the system.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -Name
+      </code>
+     </td>
+     <td>
+      Specify the name of the package to retrieve.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -ProviderName
+      </code>
+     </td>
+     <td>
+      Filter results by the package provider, such as "Programs" or "msi".
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Source
+      </code>
+     </td>
+     <td>
+      Specify the source of the packages, such as a repository name.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -AllVersions
+      </code>
+     </td>
+     <td>
+      List all versions of the specified package.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code>Get-Package
+Get-Package -Name "Notepad++"
+Get-Package -ProviderName "Programs"
+Get-Package -Name "Google Chrome" -AllVersions</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>Get-Package                      # List all packages
+Get-Package -Name &lt;name&gt;        # Find a specific package
+Get-Package -ProviderName &lt;provider&gt;  # Filter by provider</code></pre>
+ </body>
+</html>

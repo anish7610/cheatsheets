@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Get-ItemProperty Command Description
+  </title>
+ </head>
+ <body>
+  <h1>
+   Get-ItemProperty Command
+  </h1>
+  <p>
+   The
+   <code>
+    Get-ItemProperty
+   </code>
+   command retrieves properties of a specified item in Windows, often used to access registry keys and their values.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -Path
+      </code>
+     </td>
+     <td>
+      Specifies the path to the item or items.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Name
+      </code>
+     </td>
+     <td>
+      Specifies the property name to retrieve.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Filter
+      </code>
+     </td>
+     <td>
+      Applies a filter to the property names.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -ExcludeProperty
+      </code>
+     </td>
+     <td>
+      Excludes certain properties from the output.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -IncludeProperty
+      </code>
+     </td>
+     <td>
+      Includes only specified properties in the output.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code>Get-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion" -Name "ProgramFilesDir"</code></pre>
+  <pre><code>Get-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*" -Filter "DisplayName" | Select-Object DisplayName, Publisher</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+Get-ItemProperty -Path "Path" -Name "PropertyName"
+Get-ItemProperty -Path "Path" -Filter "FilterString"
+    </code></pre>
+ </body>
+</html>

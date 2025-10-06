@@ -1,0 +1,62 @@
+<h1>
+ Stop-WebApp Command
+</h1>
+<p>
+ The
+ <code>
+  Stop-WebApp
+ </code>
+ command is used to stop a web application running within an IIS web server in Windows.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -Name
+    </code>
+   </td>
+   <td>
+    Specifies the name of the web application to stop.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Site
+    </code>
+   </td>
+   <td>
+    Specifies the site where the web application is hosted.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Stop a web application named 'MyApp' in the default website
+Stop-WebApp -Name "MyApp" -Site "Default Web Site"
+
+# Stop a specific web application on a custom site
+Stop-WebApp -Name "BlogApp" -Site "MyBlog"
+</code></pre>
+<h2>
+ Quick Reference Cheat Sheet
+</h2>
+<pre><code># Basic usage
+Stop-WebApp -Name "AppName" -Site "SiteName"
+</code></pre>

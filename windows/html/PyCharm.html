@@ -1,0 +1,114 @@
+<h1>
+ PyCharm Command in Windows
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  pycharm
+ </code>
+ command in Windows is used to start the PyCharm IDE from the command line. It can be used to open projects, files, and configure the IDE settings directly from the terminal.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <tr>
+  <th>
+   Option
+  </th>
+  <th>
+   Description
+  </th>
+ </tr>
+ <tr>
+  <td>
+   <code>
+    --line &lt;line_number&gt;
+   </code>
+  </td>
+  <td>
+   Open a file at a specific line number.
+  </td>
+ </tr>
+ <tr>
+  <td>
+   <code>
+    --wait
+   </code>
+  </td>
+  <td>
+   Wait for the files to be closed in PyCharm before returning to the terminal.
+  </td>
+ </tr>
+ <tr>
+  <td>
+   <code>
+    --disable-plugins
+   </code>
+  </td>
+  <td>
+   Disable all installed plugins for the session.
+  </td>
+ </tr>
+ <tr>
+  <td>
+   <code>
+    --find-file &lt;file_name&gt;
+   </code>
+  </td>
+  <td>
+   Search for a file in the project.
+  </td>
+ </tr>
+ <tr>
+  <td>
+   <code>
+    --version
+   </code>
+  </td>
+  <td>
+   Show the PyCharm version and exit.
+  </td>
+ </tr>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code class="language-bash">
+# Open a project folder
+pycharm C:\path\to\project
+
+# Open a specific file
+pycharm C:\path\to\file.py
+
+# Open a file at a specific line number
+pycharm C:\path\to\file.py --line 20
+
+# Start PyCharm and wait for files to be closed
+pycharm C:\path\to\file.py --wait
+
+# Disable all plugins and open a project
+pycharm C:\path\to\project --disable-plugins
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code class="language-bash">
+# Basic usage
+pycharm <path_to_project_or_file>
+
+# Open at specific line
+pycharm <file> --line <line_number>
+
+# Wait for close
+pycharm <file> --wait
+
+# Disable plugins
+pycharm <path> --disable-plugins
+
+# Show version
+pycharm --version
+</path></file></line_number></file></path_to_project_or_file></code></pre>

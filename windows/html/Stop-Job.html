@@ -1,0 +1,97 @@
+<h1>
+ Stop-Job Command in Windows
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  Stop-Job
+ </code>
+ command in Windows PowerShell is used to stop one or more running background jobs.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -Id
+    </code>
+   </td>
+   <td>
+    Specifies the ID of the job(s) to stop.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Name
+    </code>
+   </td>
+   <td>
+    Specifies the name of the job(s) to stop.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -InputObject
+    </code>
+   </td>
+   <td>
+    Accepts a job object representing the job(s) to stop.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Force
+    </code>
+   </td>
+   <td>
+    Forces the job to stop, even if it's in a running state.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Stop a job by ID
+Stop-Job -Id 2
+
+# Stop a job by name
+Stop-Job -Name "MyBackgroundJob"
+
+# Stop all running jobs
+Get-Job | Stop-Job
+
+# Stop a job using the job object
+$job = Get-Job -Id 3
+Stop-Job -InputObject $job
+
+# Forcefully stop a job
+Stop-Job -Id 5 -Force
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>Stop-Job -Id &lt;job_id&gt;
+Stop-Job -Name &lt;job_name&gt;
+Stop-Job -InputObject &lt;job_object&gt;
+Stop-Job -Force
+</code></pre>

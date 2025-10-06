@@ -1,0 +1,112 @@
+<h1>
+ Windows Set-Service Command
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  Set-Service
+ </code>
+ command in PowerShell is used to modify the properties of a service on a local or remote computer.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -Name
+    </code>
+   </td>
+   <td>
+    Specifies the name of the service to modify.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Status
+    </code>
+   </td>
+   <td>
+    Sets the status of the service. Values: Running, Stopped.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -StartupType
+    </code>
+   </td>
+   <td>
+    Sets the startup type of the service. Values: Automatic, Manual, Disabled.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -PassThru
+    </code>
+   </td>
+   <td>
+    Returns an object representing the service.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -ComputerName
+    </code>
+   </td>
+   <td>
+    Specifies a remote computer to modify the service on.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre>
+<code># Start a service
+Set-Service -Name "wuauserv" -Status Running
+
+# Stop a service
+Set-Service -Name "wuauserv" -Status Stopped
+
+# Set a service to start automatically
+Set-Service -Name "wuauserv" -StartupType Automatic
+
+# Set a service to manual start
+Set-Service -Name "wuauserv" -StartupType Manual
+
+# Set a service to Disabled
+Set-Service -Name "wuauserv" -StartupType Disabled
+</code>
+</pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre>
+<code>
+Start: Set-Service -Name &lt;ServiceName&gt; -Status Running
+Stop: Set-Service -Name &lt;ServiceName&gt; -Status Stopped
+Auto Start: Set-Service -Name &lt;ServiceName&gt; -StartupType Automatic
+Manual Start: Set-Service -Name &lt;ServiceName&gt; -StartupType Manual
+Disable: Set-Service -Name &lt;ServiceName&gt; -StartupType Disabled
+</code>
+</pre>

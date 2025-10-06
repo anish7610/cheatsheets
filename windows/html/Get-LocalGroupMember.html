@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Get-LocalGroupMember Command
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Get-LocalGroupMember Command
+   </h1>
+  </header>
+  <section>
+   <h2>
+    Description
+   </h2>
+   <p>
+    The
+    <code>
+     Get-LocalGroupMember
+    </code>
+    command retrieves members of a local group on Windows systems.
+   </p>
+  </section>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        -Group
+       </code>
+      </td>
+      <td>
+       Specifies the name of the local group.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -Member
+       </code>
+      </td>
+      <td>
+       Filters results to include only specified members.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -Credential
+       </code>
+      </td>
+      <td>
+       Runs the command with specified user credentials.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Examples
+   </h2>
+   <pre><code># Example 1: Get all members of the Administrators group
+Get-LocalGroupMember -Group "Administrators"
+
+# Example 2: Get a specific member from a group
+Get-LocalGroupMember -Group "Users" -Member "JohnDoe"</code></pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code>Get-LocalGroupMember -Group "GroupName"
+Get-LocalGroupMember -Group "GroupName" -Member "MemberName"</code></pre>
+  </section>
+ </body>
+</html>

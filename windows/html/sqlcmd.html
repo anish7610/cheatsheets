@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   sqlcmd Cheat Sheet
+  </title>
+ </head>
+ <body>
+  <h1>
+   sqlcmd Command
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    sqlcmd
+   </code>
+   utility is a command-line tool in Windows used to execute SQL queries and manage SQL Server instances. It allows users to connect to SQL Server, run T-SQL commands, and perform database operations directly from the terminal.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -S
+      </code>
+     </td>
+     <td>
+      Specifies the SQL Server instance name or IP address.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -U
+      </code>
+     </td>
+     <td>
+      Specifies the user login ID for SQL Server authentication.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -P
+      </code>
+     </td>
+     <td>
+      Specifies the user password for SQL Server authentication.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Q
+      </code>
+     </td>
+     <td>
+      Executes a T-SQL query provided as a string.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -i
+      </code>
+     </td>
+     <td>
+      Specifies the file path of a script to be executed.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -o
+      </code>
+     </td>
+     <td>
+      Specifies the output file for results.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -E
+      </code>
+     </td>
+     <td>
+      Uses integrated Windows authentication.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -d
+      </code>
+     </td>
+     <td>
+      Specifies the initial database to connect to.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre>
+<code># Connect to SQL Server using Windows authentication and execute a query
+sqlcmd -S localhost -E -Q "SELECT * FROM my_table"
+
+# Connect to SQL Server using username and password, and execute a script file
+sqlcmd -S localhost -U my_user -P my_pass -i script.sql
+
+# Execute a query and save the output to a file
+sqlcmd -S localhost -E -Q "SELECT * FROM my_table" -o output.txt
+    </code>
+    </pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre>
+<code># Connect with Windows auth and run a query
+sqlcmd -S [server] -E -Q "[query]"
+
+# Connect with SQL auth
+sqlcmd -S [server] -U [user] -P [password] -Q "[query]"
+
+# Run script file
+sqlcmd -S [server] -U [user] -P [password] -i [file.sql]
+    </code>
+    </pre>
+ </body>
+</html>

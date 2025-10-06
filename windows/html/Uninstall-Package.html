@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Uninstall-Package Command Overview
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Uninstall-Package Command Overview
+   </h1>
+  </header>
+  <section>
+   <h2>
+    Description
+   </h2>
+   <p>
+    The
+    <code>
+     Uninstall-Package
+    </code>
+    command is used in Windows PowerShell to remove a software package from the system that was installed by a package provider.
+   </p>
+  </section>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        -Name
+       </code>
+      </td>
+      <td>
+       Specifies the name of the package to uninstall.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -ProviderName
+       </code>
+      </td>
+      <td>
+       Specifies the name of the package provider.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -Force
+       </code>
+      </td>
+      <td>
+       Forces the command to run without asking for user confirmation.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -AllVersions
+       </code>
+      </td>
+      <td>
+       Uninstalls all versions of the package.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -Source
+       </code>
+      </td>
+      <td>
+       Specifies the source of the package.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code># Uninstall a specific package by name
+Uninstall-Package -Name "ExamplePackage"
+
+# Force uninstall a package without confirmation
+Uninstall-Package -Name "ExamplePackage" -Force
+
+# Uninstall a package using a specific provider
+Uninstall-Package -Name "ExamplePackage" -ProviderName "ProviderExample"
+
+# Uninstall all versions of a package
+Uninstall-Package -Name "ExamplePackage" -AllVersions
+
+# Uninstall a package specifying the source
+Uninstall-Package -Name "ExamplePackage" -Source "SourceExample"
+        </code></pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code># Basic uninstall
+Uninstall-Package -Name "PackageName"
+
+# Force uninstall
+Uninstall-Package -Name "PackageName" -Force
+
+# Specific provider
+Uninstall-Package -Name "PackageName" -ProviderName "ProviderName"
+
+# All versions
+Uninstall-Package -Name "PackageName" -AllVersions
+        </code></pre>
+  </section>
+ </body>
+</html>

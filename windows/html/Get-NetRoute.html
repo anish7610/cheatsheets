@@ -1,0 +1,94 @@
+<h1>
+ Get-NetRoute Command Overview
+</h1>
+<p>
+ The
+ <code>
+  Get-NetRoute
+ </code>
+ command in Windows PowerShell retrieves the IP routing table, displaying IPv4 and IPv6 routes on the system. It's useful for examining network paths and diagnosing routing issues.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -InterfaceIndex
+    </code>
+   </td>
+   <td>
+    Filters routes by the specified network interface index.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -DestinationPrefix
+    </code>
+   </td>
+   <td>
+    Shows routes matching the specified destination prefix.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -NextHop
+    </code>
+   </td>
+   <td>
+    Displays routes using the specified next hop IP address.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -AddressFamily
+    </code>
+   </td>
+   <td>
+    Specifies address family: IPv4, IPv6.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Retrieve all routes
+Get-NetRoute
+
+# Filter routes by interface index 3
+Get-NetRoute -InterfaceIndex 3
+
+# Display routes with a specific destination prefix
+Get-NetRoute -DestinationPrefix "192.168.1.0/24"
+
+# Show IPv6 routes only
+Get-NetRoute -AddressFamily IPv6
+
+# Find routes with a specific next hop
+Get-NetRoute -NextHop "10.0.0.1"
+</code></pre>
+<h2>
+ Quick Reference Cheat Sheet
+</h2>
+<pre><code>Get-NetRoute                      # All routes
+Get-NetRoute -InterfaceIndex <i>n</i>   # Routes by interface
+Get-NetRoute -DestinationPrefix <i>subnet</i> # Routes by subnet
+Get-NetRoute -NextHop <i>IP</i>         # Routes by next hop
+Get-NetRoute -AddressFamily IPv4|IPv6   # Routes by address family
+</code></pre>

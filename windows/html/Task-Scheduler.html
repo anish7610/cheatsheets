@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Windows Task Scheduler Command Cheat Sheet
+  </title>
+ </head>
+ <body>
+  <h1>
+   Task Scheduler Command Overview
+  </h1>
+  <p>
+   The Task Scheduler command automates tasks by scheduling them to run at specified times or intervals on Windows systems.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <tr>
+    <th>
+     Option
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     /Create
+    </td>
+    <td>
+     Creates a new scheduled task.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     /Delete
+    </td>
+    <td>
+     Deletes a scheduled task.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     /Query
+    </td>
+    <td>
+     Lists all scheduled tasks.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     /Change
+    </td>
+    <td>
+     Changes properties of an existing task.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     /Run
+    </td>
+    <td>
+     Runs a scheduled task immediately.
+    </td>
+   </tr>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code>
+# Create a task to run a script daily at 8 AM
+schtasks /Create /SC DAILY /TN "BackupScript" /TR "C:\Scripts\backup.bat" /ST 08:00
+
+# Delete a previously scheduled task
+schtasks /Delete /TN "BackupScript"
+
+# List all scheduled tasks 
+schtasks /Query
+
+# Change the time of a task to 9 PM
+schtasks /Change /TN "BackupScript" /ST 21:00
+
+# Run a task immediately
+schtasks /Run /TN "BackupScript"
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+# Create Task: schtasks /Create /SC frequency /TN "Name" /TR "Path" /ST HH:MM
+# Delete Task: schtasks /Delete /TN "Name"
+# List Tasks:  schtasks /Query
+# Change Task: schtasks /Change /TN "Name" /ST HH:MM
+# Run Task:    schtasks /Run /TN "Name"
+    </code></pre>
+ </body>
+</html>

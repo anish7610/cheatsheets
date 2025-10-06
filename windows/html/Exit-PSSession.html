@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Exit-PSSession Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   Exit-PSSession Command
+  </h1>
+  <p>
+   The
+   <code>
+    Exit-PSSession
+   </code>
+   command is used in PowerShell to end an interactive session with a remote computer.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -WhatIf
+      </code>
+     </td>
+     <td>
+      Shows what would happen if the command runs without executing it.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Confirm
+      </code>
+     </td>
+     <td>
+      Prompts for confirmation before executing the command.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># End a remote session gracefully
+Exit-PSSession
+
+# Preview the consequences of ending a session
+Exit-PSSession -WhatIf
+
+# Prompt for confirmation before exiting the session
+Exit-PSSession -Confirm
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>Exit-PSSession               # End remote session
+Exit-PSSession -WhatIf       # Preview end
+Exit-PSSession -Confirm      # Confirm before exit</code></pre>
+ </body>
+</html>

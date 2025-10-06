@@ -1,0 +1,114 @@
+<h1>
+ Start-Job Command Overview
+</h1>
+<p>
+ The
+ <code>
+  Start-Job
+ </code>
+ command in Windows PowerShell is used to run commands or scripts asynchronously in the background. This allows users to perform other tasks in the console while the job executes.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -ScriptBlock
+    </code>
+   </td>
+   <td>
+    Specifies the script block to run as a background job.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Name
+    </code>
+   </td>
+   <td>
+    Assigns a name to the job.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -ArgumentList
+    </code>
+   </td>
+   <td>
+    Provides a list of arguments for the script block.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Credential
+    </code>
+   </td>
+   <td>
+    Runs the job using specified user credentials.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -InitializationScript
+    </code>
+   </td>
+   <td>
+    Runs a script block on the remote session before the main script block.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<h3>
+ Example 1: Simple Background Job
+</h3>
+<pre><code>Start-Job -ScriptBlock { Get-Process }</code></pre>
+<h3>
+ Example 2: Job with a Name
+</h3>
+<pre><code>Start-Job -ScriptBlock { Get-EventLog -LogName Security } -Name "SecurityLogJob"</code></pre>
+<h3>
+ Example 3: Passing Arguments
+</h3>
+<pre><code>Start-Job -ScriptBlock { param($name) Get-Process -Name $name } -ArgumentList "notepad"</code></pre>
+<h3>
+ Example 4: Using Credential
+</h3>
+<pre><code>$cred = Get-Credential
+Start-Job -ScriptBlock { Get-Service } -Credential $cred</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+# Start a simple background job
+Start-Job -ScriptBlock { <task> }
+
+# Name a job
+Start-Job -ScriptBlock { <task> } -Name "JobName"
+
+# Run with arguments
+Start-Job -ScriptBlock { param($args) <task> $args } -ArgumentList <args>
+
+# Use credentials
+$cred = Get-Credential
+Start-Job -ScriptBlock { <task> } -Credential $cred
+</task></args></task></task></task></code></pre>

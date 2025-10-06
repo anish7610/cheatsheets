@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Backup-WBFile Command Overview
+  </title>
+ </head>
+ <body>
+  <h1>
+   Backup-WBFile Command Overview
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    Backup-WBFile
+   </code>
+   command in Windows PowerShell is used to include file specifications in a backup policy.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -Policy
+      </code>
+     </td>
+     <td>
+      Specifies the backup policy to update.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -FileSpec
+      </code>
+     </td>
+     <td>
+      Defines the set of files and directories to include.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -SystemState
+      </code>
+     </td>
+     <td>
+      Includes the system state in the backup.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Add files to the backup policy
+Backup-WBFile -Policy $BackupPolicy -FileSpec C:\Users\Documents
+
+# Include system state in the backup
+Backup-WBFile -Policy $BackupPolicy -SystemState
+
+# Add specific folders to the backup policy
+Backup-WBFile -Policy $BackupPolicy -FileSpec D:\Projects\Code
+</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code># Add files: 
+Backup-WBFile -Policy $BackupPolicy -FileSpec &lt;Path&gt;
+
+# Include system state:
+Backup-WBFile -Policy $BackupPolicy -SystemState
+</code></pre>
+ </body>
+</html>

@@ -1,0 +1,92 @@
+<html>
+ <body>
+  <h1>
+   Start-VM Command in Windows
+  </h1>
+  <p>
+   The
+   <code>
+    Start-VM
+   </code>
+   command is used to start a virtual machine in Windows using PowerShell.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <tr>
+    <th>
+     Option
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      -Name &lt;String&gt;
+     </code>
+    </td>
+    <td>
+     Specifies the name of the VM to start.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      -ComputerName &lt;String&gt;
+     </code>
+    </td>
+    <td>
+     Specifies the Hyper-V host on which the VM is located.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      -AsJob
+     </code>
+    </td>
+    <td>
+     Runs the command as a background job.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      -Passthru
+     </code>
+    </td>
+    <td>
+     Returns an object representing the VM.
+    </td>
+   </tr>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Start a VM by name
+Start-VM -Name "UbuntuServer01"
+
+# Start multiple VMs
+Start-VM -Name "VM1", "VM2", "VM3"
+
+# Start a VM on a specific host
+Start-VM -Name "UbuntuServer01" -ComputerName "HyperV-Host1"
+
+# Start a VM and get the object
+Start-VM -Name "UbuntuServer01" -Passthru
+
+# Start a VM as a background job
+Start-VM -Name "UbuntuServer01" -AsJob
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>Start-VM -Name "VMName"
+Start-VM -Name "VMName" -ComputerName "HostName"
+Start-VM -Name "VMName" -AsJob
+    </code></pre>
+ </body>
+</html>

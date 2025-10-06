@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Remove-VM Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   Remove-VM Command
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    Remove-VM
+   </code>
+   command is used in Windows PowerShell to delete virtual machines from Hyper-V. It removes the specified VM along with its configuration and associated resources.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -Name
+      </code>
+     </td>
+     <td>
+      Name of the VM to remove.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Force
+      </code>
+     </td>
+     <td>
+      Removes the VM without confirmation prompts.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -WhatIf
+      </code>
+     </td>
+     <td>
+      Shows what would happen if the command runs, without executing it.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Confirm
+      </code>
+     </td>
+     <td>
+      Prompts for confirmation before executing the command.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Remove a specific VM by name
+Remove-VM -Name "TestVM"
+
+# Remove a VM without confirmation prompts
+Remove-VM -Name "TestVM" -Force
+
+# Simulate VM removal to see potential effects
+Remove-VM -Name "TestVM" -WhatIf
+
+# Remove a VM with confirmation prompt
+Remove-VM -Name "TestVM" -Confirm
+</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code># Basic Remove
+Remove-VM -Name "VMName"
+
+# Force Remove
+Remove-VM -Name "VMName" -Force
+
+# Simulate Remove
+Remove-VM -Name "VMName" -WhatIf
+</code></pre>
+ </body>
+</html>

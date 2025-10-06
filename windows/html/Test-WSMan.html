@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Test-WSMan Cheat Sheet
+  </title>
+ </head>
+ <body>
+  <h1>
+   Test-WSMan Command Overview
+  </h1>
+  <p>
+   The
+   <code>
+    Test-WSMan
+   </code>
+   command is used to verify the availability and accessibility of the Windows Remote Management (WinRM) service on a local or remote machine.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -ComputerName
+      </code>
+     </td>
+     <td>
+      Specifies the remote machine to test. Default is the local computer.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Credential
+      </code>
+     </td>
+     <td>
+      Specifies a user account that has permission to perform this action on the remote computer.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Port
+      </code>
+     </td>
+     <td>
+      Specifies the port number on the remote computer.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -UseSSL
+      </code>
+     </td>
+     <td>
+      Indicates that the connection should use SSL. Default is HTTP.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Test the local machine
+Test-WSMan
+
+# Test a remote machine by name
+Test-WSMan -ComputerName "server01"
+
+# Test a remote machine with specific credentials
+Test-WSMan -ComputerName "server01" -Credential (Get-Credential)
+
+# Test a remote machine on a specific port
+Test-WSMan -ComputerName "server01" -Port 5986
+
+# Test with SSL
+Test-WSMan -ComputerName "server01" -UseSSL</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code># Local test
+Test-WSMan
+
+# Remote test
+Test-WSMan -ComputerName "hostname"
+
+# With credentials &amp; SSL
+Test-WSMan -ComputerName "hostname" -Credential (Get-Credential) -UseSSL</code></pre>
+ </body>
+</html>

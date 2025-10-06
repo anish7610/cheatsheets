@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Findstr Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   Findstr Command
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    findstr
+   </code>
+   command in Windows is used to search for a specified text string in files. It supports regular expressions, making it powerful for pattern matching.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       /I
+      </code>
+     </td>
+     <td>
+      Ignore the case of the characters when searching for the string.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       /S
+      </code>
+     </td>
+     <td>
+      Search the specified directory and all subdirectories.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       /R
+      </code>
+     </td>
+     <td>
+      Use regular expressions in the search pattern.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       /M
+      </code>
+     </td>
+     <td>
+      Prints only the filename if a file contains a match.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       /N
+      </code>
+     </td>
+     <td>
+      Prints the line number before each matching line.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       /C:
+      </code>
+     </td>
+     <td>
+      Matches the specified string literally.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <h3>
+   Example 1: Search for a String in a File
+  </h3>
+  <pre><code>findstr "error" log.txt</code></pre>
+  <h3>
+   Example 2: Case-insensitive Search Across Files
+  </h3>
+  <pre><code>findstr /I "warning" *.txt</code></pre>
+  <h3>
+   Example 3: Recursive Search in Directory
+  </h3>
+  <pre><code>findstr /S /R "pattern" C:\Logs\*.log</code></pre>
+  <h3>
+   Example 4: Display Line Numbers in Results
+  </h3>
+  <pre><code>findstr /N "critical" system.log</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+findstr /I "text" file.txt   - Case-insensitive search
+findstr /S /C:"string" *     - Search string in all files
+findstr /R "^pattern" *.txt  - Regex search
+findstr /M "word" *.log      - Print matching files only
+    </code></pre>
+ </body>
+</html>

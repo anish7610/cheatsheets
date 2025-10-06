@@ -1,0 +1,85 @@
+<h1>
+ Remove-SqlDatabase Command
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  Remove-SqlDatabase
+ </code>
+ command is used in PowerShell to delete a SQL Server database.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -ServerInstance
+    </code>
+   </td>
+   <td>
+    Specifies the SQL Server instance.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Database
+    </code>
+   </td>
+   <td>
+    The name of the database to remove.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Force
+    </code>
+   </td>
+   <td>
+    Suppresses confirmation prompts.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Confirm
+    </code>
+   </td>
+   <td>
+    Prompts for confirmation before executing the command.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Remove a database with a confirmation prompt
+Remove-SqlDatabase -ServerInstance "ServerName" -Database "TestDB" -Confirm
+
+# Remove a database without confirmation
+Remove-SqlDatabase -ServerInstance "ServerName" -Database "TestDB" -Force
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>Remove-SqlDatabase -ServerInstance "ServerName" -Database "DBName"
+Remove-SqlDatabase -ServerInstance "ServerName" -Database "DBName" -Force
+</code></pre>

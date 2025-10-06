@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Get-NetAdapter Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   Get-NetAdapter Command
+  </h1>
+  <p>
+   The
+   <code>
+    Get-NetAdapter
+   </code>
+   command in Windows PowerShell retrieves the basic network adapter properties and status on a system.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -Name
+      </code>
+     </td>
+     <td>
+      Specifies the name of the network adapter.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -InterfaceDescription
+      </code>
+     </td>
+     <td>
+      Filters the output by the interface description.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -InterfaceIndex
+      </code>
+     </td>
+     <td>
+      Filters the output by the interface index.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Physical
+      </code>
+     </td>
+     <td>
+      Displays only physical network adapters.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Status
+      </code>
+     </td>
+     <td>
+      Filters results by adapter status (Up, Down).
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre>
+        <code>
+# List all network adapters
+Get-NetAdapter
+
+# Get a specific adapter by name
+Get-NetAdapter -Name "Ethernet0"
+
+# Get adapters with 'Up' status
+Get-NetAdapter -Status Up
+
+# Display only physical adapters
+Get-NetAdapter -Physical
+        </code>
+    </pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre>
+        <code>
+Get-NetAdapter                # List all adapters
+Get-NetAdapter -Name "eth0"   # Specific adapter
+Get-NetAdapter -Status Up     # Adapters Up
+Get-NetAdapter -Physical      # Physical adapters
+        </code>
+    </pre>
+ </body>
+</html>

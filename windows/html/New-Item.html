@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   New-Item Command Explanation
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    New-Item Command Overview
+   </h1>
+  </header>
+  <section>
+   <h2>
+    Description
+   </h2>
+   <p>
+    The
+    <code>
+     New-Item
+    </code>
+    command in Windows PowerShell is used to create a new file, directory, or other type of item.
+   </p>
+  </section>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        -Path
+       </code>
+      </td>
+      <td>
+       Specifies the location where the new item will be created.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -Name
+       </code>
+      </td>
+      <td>
+       Specifies the name of the new item.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -ItemType
+       </code>
+      </td>
+      <td>
+       Defines the type of item to create. Common types are
+       <code>
+        File
+       </code>
+       ,
+       <code>
+        Directory
+       </code>
+       .
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -Value
+       </code>
+      </td>
+      <td>
+       Provides the content for the new file.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -Force
+       </code>
+      </td>
+      <td>
+       Allows creation of a new item in a read-only location.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code># Create a new directory
+New-Item -Path "C:\Example" -Name "NewFolder" -ItemType "Directory"
+
+# Create a new file with content
+New-Item -Path "C:\Example" -Name "NewFile.txt" -ItemType "File" -Value "Hello, World!"
+
+# Create a new empty file
+New-Item -Path "C:\Example" -Name "EmptyFile.txt" -ItemType "File"
+        </code></pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code>New-Item -Path &lt;path&gt; -Name &lt;name&gt; -ItemType &lt;type&gt; [-Value &lt;value&gt;] [-Force]</code></pre>
+  </section>
+ </body>
+</html>

@@ -1,0 +1,77 @@
+<html>
+ <body>
+  <h1>
+   WMIC Process Command
+  </h1>
+  <p>
+   The
+   <code>
+    wmic process
+   </code>
+   command in Windows is used to interact with and retrieve information about running processes.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      /output:&lt;filename&gt;
+     </td>
+     <td>
+      Redirects output to a file.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      get name,processid
+     </td>
+     <td>
+      Lists process names with their IDs.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      where "name='process.exe'"
+     </td>
+     <td>
+      Filters processes by name.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      call terminate
+     </td>
+     <td>
+      Terminates a specified process.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code>wmic process list brief
+wmic process get name,processid
+wmic process where "name='notepad.exe'" get processid
+wmic process where processid=1234 call terminate
+wmic process get name,processid /output:c:\processes.txt</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>wmic process get name,processid
+wmic process where "name='example.exe'"
+wmic process where processid=1234 call terminate</code></pre>
+ </body>
+</html>

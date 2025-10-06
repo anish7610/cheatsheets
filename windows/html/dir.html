@@ -1,0 +1,117 @@
+<h1>
+ Windows `dir` Command
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  dir
+ </code>
+ command is used in the Windows operating system to list the files and directories in a specified directory.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    /p
+   </td>
+   <td>
+    Pauses after each screen of information.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    /q
+   </td>
+   <td>
+    Displays the owner of the file.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    /s
+   </td>
+   <td>
+    Lists all files in the specified directory and its subdirectories.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    /w
+   </td>
+   <td>
+    Displays the listing in wide format, showing more files per line.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    /a
+   </td>
+   <td>
+    Displays files with specified attributes (e.g.,
+    <code>
+     /a:h
+    </code>
+    for hidden files).
+   </td>
+  </tr>
+  <tr>
+   <td>
+    /o
+   </td>
+   <td>
+    Lists files by files in a sorted order (e.g.,
+    <code>
+     /o:n
+    </code>
+    by name).
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Lists files in the current directory with details
+dir
+
+# Lists files in wide format
+dir /w
+
+# Lists all files, including subdirectories
+dir /s
+
+# Lists files by name, in alphabetical order
+dir /o:n
+
+# Lists hidden files
+dir /a:h
+
+# Lists with pause after each screen
+dir /p
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>dir             # Basic list
+dir /w          # Wide format
+dir /s          # Include subdirectories
+dir /p          # Pause per screen
+dir /o:n        # Sorted by name
+dir /a:h        # Hidden files
+</code></pre>

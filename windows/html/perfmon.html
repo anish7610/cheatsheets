@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Perfmon Command Overview
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Perfmon Command Overview
+   </h1>
+  </header>
+  <section>
+   <h2>
+    Description
+   </h2>
+   <p>
+    The
+    <code>
+     perfmon
+    </code>
+    command launches the Windows Performance Monitor tool, which provides a visual interface for monitoring system performance metrics.
+   </p>
+  </section>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        /report
+       </code>
+      </td>
+      <td>
+       Generate a system diagnostics report.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        /res
+       </code>
+      </td>
+      <td>
+       Open the Resource Monitor.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        /sys
+       </code>
+      </td>
+      <td>
+       Open the Performance Monitor window.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        /n
+       </code>
+       <em>
+        filename
+       </em>
+      </td>
+      <td>
+       Open a specific MMC console file.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Examples
+   </h2>
+   <pre><code># Open Performance Monitor
+perfmon /sys
+
+# Generate and view a system diagnostics report
+perfmon /report
+
+# Launch the Resource Monitor
+perfmon /res
+        </code></pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code>perfmon /sys     # Launch Performance Monitor
+perfmon /report  # Generate diagnostics report
+perfmon /res     # Launch Resource Monitor
+perfmon /n <filename>  # Open specific MMC file
+        </filename></code></pre>
+  </section>
+ </body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Get-Process | Measure-Object
+  </title>
+ </head>
+ <body>
+  <h1>
+   Get-Process | Measure-Object
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The command
+   <code>
+    Get-Process | Measure-Object
+   </code>
+   retrieves a list of processes and computes statistics, such as count, using
+   <code>
+    Measure-Object
+   </code>
+   .
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <tr>
+    <th>
+     Option
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      -Property
+     </code>
+    </td>
+    <td>
+     Specifies the property to measure, such as CPU time.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      -Sum
+     </code>
+    </td>
+    <td>
+     Calculates the sum of the specified property values.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      -Average
+     </code>
+    </td>
+    <td>
+     Calculates the average of the specified property values.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      -Maximum
+     </code>
+    </td>
+    <td>
+     Finds the maximum value of the specified property.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      -Minimum
+     </code>
+    </td>
+    <td>
+     Finds the minimum value of the specified property.
+    </td>
+   </tr>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Count the total number of processes
+Get-Process | Measure-Object
+
+# Calculate the total CPU time used by all processes
+Get-Process | Measure-Object -Property CPU -Sum
+
+# Find the average CPU time of processes
+Get-Process | Measure-Object -Property CPU -Average
+
+# Get the highest memory usage of running processes
+Get-Process | Measure-Object -Property WS -Maximum
+</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code># Count processes
+Get-Process | Measure-Object
+
+# Sum of CPU times
+Get-Process | Measure-Object -Property CPU -Sum
+
+# Average CPU usage
+Get-Process | Measure-Object -Property CPU -Average
+
+# Maximum memory usage
+Get-Process | Measure-Object -Property WS -Maximum
+</code></pre>
+ </body>
+</html>

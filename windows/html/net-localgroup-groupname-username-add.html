@@ -1,0 +1,85 @@
+<h1>
+ Windows Command: net localgroup
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  net localgroup [groupname] [username] /add
+ </code>
+ command adds a user to a specific local group on a Windows system. This is used for managing user permissions and access.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     [groupname]
+    </code>
+   </td>
+   <td>
+    Specifies the name of the group.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     [username]
+    </code>
+   </td>
+   <td>
+    Specifies the name of the user to add.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     /add
+    </code>
+   </td>
+   <td>
+    Adds a specified user to a specified group.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     /delete
+    </code>
+   </td>
+   <td>
+    Removes a specified user from a specified group.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code>net localgroup Administrators JohnDoe /add
+net localgroup Users JaneDoe /add
+net localgroup PowerUsers Alice /add
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+Add user to group: net localgroup [groupname] [username] /add
+Remove user from group: net localgroup [groupname] [username] /delete
+View group members: net localgroup [groupname]
+</code></pre>

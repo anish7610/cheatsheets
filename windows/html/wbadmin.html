@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   wbadmin Command Reference
+  </title>
+ </head>
+ <body>
+  <h1>
+   Windows Command: wbadmin
+  </h1>
+  <p>
+   <code>
+    wbadmin
+   </code>
+   is a command-line utility in Windows for managing backup and restore operations, allowing users to create backups, restore files, and manage backup configurations.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       start backup
+      </code>
+     </td>
+     <td>
+      Initiates a backup operation.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       get versions
+      </code>
+     </td>
+     <td>
+      Lists details of backups available on the local computer.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       start recovery
+      </code>
+     </td>
+     <td>
+      Restores files from a specified backup.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       enable backup
+      </code>
+     </td>
+     <td>
+      Enables a scheduled daily backup.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       disable backup
+      </code>
+     </td>
+     <td>
+      Disables a scheduled daily backup.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code>wbadmin start backup -backupTarget:D: -include:C: -allCritical -quiet</code></pre>
+  <pre><code>wbadmin get versions -backuptarget:D:</code></pre>
+  <pre><code>wbadmin start recovery -version:03/15/2023-09:00 -itemType:File -items:C:\Users\Documents -recoveryTarget:C:\Recovery</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>wbadmin start backup -backupTarget:<drive_letter:>
+wbadmin get versions
+wbadmin start recovery -version:<date-time>
+wbadmin enable backup
+wbadmin disable backup</date-time></drive_letter:></code></pre>
+ </body>
+</html>

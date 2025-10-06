@@ -1,0 +1,70 @@
+<h1>
+ New-EventLog Command
+</h1>
+<p>
+ The
+ <code>
+  New-EventLog
+ </code>
+ command in Windows is used to create a new event log and configure event sources on a local or remote computer.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -LogName
+    </code>
+   </td>
+   <td>
+    Specifies the name of the event log to create.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Source
+    </code>
+   </td>
+   <td>
+    Defines the event sources that can write to the event log.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -ComputerName
+    </code>
+   </td>
+   <td>
+    Indicates the target computer where the event log will be created.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Create a local event log named "ApplicationLog" with a source "MyApp"
+New-EventLog -LogName "ApplicationLog" -Source "MyApp"
+
+# Create an event log named "NetworkLog" on a remote computer
+New-EventLog -LogName "NetworkLog" -Source "NetworkService" -ComputerName "RemotePC"
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>New-EventLog -LogName "LogName" -Source "SourceName" [-ComputerName "ComputerName"]</code></pre>

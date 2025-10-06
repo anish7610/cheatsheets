@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Enter-PSSession Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   Enter-PSSession Command
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    Enter-PSSession
+   </code>
+   command is used in PowerShell to start an interactive session with a remote computer.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -ComputerName
+      </code>
+     </td>
+     <td>
+      Specifies the name of the remote computer to connect to.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Credential
+      </code>
+     </td>
+     <td>
+      Specifies the user account to use for the remote session.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Port
+      </code>
+     </td>
+     <td>
+      Specifies the port number to use for the connection.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -ConfigurationName
+      </code>
+     </td>
+     <td>
+      Specifies the session configuration to use.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -UseSSL
+      </code>
+     </td>
+     <td>
+      Indicates that the command uses SSL to establish a secure connection.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Connect to a remote computer by name
+Enter-PSSession -ComputerName Server01
+
+# Connect with specific credentials
+Enter-PSSession -ComputerName Server01 -Credential Domain\User
+
+# Connect to a remote computer using SSL
+Enter-PSSession -ComputerName Server01 -UseSSL
+
+# Connect using a different port
+Enter-PSSession -ComputerName Server01 -Port 5986
+
+# Connect with a specific session configuration
+Enter-PSSession -ComputerName Server01 -ConfigurationName CustomShell</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>Enter-PSSession -ComputerName [name] -Credential [user] -UseSSL
+Enter-PSSession -ComputerName [name] -Port [port] -ConfigurationName [config]</code></pre>
+ </body>
+</html>

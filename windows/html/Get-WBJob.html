@@ -1,0 +1,89 @@
+<html>
+ <body>
+  <h1>
+   Get-WBJob Command Overview
+  </h1>
+  <p>
+   The
+   <code>
+    Get-WBJob
+   </code>
+   command in Windows PowerShell retrieves information about backup jobs that have been created or are in progress on the system.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -Previous
+      </code>
+     </td>
+     <td>
+      Displays the last backup job that was run before the current one.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -From
+       <i>
+        DateTime
+       </i>
+      </code>
+     </td>
+     <td>
+      Gets jobs starting from a specific date and time.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -To
+       <i>
+        DateTime
+       </i>
+      </code>
+     </td>
+     <td>
+      Gets jobs up until a specific date and time.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Retrieve the current backup job
+Get-WBJob
+
+# Retrieve the last backup job
+Get-WBJob -Previous
+
+# Retrieve backups from a specific time range
+Get-WBJob -From "2023-01-01" -To "2023-01-31"</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code># Current job
+Get-WBJob
+
+# Last job
+Get-WBJob -Previous
+
+# Jobs from/to date
+Get-WBJob -From "YYYY-MM-DD" -To "YYYY-MM-DD"</code></pre>
+ </body>
+</html>

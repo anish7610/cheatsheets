@@ -1,0 +1,78 @@
+<section>
+ <h1>
+  Remove-Module Command
+ </h1>
+ <p>
+  The
+  <code>
+   Remove-Module
+  </code>
+  command in Windows PowerShell is used to remove modules from the current session, freeing up resources and unloading functions and cmdlets provided by the module.
+ </p>
+ <h2>
+  Common Options
+ </h2>
+ <table>
+  <thead>
+   <tr>
+    <th>
+     Option
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+  </thead>
+  <tbody>
+   <tr>
+    <td>
+     <code>
+      -Name
+     </code>
+    </td>
+    <td>
+     Specifies the name of the module to remove.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      -Force
+     </code>
+    </td>
+    <td>
+     Forcibly removes the module even if it is used by other modules.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      -ErrorAction
+     </code>
+    </td>
+    <td>
+     Determines how the command responds to an error.
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h2>
+  Usage Examples
+ </h2>
+ <pre><code># Example 1: Remove a module by name
+Remove-Module -Name 'ModuleName'
+
+# Example 2: Forcefully remove a module
+Remove-Module -Name 'ModuleName' -Force
+
+# Example 3: Remove a module and handle errors silently
+Remove-Module -Name 'ModuleName' -ErrorAction SilentlyContinue
+</code></pre>
+ <h2>
+  Cheat Sheet
+ </h2>
+ <pre><code>Remove-Module -Name 'ModuleName'
+Remove-Module -Name 'ModuleName' -Force
+Remove-Module -Name 'ModuleName' -ErrorAction SilentlyContinue
+</code></pre>
+</section>

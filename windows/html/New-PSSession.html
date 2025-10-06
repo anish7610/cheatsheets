@@ -1,0 +1,108 @@
+<h1>
+ New-PSSession Command Overview
+</h1>
+<p>
+ The
+ <code>
+  New-PSSession
+ </code>
+ command in Windows PowerShell creates a persistent connection to a local or remote computer.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -ComputerName
+    </code>
+   </td>
+   <td>
+    Specifies the remote computer(s) to connect to.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Credential
+    </code>
+   </td>
+   <td>
+    Specifies the user account credentials to use for the session.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -ConfigurationName
+    </code>
+   </td>
+   <td>
+    Specifies the session configuration to use.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Port
+    </code>
+   </td>
+   <td>
+    Specifies the port to connect to on the remote computer.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -UseSSL
+    </code>
+   </td>
+   <td>
+    Establishes a secure connection using SSL.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Create a session to a single remote computer
+$s = New-PSSession -ComputerName "Server01"
+
+# Create a session with specific credentials
+$cred = Get-Credential
+$s = New-PSSession -ComputerName "Server01" -Credential $cred
+
+# Create a session using a secure SSL connection
+$s = New-PSSession -ComputerName "Server01" -UseSSL
+
+# Create a session with a specific configuration
+$s = New-PSSession -ComputerName "Server01" -ConfigurationName "MyConfig"
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code># Basic session
+New-PSSession -ComputerName "ServerName"
+
+# With credentials
+New-PSSession -ComputerName "ServerName" -Credential (Get-Credential)
+
+# Secure connection
+New-PSSession -ComputerName "ServerName" -UseSSL
+
+# Custom configuration
+New-PSSession -ComputerName "ServerName" -ConfigurationName "ConfigName"
+</code></pre>

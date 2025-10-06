@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Get-Volume Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   Windows Command: Get-Volume
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    Get-Volume
+   </code>
+   command retrieves information about the disk volumes present on a Windows system.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -DriveLetter
+      </code>
+     </td>
+     <td>
+      Specifies the drive letter of the volume to get information for.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -FileSystemLabel
+      </code>
+     </td>
+     <td>
+      Filters volumes by the file system label.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -CimSession
+      </code>
+     </td>
+     <td>
+      Runs the command in a user-specified session or computer.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -HealthStatus
+      </code>
+     </td>
+     <td>
+      Filters volumes by health status (e.g., Healthy, Unhealthy).
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code>Get-Volume
+Get-Volume -DriveLetter C
+Get-Volume -FileSystemLabel Data
+Get-Volume -HealthStatus Healthy</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>Get-Volume            # Get all volumes
+Get-Volume -DriveLetter D  # Get volume with drive letter D
+Get-Volume -FileSystemLabel WorkDocs # Volumes with label
+Get-Volume -HealthStatus Warning  # Volumes with Unhealthy status</code></pre>
+ </body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Windows Command `del`
+  </title>
+ </head>
+ <body>
+  <h1>
+   Windows Command:
+   <code>
+    del
+   </code>
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    del
+   </code>
+   command is used to delete one or more files from a directory.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <tr>
+    <th>
+     Option
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      /P
+     </code>
+    </td>
+    <td>
+     Prompts for confirmation before deleting each file.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      /F
+     </code>
+    </td>
+    <td>
+     Force deletes read-only files.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      /S
+     </code>
+    </td>
+    <td>
+     Deletes specified files from all subdirectories.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      /Q
+     </code>
+    </td>
+    <td>
+     Deletes without prompting for confirmation.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      /A
+     </code>
+    </td>
+    <td>
+     Deletes files based on attributes. Example:
+     <code>
+      /A:H
+     </code>
+     for hidden files.
+    </td>
+   </tr>
+  </table>
+  <h2>
+   Examples
+  </h2>
+  <ul>
+   <li>
+    Delete a specific file:
+    <pre><code>del file.txt</code></pre>
+   </li>
+   <li>
+    Delete all
+    <code>
+     .txt
+    </code>
+    files in a directory:
+    <pre><code>del *.txt</code></pre>
+   </li>
+   <li>
+    Delete files with confirmation:
+    <pre><code>del /P *.log</code></pre>
+   </li>
+   <li>
+    Delete read-only files without asking:
+    <pre><code>del /F /Q file.txt</code></pre>
+   </li>
+   <li>
+    Delete all files from subdirectories:
+    <pre><code>del /S *.tmp</code></pre>
+   </li>
+  </ul>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+del [filename]
+del /P [filename]   # Prompt before delete
+del /F /Q [filename] # Force delete read-only, no prompt
+del /S [pattern]   # Delete in subdirectories
+del *.txt          # Delete all .txt files
+    </code></pre>
+ </body>
+</html>

@@ -1,0 +1,94 @@
+<html>
+ <body>
+  <h1>
+   Windows Command: Get-NetIPAddress
+  </h1>
+  <p>
+   The
+   <code>
+    Get-NetIPAddress
+   </code>
+   cmdlet retrieves IP address configuration information on a device.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -InterfaceAlias
+      </code>
+     </td>
+     <td>
+      Specifies the network interface by name.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -AddressFamily
+      </code>
+     </td>
+     <td>
+      Limits results to IPv4 or IPv6 addresses.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -IPAddress
+      </code>
+     </td>
+     <td>
+      Filters results for a specific IP address.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -CimSession
+      </code>
+     </td>
+     <td>
+      Runs the command on a remote device.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Retrieve all IP addresses
+Get-NetIPAddress
+
+# Get IPv4 addresses only
+Get-NetIPAddress -AddressFamily IPv4
+
+# Retrieve IPs for a specific interface
+Get-NetIPAddress -InterfaceAlias "Ethernet"
+
+# Filter for a specific IP address
+Get-NetIPAddress -IPAddress 192.168.1.1
+</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>Get-NetIPAddress
+Get-NetIPAddress -InterfaceAlias <name>
+Get-NetIPAddress -AddressFamily IPv4|IPv6
+Get-NetIPAddress -IPAddress <address>
+</address></name></code></pre>
+ </body>
+</html>

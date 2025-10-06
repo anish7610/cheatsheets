@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   scp (OpenSSH) Command Overview
+  </title>
+ </head>
+ <body>
+  <h1>
+   scp (OpenSSH) Command Overview
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    scp
+   </code>
+   (secure copy) command is used to securely transfer files between a local host and a remote host or between two remote hosts.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -P &lt;port&gt;
+      </code>
+     </td>
+     <td>
+      Specifies the port to connect to on the remote host.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -r
+      </code>
+     </td>
+     <td>
+      Recursively copy entire directories.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -C
+      </code>
+     </td>
+     <td>
+      Enable compression.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -i &lt;identity_file&gt;
+      </code>
+     </td>
+     <td>
+      Specifies the identity file (private key) to use.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -v
+      </code>
+     </td>
+     <td>
+      Enable verbose mode.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Copy a file from local to remote
+scp local_file.txt user@remote_host:/remote/directory/
+
+# Copy a file from remote to local
+scp user@remote_host:/remote/file.txt /local/directory/
+
+# Copy a directory recursively from local to remote
+scp -r /local/directory/ user@remote_host:/remote/directory/
+
+# Copy using a specific port and identity file
+scp -P 2222 -i ~/.ssh/id_rsa local_file.txt user@remote_host:/remote/directory/</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>scp [options] [user@]host1:file1 [user@]host2:file2
+-P port | -r | -C | -i identity_file | -v</code></pre>
+ </body>
+</html>

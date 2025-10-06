@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Tracert Command Overview
+  </title>
+ </head>
+ <body>
+  <h1>
+   Tracert Command Overview
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    tracert
+   </code>
+   command in Windows is used to display the path and transit times of data packets as they travel through a network to a specified destination.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -d
+      </code>
+     </td>
+     <td>
+      Do not resolve addresses to hostnames.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -h
+       <em>
+        maximum_hops
+       </em>
+      </code>
+     </td>
+     <td>
+      Set the maximum number of hops to search for the target.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -w
+       <em>
+        timeout
+       </em>
+      </code>
+     </td>
+     <td>
+      Set the timeout in milliseconds for each reply.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code>tracert www.example.com</code></pre>
+  <pre><code>tracert -d www.example.com</code></pre>
+  <pre><code>tracert -h 15 www.example.com</code></pre>
+  <pre><code>tracert -w 2000 www.example.com</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>tracert [options] target
+-d     No hostnames
+-h #   Max hops
+-w #   Timeout ms</code></pre>
+ </body>
+</html>

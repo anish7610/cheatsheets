@@ -1,0 +1,86 @@
+<h1>
+ Understanding the Command
+</h1>
+<p>
+ The command
+ <code>
+  Get-Process | Sort-Object CPU -Descending
+ </code>
+ in Windows PowerShell retrieves a list of all running processes, sorted by CPU usage in descending order.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     Get-Process
+    </code>
+   </td>
+   <td>
+    Retrieves information about local or remote processes.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     Sort-Object
+    </code>
+   </td>
+   <td>
+    Sorts objects based on property values.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Descending
+    </code>
+   </td>
+   <td>
+    Sorts the results in descending order.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     CPU
+    </code>
+   </td>
+   <td>
+    Specifies the property to sort by (CPU usage).
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code>Get-Process | Sort-Object CPU -Descending
+# Lists processes with the highest CPU usage first.
+</code></pre>
+<pre><code>Get-Process | Sort-Object WorkingSet -Descending | Select-Object -First 5
+# Displays the top 5 processes consuming the most memory.
+</code></pre>
+<pre><code>Get-Process -Name "chrome" | Sort-Object CPU -Descending
+# Sorts Chrome processes by CPU usage.
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>Get-Process | Sort-Object <property> -Descending
+Get-Process -Name <processname> | Sort-Object <property> -Descending
+Select-Object -First <number>
+</number></property></processname></property></code></pre>

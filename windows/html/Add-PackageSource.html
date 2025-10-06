@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Add-PackageSource Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   Add-PackageSource Command
+  </h1>
+  <p>
+   The
+   <code>
+    Add-PackageSource
+   </code>
+   command in Windows PowerShell is used to add a new package source to a specified package provider, allowing users to manage software packages from different repositories.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -Name
+      </code>
+     </td>
+     <td>
+      The name of the package source.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Location
+      </code>
+     </td>
+     <td>
+      The URL or path to the package source.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -ProviderName
+      </code>
+     </td>
+     <td>
+      The name of the package provider (e.g., NuGet).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Trusted
+      </code>
+     </td>
+     <td>
+      Indicates whether the package source is trusted.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Credential
+      </code>
+     </td>
+     <td>
+      The user credentials for accessing the package source.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <h3>
+   Example 1: Add a NuGet Package Source
+  </h3>
+  <pre><code>
+Add-PackageSource -Name "MyNuGet" -Location "https://api.nuget.org/v3/index.json" -ProviderName "NuGet" -Trusted
+    </code></pre>
+  <h3>
+   Example 2: Add an Internal Repository
+  </h3>
+  <pre><code>
+Add-PackageSource -Name "InternalRepo" -Location "\\Server\Repo" -ProviderName "NuGet" -Credential (Get-Credential)
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+Add-PackageSource -Name <name> -Location <url path=""> -ProviderName <provider> [-Trusted] [-Credential <credential>]
+    </credential></provider></url></name></code></pre>
+ </body>
+</html>

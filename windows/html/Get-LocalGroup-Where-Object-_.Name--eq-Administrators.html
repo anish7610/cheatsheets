@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Get-LocalGroup Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   Get-LocalGroup Command Guide
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The `Get-LocalGroup` command is used in Windows PowerShell to retrieve local group information. Combined with `Where-Object`, it filters groups based on specific criteria, such as finding the "Administrators" group.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -Name
+      </code>
+     </td>
+     <td>
+      Specifies the name of the group to retrieve.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -SID
+      </code>
+     </td>
+     <td>
+      Returns the security identifier of the group.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Description
+      </code>
+     </td>
+     <td>
+      Provides the description of the group.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code>
+# Retrieve information about the "Administrators" group
+Get-LocalGroup | Where-Object { $_.Name -eq "Administrators" }
+
+# List all local groups
+Get-LocalGroup
+
+# Find a group by name
+Get-LocalGroup -Name "Users"
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+# List all groups
+Get-LocalGroup
+
+# Find the Administrators group
+Get-LocalGroup | Where-Object { $_.Name -eq "Administrators" }
+    </code></pre>
+ </body>
+</html>

@@ -1,0 +1,106 @@
+<html>
+ <head>
+  <title>
+   Get-Module Command Cheat Sheet
+  </title>
+ </head>
+ <body>
+  <h1>
+   Get-Module Command Overview
+  </h1>
+  <p>
+   The
+   <code>
+    Get-Module
+   </code>
+   command is used in Windows PowerShell to retrieve information about the modules that have been imported or are available to be imported.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -ListAvailable
+      </code>
+     </td>
+     <td>
+      Shows all modules that are available to import.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Name
+      </code>
+     </td>
+     <td>
+      Filters modules based on their name.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -FullyQualifiedName
+      </code>
+     </td>
+     <td>
+      Gets modules using a fully qualified name.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -All
+      </code>
+     </td>
+     <td>
+      Gets all modules, not limited to the first one found.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># List all imported modules
+Get-Module
+
+# List all available modules on the system
+Get-Module -ListAvailable
+
+# Get information about a specific module
+Get-Module -Name <em>ModuleName</em>
+
+# Display all available versions of a specific module
+Get-Module -Name <em>ModuleName</em> -ListAvailable -All
+</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code># Show all imported modules
+Get-Module
+
+# List all available modules
+Get-Module -ListAvailable
+
+# Filter by module name
+Get-Module -Name <em>ModuleName</em>
+
+# List all versions
+Get-Module -Name <em>ModuleName</em> -All
+</code></pre>
+ </body>
+</html>

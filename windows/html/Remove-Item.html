@@ -1,0 +1,101 @@
+<h1>
+ Windows Command: Remove-Item
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  Remove-Item
+ </code>
+ command deletes files, directories, and other data locations in Windows PowerShell.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -Path
+    </code>
+   </td>
+   <td>
+    Specifies the path to the item to be removed.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Recurse
+    </code>
+   </td>
+   <td>
+    Deletes all items in a specified location, including the subdirectory items.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Force
+    </code>
+   </td>
+   <td>
+    Forces the command to remove items that are read-only or hidden.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -WhatIf
+    </code>
+   </td>
+   <td>
+    Shows what would happen if the command runs without actually executing it.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Confirm
+    </code>
+   </td>
+   <td>
+    Prompts for confirmation before executing the removal.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Examples
+</h2>
+<pre><code class="language-powershell"># Delete a single file
+Remove-Item -Path "C:\Example\file.txt"
+
+# Delete a directory and all contents
+Remove-Item -Path "C:\Example\Directory" -Recurse
+
+# Forcefully delete a read-only file
+Remove-Item -Path "C:\Example\read-only-file.txt" -Force
+
+# Show what would happen without deleting
+Remove-Item -Path "C:\Example\file.txt" -WhatIf
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+Remove-Item -Path <path> [-Recurse] [-Force] [-WhatIf] [-Confirm]
+</path></code></pre>

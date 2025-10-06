@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Write-EventLog Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   Write-EventLog Command
+  </h1>
+  <p>
+   The
+   <code>
+    Write-EventLog
+   </code>
+   command in Windows PowerShell is used to write an event to a specified event log.
+        It's useful for custom logging and tracking specific events or errors.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -LogName
+      </code>
+     </td>
+     <td>
+      Specifies the name of the event log. Example: Application, System.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Source
+      </code>
+     </td>
+     <td>
+      Indicates the source of the event. Must be registered before it's used.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -EventID
+      </code>
+     </td>
+     <td>
+      Specifies the Event ID for the log entry. Useful for identification.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -EntryType
+      </code>
+     </td>
+     <td>
+      Specifies the type of event (e.g., Error, Information, Warning).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Message
+      </code>
+     </td>
+     <td>
+      The message to be written to the event log. Describes the event.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Writing an informational event
+Write-EventLog -LogName Application -Source MyApp -EventID 101 -EntryType Information -Message "Application started successfully."
+
+# Logging a warning event
+Write-EventLog -LogName System -Source MyApp -EventID 200 -EntryType Warning -Message "Potential misconfiguration detected."
+
+# Registering a new event source and then writing an error
+New-EventLog -LogName Application -Source MyNewApp
+Write-EventLog -LogName Application -Source MyNewApp -EventID 500 -EntryType Error -Message "Critical failure encountered."
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>Write-EventLog -LogName &lt;LogName&gt; -Source &lt;Source&gt;
+                -EventID &lt;ID&gt; -EntryType &lt;Type&gt; -Message &lt;"Message"&gt;
+# EntryType: Error, Warning, Information
+    </code></pre>
+ </body>
+</html>

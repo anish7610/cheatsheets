@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Get-NetTCPConnection Cheat Sheet
+  </title>
+ </head>
+ <body>
+  <h1>
+   Get-NetTCPConnection
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    Get-NetTCPConnection
+   </code>
+   command is a PowerShell cmdlet in Windows used to get information about current TCP connections.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -State
+      </code>
+     </td>
+     <td>
+      Filters connections by their state (e.g., Established, Listen).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -LocalPort
+      </code>
+     </td>
+     <td>
+      Filters connections by local port.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -RemotePort
+      </code>
+     </td>
+     <td>
+      Filters connections by remote port.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -LocalAddress
+      </code>
+     </td>
+     <td>
+      Filters connections by local address.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -RemoteAddress
+      </code>
+     </td>
+     <td>
+      Filters connections by remote address.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -OwningProcess
+      </code>
+     </td>
+     <td>
+      Filters connections by owning process ID.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Examples
+  </h2>
+  <pre><code># Get all established connections
+Get-NetTCPConnection -State Established
+
+# Filter by local port
+Get-NetTCPConnection -LocalPort 80
+
+# Filter by remote address
+Get-NetTCPConnection -RemoteAddress 192.168.1.1
+
+# Get connections for a specific process
+Get-NetTCPConnection -OwningProcess 1234
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>Get-NetTCPConnection [-State] [-LocalPort] [-RemotePort]
+                    [-LocalAddress] [-RemoteAddress] [-OwningProcess]</code></pre>
+ </body>
+</html>

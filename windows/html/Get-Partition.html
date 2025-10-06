@@ -1,0 +1,80 @@
+<html>
+ <body>
+  <h1>
+   Get-Partition Command Overview
+  </h1>
+  <p>
+   The
+   <code>
+    Get-Partition
+   </code>
+   command in Windows PowerShell retrieves information about the disk partitions available on a system. It helps manage, query, and troubleshoot disk partitions.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -DiskNumber
+      </code>
+     </td>
+     <td>
+      Specifies the disk number to query partitions from.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -PartitionNumber
+      </code>
+     </td>
+     <td>
+      Specifies a particular partition to get details about.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -CimSession
+      </code>
+     </td>
+     <td>
+      Runs the command on a remote session or computer.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Retrieve all partitions on all disks
+Get-Partition
+
+# Get details of all partitions on disk 1
+Get-Partition -DiskNumber 1
+
+# Retrieve information about a specific partition on a specific disk
+Get-Partition -DiskNumber 1 -PartitionNumber 2
+</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>Get-Partition               # List all partitions
+Get-Partition -DiskNumber n # Partitions on disk n
+Get-Partition -PartitionNumber m -DiskNumber n # Details of partition m on disk n
+</code></pre>
+ </body>
+</html>

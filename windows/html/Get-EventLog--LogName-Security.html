@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Get-EventLog Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   Windows Command: Get-EventLog -LogName Security
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    Get-EventLog
+   </code>
+   command retrieves entries from the Windows event logs. The
+   <code>
+    -LogName Security
+   </code>
+   option specifically targets the Security event log, which contains records related to security and auditing events.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -LogName
+      </code>
+     </td>
+     <td>
+      Specifies the name of the event log to retrieve entries from.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Newest
+      </code>
+     </td>
+     <td>
+      Retrieves the most recent specified number of entries.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -EntryType
+      </code>
+     </td>
+     <td>
+      Filters entries by type (Error, Warning, Information).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -InstanceId
+      </code>
+     </td>
+     <td>
+      Specifies a particular event ID to find specific entries.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Before
+      </code>
+     </td>
+     <td>
+      Returns entries logged before a specific date and time.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -After
+      </code>
+     </td>
+     <td>
+      Returns entries logged after a specific date and time.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Retrieve the 10 most recent security events
+Get-EventLog -LogName Security -Newest 10
+
+# Get all security events with the event ID 4625 (failed logon attempts)
+Get-EventLog -LogName Security -InstanceId 4625
+
+# Find security events recorded after January 1, 2023
+Get-EventLog -LogName Security -After "01/01/2023"
+
+# Fetch security events of type 'Error'
+Get-EventLog -LogName Security -EntryType Error</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code># Recent entries
+Get-EventLog -LogName Security -Newest X
+
+# Filter by event ID
+Get-EventLog -LogName Security -InstanceId ID
+
+# Date filtering
+Get-EventLog -LogName Security -After "MM/DD/YYYY"
+Get-EventLog -LogName Security -Before "MM/DD/YYYY"
+
+# Filter by type
+Get-EventLog -LogName Security -EntryType Type</code></pre>
+ </body>
+</html>

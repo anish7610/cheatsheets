@@ -1,0 +1,97 @@
+<h1>
+ Stop-Service Command
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  Stop-Service
+ </code>
+ command in Windows PowerShell is used to stop a running service on a local or remote machine.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Explanation
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -Name
+    </code>
+   </td>
+   <td>
+    Specifies the name of the service to stop.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -DisplayName
+    </code>
+   </td>
+   <td>
+    Specifies the display name of the service to stop.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -InputObject
+    </code>
+   </td>
+   <td>
+    Accepts a service object, typically obtained from
+    <code>
+     Get-Service
+    </code>
+    .
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Force
+    </code>
+   </td>
+   <td>
+    Forces the service to stop even if it has dependent services.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Stop a service by name
+Stop-Service -Name "Spooler"
+
+# Stop a service by display name
+Stop-Service -DisplayName "Print Spooler"
+
+# Stop multiple services using a pipeline
+Get-Service -Name "Spooler", "wuauserv" | Stop-Service
+
+# Force stop a service
+Stop-Service -Name "Spooler" -Force
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>Stop-Service -Name "<servicename>"
+Stop-Service -DisplayName "<displayname>"
+Get-Service | Stop-Service
+Stop-Service -Name "<servicename>" -Force
+</servicename></displayname></servicename></code></pre>

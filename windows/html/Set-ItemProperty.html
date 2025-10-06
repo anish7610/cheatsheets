@@ -1,0 +1,94 @@
+<h1>
+ PowerShell Command: Set-ItemProperty
+</h1>
+<p>
+ The
+ <code>
+  Set-ItemProperty
+ </code>
+ command in PowerShell is used to change the value of a property for a specified item, such as a registry key or a file system item.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -Path
+    </code>
+   </td>
+   <td>
+    Specifies the path to the item where the property value is set.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Name
+    </code>
+   </td>
+   <td>
+    Specifies the name of the property to modify.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Value
+    </code>
+   </td>
+   <td>
+    Specifies the new value for the property.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -LiteralPath
+    </code>
+   </td>
+   <td>
+    Specifies a path that is used exactly as entered.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Force
+    </code>
+   </td>
+   <td>
+    Overrides restrictions that might prevent command completion.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Examples
+</h2>
+<h3>
+ Change a Registry Key Value
+</h3>
+<pre><code>Set-ItemProperty -Path "HKLM:\Software\MyApp" -Name "Version" -Value "2.0"</code></pre>
+<h3>
+ Update File Attribute
+</h3>
+<pre><code>Set-ItemProperty -Path "C:\MyFolder\file.txt" -Name "IsReadOnly" -Value $false</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+Set-ItemProperty -Path "<path>" -Name "<property>" -Value "<value>"
+</value></property></path></code></pre>

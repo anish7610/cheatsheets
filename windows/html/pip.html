@@ -1,0 +1,133 @@
+<h1>
+ Windows Command: pip
+</h1>
+<p>
+ <code>
+  pip
+ </code>
+ is the package manager for Python. It allows you to install and manage packages from the Python Package Index and other repositories.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     install &lt;package&gt;
+    </code>
+   </td>
+   <td>
+    Installs the specified package.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     uninstall &lt;package&gt;
+    </code>
+   </td>
+   <td>
+    Uninstalls the specified package.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     list
+    </code>
+   </td>
+   <td>
+    Lists installed packages.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     freeze
+    </code>
+   </td>
+   <td>
+    Outputs installed packages in a format that can be used by
+    <code>
+     pip install
+    </code>
+    .
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     search &lt;query&gt;
+    </code>
+   </td>
+   <td>
+    Searches PyPI for packages.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     show &lt;package&gt;
+    </code>
+   </td>
+   <td>
+    Displays information about the installed package.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     help
+    </code>
+   </td>
+   <td>
+    Shows help for commands and options.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     upgrade &lt;package&gt;
+    </code>
+   </td>
+   <td>
+    Upgrades the specified package to the latest version.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code>pip install requests
+pip uninstall requests
+pip list
+pip freeze &gt; requirements.txt
+pip install -r requirements.txt
+pip search django
+pip show numpy
+pip install --upgrade pip
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>pip install &lt;package&gt;
+pip uninstall &lt;package&gt;
+pip list
+pip freeze
+pip search &lt;query&gt;
+pip show &lt;package&gt;
+pip install --upgrade &lt;package&gt;
+</code></pre>

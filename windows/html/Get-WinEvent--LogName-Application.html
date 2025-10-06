@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Get-WinEvent Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   Get-WinEvent -LogName Application
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    Get-WinEvent -LogName Application
+   </code>
+   command retrieves events from the Application log on a Windows system. 
+        It's part of PowerShell and is useful for viewing and analyzing application-specific events.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      -MaxEvents &lt;Number&gt;
+     </td>
+     <td>
+      Limits the number of events returned.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -FilterXPath &lt;XPath Query&gt;
+     </td>
+     <td>
+      Uses XPath to filter the events more precisely.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -Oldest
+     </td>
+     <td>
+      Returns the oldest events first.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -Verbose
+     </td>
+     <td>
+      Provides more detailed output information.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -ComputerName &lt;Name&gt;
+     </td>
+     <td>
+      Queries a remote computer by name.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Examples
+  </h2>
+  <pre>
+    <code>
+# Retrieve the latest 10 events from Application log
+Get-WinEvent -LogName Application -MaxEvents 10
+
+# Get events older first
+Get-WinEvent -LogName Application -Oldest
+
+# Use XPath to filter for errors only
+Get-WinEvent -LogName Application -FilterXPath "*[System[(Level=2)]]"
+
+# Check events on a remote computer
+Get-WinEvent -LogName Application -ComputerName "RemotePC"
+    </code>
+    </pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre>
+    <code>
+Get-WinEvent -LogName Application -MaxEvents <number>
+Get-WinEvent -LogName Application -Oldest
+Get-WinEvent -LogName Application -FilterXPath <xpath query="">
+Get-WinEvent -LogName Application -ComputerName <name>
+    </name></xpath></number></code>
+    </pre>
+ </body>
+</html>

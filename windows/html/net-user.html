@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Net User Command Overview
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Net User Command Overview
+   </h1>
+   <p>
+    The
+    <code>
+     net user
+    </code>
+    command is used in Windows to manage user accounts.
+   </p>
+  </header>
+  <main>
+   <section>
+    <h2>
+     Common Options
+    </h2>
+    <table>
+     <thead>
+      <tr>
+       <th>
+        Option
+       </th>
+       <th>
+        Description
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        <code>
+         net user
+        </code>
+       </td>
+       <td>
+        Lists all user accounts.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <code>
+         net user &lt;username&gt;
+        </code>
+       </td>
+       <td>
+        Displays detailed information about a specific user.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <code>
+         net user &lt;username&gt; &lt;password&gt;
+        </code>
+       </td>
+       <td>
+        Sets or changes a user's password.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <code>
+         /add
+        </code>
+       </td>
+       <td>
+        Adds a new user account.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <code>
+         /delete
+        </code>
+       </td>
+       <td>
+        Deletes a user account.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </section>
+   <section>
+    <h2>
+     Usage Examples
+    </h2>
+    <pre><code>net user JohnDoe /add
+net user JohnDoe Password123
+net user JohnDoe /delete
+net user Administrator *</code></pre>
+   </section>
+   <section>
+    <h2>
+     Cheat Sheet
+    </h2>
+    <pre><code>net user
+net user &lt;username&gt;
+net user &lt;username&gt; &lt;password&gt;
+net user &lt;username&gt; /add
+net user &lt;username&gt; /delete</code></pre>
+   </section>
+  </main>
+ </body>
+</html>

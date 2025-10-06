@@ -1,0 +1,165 @@
+<h1>
+ xcopy Command Overview
+</h1>
+<p>
+ The
+ <code>
+  xcopy
+ </code>
+ command in Windows is used to copy files and directories, including their subdirectories. It provides more options than the standard
+ <code>
+  copy
+ </code>
+ command, making it suitable for duplicating complex directory structures.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     /s
+    </code>
+   </td>
+   <td>
+    Copy directories and subdirectories except empty ones.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     /e
+    </code>
+   </td>
+   <td>
+    Copy all subdirectories, including empty ones.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     /v
+    </code>
+   </td>
+   <td>
+    Verify each file as it is written to the destination.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     /f
+    </code>
+   </td>
+   <td>
+    Display full source and destination file names while copying.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     /h
+    </code>
+   </td>
+   <td>
+    Copy hidden and system files as well.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     /k
+    </code>
+   </td>
+   <td>
+    Copy attributes. Normal
+    <code>
+     xcopy
+    </code>
+    will reset read-only attributes.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     /d[:MM-DD-YYYY]
+    </code>
+   </td>
+   <td>
+    Copy files changed on or after the specified date. If no date is provided, copies only if source is newer than destination.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     /i
+    </code>
+   </td>
+   <td>
+    If destination does not exist, assume it's a directory.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     /q
+    </code>
+   </td>
+   <td>
+    Do not display file names while copying.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code class="language-bash">xcopy C:\SourceFolder D:\Backup /s /e /v /f</code></pre>
+<p>
+ Copy all files and subdirectories from
+ <code>
+  C:\SourceFolder
+ </code>
+ to
+ <code>
+  D:\Backup
+ </code>
+ , including empty subdirectories, with verification and full path display.
+</p>
+<pre><code class="language-bash">xcopy C:\SourceFolder D:\Backup /d /e /h /i</code></pre>
+<p>
+ Copy only files that are newer from
+ <code>
+  C:\SourceFolder
+ </code>
+ to
+ <code>
+  D:\Backup
+ </code>
+ , including hidden files and assuming the destination is a directory.
+</p>
+<h2>
+ Cheat Sheet
+</h2>
+<pre>
+xcopy [source] [destination] [options]
+  /s    # Copy subdirectories
+  /e    # Include empty directories
+  /v    # Verify files after writing
+  /f    # Show full file paths
+  /h    # Include hidden/system files
+  /d    # Only newer files
+  /i    # Treat destination as folder
+</pre>

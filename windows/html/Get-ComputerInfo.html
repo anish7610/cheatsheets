@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Get-ComputerInfo Command Guide
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Get-ComputerInfo Command Overview
+   </h1>
+  </header>
+  <section>
+   <h2>
+    Description
+   </h2>
+   <p>
+    The
+    <code>
+     Get-ComputerInfo
+    </code>
+    command in Windows PowerShell is used to retrieve detailed information about the computer's hardware and operating system.
+   </p>
+  </section>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        -Property
+       </code>
+      </td>
+      <td>
+       Specifies which properties to display, provides flexibility to view specific details.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -ErrorAction
+       </code>
+      </td>
+      <td>
+       Determines the action to take if the command encounters an error.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code>
+# Retrieve all computer information
+Get-ComputerInfo
+
+# View only specific properties, e.g., OS version and architecture
+Get-ComputerInfo -Property "CsName", "WindowsVersion", "WindowsBuildLabEx"
+
+# Handle errors gracefully
+Get-ComputerInfo -ErrorAction SilentlyContinue
+        </code></pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code>
+# Basic Information
+Get-ComputerInfo
+
+# Specific Properties
+Get-ComputerInfo -Property "WindowsVersion"
+
+# Error Handling
+Get-ComputerInfo -ErrorAction Stop
+        </code></pre>
+  </section>
+ </body>
+</html>

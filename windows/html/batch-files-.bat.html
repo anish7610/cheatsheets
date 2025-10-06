@@ -1,0 +1,116 @@
+<h1>
+ Batch Files (.bat) in Windows
+</h1>
+<p>
+ Batch files are scripts that contain a sequence of commands to be executed by the Windows command interpreter. They are commonly used for automating routine tasks and configuring system settings.
+</p>
+<h2>
+ Common Options and Explanations
+</h2>
+<table>
+ <tr>
+  <th>
+   Option
+  </th>
+  <th>
+   Description
+  </th>
+ </tr>
+ <tr>
+  <td>
+   echo
+  </td>
+  <td>
+   Displays messages or turns command echoing on or off.
+  </td>
+ </tr>
+ <tr>
+  <td>
+   pause
+  </td>
+  <td>
+   Suspends the batch process and prompts the user to press any key to continue.
+  </td>
+ </tr>
+ <tr>
+  <td>
+   rem
+  </td>
+  <td>
+   Adds a comment line in the batch file.
+  </td>
+ </tr>
+ <tr>
+  <td>
+   if
+  </td>
+  <td>
+   Performs conditional processing in batch programs.
+  </td>
+ </tr>
+ <tr>
+  <td>
+   goto
+  </td>
+  <td>
+   Directs batch file processing to a labeled line.
+  </td>
+ </tr>
+ <tr>
+  <td>
+   set
+  </td>
+  <td>
+   Defines and manages environment variables.
+  </td>
+ </tr>
+ <tr>
+  <td>
+   call
+  </td>
+  <td>
+   Calls another batch file and returns to the original script afterward.
+  </td>
+ </tr>
+ <tr>
+  <td>
+   exit
+  </td>
+  <td>
+   Exits the command processor or batch file.
+  </td>
+ </tr>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code>@echo off
+echo Hello, World!
+pause
+</code></pre>
+<pre><code>@echo off
+set /p name=Enter your name: 
+echo Hello, %name%!
+pause
+</code></pre>
+<pre><code>@echo off
+if exist "file.txt" (
+    echo File exists.
+) else (
+    echo File does not exist.
+)
+pause
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>@echo off        :: Disable command echoing
+echo text         :: Display text
+pause             :: Wait for user input
+rem comment       :: Add comment
+if condition      :: Conditional execution
+goto label        :: Jump to label
+set var=value     :: Set variable
+call script.bat   :: Call another batch file
+exit              :: Exit script
+</code></pre>

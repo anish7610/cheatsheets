@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Export-EventLog Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   Export-EventLog Command
+  </h1>
+  <p>
+   <code>
+    Export-EventLog
+   </code>
+   is a PowerShell command used to export event logs from Windows systems to a file, making it easier to archive and analyze log files.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -LogName
+      </code>
+     </td>
+     <td>
+      Specifies the name of the event log to be exported.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -FilePath
+      </code>
+     </td>
+     <td>
+      Defines the full path where the exported log file will be saved.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Newest
+      </code>
+     </td>
+     <td>
+      Exports the newest entries up to the specified number.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -ComputerName
+      </code>
+     </td>
+     <td>
+      Specifies the target computer from which the event log is exported.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -UserName
+      </code>
+     </td>
+     <td>
+      Uses a specific user credential for connecting to a remote computer.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Export the Application log to a file
+Export-EventLog -LogName Application -FilePath "C:\Logs\AppLog.evt"</code></pre>
+  <pre><code># Export the last 50 entries from the System log
+Export-EventLog -LogName System -FilePath "C:\Logs\SysLog.evt" -Newest 50</code></pre>
+  <pre><code># Export the Security log from a remote computer
+Export-EventLog -LogName Security -FilePath "C:\Logs\SecLog.evt" -ComputerName "Server01"</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code># Basic format
+Export-EventLog -LogName [Log] -FilePath [Path] -Newest [Number]</code></pre>
+ </body>
+</html>

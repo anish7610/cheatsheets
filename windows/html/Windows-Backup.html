@@ -1,0 +1,103 @@
+<h1>
+ Windows Backup Command
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The Windows Backup command is used to create backups of files, folders, or entire systems, allowing users to restore data in case of loss or corruption.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    /backup
+   </td>
+   <td>
+    Initiates a backup operation.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    /restore
+   </td>
+   <td>
+    Restores data from a backup.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    /quiet
+   </td>
+   <td>
+    Runs the command without any interactive prompts.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    /target:
+    <i>
+     destination
+    </i>
+   </td>
+   <td>
+    Specifies the backup location.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    /include:
+    <i>
+     items
+    </i>
+   </td>
+   <td>
+    Specifies files or folders to include in the backup.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    /exclude:
+    <i>
+     items
+    </i>
+   </td>
+   <td>
+    Specifies files or folders to exclude from the backup.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code>
+<!-- Backup specific folders to an external drive -->
+wbadmin start backup -backupTarget:D: -include:C:\Users\John -quiet
+
+<!-- Restore a backup from an external drive -->
+wbadmin start recovery -version:09/30/2023-10:00 -backupTarget:D: -quiet
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+# Start backup
+wbadmin start backup -backupTarget:<destination> -include:<items> -quiet
+
+# Restore backup
+wbadmin start recovery -version:<backup version=""> -backupTarget:<destination> -quiet
+</destination></backup></items></destination></code></pre>

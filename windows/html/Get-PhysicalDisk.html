@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Get-PhysicalDisk Command
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Get-PhysicalDisk Command
+   </h1>
+   <h2>
+    Description
+   </h2>
+   <p>
+    The
+    <code>
+     Get-PhysicalDisk
+    </code>
+    cmdlet retrieves information about the physical disks on a Windows system.
+   </p>
+  </header>
+  <main>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       No specific options
+      </td>
+      <td>
+       Returns all physical disks with default properties.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -CimSession &lt;CimSession&gt;
+       </code>
+      </td>
+      <td>
+       Runs the command in a remote session or on a remote computer.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -SerialNumber
+       </code>
+      </td>
+      <td>
+       Filters the output based on a specified serial number.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -UniqueId
+       </code>
+      </td>
+      <td>
+       Displays information for a disk with a specific unique ID.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code># List all physical disks
+Get-PhysicalDisk
+
+# Filter by serial number
+Get-PhysicalDisk -SerialNumber "123456789"
+
+# Run the command on a remote computer
+Get-PhysicalDisk -CimSession "RemoteServerName"</code></pre>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code>Get-PhysicalDisk             # Basic usage
+Get-PhysicalDisk -SerialNumber "SN"  # Filter by serial number
+Get-PhysicalDisk -CimSession "Name"  # Remote machine</code></pre>
+  </main>
+ </body>
+</html>

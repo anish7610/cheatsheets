@@ -1,0 +1,100 @@
+<h1>
+ Get-PSSession Overview
+</h1>
+<p>
+ The
+ <code>
+  Get-PSSession
+ </code>
+ command in Windows PowerShell retrieves the current PowerShell sessions (PSSessions) on the local computer. These sessions can be used to run remote commands.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -Name
+    </code>
+   </td>
+   <td>
+    Specify the session name to filter returned sessions.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -ComputerName
+    </code>
+   </td>
+   <td>
+    Return sessions connected to specified computers.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -InstanceId
+    </code>
+   </td>
+   <td>
+    Retrieve sessions using specific instance IDs.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -State
+    </code>
+   </td>
+   <td>
+    Filter sessions by their state (e.g., Opened, Closed).
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Retrieve all active sessions
+Get-PSSession
+
+# Filter sessions by name
+Get-PSSession -Name "SessionName"
+
+# List sessions for a specific computer
+Get-PSSession -ComputerName "RemotePC"
+
+# Find sessions by instance ID
+Get-PSSession -InstanceId "GUID"
+
+# Get sessions that are opened
+Get-PSSession -State "Opened"
+</code></pre>
+<h2>
+ Quick Reference Cheat Sheet
+</h2>
+<pre><code># List all sessions
+Get-PSSession
+
+# Filter by name
+Get-PSSession -Name "YourSessionName"
+
+# Sessions by computer
+Get-PSSession -ComputerName "YourComputerName"
+
+# By state
+Get-PSSession -State "Opened"
+</code></pre>

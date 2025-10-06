@@ -1,0 +1,103 @@
+<html>
+ <head>
+  <title>
+   Get-Process Command Overview
+  </title>
+ </head>
+ <body>
+  <h1>
+   Get-Process Command
+  </h1>
+  <p>
+   The
+   <code>
+    Get-Process
+   </code>
+   command in Windows retrieves information about processes running on a local or remote machine.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -Name
+      </code>
+     </td>
+     <td>
+      Gets the process with the specified name.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Id
+      </code>
+     </td>
+     <td>
+      Gets the process with the specified process ID.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -ComputerName
+      </code>
+     </td>
+     <td>
+      Gets processes on a remote computer.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -FileVersionInfo
+      </code>
+     </td>
+     <td>
+      Displays file version information for the process.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># List all running processes
+Get-Process
+
+# Get processes by name
+Get-Process -Name "notepad"
+
+# Get a specific process by ID
+Get-Process -Id 1234
+
+# Get processes from a remote computer
+Get-Process -ComputerName "RemotePC"
+
+# Display version information of a process
+Get-Process -Name "chrome" -FileVersionInfo
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code># List processes: Get-Process
+# By name: Get-Process -Name "name"
+# By ID: Get-Process -Id 1234
+# Remote: Get-Process -ComputerName "PCName"
+# Version info: Get-Process -Name "name" -FileVersionInfo
+    </code></pre>
+ </body>
+</html>

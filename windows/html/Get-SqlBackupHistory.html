@@ -1,0 +1,87 @@
+<html>
+ <body>
+  <h1>
+   Get-SqlBackupHistory: Overview
+  </h1>
+  <p>
+   The
+   <code>
+    Get-SqlBackupHistory
+   </code>
+   command retrieves the backup history of databases from a SQL Server instance.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -ServerInstance
+      </code>
+     </td>
+     <td>
+      The name or network address of the SQL Server instance.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Database
+      </code>
+     </td>
+     <td>
+      The name of the database to get backup history for.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Since
+      </code>
+     </td>
+     <td>
+      Gets backups since the specified date.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -MaximumRows
+      </code>
+     </td>
+     <td>
+      Limits the number of rows returned.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Retrieve backup history for a specific database
+Get-SqlBackupHistory -ServerInstance "ServerName" -Database "DatabaseName"
+
+# Get all backup history since a specific date
+Get-SqlBackupHistory -ServerInstance "ServerName" -Since "2023-01-01"
+
+# Limit the results to the last 5 backups
+Get-SqlBackupHistory -ServerInstance "ServerName" -MaximumRows 5</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>Get-SqlBackupHistory -ServerInstance "ServerName"
+</code></pre>
+ </body>
+</html>

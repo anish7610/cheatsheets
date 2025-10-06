@@ -1,0 +1,83 @@
+<h1>
+ Get-SqlLogin Command
+</h1>
+<p>
+ The
+ <code>
+  Get-SqlLogin
+ </code>
+ command retrieves login information from a SQL Server instance.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -ServerInstance
+    </code>
+   </td>
+   <td>
+    Specifies the SQL Server instance.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Credential
+    </code>
+   </td>
+   <td>
+    Provides authentication credentials.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Username
+    </code>
+   </td>
+   <td>
+    Filters results by specific username.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Databases
+    </code>
+   </td>
+   <td>
+    Retrieves logins for specified databases.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code>
+<code>Get-SqlLogin -ServerInstance "ServerName" -Credential (Get-Credential)</code>
+<code>Get-SqlLogin -ServerInstance "ServerName" -Username "sa"</code>
+<code>Get-SqlLogin -ServerInstance "ServerName" -Databases "Database1"</code>
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+Get-SqlLogin -ServerInstance [Instance] -Credential [Get-Credential]
+Get-SqlLogin -ServerInstance [Instance] -Username [User]
+Get-SqlLogin -ServerInstance [Instance] -Databases [DB]
+</code></pre>

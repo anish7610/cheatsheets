@@ -1,0 +1,103 @@
+<h1>
+ Azure CLI (`az`)
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The Azure Command-Line Interface (CLI) is a tool for managing Azure resources directly from the command line. It allows performing a variety of management and deployment tasks on Azure.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <tr>
+  <th>
+   Option
+  </th>
+  <th>
+   Description
+  </th>
+ </tr>
+ <tr>
+  <td>
+   <code>
+    --help
+   </code>
+  </td>
+  <td>
+   Show help information for a command or group.
+  </td>
+ </tr>
+ <tr>
+  <td>
+   <code>
+    --output
+   </code>
+   /
+   <code>
+    -o
+   </code>
+  </td>
+  <td>
+   Specify the format of command output (json, table, tsv).
+  </td>
+ </tr>
+ <tr>
+  <td>
+   <code>
+    --query
+   </code>
+  </td>
+  <td>
+   Filter results using a JMESPath query string.
+  </td>
+ </tr>
+ <tr>
+  <td>
+   <code>
+    --verbose
+   </code>
+  </td>
+  <td>
+   Increase logging verbosity for debugging.
+  </td>
+ </tr>
+ <tr>
+  <td>
+   <code>
+    --debug
+   </code>
+  </td>
+  <td>
+   Show all debug information.
+  </td>
+ </tr>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Log in to Azure
+az login
+
+# List all resource groups
+az group list --output table
+
+# Create a new resource group
+az group create --name MyResourceGroup --location eastus
+
+# Show details of a specific resource group
+az group show --name MyResourceGroup --output json
+
+# Delete a resource group
+az group delete --name MyResourceGroup --yes --no-wait
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>az login                     # Log in to Azure
+az --help                    # Get help
+az <resource> --help         # Get help for specific resource
+az <resource> list -o table  # List resources in table format
+az <resource> show -o json   # Show resource details in JSON
+</resource></resource></resource></code></pre>

@@ -1,0 +1,79 @@
+<html>
+ <body>
+  <h1>
+   Windows Command: net localgroup [groupname] [username] /delete
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    net localgroup [groupname] [username] /delete
+   </code>
+   command is used to remove a user from a specified local group on a Windows machine.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       [groupname]
+      </code>
+     </td>
+     <td>
+      The name of the local group from which the user will be removed.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       [username]
+      </code>
+     </td>
+     <td>
+      The name of the user to be removed from the group.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       /delete
+      </code>
+     </td>
+     <td>
+      Indicates the action to remove the user from the group.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Remove user 'john' from the 'Administrators' group
+net localgroup Administrators john /delete
+
+# Remove user 'guest' from the 'Users' group
+net localgroup Users guest /delete
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code># Remove user from group
+net localgroup [groupname] [username] /delete
+    </code></pre>
+ </body>
+</html>

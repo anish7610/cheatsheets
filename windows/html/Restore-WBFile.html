@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Restore-WBFile Command Cheat Sheet
+  </title>
+ </head>
+ <body>
+  <main>
+   <h1>
+    Restore-WBFile Command
+   </h1>
+   <h2>
+    Description
+   </h2>
+   <p>
+    The
+    <code>
+     Restore-WBFile
+    </code>
+    command is used in Windows PowerShell to recover files and folders from a backup created using Windows Server Backup.
+   </p>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        -BackupSet
+       </code>
+      </td>
+      <td>
+       Specifies the backup set from which to restore files.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -Item
+       </code>
+      </td>
+      <td>
+       Defines the path(s) of the file(s) or folder(s) to restore.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -DestinationPath
+       </code>
+      </td>
+      <td>
+       Specifies the path where the restored files will be placed.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -Overwrite
+       </code>
+      </td>
+      <td>
+       Indicates whether to overwrite existing files at the destination.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code>
+# Restore a specific file from a backup to a given location
+Restore-WBFile -BackupSet $backupSet -Item "C:\Backup\File1.txt" -DestinationPath "C:\RestoredFiles"
+
+# Restore a directory and overwrite existing files
+Restore-WBFile -BackupSet $backupSet -Item "C:\Backup\Documents" -DestinationPath "C:\RestoredDocuments" -Overwrite
+        </code></pre>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code>
+Restore-WBFile -BackupSet <backupset> -Item <path> -DestinationPath <destination> [-Overwrite]
+        </destination></path></backupset></code></pre>
+  </main>
+ </body>
+</html>

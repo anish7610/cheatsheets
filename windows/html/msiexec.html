@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   msiexec Command Overview
+  </title>
+ </head>
+ <body>
+  <h1>
+   msiexec Command Overview
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    msiexec
+   </code>
+   command is used to install, repair, or uninstall Windows Installer packages with the extension
+   <code>
+    .msi
+   </code>
+   . It is a command-line utility for managing Windows Installer actions.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       /i
+      </code>
+      <em>
+       package
+      </em>
+     </td>
+     <td>
+      Install the specified
+      <em>
+       package
+      </em>
+      .
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       /x
+      </code>
+      <em>
+       package
+      </em>
+     </td>
+     <td>
+      Uninstall the specified
+      <em>
+       package
+      </em>
+      .
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       /f
+      </code>
+      <em>
+       package
+      </em>
+     </td>
+     <td>
+      Repair the specified
+      <em>
+       package
+      </em>
+      .
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       /qn
+      </code>
+     </td>
+     <td>
+      Run the installer with no user interface.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       /quiet
+      </code>
+     </td>
+     <td>
+      An alternative to
+      <code>
+       /qn
+      </code>
+      for quiet installation without UI.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       /l*v
+      </code>
+      <em>
+       logfile
+      </em>
+     </td>
+     <td>
+      Log installation information to the specified
+      <em>
+       logfile
+      </em>
+      with verbose output.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code>
+    <!-- Install an MSI package -->
+    msiexec /i example.msi
+
+    <!-- Uninstall an MSI package -->
+    msiexec /x example.msi
+
+    <!-- Repair an MSI package -->
+    msiexec /f example.msi
+
+    <!-- Install an MSI package quietly and log output -->
+    msiexec /i example.msi /quiet /l*v install.log
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+    Install: msiexec /i [package]
+    Uninstall: msiexec /x [package]
+    Repair: msiexec /f [package]
+    Quiet Install: msiexec /i [package] /quiet
+    Log: msiexec /i [package] /l*v [logfile]
+    </code></pre>
+ </body>
+</html>

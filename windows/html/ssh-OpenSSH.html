@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   SSH (OpenSSH) Cheat Sheet
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    SSH (OpenSSH)
+   </h1>
+  </header>
+  <section>
+   <h2>
+    Description
+   </h2>
+   <p>
+    SSH (Secure Shell) is a protocol for securely connecting to remote systems over a network. It provides encrypted communications and various authentication methods.
+   </p>
+  </section>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       -l
+       <em>
+        login_name
+       </em>
+      </td>
+      <td>
+       Specify the user to log in as on the remote machine.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       -i
+       <em>
+        identity_file
+       </em>
+      </td>
+      <td>
+       Use the specified file as the private key for authentication.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       -p
+       <em>
+        port
+       </em>
+      </td>
+      <td>
+       Connect to the specified port on the remote host.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       -v
+      </td>
+      <td>
+       Verbose mode. Increase verbosity for debugging.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       -N
+      </td>
+      <td>
+       Do not execute a remote command (useful for port forwarding).
+      </td>
+     </tr>
+     <tr>
+      <td>
+       -T
+      </td>
+      <td>
+       Disable pseudo-terminal allocation.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       -L
+       <em>
+        local_port:remote_host:remote_port
+       </em>
+      </td>
+      <td>
+       Specify local port forwarding.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Examples
+   </h2>
+   <pre><code># Connect to a remote host
+ssh user@example.com
+
+# Use a specific private key
+ssh -i ~/.ssh/id_rsa user@example.com
+
+# Connect to a remote host on a non-standard port
+ssh -p 2222 user@example.com
+
+# Enable verbose mode for more details
+ssh -v user@example.com
+
+# Local port forwarding example
+ssh -L 8080:localhost:80 user@example.com
+
+# Connect without executing remote commands (useful for tunneling)
+ssh -N -L 8080:localhost:80 user@example.com
+        </code></pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code>
+# Basic SSH connection
+ssh user@hostname
+
+# Use a private key
+ssh -i path_to_key user@hostname
+
+# Connect on a custom port
+ssh -p port user@hostname
+
+# Verbose output
+ssh -v user@hostname
+
+# Local port forwarding
+ssh -L local_port:remote_host:remote_port user@hostname
+        </code></pre>
+  </section>
+ </body>
+</html>

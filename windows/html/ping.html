@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Ping Command Guide
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Ping Command in Windows
+   </h1>
+  </header>
+  <main>
+   <section>
+    <h2>
+     Description
+    </h2>
+    <p>
+     The
+     <code>
+      ping
+     </code>
+     command is used to test the network connectivity between a source computer and a specified destination, typically using ICMP echo requests and replies.
+    </p>
+   </section>
+   <section>
+    <h2>
+     Common Options
+    </h2>
+    <table>
+     <thead>
+      <tr>
+       <th>
+        Option
+       </th>
+       <th>
+        Description
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        <code>
+         -t
+        </code>
+       </td>
+       <td>
+        Pings the specified host until stopped. Use
+        <code>
+         Ctrl+C
+        </code>
+        to stop.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <code>
+         -n
+        </code>
+       </td>
+       <td>
+        Specifies the number of echo requests to send. Example:
+        <code>
+         -n 5
+        </code>
+        .
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <code>
+         -l
+        </code>
+       </td>
+       <td>
+        Sets the size of the send buffer. Example:
+        <code>
+         -l 1024
+        </code>
+        .
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <code>
+         -4
+        </code>
+       </td>
+       <td>
+        Forces using IPv4.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <code>
+         -6
+        </code>
+       </td>
+       <td>
+        Forces using IPv6.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </section>
+   <section>
+    <h2>
+     Usage Examples
+    </h2>
+    <pre>
+<code>ping google.com</code>
+            </pre>
+    <p>
+     Pings Google's server to check connectivity.
+    </p>
+    <pre>
+<code>ping -n 3 example.com</code>
+            </pre>
+    <p>
+     Sends 3 echo requests to example.com and displays the results.
+    </p>
+    <pre>
+<code>ping -t 192.168.1.1</code>
+            </pre>
+    <p>
+     Pings the IP address 192.168.1.1 continuously until stopped.
+    </p>
+   </section>
+   <section>
+    <h2>
+     Cheat Sheet
+    </h2>
+    <pre>
+<code>ping [host]
+ping [host] -n [count]
+ping [host] -t
+ping [host] -l [size]</code>
+            </pre>
+   </section>
+  </main>
+ </body>
+</html>

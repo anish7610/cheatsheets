@@ -1,0 +1,92 @@
+<h1>
+ Windows Command: netsh interface
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  netsh interface
+ </code>
+ command is used to manage and configure network interfaces on Windows systems. It allows users to view and adjust networking settings.
+</p>
+<h2>
+ Options and Explanations
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    show interface
+   </td>
+   <td>
+    Displays a list of network interfaces and their status.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    set interface
+   </td>
+   <td>
+    Configures parameters such as enabling/disabling an interface.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    ip set address
+   </td>
+   <td>
+    Assigns a static IP address to a network interface.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    ip show config
+   </td>
+   <td>
+    Displays IP configuration of network interfaces.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    reset
+   </td>
+   <td>
+    Resets all interfaces to default settings.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code>netsh interface show interface
+</code></pre>
+<pre><code>netsh interface set interface "Ethernet" admin=disable
+</code></pre>
+<pre><code>netsh interface ip set address "Ethernet" static 192.168.1.10 255.255.255.0 192.168.1.1
+</code></pre>
+<pre><code>netsh interface ip show config
+</code></pre>
+<pre><code>netsh interface reset all
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>show interface - List interfaces
+set interface "Name" admin=disable - Disable interface
+ip set address "Name" static IP Subnet Gateway - Set static IP
+ip show config - Show IP config
+reset all - Reset settings
+</code></pre>

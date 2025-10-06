@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Get-WebApplication Command Guide
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Get-WebApplication Command Guide
+   </h1>
+  </header>
+  <section>
+   <h2>
+    Description
+   </h2>
+   <p>
+    The
+    <code>
+     Get-WebApplication
+    </code>
+    command retrieves information about web applications in IIS (Internet Information Services).
+   </p>
+  </section>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        -Name
+       </code>
+      </td>
+      <td>
+       Specifies the name of the web application to retrieve.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -Site
+       </code>
+      </td>
+      <td>
+       Specifies the site under which the web application resides.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -Filter
+       </code>
+      </td>
+      <td>
+       Applies a filter to the list of web applications.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code># Retrieve all web applications on the default site
+Get-WebApplication -Site "Default Web Site"
+
+# Retrieve a specific web application by name
+Get-WebApplication -Name "MyApp"
+
+# Apply a filter to retrieve applications that contain 'shop' in their name
+Get-WebApplication -Filter "*shop*"</code></pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code># List all on default site
+Get-WebApplication -Site "Default Web Site"
+
+# Get specific app
+Get-WebApplication -Name "AppName"
+
+# Filter applications
+Get-WebApplication -Filter "*pattern*"</code></pre>
+  </section>
+ </body>
+</html>

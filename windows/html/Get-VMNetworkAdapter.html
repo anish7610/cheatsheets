@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Get-VMNetworkAdapter Cheat Sheet
+  </title>
+ </head>
+ <body>
+  <main>
+   <h1>
+    Get-VMNetworkAdapter Command
+   </h1>
+   <h2>
+    Description
+   </h2>
+   <p>
+    The
+    <code>
+     Get-VMNetworkAdapter
+    </code>
+    command is used in Windows PowerShell to retrieve information about virtual network adapters of virtual machines managed by Hyper-V.
+   </p>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        -VMName &lt;String&gt;
+       </code>
+      </td>
+      <td>
+       Specifies the name of the virtual machine.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -VMId &lt;Guid&gt;
+       </code>
+      </td>
+      <td>
+       Specifies the GUID of the virtual machine.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -SwitchName &lt;String&gt;
+       </code>
+      </td>
+      <td>
+       Filters network adapters connected to a specific virtual switch.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -ManagementOS
+       </code>
+      </td>
+      <td>
+       Retrieves network adapters on the management operating system.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -CimSession &lt;CimSession[]&gt;
+       </code>
+      </td>
+      <td>
+       Runs the command on remote sessions.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code class="language-powershell">
+# Retrieve network adapters for a specific VM
+Get-VMNetworkAdapter -VMName "MyVM"
+
+# Get network adapters connected to a specific switch
+Get-VMNetworkAdapter -SwitchName "MySwitch"
+
+# List adapters on the management OS
+Get-VMNetworkAdapter -ManagementOS
+        </code></pre>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code class="language-powershell">
+Get-VMNetworkAdapter -VMName "VM"
+Get-VMNetworkAdapter -SwitchName "Switch"
+Get-VMNetworkAdapter -ManagementOS
+        </code></pre>
+  </main>
+ </body>
+</html>

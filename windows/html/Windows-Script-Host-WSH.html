@@ -1,0 +1,105 @@
+<h1>
+ Windows Script Host (WSH)
+</h1>
+<p>
+ Windows Script Host (WSH) is a scripting utility that allows you to run scripts directly in the Windows environment. It supports scripts written in VBScript and JScript.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    -e
+   </td>
+   <td>
+    Executes the script in interpreted mode.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    //B
+   </td>
+   <td>
+    Batch mode; suppresses script errors and prompts.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    //H:cscript
+   </td>
+   <td>
+    Changes the default scripting host to CScript.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    //H:wscript
+   </td>
+   <td>
+    Changes the default scripting host to WScript.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    //nologo
+   </td>
+   <td>
+    Prevents WSH banner from appearing.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    //S
+   </td>
+   <td>
+    Saves the current command-line options for this user.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    //T:nn
+   </td>
+   <td>
+    Time out in seconds; maximum time allowed for the script to run.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    //X
+   </td>
+   <td>
+    Executes the script in debugger mode.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code>
+cscript //nologo myscript.vbs
+wscript //B myscript.js
+cscript //H:cscript //nologo script.vbs
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+cscript myscript.vbs               <!-- Run VBScript with cscript -->
+wscript myscript.js                <!-- Run JScript with wscript -->
+//B                                <!-- Batch mode -->
+//nologo                           <!-- No logo -->
+//H:cscript                        <!-- Set cscript as default host -->
+</code></pre>

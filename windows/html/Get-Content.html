@@ -1,0 +1,99 @@
+<h1>
+ Get-Content Command Overview
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  Get-Content
+ </code>
+ command in Windows is used to read and display the contents of a file. It is commonly used in PowerShell to access text data for viewing and processing.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -Path
+    </code>
+   </td>
+   <td>
+    Specifies the file path to read the content from.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -TotalCount
+    </code>
+   </td>
+   <td>
+    Reads a specified number of lines from the start of the file.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Tail
+    </code>
+   </td>
+   <td>
+    Displays the last specified number of lines from the file.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Wait
+    </code>
+   </td>
+   <td>
+    Continuously checks the file for new content, similar to 'tail -f'.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Encoding
+    </code>
+   </td>
+   <td>
+    Specifies the file encoding (e.g., UTF8, ASCII).
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code>Get-Content -Path "C:\example\file.txt"</code></pre>
+<pre><code>Get-Content -Path "C:\example\file.txt" -TotalCount 10</code></pre>
+<pre><code>Get-Content -Path "C:\example\file.txt" -Tail 5</code></pre>
+<pre><code>Get-Content -Path "C:\example\file.txt" -Encoding UTF8</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre>
+<code>
+Get-Content -Path "FilePath"
+Get-Content -Path "FilePath" -TotalCount Number
+Get-Content -Path "FilePath" -Tail Number
+Get-Content -Path "FilePath" -Wait
+Get-Content -Path "FilePath" -Encoding EncodingType
+</code>
+</pre>

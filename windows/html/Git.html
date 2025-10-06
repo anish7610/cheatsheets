@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Git Command Overview
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Git Command Overview
+   </h1>
+   <p>
+    Git is a distributed version control system used to track changes in source code during software development.
+   </p>
+  </header>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        git clone &lt;url&gt;
+       </code>
+      </td>
+      <td>
+       Clone a repository into a new directory.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        git init
+       </code>
+      </td>
+      <td>
+       Initialize a new Git repository.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        git add &lt;file&gt;
+       </code>
+      </td>
+      <td>
+       Add file contents to the index.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        git commit -m "message"
+       </code>
+      </td>
+      <td>
+       Record changes with a message.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        git status
+       </code>
+      </td>
+      <td>
+       Show the working tree status.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        git log
+       </code>
+      </td>
+      <td>
+       Show commit logs.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        git push
+       </code>
+      </td>
+      <td>
+       Update remote refs along with associated objects.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        git pull
+       </code>
+      </td>
+      <td>
+       Fetch from and integrate with another repository or a local branch.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        git branch
+       </code>
+      </td>
+      <td>
+       List, create, or delete branches.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        git checkout &lt;branch&gt;
+       </code>
+      </td>
+      <td>
+       Switch branches or restore working tree files.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code>git clone https://github.com/user/repo.git
+git init
+git add README.md
+git commit -m "Initial commit"
+git status
+git log
+git push origin main
+git pull origin main
+git branch new-feature
+git checkout new-feature</code></pre>
+  </section>
+  <section>
+   <h2>
+    Quick Reference Cheat Sheet
+   </h2>
+   <pre><code>Clone:   git clone &lt;url&gt;
+Init:    git init
+Add:     git add &lt;file&gt;
+Commit:  git commit -m "msg"
+Status:  git status
+Log:     git log
+Push:    git push
+Pull:    git pull
+Branch:  git branch
+Checkout:git checkout &lt;branch&gt;</code></pre>
+  </section>
+ </body>
+</html>

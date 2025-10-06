@@ -1,0 +1,60 @@
+<html>
+ <body>
+  <h1>
+   Get-WBPolicy Command Overview
+  </h1>
+  <p>
+   The
+   <code>
+    Get-WBPolicy
+   </code>
+   cmdlet retrieves the current backup policy for a Windows Server. It's used to check the configuration of the backup schedule, backup targets, and items included in backups.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -PolicyEditable
+      </code>
+     </td>
+     <td>
+      Gets a copy of the backup policy that can be modified.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <h3>
+   Retrieve Current Backup Policy
+  </h3>
+  <pre><code>Get-WBPolicy</code></pre>
+  <h3>
+   Get Editable Copy of Backup Policy
+  </h3>
+  <pre><code>Get-WBPolicy -PolicyEditable</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code># Retrieve current backup policy
+Get-WBPolicy
+
+# Get editable copy of backup policy
+Get-WBPolicy -PolicyEditable</code></pre>
+ </body>
+</html>

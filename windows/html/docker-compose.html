@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Docker Compose Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   Docker Compose Command Overview
+  </h1>
+  <p>
+   Docker Compose is a tool for defining and running multi-container Docker applications. Using a
+   <code>
+    docker-compose.yml
+   </code>
+   file, you can configure your app’s services, networks, and volumes in one place.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       up
+      </code>
+     </td>
+     <td>
+      Builds, (re)creates, starts, and attaches to containers for a service.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       down
+      </code>
+     </td>
+     <td>
+      Stops containers and removes containers, networks, volumes, and images created by
+      <code>
+       up
+      </code>
+      .
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       build
+      </code>
+     </td>
+     <td>
+      Builds or rebuilds services.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       ps
+      </code>
+     </td>
+     <td>
+      Lists containers.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       logs
+      </code>
+     </td>
+     <td>
+      Views output from containers.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       config
+      </code>
+     </td>
+     <td>
+      Validates and views the Compose file.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       restart
+      </code>
+     </td>
+     <td>
+      Restarts running services.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Start all services defined in docker-compose.yml
+docker-compose up
+
+# Start services in detached mode (background)
+docker-compose up -d
+
+# Stop and remove all containers defined in docker-compose.yml
+docker-compose down
+
+# Build or rebuild services
+docker-compose build
+
+# View logs for all services
+docker-compose logs
+
+# View configuration details
+docker-compose config
+
+# List all running containers
+docker-compose ps
+</code></pre>
+  <h2>
+   Quick Reference Cheat Sheet
+  </h2>
+  <pre><code>up        # Start containers
+down      # Stop and remove containers
+build     # Build services
+ps        # List containers
+logs      # View logs
+config    # Validate config
+restart   # Restart services
+</code></pre>
+ </body>
+</html>

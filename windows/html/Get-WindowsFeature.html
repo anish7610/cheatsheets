@@ -1,0 +1,105 @@
+<h1>
+ Get-WindowsFeature Command Overview
+</h1>
+<p>
+ The
+ <code>
+  Get-WindowsFeature
+ </code>
+ command in Windows PowerShell is used to list the roles and features installed or available on a Windows Server.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -Name
+    </code>
+   </td>
+   <td>
+    Specifies the name of the feature to retrieve information about.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -ComputerName
+    </code>
+   </td>
+   <td>
+    Runs the command on a remote computer.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Credential
+    </code>
+   </td>
+   <td>
+    Runs the command under a specified user account.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -LogPath
+    </code>
+   </td>
+   <td>
+    Specifies a path for the command logs.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -ErrorVariable
+    </code>
+   </td>
+   <td>
+    Stores error messages in the specified variable.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># List all features and their installation state
+Get-WindowsFeature
+
+# Get details of a specific feature by name
+Get-WindowsFeature -Name Web-Server
+
+# Check features on a remote server
+Get-WindowsFeature -ComputerName Server01
+
+# Run the command with specific credentials
+$cred = Get-Credential
+Get-WindowsFeature -Credential $cred
+</code></pre>
+<h2>
+ Compact Cheat Sheet
+</h2>
+<pre><code># List all features
+Get-WindowsFeature
+
+# Specific feature
+Get-WindowsFeature -Name FeatureName
+
+# Remote server
+Get-WindowsFeature -ComputerName ServerName
+</code></pre>

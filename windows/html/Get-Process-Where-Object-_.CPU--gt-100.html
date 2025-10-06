@@ -1,0 +1,91 @@
+<h1>
+ Understanding the Windows Command
+</h1>
+<h2>
+ Short Description
+</h2>
+<p>
+ The command
+ <code>
+  Get-Process | Where-Object { $_.CPU -gt 100 }
+ </code>
+ retrieves a list of processes and filters them to show only those using more than 100 CPU units.
+</p>
+<h2>
+ Common Options and Explanations
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Explanation
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -ProcessName "Name"
+    </code>
+   </td>
+   <td>
+    Filter by the name of the process.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Id PID
+    </code>
+   </td>
+   <td>
+    Select a process by its ID.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -FileVersionInfo
+    </code>
+   </td>
+   <td>
+    Include version information for process executables.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -IncludeUserName
+    </code>
+   </td>
+   <td>
+    Show user names for processes (requires admin rights).
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># List processes using more than 200 CPU units
+Get-Process | Where-Object { $_.CPU -gt 200 }
+
+# Find processes named "notepad" with CPU usage over 50
+Get-Process -ProcessName "notepad" | Where-Object { $_.CPU -gt 50 }
+
+# List all processes with version info
+Get-Process -FileVersionInfo
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code># Basic filter
+Get-Process | Where-Object { $_.Property -Condition Value }
+
+# Example with CPU
+Get-Process | Where-Object { $_.CPU -gt 100 }
+</code></pre>

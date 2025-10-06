@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Windows `start` Command Cheat Sheet
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Windows `start` Command
+   </h1>
+   <p>
+    A command used to open a new window, or launch an application or document.
+   </p>
+  </header>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       /MAX
+      </td>
+      <td>
+       Start the program maximized.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       /MIN
+      </td>
+      <td>
+       Start the program minimized.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       /WAIT
+      </td>
+      <td>
+       Start the program and wait for it to end.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       /B
+      </td>
+      <td>
+       Start without creating a new window. Handles
+       <code>
+        Ctrl+C
+       </code>
+       .
+      </td>
+     </tr>
+     <tr>
+      <td>
+       Title
+      </td>
+      <td>
+       Specified title for the new window.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       Path or Command
+      </td>
+      <td>
+       Path to the executable or document.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Realistic Usage Examples
+   </h2>
+   <pre><code>start notepad.exe
+start /MAX explorer
+start /WAIT calc</code></pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code>start /MAX [program]    # Maximize window
+start /MIN [program]    # Minimize window
+start /WAIT [program]   # Wait for program to close
+start "" [program]      # Open with title</code></pre>
+  </section>
+ </body>
+</html>

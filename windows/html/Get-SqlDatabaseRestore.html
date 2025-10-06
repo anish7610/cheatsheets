@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Get-SqlDatabaseRestore Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   Get-SqlDatabaseRestore Command Overview
+  </h1>
+  <p>
+   The
+   <code>
+    Get-SqlDatabaseRestore
+   </code>
+   command is used to retrieve information about SQL Server database restores. It provides details on restore history, including date, restore type, and the source of the restore.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <tr>
+    <th>
+     Option
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      -ServerInstance
+     </code>
+    </td>
+    <td>
+     Specify the SQL Server instance to connect to.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      -Database
+     </code>
+    </td>
+    <td>
+     Specify the name of the database to retrieve restore information for.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      -Credential
+     </code>
+    </td>
+    <td>
+     Provide a SQL Server authentication credential.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      -Top
+     </code>
+    </td>
+    <td>
+     Limit the number of restore records returned.
+    </td>
+   </tr>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Retrieve restore information for a specific database
+Get-SqlDatabaseRestore -ServerInstance "Server\Instance" -Database "MyDatabase"
+
+# Get the top 5 restore records for a database
+Get-SqlDatabaseRestore -ServerInstance "Server\Instance" -Database "MyDatabase" -Top 5
+
+# Use a specific credential to connect to SQL Server
+Get-SqlDatabaseRestore -ServerInstance "Server\Instance" -Database "MyDatabase" -Credential (Get-Credential)</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code># Basic Command
+Get-SqlDatabaseRestore -ServerInstance "Server\Instance" -Database "MyDatabase"
+
+# Limit Results
+-Top
+
+# Authentication
+-Credential (Get-Credential)
+</code></pre>
+ </body>
+</html>

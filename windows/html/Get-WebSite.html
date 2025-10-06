@@ -1,0 +1,91 @@
+<html>
+ <head>
+  <title>
+   Get-Website Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   Get-Website Command
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    Get-Website
+   </code>
+   command is used in Windows PowerShell to retrieve information about websites configured on an IIS (Internet Information Services) server.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -Name
+      </code>
+     </td>
+     <td>
+      Specify the name of the website to retrieve. If omitted, retrieves all websites.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -PhysicalPath
+      </code>
+     </td>
+     <td>
+      Include the physical path of the website in the output.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -State
+      </code>
+     </td>
+     <td>
+      Include the state (Started, Stopped) of the website in the output.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Retrieve all websites
+Get-Website
+
+# Retrieve a specific website by name
+Get-Website -Name "MySite"
+
+# Retrieve websites including their physical paths
+Get-Website | Select-Object Name, PhysicalPath
+
+# Retrieve websites with their state
+Get-Website | Select-Object Name, State
+</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>Get-Website               # List all websites
+Get-Website -Name "Site"   # List specific site
+Get-Website | Select-Object Name, PhysicalPath, State
+</code></pre>
+ </body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   icacls Command Overview
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Understanding the `icacls` Command
+   </h1>
+   <p>
+    The `icacls` command is used in Windows to view and modify access control lists (ACLs) for files and directories.
+   </p>
+  </header>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        /grant
+       </code>
+      </td>
+      <td>
+       Grants specified user access rights.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        /deny
+       </code>
+      </td>
+      <td>
+       Denies specified user access rights.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        /remove
+       </code>
+      </td>
+      <td>
+       Removes access rights for specified user or group.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        /setowner
+       </code>
+      </td>
+      <td>
+       Sets the owner of a file or directory.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        /inheritance
+       </code>
+      </td>
+      <td>
+       Modifies inheritance settings for a file or directory.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        /save
+       </code>
+      </td>
+      <td>
+       Saves ACLs of specified files to a file.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        /restore
+       </code>
+      </td>
+      <td>
+       Restores ACLs from a file.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre>
+            <code>
+icacls C:\example.txt /grant UserName:F
+icacls C:\example.txt /deny UserName:F
+icacls C:\example.txt /remove UserName
+icacls C:\example.txt /setowner Administrator
+icacls C:\example /inheritance:d
+icacls C:\example\* /save acls.txt
+icacls C:\example\* /restore acls.txt
+            </code>
+        </pre>
+  </section>
+  <section>
+   <h2>
+    Quick Reference Cheat Sheet
+   </h2>
+   <pre>
+            <code>
+/grant UserName:Permissions
+/deny UserName:Permissions
+/remove UserName
+/setowner UserName
+/inheritance:e|d|r
+/save acls.txt
+/restore acls.txt
+            </code>
+        </pre>
+  </section>
+ </body>
+</html>

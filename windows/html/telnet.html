@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Telnet Command Overview
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        pre {
+            background-color: #f8f8f8;
+            padding: 10px;
+            border: 1px solid #ddd;
+            overflow: auto;
+        }
+  </style>
+ </head>
+ <body>
+  <h1>
+   Windows Telnet Command
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    telnet
+   </code>
+   command is used to communicate with another host using the Telnet protocol. It is mainly used for troubleshooting and remote access to servers.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -a
+      </code>
+     </td>
+     <td>
+      Attempts automatic logon with the current user name.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -e
+      </code>
+      <em>
+       escapechar
+      </em>
+     </td>
+     <td>
+      Sets the escape character. Default is
+      <code>
+       CTRL+]
+      </code>
+      .
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -f
+      </code>
+     </td>
+     <td>
+      Enables file transfer.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -l
+      </code>
+      <em>
+       user
+      </em>
+     </td>
+     <td>
+      Specifies user name for logon.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -t
+      </code>
+      <em>
+       term
+      </em>
+     </td>
+     <td>
+      Specifies terminal type. Supported types are VT100, VT52, ANSI.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Connect to a remote server on port 23
+telnet example.com 23
+
+# Connect with automatic logon using current user name
+telnet -a example.com 23
+
+# Connect specifying user name for logon
+telnet -l username example.com 23</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>telnet host [port]           # Connect to host
+telnet -a host [port]       # Automatic logon
+telnet -e c host [port]     # Set escape char to c
+telnet -l user host [port]  # Logon with user</code></pre>
+ </body>
+</html>

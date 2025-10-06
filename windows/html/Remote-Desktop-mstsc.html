@@ -1,0 +1,109 @@
+<html>
+ <body>
+  <h1>
+   Remote Desktop (mstsc)
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The `mstsc` command launches the Remote Desktop Connection client, allowing users to connect to remote computers or virtual machines running Remote Desktop Protocol (RDP) server.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      /v:
+      <em>
+       server
+      </em>
+     </td>
+     <td>
+      Specifies the remote computer and port (e.g., example.com:3389).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      /admin
+     </td>
+     <td>
+      Connects you to the session for administering a server.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      /f
+     </td>
+     <td>
+      Starts Remote Desktop in full-screen mode.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      /w:
+      <em>
+       width
+      </em>
+      /h:
+      <em>
+       height
+      </em>
+     </td>
+     <td>
+      Specifies the dimensions of the Remote Desktop window.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      /multimon
+     </td>
+     <td>
+      Enables support for multiple monitors.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre>
+      <code>
+# Connect to a remote computer using default settings
+mstsc /v:192.168.1.10
+
+# Connect to a remote computer as admin
+mstsc /v:192.168.1.10 /admin
+
+# Full-screen connection
+mstsc /v:example.com /f
+
+# Connection with specific screen dimensions
+mstsc /v:example.com /w:1280 /h:720
+
+# Connect using multiple monitors
+mstsc /v:example.com /multimon
+      </code>
+    </pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre>
+      <code>
+mstsc /v:<server> [/admin] [/f] [/w:<width>] [/h:<height>] [/multimon]
+      </height></width></server></code>
+    </pre>
+ </body>
+</html>

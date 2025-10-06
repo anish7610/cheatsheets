@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   New-SqlDatabase Command Overview
+  </title>
+ </head>
+ <body>
+  <h1>
+   New-SqlDatabase Command
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    New-SqlDatabase
+   </code>
+   command in PowerShell is used to create a new SQL database on a specified SQL Server instance.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -Name
+      </code>
+     </td>
+     <td>
+      The name of the new SQL database.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -ServerInstance
+      </code>
+     </td>
+     <td>
+      The SQL Server instance where the database will be created.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Collation
+      </code>
+     </td>
+     <td>
+      Specifies the collation for the newly created database.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -MaxSize
+      </code>
+     </td>
+     <td>
+      Sets the maximum size of the database.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -FileGroup
+      </code>
+     </td>
+     <td>
+      Designates the default filegroup for the database.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <h3>
+   Example 1: Create a Simple Database
+  </h3>
+  <pre><code>New-SqlDatabase -Name 'TestDB' -ServerInstance 'localhost'</code></pre>
+  <h3>
+   Example 2: Create a Database with Specific Collation
+  </h3>
+  <pre><code>New-SqlDatabase -Name 'TestDB2' -ServerInstance 'localhost' -Collation 'SQL_Latin1_General_CP1_CI_AS'</code></pre>
+  <h3>
+   Example 3: Create a Database with Maximum Size
+  </h3>
+  <pre><code>New-SqlDatabase -Name 'LargeDB' -ServerInstance 'localhost' -MaxSize 100GB</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+New-SqlDatabase -Name &lt;DatabaseName&gt; -ServerInstance &lt;ServerName&gt; [-Collation &lt;CollationName&gt;] [-MaxSize &lt;Size&gt;]
+    </code></pre>
+ </body>
+</html>

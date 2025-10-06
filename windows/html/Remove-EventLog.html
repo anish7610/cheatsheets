@@ -1,0 +1,95 @@
+<h1>
+ Remove-EventLog Command Overview
+</h1>
+<p>
+ The
+ <code>
+  Remove-EventLog
+ </code>
+ command in Windows PowerShell is used to delete an event log or its entries.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -LogName
+    </code>
+   </td>
+   <td>
+    Specifies the name of the event log to remove.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -ComputerName
+    </code>
+   </td>
+   <td>
+    Indicates the target computer for the command.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -WhatIf
+    </code>
+   </td>
+   <td>
+    Shows what would happen if the command was executed without actually performing the action.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Confirm
+    </code>
+   </td>
+   <td>
+    Prompts for confirmation before executing the command.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Remove the 'Application' event log locally
+Remove-EventLog -LogName "Application"
+
+# Remove the 'Security' event log on a remote computer
+Remove-EventLog -LogName "Security" -ComputerName "Server01"
+
+# Check what would happen if removing the 'System' log without executing
+Remove-EventLog -LogName "System" -WhatIf
+
+# Remove the 'CustomLog' with confirmation prompt
+Remove-EventLog -LogName "CustomLog" -Confirm
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+# Remove local log
+Remove-EventLog -LogName "LogName"
+
+# Remove remote log
+Remove-EventLog -LogName "LogName" -ComputerName "ComputerName"
+
+# Check without execution
+Remove-EventLog -LogName "LogName" -WhatIf
+</code></pre>

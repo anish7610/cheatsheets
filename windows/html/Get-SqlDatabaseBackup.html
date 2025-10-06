@@ -1,0 +1,89 @@
+<html>
+ <body>
+  <h1>
+   Get-SqlDatabaseBackup Command Overview
+  </h1>
+  <p>
+   The
+   <code>
+    Get-SqlDatabaseBackup
+   </code>
+   command retrieves information about SQL Server database backups.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -ServerInstance
+      </code>
+     </td>
+     <td>
+      Specifies the SQL Server instance to connect to.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Database
+      </code>
+     </td>
+     <td>
+      Filters results for a specific database.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -LastBackup
+      </code>
+     </td>
+     <td>
+      Shows the most recent backup.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Credential
+      </code>
+     </td>
+     <td>
+      Provides credentials for authentication.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Retrieve all backups for a specific database
+Get-SqlDatabaseBackup -ServerInstance "MyServer" -Database "MyDatabase"
+
+# Show the last backup for all databases on an instance
+Get-SqlDatabaseBackup -ServerInstance "MyServer" -LastBackup
+
+# Use specific credentials to get backup information
+Get-SqlDatabaseBackup -ServerInstance "MyServer" -Credential $MyCredential
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>Get-SqlDatabaseBackup -ServerInstance "Server" -Database "DB"
+Get-SqlDatabaseBackup -ServerInstance "Server" -LastBackup
+    </code></pre>
+ </body>
+</html>

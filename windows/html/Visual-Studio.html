@@ -1,0 +1,101 @@
+<h1>
+ Visual Studio (devenv) Command Line
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  devenv
+ </code>
+ command launches Microsoft Visual Studio and performs various tasks such as building projects or solutions from the command line.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     /build
+    </code>
+   </td>
+   <td>
+    Builds the specified solution or project.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     /rebuild
+    </code>
+   </td>
+   <td>
+    Cleans and then builds the specified solution or project.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     /clean
+    </code>
+   </td>
+   <td>
+    Deletes build outputs for the specified solution or project.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     /project
+    </code>
+   </td>
+   <td>
+    Specifies the project to build within a solution.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     /out
+    </code>
+   </td>
+   <td>
+    Specifies a file to receive logs of build operations.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Build a solution
+devenv MySolution.sln /build
+
+# Rebuild a project within a solution
+devenv MySolution.sln /rebuild /project MyProject
+
+# Clean a solution and log output
+devenv MySolution.sln /clean /out clean_output.txt
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+devenv <solution> /build               # Build
+devenv <solution> /rebuild             # Rebuild
+devenv <solution> /clean               # Clean
+devenv <solution> /rebuild /project    # Rebuild specific project
+</solution></solution></solution></solution></code></pre>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Net Accounts Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   Net Accounts Command
+  </h1>
+  <p>
+   The
+   <code>
+    net accounts
+   </code>
+   command is used to set and display user account policies, such as password and logon requirements, on a Windows system.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      /minpwlen
+     </td>
+     <td>
+      Sets minimum password length.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      /maxpwage
+     </td>
+     <td>
+      Sets maximum number of days a password is valid.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      /minpwage
+     </td>
+     <td>
+      Sets minimum number of days before a password can be changed.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      /uniquepw
+     </td>
+     <td>
+      Requires that a specified number of previous passwords cannot be reused.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      /forcelogoff
+     </td>
+     <td>
+      Sets auto logoff delay after a forced logoff warning.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      /help
+     </td>
+     <td>
+      Displays help for the command.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code>net accounts /minpwlen:8</code></pre>
+  <p>
+   Set the minimum password length to 8 characters.
+  </p>
+  <pre><code>net accounts /maxpwage:30</code></pre>
+  <p>
+   Set passwords to expire every 30 days.
+  </p>
+  <pre><code>net accounts /uniquepw:5</code></pre>
+  <p>
+   Ensure that the previous 5 passwords cannot be reused.
+  </p>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>/minpwlen:n     # Minimum password length
+/maxpwage:n     # Maximum password age
+/minpwage:n     # Minimum password age
+/uniquepw:n     # Unique passwords count
+/forcelogoff:n  # Auto logoff delay</code></pre>
+ </body>
+</html>

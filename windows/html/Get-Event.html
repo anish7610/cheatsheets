@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Get-Event Command Overview
+  </title>
+ </head>
+ <body>
+  <h1>
+   Get-Event Command Overview
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    Get-Event
+   </code>
+   command in Windows PowerShell retrieves events from the event queue in the current session. It is useful for handling and monitoring system events that have been created or triggered.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -SourceIdentifier &lt;string&gt;
+      </code>
+     </td>
+     <td>
+      Specifies the source identifier of the events to retrieve.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Newest &lt;int&gt;
+      </code>
+     </td>
+     <td>
+      Retrieves the specified number of most recent events.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -After &lt;DateTime&gt;
+      </code>
+     </td>
+     <td>
+      Returns events that were created after the specified date and time.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Retrieve the most recent event
+Get-Event -Newest 1
+
+# Get events that have a specific source identifier
+Get-Event -SourceIdentifier "MyCustomEvent"
+
+# Retrieve all events after a specific date and time
+Get-Event -After (Get-Date).AddDays(-1)
+</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>Get-Event -Newest 5
+Get-Event -SourceIdentifier "Identifier"
+Get-Event -After (Get-Date).AddMinutes(-10)
+</code></pre>
+ </body>
+</html>

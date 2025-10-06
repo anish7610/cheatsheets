@@ -1,0 +1,76 @@
+<h1>
+ Understanding the `Get-LocalGroup` Command
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  Get-LocalGroup
+ </code>
+ command retrieves information about local security groups on Windows, primarily used to manage permissions on systems.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -Name
+    </code>
+   </td>
+   <td>
+    Specifies the name of the local group to retrieve.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -SID
+    </code>
+   </td>
+   <td>
+    Retrieves a local group by its security identifier (SID).
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code class="language-shell">
+# List all local groups
+Get-LocalGroup
+
+# Retrieve a specific group by name
+Get-LocalGroup -Name "Administrators"
+
+# Retrieve a group by security identifier (SID)
+Get-LocalGroup -SID "S-1-5-32-544"
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code class="language-shell">
+# List all groups
+Get-LocalGroup
+
+# Get group by name
+Get-LocalGroup -Name "GroupName"
+
+# Get group by SID
+Get-LocalGroup -SID "GroupSID"
+</code></pre>

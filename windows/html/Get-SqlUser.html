@@ -1,0 +1,88 @@
+<html>
+ <body>
+  <h1>
+   Get-SqlUser Command Overview
+  </h1>
+  <p>
+   The
+   <code>
+    Get-SqlUser
+   </code>
+   command in PowerShell retrieves SQL Server user information from a SQL Server instance.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -ServerInstance
+      </code>
+     </td>
+     <td>
+      Specifies the SQL Server instance to connect to.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Database
+      </code>
+     </td>
+     <td>
+      Indicates the database from which to retrieve user information.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Username
+      </code>
+     </td>
+     <td>
+      Filters results by a specific SQL user name.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Credential
+      </code>
+     </td>
+     <td>
+      Specifies a user account with permission to access the SQL Server instance.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Retrieve all SQL users from a specific server and database
+Get-SqlUser -ServerInstance "MyServer" -Database "MyDatabase"
+
+# Retrieve a specific SQL user
+Get-SqlUser -ServerInstance "MyServer" -Database "MyDatabase" -Username "MyUser"
+
+# Use a credential to retrieve SQL users
+$credential = Get-Credential
+Get-SqlUser -ServerInstance "MyServer" -Database "MyDatabase" -Credential $credential
+</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>Get-SqlUser -ServerInstance "SERVER" -Database "DB" [-Username "USER"] [-Credential $cred]</code></pre>
+ </body>
+</html>

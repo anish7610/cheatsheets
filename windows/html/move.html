@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Windows `move` Command
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Windows `move` Command
+   </h1>
+   <p>
+    The
+    <code>
+     move
+    </code>
+    command is used to move files and directories from one location to another.
+   </p>
+  </header>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        /Y
+       </code>
+      </td>
+      <td>
+       Suppresses confirmation prompts when overwriting files.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        /-Y
+       </code>
+      </td>
+      <td>
+       Prompts for confirmation before overwriting files. This is the default option.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code class="language-batch">
+move C:\Source\File.txt D:\Destination\
+move /Y C:\Source\File.txt D:\Destination\RenamedFile.txt
+move C:\Source\*.txt D:\Destination\
+move C:\Source\OldFolder D:\NewLocation
+        </code></pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code class="language-batch">
+move [options] [source] [destination]
+move C:\source.txt D:\dest\
+move /Y C:\*.txt D:\dest\
+        </code></pre>
+  </section>
+ </body>
+</html>

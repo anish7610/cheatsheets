@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Netstat Command Guide
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Netstat Command Overview
+   </h1>
+  </header>
+  <main>
+   <section>
+    <h2>
+     Description
+    </h2>
+    <p>
+     The
+     <code>
+      netstat
+     </code>
+     command displays network connections, routing tables, and interface statistics.
+    </p>
+   </section>
+   <section>
+    <h2>
+     Common Options
+    </h2>
+    <table>
+     <thead>
+      <tr>
+       <th>
+        Option
+       </th>
+       <th>
+        Description
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        <code>
+         -a
+        </code>
+       </td>
+       <td>
+        Display all connections and listening ports.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <code>
+         -n
+        </code>
+       </td>
+       <td>
+        Show numerical addresses instead of resolving hosts.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <code>
+         -o
+        </code>
+       </td>
+       <td>
+        Show the owning process ID associated with each connection.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <code>
+         -b
+        </code>
+       </td>
+       <td>
+        Display the executable involved in creating each connection.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <code>
+         -s
+        </code>
+       </td>
+       <td>
+        Show statistics by protocol.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </section>
+   <section>
+    <h2>
+     Examples
+    </h2>
+    <pre><code># Display all connections and listening ports
+netstat -a
+
+# Show all connections with numerical IPs and ports
+netstat -an
+
+# Find which process ID is using a specific port (e.g., port 80)
+netstat -ao | findstr :80
+
+# Show statistics for TCP protocol
+netstat -s -p tcp
+</code></pre>
+   </section>
+   <section>
+    <h2>
+     Cheat Sheet
+    </h2>
+    <pre><code># All connections and ports
+netstat -a
+
+# Numerical output
+netstat -n
+
+# With process ID
+netstat -o
+
+# With executable details
+netstat -b
+</code></pre>
+   </section>
+  </main>
+ </body>
+</html>
