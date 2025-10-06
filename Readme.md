@@ -1,4 +1,4 @@
-### Linux Cheatsheets 
+### Cheatsheets 
 
 1. Start a web server using Python:
 
