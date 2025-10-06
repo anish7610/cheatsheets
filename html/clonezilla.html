@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Clonezilla Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   Clonezilla Command Overview
+  </h1>
+  <p>
+   Clonezilla is a partition and disk imaging/cloning program for data recovery and deployment.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Explanation
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      -q
+     </td>
+     <td>
+      Enable quiet mode to minimize output.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -y
+     </td>
+     <td>
+      Auto confirm prompts during the process.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -r
+     </td>
+     <td>
+      Resizes file systems when restoring image.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      --no-restore-mbr
+     </td>
+     <td>
+      Do not restore the Master Boot Record.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -j2
+     </td>
+     <td>
+      Use multicore compression. Faster compression but high CPU usage.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -n
+     </td>
+     <td>
+      Skip checking the image before restoring.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Clone a disk to an image
+sudo clonezilla -q -y -r -j2 -s /dev/sda -o /backup/image.img
+
+# Restore an image to a disk
+sudo clonezilla --no-restore-mbr -r -q -y -f /backup/image.img -t /dev/sdb
+
+# Clone one disk to another directly
+sudo clonezilla -q -y -r -s /dev/sda -t /dev/sdb
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>Clone to Image: -q -y -r -s [source] -o [output.img]
+Restore Image: --no-restore-mbr -r -q -y -f [image.img] -t [target]
+Direct Clone: -q -y -r -s [source] -t [target]
+    </code></pre>
+ </body>
+</html>

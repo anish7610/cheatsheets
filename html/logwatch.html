@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Logwatch Cheat Sheet
+  </title>
+ </head>
+ <body>
+  <h1>
+   Logwatch Command Overview
+  </h1>
+  <p>
+   <strong>
+    Logwatch
+   </strong>
+   is a log parsing tool that analyzes and summarizes system log files, providing detailed reports about various system activities.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       --detail
+      </code>
+     </td>
+     <td>
+      Specifies the level of detail in the report (e.g., Low, Med, High).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --service
+      </code>
+     </td>
+     <td>
+      Define specific services to include (or "All" for every service).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --range
+      </code>
+     </td>
+     <td>
+      Set the time range for the logs (e.g., Yesterday, Today).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --output
+      </code>
+     </td>
+     <td>
+      Choose the report output method (e.g., stdout, file).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --logfile
+      </code>
+     </td>
+     <td>
+      Specify a particular log file to analyze.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code>
+# Generate a detailed report for all services from yesterday
+logwatch --detail High --service All --range Yesterday
+
+# Get a summary report of sshd logs only
+logwatch --service sshd --detail Med
+
+# Output a report to a specific file
+logwatch --range Today --output file &gt; /var/log/logwatch_report.txt
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+# Basic Usage
+logwatch --detail <level> --service <service> --range <time>
+
+# Example
+logwatch --detail High --service All --range Today
+    </time></service></level></code></pre>
+ </body>
+</html>

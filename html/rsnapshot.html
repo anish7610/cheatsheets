@@ -1,0 +1,99 @@
+<h1>
+ Linux Command: rsnapshot
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ rsnapshot is a command-line utility for taking filesystem snapshots, effectively creating backups using rsync and hard links, which makes efficient use of disk space.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -v
+    </code>
+   </td>
+   <td>
+    Verbose output, useful for debugging.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -q
+    </code>
+   </td>
+   <td>
+    Quiet mode, only output errors.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     config_file
+    </code>
+   </td>
+   <td>
+    Specify a custom configuration file.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     sync_first
+    </code>
+   </td>
+   <td>
+    Synchronize files before creating a snapshot.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -c
+    </code>
+   </td>
+   <td>
+    Check the configuration file for syntax errors.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<h3>
+ Creating a Daily Backup
+</h3>
+<pre><code>rsnapshot daily</code></pre>
+<h3>
+ Using a Custom Configuration File
+</h3>
+<pre><code>rsnapshot -c /path/to/config.conf daily</code></pre>
+<h3>
+ Verbose Output for Debugging
+</h3>
+<pre><code>rsnapshot -v weekly</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+rsnapshot daily
+rsnapshot -c /path/to/config.conf daily
+rsnapshot -v weekly
+</code></pre>

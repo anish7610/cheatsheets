@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Zypper Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   Zypper Command Guide
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   Zypper is a command-line tool for managing packages in openSUSE and SUSE Linux Enterprise. It allows you to install, update, and remove packages, as well as manage repositories.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      install
+      <em>
+       package_name
+      </em>
+     </td>
+     <td>
+      Install a package.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      remove
+      <em>
+       package_name
+      </em>
+     </td>
+     <td>
+      Remove a package.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      update
+     </td>
+     <td>
+      Update all installed packages.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      list-updates
+     </td>
+     <td>
+      List available package updates.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      search
+      <em>
+       keyword
+      </em>
+     </td>
+     <td>
+      Search for packages matching a keyword.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      clean
+     </td>
+     <td>
+      Clean the local cache.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      refresh
+     </td>
+     <td>
+      Refresh the repository metadata.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Install a package
+zypper install vim
+
+# Remove a package
+zypper remove vim
+
+# Update all packages
+zypper update
+
+# List updates
+zypper list-updates
+
+# Search for a package
+zypper search curl
+
+# Clean cache
+zypper clean
+
+# Refresh repositories
+zypper refresh
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>Install:  zypper in <em>package</em>
+Remove:   zypper rm <em>package</em>
+Update:   zypper up
+Search:   zypper se <em>keyword</em>
+Clean:    zypper clean
+Refresh:  zypper ref
+</code></pre>
+ </body>
+</html>

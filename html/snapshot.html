@@ -1,0 +1,95 @@
+<h1>
+ Linux Snapshot Command
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  snapshot
+ </code>
+ command is used to create and manage snapshots of file systems or volumes. These snapshots capture the state of a file system at a particular point in time, allowing users to revert to this state if needed.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -c
+    </code>
+   </td>
+   <td>
+    Create a new snapshot.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -d
+    </code>
+   </td>
+   <td>
+    Delete an existing snapshot.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -l
+    </code>
+   </td>
+   <td>
+    List all available snapshots.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -r
+    </code>
+   </td>
+   <td>
+    Restore a snapshot to revert the file system.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code>
+# Create a snapshot of the /home directory
+snapshot -c /home
+
+# List all snapshots
+snapshot -l
+
+# Restore a specific snapshot
+snapshot -r snapshot-name
+
+# Delete a specific snapshot
+snapshot -d snapshot-name
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+# Create:  snapshot -c <directory>
+# List:   snapshot -l
+# Restore: snapshot -r <snapshot-name>
+# Delete: snapshot -d <snapshot-name>
+</snapshot-name></snapshot-name></directory></code></pre>

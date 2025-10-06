@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Linux `semanage` Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   Linux `semanage` Command
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    semanage
+   </code>
+   command is used to configure SELinux (Security-Enhanced Linux) policy components, including contexts, ports, and file labeling.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -a
+      </code>
+      ,
+      <code>
+       --add
+      </code>
+     </td>
+     <td>
+      Add a new object
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -d
+      </code>
+      ,
+      <code>
+       --delete
+      </code>
+     </td>
+     <td>
+      Delete an object
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -m
+      </code>
+      ,
+      <code>
+       --modify
+      </code>
+     </td>
+     <td>
+      Modify an object
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -l
+      </code>
+      ,
+      <code>
+       --list
+      </code>
+     </td>
+     <td>
+      List all objects
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -n
+      </code>
+      ,
+      <code>
+       --noheading
+      </code>
+     </td>
+     <td>
+      Omit headings in output
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -C
+      </code>
+      ,
+      <code>
+       --locallist
+      </code>
+     </td>
+     <td>
+      Display local customizations
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Examples
+  </h2>
+  <pre><code># Add a new port for http service
+semanage port -a -t http_port_t -p tcp 8080
+
+# Delete a custom SELinux context for a file
+semanage fcontext -d '/custom/path(/.*)?'
+
+# List all defined SELinux users
+semanage user -l
+
+# Modify a port definition for ssh
+semanage port -m -t ssh_port_t -p tcp 2022</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>Add port: semanage port -a -t TYPE -p PROTOCOL PORT
+Delete fcontext: semanage fcontext -d 'PATH'
+List users: semanage user -l
+Modify port: semanage port -m -t TYPE -p PROTOCOL PORT</code></pre>
+ </body>
+</html>

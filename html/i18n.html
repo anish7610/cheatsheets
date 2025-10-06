@@ -1,0 +1,103 @@
+<h1>
+ Linux Command: i18n
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  i18n
+ </code>
+ command in Linux is associated with internationalization, managing locale settings for software applications to support multiple languages and regions more efficiently.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     locale
+    </code>
+   </td>
+   <td>
+    Display information about the current locale settings.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     export LANG=
+    </code>
+    <em>
+     locale
+    </em>
+   </td>
+   <td>
+    Set the default locale for applications.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     localectl
+    </code>
+   </td>
+   <td>
+    Query or change system locale and keyboard layout settings.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     locale-gen
+    </code>
+   </td>
+   <td>
+    Generate locales based on system configuration.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Display currently set locale
+locale
+
+# Set the default system language to US English
+export LANG=en_US.UTF-8
+
+# Generate missing locale data
+sudo locale-gen
+
+# Check current system locale setting
+localectl status
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code># Display locale settings
+locale
+
+# Set locale
+export LANG=<em>locale</em>
+
+# Generate locales
+sudo locale-gen
+
+# System locale status
+localectl status
+</code></pre>

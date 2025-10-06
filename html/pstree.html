@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Linux `pstree` Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   Linux `pstree` Command Guide
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    pstree
+   </code>
+   command displays running processes as a tree, showing the parent-child relationships between them.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      -p
+     </td>
+     <td>
+      Show PIDs of the processes.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -n
+     </td>
+     <td>
+      Sort processes by PID.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -a
+     </td>
+     <td>
+      Show command line arguments.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -u
+     </td>
+     <td>
+      Show user IDs.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -h
+     </td>
+     <td>
+      Highlight the process tree of the current user.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Display the process tree with PIDs
+pstree -p
+
+# Display the process tree sorted by PID
+pstree -pn
+
+# Show command line arguments with process tree
+pstree -a
+
+# Highlight the current user's process tree
+pstree -h
+
+# Show user IDs in the process tree
+pstree -u
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>pstree -p  # Show PIDs
+pstree -n  # Sort by PID
+pstree -a  # Show arguments
+pstree -u  # Show user IDs
+pstree -h  # Highlight user tree
+    </code></pre>
+ </body>
+</html>

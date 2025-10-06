@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Linux Command: sysctl
+  </title>
+ </head>
+ <body>
+  <h1>
+   Linux Command: sysctl
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    sysctl
+   </code>
+   command is used to view and manage kernel parameters at runtime. It helps in configuring kernel behavior without rebooting the system.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -a
+      </code>
+     </td>
+     <td>
+      Display all kernel parameters and their values.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -p [file]
+      </code>
+     </td>
+     <td>
+      Load values from a specified file (default is
+      <code>
+       /etc/sysctl.conf
+      </code>
+      ).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -w
+      </code>
+     </td>
+     <td>
+      Write a parameter value in format
+      <code>
+       variable=value
+      </code>
+      .
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -n
+      </code>
+     </td>
+     <td>
+      Display only the value of a parameter.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Display all kernel parameters
+sysctl -a
+
+# Set a kernel parameter (e.g., enable IP forwarding)
+sysctl -w net.ipv4.ip_forward=1
+
+# Load kernel parameters from a custom file
+sysctl -p /path/to/custom.conf
+
+# Display the value of a specific parameter
+sysctl -n net.ipv4.ip_forward
+</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>sysctl -a            # Show all parameters
+sysctl -w key=val   # Set parameter
+sysctl -p [file]    # Load from file
+sysctl -n key       # Get parameter value
+</code></pre>
+ </body>
+</html>

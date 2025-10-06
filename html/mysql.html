@@ -1,0 +1,144 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   MySQL Command Overview
+  </title>
+ </head>
+ <body>
+  <h1>
+   MySQL Command Overview
+  </h1>
+  <p>
+   The
+   <code>
+    mysql
+   </code>
+   command-line tool allows users to execute MySQL queries, manage databases, and perform administrative tasks.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -u
+      </code>
+      ,
+      <code>
+       --user
+      </code>
+     </td>
+     <td>
+      Specify the MySQL username
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -p
+      </code>
+      ,
+      <code>
+       --password
+      </code>
+     </td>
+     <td>
+      Prompt for the database password
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -h
+      </code>
+      ,
+      <code>
+       --host
+      </code>
+     </td>
+     <td>
+      Connect to a specific host
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -P
+      </code>
+      ,
+      <code>
+       --port
+      </code>
+     </td>
+     <td>
+      Specify the port number
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -e
+      </code>
+      ,
+      <code>
+       --execute
+      </code>
+     </td>
+     <td>
+      Execute a SQL statement directly
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --database
+      </code>
+      ,
+      <code>
+       -D
+      </code>
+     </td>
+     <td>
+      Select the database to use
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Connect to a MySQL server
+mysql -u username -p
+
+# Execute a SQL command
+mysql -u username -p -e "SHOW DATABASES;"
+
+# Connect to a specific database on a remote server
+mysql -u username -p -h hostname -D database_name
+
+# Import a SQL file into a database
+mysql -u username -p -D database_name &lt; file.sql
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>mysql -u user -p            # Connect and prompt for password
+mysql -h host -P port        # Specify host and port
+mysql -e "SQL"               # Execute SQL statement
+    </code></pre>
+ </body>
+</html>

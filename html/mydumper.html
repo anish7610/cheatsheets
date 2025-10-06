@@ -1,0 +1,131 @@
+<h1>
+ mydumper Command Overview
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ <code>
+  mydumper
+ </code>
+ is a high-performance MySQL backup tool designed to produce consistent snapshots while performing the backup in parallel, efficiently handling large datasets.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     --user
+    </code>
+   </td>
+   <td>
+    Specifies the MySQL user name.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --password
+    </code>
+   </td>
+   <td>
+    Password for the specified MySQL user.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --host
+    </code>
+   </td>
+   <td>
+    Target host for the MySQL server.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --port
+    </code>
+   </td>
+   <td>
+    Port number for the MySQL server connection.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --outputdir
+    </code>
+   </td>
+   <td>
+    Directory to store the backup files.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --threads
+    </code>
+   </td>
+   <td>
+    Number of threads to use for backup.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --compress
+    </code>
+   </td>
+   <td>
+    Compress backup files using gzip.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --verbose
+    </code>
+   </td>
+   <td>
+    Set verbosity level for logging (e.g., 3 for debugging).
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<h3>
+ Basic Backup Command
+</h3>
+<pre><code>mydumper --user=root --password=example --host=localhost --outputdir=/backups/mydb</code></pre>
+<h3>
+ Backup with Compression and Multiple Threads
+</h3>
+<pre><code>mydumper --user=root --password=example --host=localhost --outputdir=/backups/mydb --threads=4 --compress</code></pre>
+<h3>
+ Backup with Specific Port and Verbosity
+</h3>
+<pre><code>mydumper --user=root --password=example --host=localhost --port=3307 --outputdir=/backups/mydb --verbose=3</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+mydumper --user=<username> --password=<password> --host=<host> \ 
+--outputdir=<directory> [--threads=<num>] [--compress] [--verbose=<level>]
+</level></num></directory></host></password></username></code></pre>

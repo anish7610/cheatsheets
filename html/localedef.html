@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   localedef Command
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    localedef Command Overview
+   </h1>
+  </header>
+  <section>
+   <h2>
+    Description
+   </h2>
+   <p>
+    The
+    <code>
+     localedef
+    </code>
+    command is used to compile locale information for use by the system, creating binary locale data from text-based source files.
+   </p>
+  </section>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        -f
+        <i>
+         charmap
+        </i>
+       </code>
+      </td>
+      <td>
+       Specify the character map file.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -i
+        <i>
+         source
+        </i>
+       </code>
+      </td>
+      <td>
+       Specify the input locale source file.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -c
+       </code>
+      </td>
+      <td>
+       Suppress warnings and proceed.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        --verbose
+       </code>
+      </td>
+      <td>
+       Provide additional information during processing.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -A
+        <i>
+         aliasfile
+        </i>
+       </code>
+      </td>
+      <td>
+       Specify an alias file.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code># Create a locale for US English with UTF-8 encoding
+localedef -i en_US -f UTF-8 en_US.UTF-8
+
+# Suppress warnings while creating German locale
+localedef -c -i de_DE -f UTF-8 de_DE.UTF-8
+
+# Create a verbose French locale
+localedef --verbose -i fr_FR -f UTF-8 fr_FR.UTF-8
+        </code></pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code># Basic structure
+localedef -i <source/> -f <charmap> [<output>]
+
+# Common examples
+localedef -i en_US -f UTF-8 en_US.UTF-8
+localedef -c -i <source/> -f <charmap> <output>
+        </output></charmap></output></charmap></code></pre>
+  </section>
+ </body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Ping Command Overview
+  </title>
+  <style>
+   body { font-family: Arial, sans-serif; margin: 20px; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #dddddd; text-align: left; padding: 8px; }
+        th { background-color: #f2f2f2; }
+        pre { background-color: #f9f9f9; padding: 10px; }
+  </style>
+ </head>
+ <body>
+  <h1>
+   Ping Command Overview
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    ping
+   </code>
+   command is used to test the reachability of a host on a network and measure the round-trip time for messages sent from the source to the destination.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -c &lt;count&gt;
+      </code>
+     </td>
+     <td>
+      Send a specific number of packets and then stop.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -i &lt;interval&gt;
+      </code>
+     </td>
+     <td>
+      Wait a specified interval (in seconds) between sending each packet.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -s &lt;size&gt;
+      </code>
+     </td>
+     <td>
+      Specify the number of data bytes to be sent.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -t &lt;ttl&gt;
+      </code>
+     </td>
+     <td>
+      Set the Time To Live for packets.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -4
+      </code>
+     </td>
+     <td>
+      Use IPv4 only.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -6
+      </code>
+     </td>
+     <td>
+      Use IPv6 only.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code>$ ping google.com
+$ ping -c 4 example.com
+$ ping -i 2 -c 5 192.168.1.1
+$ ping -s 1000 -c 3 localhost
+$ ping -t 64 example.net</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>ping &lt;host&gt;
+ping -c &lt;count&gt; &lt;host&gt;
+ping -i &lt;interval&gt; &lt;host&gt;
+ping -s &lt;size&gt; &lt;host&gt;
+ping -t &lt;ttl&gt; &lt;host&gt;</code></pre>
+ </body>
+</html>

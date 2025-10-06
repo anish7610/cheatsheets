@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Linux Command `last` Guide
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Linux Command:
+    <code>
+     last
+    </code>
+   </h1>
+  </header>
+  <section>
+   <h2>
+    Description
+   </h2>
+   <p>
+    The
+    <code>
+     last
+    </code>
+    command displays a list of the most recent user logins on a Linux system.
+   </p>
+  </section>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        -n
+       </code>
+       <em>
+        number
+       </em>
+      </td>
+      <td>
+       Show the specified number of lines.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -R
+       </code>
+      </td>
+      <td>
+       Omit the hostname column.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -F
+       </code>
+      </td>
+      <td>
+       Display full date and time.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -x
+       </code>
+      </td>
+      <td>
+       Show system shutdown entries and run level changes.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code># Show the last 5 logins
+last -n 5
+
+# Show full date and time for each login
+last -F
+
+# Display logins, omitting the hostname
+last -R
+
+# Include shutdown and run level changes
+last -x
+</code></pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code>last -n <em>number</em> # Show specified number of logins
+last -F          # Show full date and time
+last -R          # Omit hostname
+last -x          # Include shutdowns &amp; run levels
+</code></pre>
+  </section>
+ </body>
+</html>

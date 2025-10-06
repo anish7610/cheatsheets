@@ -1,0 +1,122 @@
+<html>
+ <body>
+  <h1>
+   DigitalOcean Command-Line Interface (doctl)
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    doctl
+   </code>
+   command is a CLI for managing resources on DigitalOcean. It allows users to interact with droplets, images, networking, and more.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       account get
+      </code>
+     </td>
+     <td>
+      View information about the authenticated user’s account.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       droplet list
+      </code>
+     </td>
+     <td>
+      List all droplets in your account.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       droplet create
+      </code>
+     </td>
+     <td>
+      Create a new droplet with specified configurations.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       droplet delete
+      </code>
+     </td>
+     <td>
+      Delete a droplet by ID.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       kubernetes cluster list
+      </code>
+     </td>
+     <td>
+      List all Kubernetes clusters.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre>
+      <code>
+# List all droplets
+doctl compute droplet list
+
+# Create a droplet with a specific name and size
+doctl compute droplet create example-droplet --size s-1vcpu-1gb
+
+# Delete a droplet by ID
+doctl compute droplet delete 12345678
+
+# Check account details
+doctl account get
+
+# List all Kubernetes clusters
+doctl kubernetes cluster list
+      </code>
+    </pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre>
+      <code>
+# Account
+doctl account get
+
+# Droplets
+doctl compute droplet list
+doctl compute droplet create <name> --size <size>
+doctl compute droplet delete <id>
+
+# Kubernetes
+doctl kubernetes cluster list
+      </id></size></name></code>
+    </pre>
+ </body>
+</html>

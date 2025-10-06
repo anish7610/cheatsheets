@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   timedatectl Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   timedatectl Command Overview
+  </h1>
+  <p>
+   The
+   <code>
+    timedatectl
+   </code>
+   command is used to query and change the system clock and its settings in Linux systems.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       status
+      </code>
+     </td>
+     <td>
+      Displays the current time settings and status.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       set-time &lt;time&gt;
+      </code>
+     </td>
+     <td>
+      Sets the system time. Format: YYYY-MM-DD HH:MM:SS.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       set-timezone &lt;zone&gt;
+      </code>
+     </td>
+     <td>
+      Sets the system timezone. Example:
+      <code>
+       America/New_York
+      </code>
+      .
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       list-timezones
+      </code>
+     </td>
+     <td>
+      Lists all available timezones.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       set-ntp &lt;bool&gt;
+      </code>
+     </td>
+     <td>
+      Enables or disables Network Time Protocol (NTP) synchronization.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre>
+        <code># Display the current time settings
+        timedatectl status
+
+        # Set the system time to a specific date and time
+        timedatectl set-time "2023-10-01 12:00:00"
+
+        # Change the time zone to New York
+        timedatectl set-timezone America/New_York
+
+        # List all available time zones
+        timedatectl list-timezones
+
+        # Enable NTP synchronization
+        timedatectl set-ntp true
+        </code>
+    </pre>
+  <h2>
+   Quick Reference Cheat Sheet
+  </h2>
+  <pre>
+        <code>
+        status              - Show time status
+        set-time &lt;time&gt;       - Set time
+        set-timezone &lt;zone&gt;   - Set timezone
+        list-timezones      - List timezones
+        set-ntp &lt;bool&gt;        - Enable/Disable NTP
+        </code>
+    </pre>
+ </body>
+</html>

@@ -1,0 +1,113 @@
+<html>
+ <body>
+  <h1>
+   FTP Command in Linux
+  </h1>
+  <p>
+   The
+   <code>
+    ftp
+   </code>
+   command is used to transfer files to and from a remote network server using the File Transfer Protocol.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -v
+      </code>
+     </td>
+     <td>
+      Enables verbose mode, showing all responses from the FTP server.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -n
+      </code>
+     </td>
+     <td>
+      Suppresses automatic login upon initial connection.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -i
+      </code>
+     </td>
+     <td>
+      Disables interactive prompting during multiple file transfers.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -g
+      </code>
+     </td>
+     <td>
+      Disables filename globbing.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -d
+      </code>
+     </td>
+     <td>
+      Enables debugging mode.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Connect to an FTP server
+ftp ftp.example.com
+
+# Upload a file to the FTP server
+ftp&gt; put localfile.txt remotedir/remotefile.txt
+
+# Download a file from the FTP server
+ftp&gt; get remotedir/remotefile.txt localfile.txt
+
+# Enable passive mode and download a file
+ftp -p ftp.example.com
+ftp&gt; get remotefile.txt
+
+# Login without automatic login prompt
+ftp -n ftp.example.com
+ftp&gt; user username
+ftp&gt; password
+</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code># Connect and upload
+ftp [-v] [-n] [-i] [-g] server
+
+# Example usage
+ftp ftp.example.com
+put localfile.txt remotedir/
+get remotefile.txt
+</code></pre>
+ </body>
+</html>

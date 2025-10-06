@@ -1,0 +1,101 @@
+<html>
+ <body>
+  <h1>
+   Glances Command in Linux
+  </h1>
+  <p>
+   Glances is a cross-platform system monitoring tool that provides a comprehensive view of your system resources, including CPU, memory, disk I/O, network, and more. It's designed to present data in a dynamic and real-time manner.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      -h
+     </td>
+     <td>
+      Display help message and exit.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -V
+     </td>
+     <td>
+      Show version information and exit.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -c &lt;file&gt;
+     </td>
+     <td>
+      Use a specific configuration file.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -t &lt;seconds&gt;
+     </td>
+     <td>
+      Set the refresh time in seconds.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -B
+     </td>
+     <td>
+      Disable network bandwidth.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -q
+     </td>
+     <td>
+      Start Glances in quiet mode.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code>
+# Run Glances with default settings
+glances
+
+# Run Glances with a refresh time of 5 seconds
+glances -t 5
+
+# Run Glances using a specific configuration file
+glances -c /path/to/config
+
+# Run Glances in quiet mode
+glances -q
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+glances -h          # Display help
+glances -V          # Show version
+glances -t <secs>   # Set refresh time
+glances -c <file>   # Use config file
+glances -q          # Quiet mode
+    </file></secs></code></pre>
+ </body>
+</html>

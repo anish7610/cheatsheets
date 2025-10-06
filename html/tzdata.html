@@ -1,0 +1,92 @@
+<h1>
+ Linux Command: tzdata
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  tzdata
+ </code>
+ command is not typically executed directly but refers to the time zone database in Linux systems. It's often used in associated tools for setting or displaying time zone information.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     dpkg-reconfigure tzdata
+    </code>
+   </td>
+   <td>
+    Reconfigure the time zone on Debian-based systems.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     timedatectl list-timezones
+    </code>
+   </td>
+   <td>
+    List available time zones to use with
+    <code>
+     tzdata
+    </code>
+    .
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     timedatectl set-timezone [Zone/City]
+    </code>
+   </td>
+   <td>
+    Set the system time zone.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<h3>
+ Reconfigure Time Zone (Debian)
+</h3>
+<pre><code>sudo dpkg-reconfigure tzdata</code></pre>
+<h3>
+ List Available Time Zones
+</h3>
+<pre><code>timedatectl list-timezones</code></pre>
+<h3>
+ Set Time Zone to New York
+</h3>
+<pre><code>sudo timedatectl set-timezone America/New_York</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+# Reconfigure timezone on Debian
+sudo dpkg-reconfigure tzdata
+
+# List all time zones
+timedatectl list-timezones
+
+# Set timezone (example: New York)
+sudo timedatectl set-timezone America/New_York
+</code></pre>

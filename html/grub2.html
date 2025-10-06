@@ -1,0 +1,119 @@
+<h1>
+ grub2 Command Overview
+</h1>
+<p>
+ The
+ <code>
+  grub2
+ </code>
+ command is used to manage the GNU GRand Unified Bootloader (GRUB) version 2, which is responsible for loading the operating system on many Linux systems. It provides a wide range of options to configure and update the boot process.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     grub2-install
+    </code>
+   </td>
+   <td>
+    Install GRUB to a device (e.g., hard drive).
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     grub2-mkconfig
+    </code>
+   </td>
+   <td>
+    Generate a new
+    <code>
+     grub.cfg
+    </code>
+    configuration file.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     grub2-set-default
+    </code>
+   </td>
+   <td>
+    Set the default boot entry in
+    <code>
+     grub.cfg
+    </code>
+    .
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     grub2-reboot
+    </code>
+   </td>
+   <td>
+    Set the next boot to a specific entry.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     grub2-editenv
+    </code>
+   </td>
+   <td>
+    Modify the GRUB environment block.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Install GRUB to /dev/sda
+sudo grub2-install /dev/sda
+
+# Generate a new grub.cfg configuration file
+sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+
+# Set the default boot entry to 2 (third entry)
+sudo grub2-set-default 2
+
+# Set the next boot to boot entry 1 (second entry)
+sudo grub2-reboot 1
+
+# List current GRUB environment variables
+sudo grub2-editenv list
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+# Install GRUB
+sudo grub2-install /dev/sdX
+
+# Generate grub.cfg
+sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+
+# Set default boot entry
+sudo grub2-set-default N
+
+# Reboot to specific entry
+sudo grub2-reboot N
+</code></pre>

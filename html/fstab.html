@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Understanding fstab
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Understanding the Linux
+    <code>
+     fstab
+    </code>
+    File
+   </h1>
+  </header>
+  <section>
+   <h2>
+    Description
+   </h2>
+   <p>
+    The
+    <code>
+     fstab
+    </code>
+    file is a system configuration file in Linux that contains information about disk drives and partitions. It is used to define how disk drives should be automatically mounted at boot time.
+   </p>
+  </section>
+  <section>
+   <h2>
+    Most Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Explanation
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        defaults
+       </code>
+      </td>
+      <td>
+       Uses the default mount options: rw, suid, dev, exec, auto, nouser, and async.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        noauto
+       </code>
+      </td>
+      <td>
+       Does not mount the filesystem at boot.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        ro
+       </code>
+      </td>
+      <td>
+       Mounts the filesystem as read-only.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        rw
+       </code>
+      </td>
+      <td>
+       Mounts the filesystem as read-write.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        user
+       </code>
+      </td>
+      <td>
+       Allows any user to mount and unmount the filesystem.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        nouser
+       </code>
+      </td>
+      <td>
+       Allows only root to mount and unmount the filesystem.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        exec
+       </code>
+      </td>
+      <td>
+       Allows execution of binaries.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        noexec
+       </code>
+      </td>
+      <td>
+       Prevents execution of binaries.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code># Mount a USB drive to /mnt/usb
+UUID=1234-5678 /mnt/usb vfat defaults,noauto,user 0 0
+
+# Mount a read-only backup partition
+/dev/sdb1 /backup ext4 defaults,ro 0 0
+
+# NFS share mount
+server:/export /mnt/nfs nfs defaults 0 0
+</code></pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code># fstab entry format
+&lt;file system&gt; &lt;mount point&gt; &lt;type&gt; &lt;options&gt; &lt;dump&gt; &lt;pass&gt;
+
+# Example entry
+/dev/sda1 / ext4 defaults 0 1
+</code></pre>
+  </section>
+ </body>
+</html>

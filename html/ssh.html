@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   SSH Command Guide
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    SSH Command Overview
+   </h1>
+  </header>
+  <section>
+   <h2>
+    Description
+   </h2>
+   <p>
+    SSH (Secure Shell) is a command-line tool used for securely connecting to remote systems over a network. It provides encrypted communications for security.
+   </p>
+  </section>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        -p
+       </code>
+      </td>
+      <td>
+       Specify the port to connect to on the remote host.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -i
+       </code>
+      </td>
+      <td>
+       Specify the identity file (private key) for public key authentication.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -l
+       </code>
+      </td>
+      <td>
+       Specify the user to log in as on the remote system.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -N
+       </code>
+      </td>
+      <td>
+       Create a connection without executing any command.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -T
+       </code>
+      </td>
+      <td>
+       Disable pseudo-tty allocation.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code># Connect to a remote server
+ssh user@hostname
+
+# Connect using a specific port
+ssh -p 2222 user@hostname
+
+# Use a specific private key
+ssh -i /path/to/private_key user@hostname
+
+# Run a command on the remote server
+ssh user@hostname 'ls -l /var/www'
+
+# Establish a tunnel
+ssh -L 8080:localhost:80 user@hostname</code></pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code># Basic connection
+ssh user@host
+
+# Specify port
+ssh -p port user@host
+
+# Identity file
+ssh -i keyfile user@host
+
+# Run remote command
+ssh user@host 'command'</code></pre>
+  </section>
+ </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   mpstat Command Reference
+  </title>
+ </head>
+ <body>
+  <h1>
+   mpstat Command
+  </h1>
+  <p>
+   The
+   <code>
+    mpstat
+   </code>
+   command is used to display CPU-related statistics. It provides information about each available processor or core, helping monitor CPU performance.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      -P ALL
+     </td>
+     <td>
+      Display statistics for all CPUs.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -u
+     </td>
+     <td>
+      Show CPU utilization.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -I SUM
+     </td>
+     <td>
+      Display interrupt information summary.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -V
+     </td>
+     <td>
+      Display version information.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code>mpstat
+mpstat -P ALL
+mpstat -u 5 3
+mpstat -I SUM 1 5</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>mpstat          # Basic usage
+mpstat -P ALL   # All CPUs
+mpstat -u       # CPU utilization
+mpstat -I SUM   # Interrupt summary</code></pre>
+ </body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Systemctl Command Overview
+  </title>
+ </head>
+ <body>
+  <h1>
+   Systemctl Command Overview
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    systemctl
+   </code>
+   command is a tool to examine and control the 
+        systemd system and service manager. It allows users to manage system services, 
+        check statuses, and control units.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <tr>
+    <th>
+     Option
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      start [unit]
+     </code>
+    </td>
+    <td>
+     Starts the specified service or unit.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      stop [unit]
+     </code>
+    </td>
+    <td>
+     Stops the specified service or unit.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      restart [unit]
+     </code>
+    </td>
+    <td>
+     Restarts the specified service or unit.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      status [unit]
+     </code>
+    </td>
+    <td>
+     Shows the status of the specified service or unit.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      enable [unit]
+     </code>
+    </td>
+    <td>
+     Enables the service or unit to start on boot.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      disable [unit]
+     </code>
+    </td>
+    <td>
+     Disables the service or unit, preventing it from starting on boot.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      list-units
+     </code>
+    </td>
+    <td>
+     Lists all loaded units.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      daemon-reload
+     </code>
+    </td>
+    <td>
+     Reloads the systemd manager configuration.
+    </td>
+   </tr>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code>
+# Start the Apache service
+systemctl start apache2
+
+# Stop the Apache service
+systemctl stop apache2
+
+# Restart the Apache service
+systemctl restart apache2
+
+# Check the status of the Apache service
+systemctl status apache2
+
+# Enable the Apache service to start at boot
+systemctl enable apache2
+
+# Disable the Apache service from starting at boot
+systemctl disable apache2
+
+# List all active systemd units
+systemctl list-units
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+systemctl start [unit]
+systemctl stop [unit]
+systemctl restart [unit]
+systemctl status [unit]
+systemctl enable [unit]
+systemctl disable [unit]
+systemctl list-units
+systemctl daemon-reload
+    </code></pre>
+ </body>
+</html>

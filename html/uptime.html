@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Linux `uptime` Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   Linux `uptime` Command
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    uptime
+   </code>
+   command displays how long the system has been running, the number of users currently logged in, and the system load averages for the past 1, 5, and 15 minutes.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -p
+      </code>
+     </td>
+     <td>
+      Displays the uptime in a pretty format.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -s
+      </code>
+     </td>
+     <td>
+      Shows the system boot time.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <h3>
+   Basic Example
+  </h3>
+  <pre><code>uptime</code></pre>
+  <p>
+   Displays the current time, uptime duration, number of users, and load averages.
+  </p>
+  <h3>
+   Pretty Format
+  </h3>
+  <pre><code>uptime -p</code></pre>
+  <p>
+   Outputs the uptime in a human-readable format, like "up 5 hours, 10 minutes".
+  </p>
+  <h3>
+   System Boot Time
+  </h3>
+  <pre><code>uptime -s</code></pre>
+  <p>
+   Shows the exact date and time when the system was last booted.
+  </p>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre>
+        uptime      # Show system uptime and load
+        uptime -p   # Pretty format
+        uptime -s   # System boot time
+    </pre>
+ </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Linux `fg` Command Guide
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Linux `fg` Command
+   </h1>
+  </header>
+  <section>
+   <h2>
+    Description
+   </h2>
+   <p>
+    The
+    <code>
+     fg
+    </code>
+    command is used to bring a background job to the foreground in a shell environment.
+   </p>
+  </section>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        %job-id
+       </code>
+      </td>
+      <td>
+       Specifies the job ID to bring to the foreground.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Examples
+   </h2>
+   <pre>
+<code># Start a job in the background
+sleep 100 &amp;
+
+# View background jobs
+jobs
+
+# Bring the first job to the foreground
+fg %1
+
+# Bring job with job ID 2 to the foreground
+fg %2
+</code>
+        </pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre>
+<code>
+# Bring the most recent background job to foreground
+fg
+
+# Bring a specific job to foreground using job ID
+fg %job-id
+</code>
+        </pre>
+  </section>
+ </body>
+</html>

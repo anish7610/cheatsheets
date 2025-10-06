@@ -1,0 +1,122 @@
+<h1>
+ Duplicity Command Overview
+</h1>
+<p>
+ Duplicity is a Linux command-line utility for creating encrypted, bandwidth-efficient, incremental backups locally or remotely.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     full
+    </code>
+   </td>
+   <td>
+    Create a full backup.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     incremental
+    </code>
+   </td>
+   <td>
+    Create an incremental backup since the last backup.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     restore
+    </code>
+   </td>
+   <td>
+    Restore files from a backup.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --encrypted
+    </code>
+   </td>
+   <td>
+    Encrypt the backup with a GPG key.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --sign-key
+    </code>
+   </td>
+   <td>
+    Sign the backup with a GPG key.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --exclude
+    </code>
+   </td>
+   <td>
+    Exclude specific files or directories from the backup.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --include
+    </code>
+   </td>
+   <td>
+    Include only specified files or directories in the backup.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code>
+<h3>Full Backup</h3>
+duplicity full /home/user file://var/backup
+
+<h3>Incremental Backup</h3>
+duplicity incremental /home/user file://var/backup
+
+<h3>Restore Backup</h3>
+duplicity restore file://var/backup /home/user
+
+<h3>Exclude Files</h3>
+duplicity --exclude /home/user/temp /home/user file://var/backup
+
+<h3>Encrypted Backup</h3>
+duplicity --encrypted --sign-key ABC123 /home/user remote://user@server/backup
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+duplicate full /source /dest
+duplicate incremental /source /dest
+duplicate restore /dest /source
+duplicate --exclude /path/to/exclude /source /dest
+duplicate --encrypted --sign-key KEYID /source /dest
+</code></pre>

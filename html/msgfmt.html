@@ -1,0 +1,101 @@
+<h1>
+ msgfmt Command
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  msgfmt
+ </code>
+ command is used to compile message catalogs from portable object (.po) files into binary format (.mo) files for use with GNU
+ <code>
+  gettext
+ </code>
+ utilities.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -o file
+    </code>
+   </td>
+   <td>
+    Output the result to a specified file.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --check
+    </code>
+   </td>
+   <td>
+    Perform validation checks on the file.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --verbose
+    </code>
+   </td>
+   <td>
+    Increase verbosity of the output.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --statistics
+    </code>
+   </td>
+   <td>
+    Print statistics about the translations.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Compile a .po file into a .mo file
+msgfmt messages.po -o messages.mo
+
+# Compile and print statistics
+msgfmt --statistics messages.po
+
+# Compile with verbose output
+msgfmt --verbose messages.po -o messages.mo
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code># Basic compile
+msgfmt file.po -o file.mo
+
+# With statistics
+msgfmt --statistics file.po
+
+# Perform checks
+msgfmt --check file.po
+
+# Verbose output
+msgfmt --verbose file.po -o file.mo
+</code></pre>

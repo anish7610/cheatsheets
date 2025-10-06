@@ -1,0 +1,125 @@
+<h1>
+ Linux Command: netstat
+</h1>
+<p>
+ The
+ <code>
+  netstat
+ </code>
+ command is used to display network connections, routing tables, interface statistics, masquerade connections, and multicast memberships.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    -a
+   </td>
+   <td>
+    Show all sockets (listening and non-listening).
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -t
+   </td>
+   <td>
+    Display TCP connections.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -u
+   </td>
+   <td>
+    Display UDP connections.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -l
+   </td>
+   <td>
+    Show only listening sockets.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -n
+   </td>
+   <td>
+    Show numerical addresses instead of resolving hosts.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -p
+   </td>
+   <td>
+    Show the PID and name of the program to which each socket belongs.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -r
+   </td>
+   <td>
+    Display the routing table.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -s
+   </td>
+   <td>
+    Display network statistics (like recv/send counts).
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Display all connections and listening ports
+netstat -a
+
+# Show TCP connections only
+netstat -t
+
+# Show listening TCP sockets with numerical addresses
+netstat -ltun
+
+# Display UDP connections with PID and program name
+netstat -up
+
+# Show routing table
+netstat -r
+
+# Display network statistics
+netstat -s
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+-a          # All sockets
+-t          # TCP only
+-u          # UDP only
+-l          # Listening sockets
+-n          # Numerical addresses
+-p          # Show PID/program
+-r          # Routing table
+-s          # Network statistics
+</code></pre>

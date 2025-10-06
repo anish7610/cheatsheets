@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Linux lsof Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   Linux `lsof` Command
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    lsof
+   </code>
+   command lists open files and the processes that opened them. It's useful for identifying files that are open and their associated processes.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -i
+      </code>
+     </td>
+     <td>
+      List files opened by network connections.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -u &lt;username&gt;
+      </code>
+     </td>
+     <td>
+      Show open files by a specific user.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -p &lt;pid&gt;
+      </code>
+     </td>
+     <td>
+      Display files opened by a specific process ID.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       +D &lt;directory&gt;
+      </code>
+     </td>
+     <td>
+      List files under the specified directory.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -t
+      </code>
+     </td>
+     <td>
+      Only display process IDs.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># List all network connections
+lsof -i
+
+# Show files opened by user 'john'
+lsof -u john
+
+# Display files opened by process with PID 1234
+lsof -p 1234
+
+# List all files under /var/log
+lsof +D /var/log
+
+# Show only process IDs of open files
+lsof -t
+</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>lsof -i                # Network connections
+lsof -u <username>     # Files by user
+lsof -p <pid>          # Files by PID
+lsof +D <directory>    # Files in directory
+lsof -t                # Only PIDs
+</directory></pid></username></code></pre>
+ </body>
+</html>

@@ -1,0 +1,127 @@
+<h1>
+ Linux Command: ifconfig
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  ifconfig
+ </code>
+ command is used to configure and manage network interfaces in Unix-based systems.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     interface
+    </code>
+   </td>
+   <td>
+    Display configuration for a specific interface.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     up
+    </code>
+   </td>
+   <td>
+    Activate the specified network interface.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     down
+    </code>
+   </td>
+   <td>
+    Deactivate the specified network interface.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     add
+    </code>
+   </td>
+   <td>
+    Add an IP address to an interface.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     del
+    </code>
+   </td>
+   <td>
+    Remove an IP address from an interface.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     netmask
+    </code>
+   </td>
+   <td>
+    Set a network mask for an interface.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Display all network interfaces
+ifconfig
+
+# Display information for eth0
+ifconfig eth0
+
+# Activate the interface eth0
+ifconfig eth0 up
+
+# Deactivate the interface eth0
+ifconfig eth0 down
+
+# Assign an IP address to eth0
+ifconfig eth0 192.168.1.10
+
+# Set the netmask for eth0
+ifconfig eth0 netmask 255.255.255.0
+
+# Add a second IP to eth0
+ifconfig eth0:0 192.168.1.11
+
+# Remove a specific IP address from eth0
+ifconfig eth0:0 del 192.168.1.11
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+ifconfig            # Show interfaces
+ifconfig eth0       # Show specific interface
+ifconfig eth0 up    # Bring interface up
+ifconfig eth0 down  # Bring interface down
+ifconfig eth0 192.168.1.10 netmask 255.255.255.0
+</code></pre>

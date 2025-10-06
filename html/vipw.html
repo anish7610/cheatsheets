@@ -1,0 +1,96 @@
+<h1>
+ Linux Command: vipw
+</h1>
+<p>
+ The
+ <code>
+  vipw
+ </code>
+ command is used to safely edit the
+ <code>
+  /etc/passwd
+ </code>
+ and
+ <code>
+  /etc/shadow
+ </code>
+ files, which store user account information on Linux systems.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -g
+    </code>
+   </td>
+   <td>
+    Invoke the editor on the
+    <code>
+     /etc/group
+    </code>
+    file instead.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -s
+    </code>
+   </td>
+   <td>
+    Invoke the editor on the
+    <code>
+     /etc/shadow
+    </code>
+    file instead.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -q
+    </code>
+   </td>
+   <td>
+    Quiet mode; fewer messages.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<h3>
+ Example 1: Edit Password File
+</h3>
+<pre><code>vipw</code></pre>
+<h3>
+ Example 2: Edit Shadow File
+</h3>
+<pre><code>vipw -s</code></pre>
+<h3>
+ Example 3: Edit Group File
+</h3>
+<pre><code>vipw -g</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+vipw      # Edit /etc/passwd
+vipw -s   # Edit /etc/shadow
+vipw -g   # Edit /etc/group
+</code></pre>

@@ -1,0 +1,149 @@
+<h1>
+ Understanding the
+ <code>
+  nginx
+ </code>
+ Command
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ <code>
+  nginx
+ </code>
+ is a high-performance HTTP server and reverse proxy, as well as an IMAP/POP3 proxy server.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -t
+    </code>
+   </td>
+   <td>
+    Test the configuration file for syntax errors.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -s
+    </code>
+    <em>
+     signal
+    </em>
+   </td>
+   <td>
+    Send a signal to the master process. Signals can include
+    <code>
+     stop
+    </code>
+    ,
+    <code>
+     quit
+    </code>
+    ,
+    <code>
+     reload
+    </code>
+    , or
+    <code>
+     reopen
+    </code>
+    .
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -v
+    </code>
+   </td>
+   <td>
+    Display the version of nginx.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -V
+    </code>
+   </td>
+   <td>
+    Display the version and configure options.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -c
+    </code>
+    <em>
+     file
+    </em>
+   </td>
+   <td>
+    Use an alternate configuration file.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -p
+    </code>
+    <em>
+     prefix
+    </em>
+   </td>
+   <td>
+    Set the prefix path (default is
+    <code>
+     /usr/local/nginx/
+    </code>
+    ).
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Start nginx with the default configuration
+nginx
+
+# Test the current configuration file for syntax errors
+nginx -t
+
+# Reload nginx to apply changes in the configuration
+nginx -s reload
+
+# Stop the nginx server
+nginx -s stop
+
+# Start nginx with a specific configuration file
+nginx -c /path/to/config/file.conf
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>nginx            # Start nginx
+nginx -t          # Test configuration
+nginx -s reload   # Reload nginx
+nginx -s stop     # Stop nginx
+nginx -c <file>   # Use alternate config
+</file></code></pre>

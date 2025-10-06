@@ -1,0 +1,118 @@
+<h1>
+ Hadoop Command Overview
+</h1>
+<p>
+ The
+ <code>
+  hadoop
+ </code>
+ command is a tool for interacting with Hadoop, a framework for distributed storage and processing of large data sets. It provides various subcommands for different aspects of Hadoop ecosystem.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     fs
+    </code>
+   </td>
+   <td>
+    Interacts with the Hadoop filesystem (HDFS).
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     jar
+    </code>
+   </td>
+   <td>
+    Executes Hadoop jobs packaged as JAR files.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     version
+    </code>
+   </td>
+   <td>
+    Displays the Hadoop version.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     help
+    </code>
+   </td>
+   <td>
+    Provides help for a specific command.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre>
+<code>hadoop fs -ls /user/hadoop/</code>
+</pre>
+<p>
+ Lists files and directories in the specified HDFS path.
+</p>
+<pre>
+<code>hadoop jar myapp.jar com.example.MyApp input output</code>
+</pre>
+<p>
+ Runs a Hadoop job defined in
+ <code>
+  myapp.jar
+ </code>
+ with the main class
+ <code>
+  com.example.MyApp
+ </code>
+ , taking
+ <code>
+  input
+ </code>
+ and
+ <code>
+  output
+ </code>
+ as arguments.
+</p>
+<pre>
+<code>hadoop version</code>
+</pre>
+<p>
+ Displays the current Hadoop version installed.
+</p>
+<h2>
+ Cheat Sheet
+</h2>
+<pre>
+<code>
+hadoop fs -ls /path        # List directory contents
+hadoop fs -mkdir /path     # Create directory in HDFS
+hadoop fs -put local target # Upload local file to HDFS
+hadoop fs -get source local # Download HDFS file to local
+hadoop jar file.jar args   # Run Hadoop job JAR
+hadoop version             # Show Hadoop version
+hadoop help command        # Get help for command
+</code>
+</pre>

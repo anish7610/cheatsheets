@@ -1,0 +1,95 @@
+<html>
+ <body>
+  <h1>
+   Linux Command: renice
+  </h1>
+  <p>
+   The
+   <code>
+    renice
+   </code>
+   command is used to alter the priority of running processes in Linux. A lower nice value means higher priority (more CPU time).
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -n
+      </code>
+     </td>
+     <td>
+      Specifies the increment to adjust the nice value.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -p
+      </code>
+     </td>
+     <td>
+      Specifies a process ID (PID) to change the nice value for.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -u
+      </code>
+     </td>
+     <td>
+      Specifies a user whose processes' nice values are to be changed.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -g
+      </code>
+     </td>
+     <td>
+      Specifies a process group ID to change the nice value for processes in that group.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Renice a process with PID 1234 to higher priority
+renice -n -5 -p 1234
+
+# Lower the priority of all processes by user 'john'
+renice -n 5 -u john
+
+# Adjust priority of a process group with GID 5678
+renice -n 10 -g 5678
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code># Renice process by PID
+renice -n NICE_VALUE -p PID
+
+# Renice all processes by user
+renice -n NICE_VALUE -u USER
+
+# Renice a process group
+renice -n NICE_VALUE -g GID
+    </code></pre>
+ </body>
+</html>

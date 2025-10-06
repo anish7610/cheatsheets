@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Linux `db2` Command
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Linux `db2` Command
+   </h1>
+  </header>
+  <section>
+   <h2>
+    Description
+   </h2>
+   <p>
+    The
+    <code>
+     db2
+    </code>
+    command is used for interacting with IBM Db2 databases, allowing users to execute database commands and queries.
+   </p>
+  </section>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        -c
+       </code>
+      </td>
+      <td>
+       Continue processing after an error occurs.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -t
+       </code>
+      </td>
+      <td>
+       Terminate commands with a semicolon.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -v
+       </code>
+      </td>
+      <td>
+       Display command output verbosely.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -x
+       </code>
+      </td>
+      <td>
+       Generate XML output for the commands.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -r
+        <em>
+         file
+        </em>
+       </code>
+      </td>
+      <td>
+       Redirect output to the specified file.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code># Connect to a database
+db2 connect to sample
+
+# Run a simple query
+db2 "SELECT * FROM employees"
+
+# Execute commands from a file, terminate with semicolons
+db2 -tvf script.sql
+
+# Redirect output to a file
+db2 -r output.log "SELECT * FROM employees"</code></pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code># Connect to a database
+db2 connect to <em>dbname</em>
+
+# Execute commands with continuation on error
+db2 -c "<em>command</em>"
+
+# Query with semicolon termination
+db2 -t "<em>query</em>"
+
+# Run a script file
+db2 -tvf <em>file.sql</em></code></pre>
+  </section>
+ </body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Restic Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   Restic Command Guide
+  </h1>
+  <h2>
+   Short Description
+  </h2>
+  <p>
+   Restic is a fast, secure, and efficient backup tool that ensures your data is reliably saved and restored.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       init
+      </code>
+     </td>
+     <td>
+      Initialize a new repository.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       backup [directory]
+      </code>
+     </td>
+     <td>
+      Create a backup of the specified directory.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       restore [snapshotID]
+      </code>
+     </td>
+     <td>
+      Restore the specified snapshot.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       snapshots
+      </code>
+     </td>
+     <td>
+      List all snapshots in the repository.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       forget
+      </code>
+     </td>
+     <td>
+      Remove snapshots based on a policy.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       prune
+      </code>
+     </td>
+     <td>
+      Remove unneeded data from the repository.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       check
+      </code>
+     </td>
+     <td>
+      Verify the integrity of the repository.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code>restic init --repo /path/to/repo</code></pre>
+  <pre><code>restic backup /home/user/documents</code></pre>
+  <pre><code>restic restore 12345678 --target /restored/files</code></pre>
+  <pre><code>restic snapshots --repo /path/to/repo</code></pre>
+  <pre><code>restic forget --keep-last 5 --prune</code></pre>
+  <pre><code>restic check --repo /path/to/repo</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>init, backup, restore, snapshots, forget, prune, check</code></pre>
+ </body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Linux modprobe Command
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Linux modprobe Command
+   </h1>
+  </header>
+  <section>
+   <h2>
+    Description
+   </h2>
+   <p>
+    The
+    <code>
+     modprobe
+    </code>
+    command is used to add or remove modules from the Linux kernel. It effectively manages dependencies between modules.
+   </p>
+  </section>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        -v
+       </code>
+       ,
+       <code>
+        --verbose
+       </code>
+      </td>
+      <td>
+       Run in verbose mode, showing more detail about what the command does.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -r
+       </code>
+       ,
+       <code>
+        --remove
+       </code>
+      </td>
+      <td>
+       Remove a module from the kernel.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -n
+       </code>
+       ,
+       <code>
+        --dry-run
+       </code>
+      </td>
+      <td>
+       Simulate an action; do not actually load or unload a module.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        --first-time
+       </code>
+      </td>
+      <td>
+       Only load the module if it is not already loaded.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        --show-depends
+       </code>
+      </td>
+      <td>
+       List the dependencies of a module without loading it.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Realistic Usage Examples
+   </h2>
+   <pre><code># Load a module (e.g., foo)
+modprobe foo
+
+# Remove a module (e.g., foo)
+modprobe -r foo
+
+# Verbosely load a module
+modprobe -v foo
+
+# Show dependencies of a module
+modprobe --show-depends foo
+
+# Simulate loading a module
+modprobe -n foo
+        </code></pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code># Load: modprobe [module]
+# Remove: modprobe -r [module]
+# Verbose: modprobe -v [module]
+# Show dependencies: modprobe --show-depends [module]
+        </code></pre>
+  </section>
+ </body>
+</html>

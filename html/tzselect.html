@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   tzselect Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   tzselect Command
+  </h1>
+  <p>
+   The
+   <code>
+    tzselect
+   </code>
+   command helps you set the time zone by providing a step-by-step selection process. It doesn't change the timezone configuration; instead, it outputs the timezone string for use with other tools or scripts.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      N/A
+     </td>
+     <td>
+      No specific options; runs interactively.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Run tzselect to determine the timezone
+$ tzselect
+</code></pre>
+  <pre><code># Combine with setting timezone in a session
+$ TZ=$(tzselect); export TZ
+</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code># Launch tzselect
+tzselect
+
+# Set timezone environment variable
+TZ=$(tzselect); export TZ
+</code></pre>
+ </body>
+</html>

@@ -1,0 +1,114 @@
+<h1>
+ Understanding the Linux
+ <code>
+  find
+ </code>
+ Command
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  find
+ </code>
+ command is used in Linux to search for files and directories within a directory hierarchy. It offers multiple options to refine and filter search results based on specific criteria.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    -name
+   </td>
+   <td>
+    Searches for files by name.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -type
+   </td>
+   <td>
+    Filters search by file type (e.g.,
+    <code>
+     f
+    </code>
+    for files,
+    <code>
+     d
+    </code>
+    for directories).
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -size
+   </td>
+   <td>
+    Finds files by size (e.g.,
+    <code>
+     +1M
+    </code>
+    for larger than 1 MB).
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -mtime
+   </td>
+   <td>
+    Searches for files modified within a certain number of days.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -exec
+   </td>
+   <td>
+    Executes a command on each found file.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Find all .txt files in the current directory and subdirectories
+find . -name "*.txt"
+
+# Find all directories named 'backup'
+find / -type d -name "backup"
+
+# Find all files larger than 100MB
+find / -size +100M
+
+# Find files modified in the last 7 days
+find . -mtime -7
+
+# Find and remove all files named 'tmp.log'
+find . -name "tmp.log" -exec rm {} \;
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>find [path] [expression]
+-name "pattern"      # Search by name
+-type [f|d]         # Search by type (file or dir)
+-size [+|-]N[c|k|M] # Search by size
+-mtime [+|-]N       # Search by modification time
+-exec command {} \; # Execute command
+</code></pre>

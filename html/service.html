@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Linux Service Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   Linux Service Command
+  </h1>
+  <p>
+   The
+   <code>
+    service
+   </code>
+   command is used to manage and control services on a Linux system. It allows starting, stopping, and restarting services, among other functions.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       start
+      </code>
+     </td>
+     <td>
+      Starts the specified service.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       stop
+      </code>
+     </td>
+     <td>
+      Stops the specified service.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       restart
+      </code>
+     </td>
+     <td>
+      Restarts the specified service.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       status
+      </code>
+     </td>
+     <td>
+      Shows the current status of the service.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       reload
+      </code>
+     </td>
+     <td>
+      Reloads the service configuration without stopping it.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Start a service
+service apache2 start
+
+# Stop a service
+service apache2 stop
+
+# Restart a service
+service nginx restart
+
+# Check the status of a service
+service ssh status
+
+# Reload the configuration of a service
+service apache2 reload
+</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code># Use "service [service_name] [option]" format
+
+service [name] start    # Start service
+service [name] stop     # Stop service
+service [name] restart  # Restart service
+service [name] status   # Status of service
+service [name] reload   # Reload service
+</code></pre>
+ </body>
+</html>

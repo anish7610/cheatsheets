@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Docker Compose Cheat Sheet
+  </title>
+ </head>
+ <body>
+  <h1>
+   Docker Compose Command
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   <code>
+    docker-compose
+   </code>
+   is a tool for defining and running multi-container Docker applications. It uses a YAML file to configure services, networks, and volumes needed for your application.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       up
+      </code>
+     </td>
+     <td>
+      Builds, (re)creates, starts, and attaches to containers for a service.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       down
+      </code>
+     </td>
+     <td>
+      Stops containers and removes containers, networks, volumes, and images created by
+      <code>
+       up
+      </code>
+      .
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       build
+      </code>
+     </td>
+     <td>
+      Build or rebuild services.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       start
+      </code>
+     </td>
+     <td>
+      Starts existing containers for a service.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       stop
+      </code>
+     </td>
+     <td>
+      Stops running containers without removing them.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       restart
+      </code>
+     </td>
+     <td>
+      Restarts all stopped and running services.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       logs
+      </code>
+     </td>
+     <td>
+      View output from containers.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       ps
+      </code>
+     </td>
+     <td>
+      Lists containers.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Start all services defined in docker-compose.yml
+docker-compose up
+
+# Start services in the background (detached mode)
+docker-compose up -d
+
+# Stop and remove resources started with up
+docker-compose down
+
+# Rebuild services
+docker-compose build
+
+# View logs from all services
+docker-compose logs
+
+# List all running containers
+docker-compose ps
+</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>docker-compose up       # Start services
+docker-compose down     # Stop and remove services
+docker-compose build    # Build services
+docker-compose start    # Start existing services
+docker-compose stop     # Stop services
+docker-compose restart  # Restart services
+docker-compose logs     # View container logs
+docker-compose ps       # List containers
+</code></pre>
+ </body>
+</html>

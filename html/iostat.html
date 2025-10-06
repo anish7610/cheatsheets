@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   iostat Cheat Sheet
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    iostat Command Overview
+   </h1>
+  </header>
+  <section>
+   <h2>
+    Description
+   </h2>
+   <p>
+    The
+    <code>
+     iostat
+    </code>
+    command reports Central Processing Unit (CPU) and input/output statistics for devices and partitions, helping to monitor system performance and identify bottlenecks.
+   </p>
+  </section>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        -c
+       </code>
+      </td>
+      <td>
+       Display only the CPU usage report.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -d
+       </code>
+      </td>
+      <td>
+       Display only device utilization report.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -x
+       </code>
+      </td>
+      <td>
+       Display extended statistics.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -m
+       </code>
+      </td>
+      <td>
+       Display statistics in megabytes per second.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -k
+       </code>
+      </td>
+      <td>
+       Display statistics in kilobytes per second.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -t
+       </code>
+      </td>
+      <td>
+       Add a timestamp to each report line.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code># Display CPU and device statistics every 2 seconds
+iostat 2
+
+# Display extended I/O statistics for devices
+iostat -x
+
+# Display I/O statistics in megabytes with a timestamp
+iostat -m -t
+
+# Display CPU statistics only
+iostat -c
+
+# Display device statistics in kilobytes every 1 second
+iostat -dk 1
+        </code></pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code>iostat                    # Basic usage
+iostat 2                  # Refresh every 2 seconds
+iostat -x                 # Extended statistics
+iostat -m                 # Output in megabytes
+iostat -c                 # CPU stats only
+        </code></pre>
+  </section>
+ </body>
+</html>

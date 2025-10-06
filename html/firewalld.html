@@ -1,0 +1,104 @@
+<html>
+ <body>
+  <h1>
+   Firewalld Command Overview
+  </h1>
+  <p>
+   Firewalld is a firewall management tool for Linux operating systems that provides a dynamically managed firewall with support for network zones.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       --state
+      </code>
+     </td>
+     <td>
+      Check whether the firewalld is running.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --reload
+      </code>
+     </td>
+     <td>
+      Reload firewalld rules without losing current connections.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --add-service=SERVICE
+      </code>
+     </td>
+     <td>
+      Add a service to the default zone.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --remove-service=SERVICE
+      </code>
+     </td>
+     <td>
+      Remove a service from the default zone.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --list-all
+      </code>
+     </td>
+     <td>
+      List all settings for the default zone.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Check if firewalld is running
+firewalld --state
+
+# Reload firewalld rules
+firewalld --reload
+
+# Add the http service to the default zone
+firewalld --add-service=http
+
+# Remove the ssh service from the default zone
+firewalld --remove-service=ssh
+
+# List all settings for the default zone
+firewalld --list-all
+</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>Check state: firewalld --state
+Reload rules: firewalld --reload
+Add service: firewalld --add-service=SERVICE
+Remove service: firewalld --remove-service=SERVICE
+List settings: firewalld --list-all
+</code></pre>
+ </body>
+</html>

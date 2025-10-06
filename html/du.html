@@ -1,0 +1,94 @@
+<h1>
+ Linux `du` Command
+</h1>
+<p>
+ The
+ <code>
+  du
+ </code>
+ command estimates and displays the disk usage of files and directories.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    -h
+   </td>
+   <td>
+    Show sizes in human-readable format (e.g., KB, MB).
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -s
+   </td>
+   <td>
+    Display only the total size for each argument.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -a
+   </td>
+   <td>
+    Include individual files in the output.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -c
+   </td>
+   <td>
+    Display a grand total at the end.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    --max-depth=N
+   </td>
+   <td>
+    Limit the output to directories up to depth N.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Display disk usage of all files and directories in a human-readable format
+du -h
+
+# Display total size of a specific directory
+du -sh /path/to/directory
+
+# Show disk usage including individual files
+du -ah
+
+# Display disk usage with a grand total
+du -ch
+
+# Limit the output to top-level directories
+du -h --max-depth=1
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>du -h       # Human-readable sizes
+du -sh      # Total size of directory
+du -ah      # Include files
+du -ch      # Grand total
+--max-depth=N # Limit depth
+</code></pre>

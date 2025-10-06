@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Linux `update-alternatives` Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   Linux `update-alternatives` Guide
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    update-alternatives
+   </code>
+   command manages symbolic links determining default commands for system alternatives.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       --install
+      </code>
+     </td>
+     <td>
+      Install a new alternative for a command.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --config
+      </code>
+     </td>
+     <td>
+      Select a specific alternative for a command.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --remove
+      </code>
+     </td>
+     <td>
+      Remove an alternative link.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --display
+      </code>
+     </td>
+     <td>
+      Show information about the alternatives.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <h3>
+   Install New Alternative
+  </h3>
+  <pre><code>sudo update-alternatives --install /usr/bin/editor editor /usr/bin/nano 10</code></pre>
+  <h3>
+   Select Alternative
+  </h3>
+  <pre><code>sudo update-alternatives --config editor</code></pre>
+  <h3>
+   Remove Alternative
+  </h3>
+  <pre><code>sudo update-alternatives --remove editor /usr/bin/nano</code></pre>
+  <h3>
+   Display Alternatives
+  </h3>
+  <pre><code>update-alternatives --display editor</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+--install link name path priority
+--config name
+--remove name path
+--display name
+    </code></pre>
+ </body>
+</html>

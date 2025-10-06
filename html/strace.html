@@ -1,0 +1,128 @@
+<html>
+ <body>
+  <h1>
+   strace Command Overview
+  </h1>
+  <p>
+   The
+   <code>
+    strace
+   </code>
+   command in Linux is used to trace system calls and signals made by a process. It helps in debugging and understanding how a program interacts with the operating system.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -c
+      </code>
+     </td>
+     <td>
+      Count time, calls, and errors for each system call and report a summary.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -e
+      </code>
+     </td>
+     <td>
+      Filter which system calls are traced.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -p
+      </code>
+     </td>
+     <td>
+      Attach to a process with a specified PID.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -f
+      </code>
+     </td>
+     <td>
+      Trace child processes created by
+      <code>
+       fork
+      </code>
+      .
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -o
+      </code>
+     </td>
+     <td>
+      Write trace output to a file.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -s
+      </code>
+     </td>
+     <td>
+      Specify the maximum string length to print.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Trace all system calls made by ls
+strace ls
+
+# Trace all open syscalls made by ls
+strace -e open ls
+
+# Attach to a running process with PID 1234
+strace -p 1234
+
+# Trace a process and its child processes
+strace -f -o trace_output.txt my_program
+
+# Summarize time and errors for all syscalls in ls
+strace -c ls
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code># Basic usage
+strace <command/>
+
+# Specific syscall
+strace -e syscall <command/>
+
+# Attach to PID
+strace -p <pid>
+
+# Output to file
+strace -o <file> <command/>
+    </file></pid></code></pre>
+ </body>
+</html>

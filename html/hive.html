@@ -1,0 +1,110 @@
+<h1>
+ Linux Command: hive
+</h1>
+<p>
+ The
+ <code>
+  hive
+ </code>
+ command is used to interact with Apache Hive, a data warehouse software that facilitates reading, writing, and managing large datasets stored in distributed storage using SQL.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -e &lt;query&gt;
+    </code>
+   </td>
+   <td>
+    Execute a Hive query directly from the command line.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -f &lt;file&gt;
+    </code>
+   </td>
+   <td>
+    Execute Hive commands from a file.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --hiveconf &lt;key=value&gt;
+    </code>
+   </td>
+   <td>
+    Set Hive configuration variables.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --database &lt;database&gt;
+    </code>
+   </td>
+   <td>
+    Specify the database to use.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --silent
+    </code>
+   </td>
+   <td>
+    Suppress non-error messages in the output.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Run a simple query
+hive -e "SELECT * FROM my_table LIMIT 10;"
+
+# Execute commands from a file named script.hql
+hive -f script.hql
+
+# Set a Hive configuration variable and run a query
+hive --hiveconf mapreduce.job.queuename=myqueue -e "SHOW TABLES;"
+
+# Specify a database and execute a query within it
+hive --database my_database -e "SELECT COUNT(*) FROM another_table;"
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code># Run a Hive query
+hive -e "QUERY"
+
+# Execute commands from a file
+hive -f FILE
+
+# Set Hive configuration
+hive --hiveconf KEY=VALUE
+
+# Use a specific database
+hive --database DB_NAME
+
+# Suppress messages
+hive --silent
+</code></pre>

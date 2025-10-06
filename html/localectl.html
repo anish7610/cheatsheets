@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   localectl Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   localectl Command
+  </h1>
+  <p>
+   <code>
+    localectl
+   </code>
+   is a command-line utility for querying and setting system locale and keyboard layout settings.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       status
+      </code>
+     </td>
+     <td>
+      Show current locale and keyboard settings.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       set-locale LANG=...
+      </code>
+     </td>
+     <td>
+      Set system locale to a specified language.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       set-keymap MAP
+      </code>
+     </td>
+     <td>
+      Set console keyboard layout to a specified keymap.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       list-locales
+      </code>
+     </td>
+     <td>
+      List available locales on the system.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       list-keymaps
+      </code>
+     </td>
+     <td>
+      List available keymaps on the system.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <h3>
+   Check Current Locale and Keymap
+  </h3>
+  <pre><code>localectl status</code></pre>
+  <h3>
+   Set System Locale
+  </h3>
+  <p>
+   Set the system locale to US English:
+  </p>
+  <pre><code>localectl set-locale LANG=en_US.UTF-8</code></pre>
+  <h3>
+   Set Keyboard Layout
+  </h3>
+  <p>
+   Set the keyboard layout to German:
+  </p>
+  <pre><code>localectl set-keymap de</code></pre>
+  <h3>
+   List Available Locales
+  </h3>
+  <pre><code>localectl list-locales</code></pre>
+  <h3>
+   List Available Keymaps
+  </h3>
+  <pre><code>localectl list-keymaps</code></pre>
+  <h2>
+   Quick Reference Cheat Sheet
+  </h2>
+  <pre><code>
+# Check current settings
+localectl status
+
+# Set locale
+localectl set-locale LANG=en_US.UTF-8
+
+# Set keyboard layout
+localectl set-keymap de
+
+# List locales
+localectl list-locales
+
+# List keymaps
+localectl list-keymaps
+    </code></pre>
+ </body>
+</html>

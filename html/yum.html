@@ -1,0 +1,136 @@
+<html>
+ <body>
+  <h1>
+   Linux Command: yum
+  </h1>
+  <p>
+   The
+   <code>
+    yum
+   </code>
+   command is a package manager used in RPM-based Linux distributions like CentOS, Fedora, and Red Hat Enterprise Linux. It helps to install, update, and remove packages, and manage dependencies.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       install
+      </code>
+     </td>
+     <td>
+      Installs one or more packages.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       remove
+      </code>
+     </td>
+     <td>
+      Removes one or more packages.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       update
+      </code>
+     </td>
+     <td>
+      Updates one or more packages.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       list
+      </code>
+     </td>
+     <td>
+      Lists available, installed, or updates to packages.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       search
+      </code>
+     </td>
+     <td>
+      Searches for a package by name or description.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       info
+      </code>
+     </td>
+     <td>
+      Displays detailed information about a package.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       clean
+      </code>
+     </td>
+     <td>
+      Cleans up temporary files.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Install a package
+yum install <em>package-name</em>
+
+# Remove a package
+yum remove <em>package-name</em>
+
+# Update all packages
+yum update
+
+# List all installed packages
+yum list installed
+
+# Search for a package
+yum search <em>search-term</em>
+
+# Get information about a package
+yum info <em>package-name</em>
+
+# Clean cached files
+yum clean all
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>yum install <em>pkg</em> - Install package
+yum remove <em>pkg</em>  - Remove package
+yum update        - Update all packages
+yum list          - List packages
+yum search <em>term</em> - Search for package
+yum info <em>pkg</em>    - Package info
+yum clean all     - Clean cache
+    </code></pre>
+ </body>
+</html>

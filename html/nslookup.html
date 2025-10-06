@@ -1,0 +1,97 @@
+<h1>
+ Linux Command: nslookup
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ <code>
+  nslookup
+ </code>
+ is a command-line tool used to query Domain Name System (DNS) to obtain domain name or IP address mapping, or other DNS records.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    -type=
+   </td>
+   <td>
+    Specify the type of DNS record to query (e.g., A, MX, TXT).
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -timeout=
+   </td>
+   <td>
+    Set the time to wait for a response.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -retry=
+   </td>
+   <td>
+    Set the number of retries to make before giving up.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -debug
+   </td>
+   <td>
+    Print debugging information.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -debug
+   </td>
+   <td>
+    Enable verbose debugging mode.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code>
+# Lookup an IP address for a domain
+nslookup example.com
+</code></pre>
+<pre><code>
+# Query a specific DNS record type
+nslookup -type=MX example.com
+</code></pre>
+<pre><code>
+# Use a specific DNS server for the query
+nslookup example.com 8.8.8.8
+</code></pre>
+<pre><code>
+# Enable debugging information
+nslookup -debug example.com
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+nslookup <domain>: Simple query
+nslookup -type=<record> <domain>: Query specific record
+nslookup <domain> <server>: Use specific DNS server
+nslookup -debug <domain>: Debug mode
+</domain></server></domain></domain></record></domain></code></pre>

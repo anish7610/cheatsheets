@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Rsync Command Cheat Sheet
+  </title>
+  <style>
+   table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+  </style>
+ </head>
+ <body>
+  <h1>
+   Rsync Command
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    rsync
+   </code>
+   command is a powerful utility for efficiently transferring and synchronizing files across computer systems by checking the differences in files.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -a
+      </code>
+     </td>
+     <td>
+      Archive mode, preserves permissions, times, symbolic links, etc.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -v
+      </code>
+     </td>
+     <td>
+      Verbose output, display files being processed.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -z
+      </code>
+     </td>
+     <td>
+      Compress file data during transfer.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --delete
+      </code>
+     </td>
+     <td>
+      Delete files in the destination that are not present in the source.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -P
+      </code>
+     </td>
+     <td>
+      Show progress during transfer and keep partially transferred files.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -e
+      </code>
+     </td>
+     <td>
+      Specify the remote shell to use, e.g.,
+      <code>
+       ssh
+      </code>
+      .
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --exclude
+      </code>
+     </td>
+     <td>
+      Exclude files matching specified patterns.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Examples
+  </h2>
+  <h3>
+   Local Directory Synchronization
+  </h3>
+  <pre><code>rsync -avz /source/directory/ /destination/directory/</code></pre>
+  <h3>
+   Remote Backup Over SSH
+  </h3>
+  <pre><code>rsync -avz -e ssh /local/directory/ user@host:/remote/directory/</code></pre>
+  <h3>
+   Synchronize and Delete Extraneous Files
+  </h3>
+  <pre><code>rsync -av --delete /source/directory/ /destination/directory/</code></pre>
+  <h3>
+   Exclude Specific Files
+  </h3>
+  <pre><code>rsync -av --exclude '*.log' /source/directory/ /destination/directory/</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+rsync -avz source/ destination/
+rsync -avz -e ssh source/ user@host:/path/
+rsync -av --delete source/ destination/
+rsync -av --exclude 'pattern' source/ destination/
+    </code></pre>
+ </body>
+</html>

@@ -1,0 +1,111 @@
+<h1>
+ mongosh Command Overview
+</h1>
+<p>
+ The
+ <code>
+  mongosh
+ </code>
+ command provides an interactive JavaScript shell for MongoDB, allowing users to interact with their MongoDB databases.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     --host
+    </code>
+   </td>
+   <td>
+    Specifies the hostname of the MongoDB server to connect to.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --port
+    </code>
+   </td>
+   <td>
+    Specifies the port number to connect to on the MongoDB server.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -u
+    </code>
+    or
+    <code>
+     --username
+    </code>
+   </td>
+   <td>
+    Provides the username for authentication.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -p
+    </code>
+    or
+    <code>
+     --password
+    </code>
+   </td>
+   <td>
+    Provides the password for authentication.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --authenticationDatabase
+    </code>
+   </td>
+   <td>
+    Specifies the database that holds the user's credentials.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code>mongosh --host localhost --port 27017</code></pre>
+<p>
+ Connect to a MongoDB instance running locally on the default port.
+</p>
+<pre><code>mongosh --host example.com --username myUser --password myPassword</code></pre>
+<p>
+ Connect to a remote MongoDB server with authentication.
+</p>
+<pre><code>mongosh -u admin -p secret --authenticationDatabase admin</code></pre>
+<p>
+ Authenticate as an admin user using a specific authentication database.
+</p>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+mongosh [options] [<database>]
+--host <host>         # MongoDB server hostname
+--port <port>         # MongoDB server port
+-u, --username <user> # Username
+-p, --password <pwd>  # Password
+--authenticationDatabase <db> # Auth DB
+</db></pwd></user></port></host></database></code></pre>

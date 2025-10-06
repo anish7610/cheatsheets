@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Linux `rescue` Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   Linux `rescue` Command
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The `rescue` command is used to initiate a rescue operation on a Linux system, often used to recover a system that cannot boot normally.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      -n, --new-root
+     </td>
+     <td>
+      Specify a new root filesystem for the rescue operation.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -r, --readonly
+     </td>
+     <td>
+      Mount the rescue filesystem as read-only.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -v, --verbose
+     </td>
+     <td>
+      Enable verbose output for debugging purposes.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code>
+# Rescue operation with a new root filesystem
+rescue -n /dev/sda1
+
+# Perform a rescue operation with the filesystem mounted read-only
+rescue -n /dev/sda1 -r
+
+# Verbose output for more details during rescue
+rescue -v
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+rescue -n /dev/sdX    # Specify new root
+rescue -r             # Read-only
+rescue -v             # Verbose
+    </code></pre>
+ </body>
+</html>

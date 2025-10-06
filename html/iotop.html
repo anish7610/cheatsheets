@@ -1,0 +1,113 @@
+<html>
+ <body>
+  <h1>
+   Linux Command: iotop
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   <code>
+    iotop
+   </code>
+   is a command-line tool for monitoring I/O usage by processes on Linux, providing a real-time view similar to
+   <code>
+    top
+   </code>
+   .
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -o
+      </code>
+     </td>
+     <td>
+      Show only processes or threads actually doing I/O.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -b
+      </code>
+     </td>
+     <td>
+      Run in batch mode, suitable for logging.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -n NUM
+      </code>
+     </td>
+     <td>
+      Set the number of iterations before quitting (used with
+      <code>
+       -b
+      </code>
+      ).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -d SEC
+      </code>
+     </td>
+     <td>
+      Delay between iterations in seconds.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -p PID
+      </code>
+     </td>
+     <td>
+      Monitor specific process by PID.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Monitor all I/O operations in real-time
+iotop
+
+# Show only processes performing I/O
+iotop -o
+
+# Run 10 iterations in batch mode with 1-second intervals
+iotop -b -n 10 -d 1
+
+# Monitor I/O for a specific process with PID 1234
+iotop -p 1234
+</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>iotop -o      # Active I/O only
+iotop -b -n 5  # Batch mode, 5 iterations
+iotop -d 2     # 2-second delay
+iotop -p 1234  # Specific PID</code></pre>
+ </body>
+</html>

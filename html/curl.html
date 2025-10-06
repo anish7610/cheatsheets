@@ -1,0 +1,135 @@
+<h1>
+ Linux `curl` Command
+</h1>
+<p>
+ <code>
+  curl
+ </code>
+ is a command-line tool used to transfer data to or from a server, using various protocols such as HTTP, HTTPS, FTP, and more.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -o &lt;file&gt;
+    </code>
+   </td>
+   <td>
+    Write output to &lt;file&gt; instead of stdout
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -O
+    </code>
+   </td>
+   <td>
+    Save the file using remote file name
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -L
+    </code>
+   </td>
+   <td>
+    Follow redirects
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -I
+    </code>
+   </td>
+   <td>
+    Show HTTP headers only
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -u &lt;user:password&gt;
+    </code>
+   </td>
+   <td>
+    Server user and password authentication
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -d &lt;data&gt;
+    </code>
+   </td>
+   <td>
+    Send specified data in a POST request
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -H &lt;header&gt;
+    </code>
+   </td>
+   <td>
+    Pass custom header(s) to the server
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -X &lt;command&gt;
+    </code>
+   </td>
+   <td>
+    Specify the request command to use, like GET, POST
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Download a file
+curl -O https://example.com/file.txt
+
+# Save output to a file
+curl -o output.txt https://example.com
+
+# Follow redirects
+curl -L https://example.com
+
+# Send a POST request with data
+curl -d "name=John&amp;age=30" https://example.com/form
+
+# Access a URL with user authentication
+curl -u username:password https://example.com
+
+# Custom header with GET
+curl -H "Authorization: Bearer token" https://api.example.com/resource
+
+# Display only headers of a URL
+curl -I https://example.com
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>curl -o &lt;file&gt; -O -L -I -u &lt;user:pass&gt; -d &lt;data&gt; \
+  -H &lt;header&gt; -X &lt;command&gt; https://example.com</code></pre>

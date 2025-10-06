@@ -1,0 +1,83 @@
+<h1>
+ Linux `jobs` Command
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  jobs
+ </code>
+ command displays a list of all current jobs along with their statuses in the current shell session.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -l
+    </code>
+   </td>
+   <td>
+    Displays the process ID (PID) of each job.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -n
+    </code>
+   </td>
+   <td>
+    Lists only jobs that have stopped or exited since the last notification.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -p
+    </code>
+   </td>
+   <td>
+    Displays only the process ID of the jobs.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># List all current jobs
+jobs
+
+# Include PIDs in the output
+jobs -l
+
+# Display jobs with updated states
+jobs -n
+
+# Show only the PIDs of the jobs
+jobs -p
+</code></pre>
+<h2>
+ Quick Reference Cheat Sheet
+</h2>
+<pre><code>jobs       # List all jobs
+jobs -l    # Include PIDs
+jobs -n    # List updated jobs
+jobs -p    # Show only PIDs
+</code></pre>

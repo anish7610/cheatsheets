@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Logger Command Cheat Sheet
+  </title>
+ </head>
+ <body>
+  <h1>
+   Logger Command Overview
+  </h1>
+  <p>
+   The
+   <code>
+    logger
+   </code>
+   command provides a shell interface to the system log service, allowing you to log messages from the command line or scripts.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -p
+      </code>
+     </td>
+     <td>
+      Specify the priority of the message (e.g.,
+      <code>
+       user.info
+      </code>
+      ).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -t
+      </code>
+     </td>
+     <td>
+      Tag the message with a specified identifier.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -f
+      </code>
+     </td>
+     <td>
+      Log the contents of a file.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --id
+      </code>
+     </td>
+     <td>
+      Log the process ID with the message.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Log a simple message
+logger "System maintenance scheduled at midnight."
+
+# Log a message with a specific priority
+logger -p local0.notice "A custom notice from local program."
+
+# Log a message with a tag
+logger -t myscript "Script executed successfully."
+
+# Log the contents of a file
+logger -f /path/to/logfile
+
+# Log a message with the process ID
+logger --id "Process finished successfully."</code></pre>
+  <h2>
+   Quick Cheat Sheet
+  </h2>
+  <pre><code>logger "message"                 # Log a simple message
+logger -p user.info "message"    # Log with priority
+logger -t tag "message"          # Log with tag
+logger -f file                   # Log contents of a file
+logger --id "message"            # Log with process ID</code></pre>
+ </body>
+</html>

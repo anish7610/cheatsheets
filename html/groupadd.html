@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Linux `groupadd` Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   Linux `groupadd` Command
+  </h1>
+  <p>
+   The
+   <code>
+    groupadd
+   </code>
+   command is used to create a new group on a Linux system.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -g, --gid GID
+      </code>
+     </td>
+     <td>
+      Specify the group ID for the new group.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -f, --force
+      </code>
+     </td>
+     <td>
+      Force removal of existing group with the same name.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -K, --key KEY=VALUE
+      </code>
+     </td>
+     <td>
+      Override
+      <code>
+       /etc/login.defs
+      </code>
+      defaults.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -r, --system
+      </code>
+     </td>
+     <td>
+      Create a system group.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Create a new group called 'developers'
+sudo groupadd developers
+
+# Create a new group with a specific GID
+sudo groupadd -g 2001 staff
+
+# Create a system group
+sudo groupadd -r sysadmins
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code># Basic command
+groupadd <groupname>
+
+# With GID
+groupadd -g <gid> <groupname>
+
+# Force with existing name
+groupadd -f <groupname>
+
+# Create system group
+groupadd -r <groupname>
+    </groupname></groupname></groupname></gid></groupname></code></pre>
+ </body>
+</html>

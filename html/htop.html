@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Understanding the `htop` Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   Understanding the
+   <code>
+    htop
+   </code>
+   Command
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   <code>
+    htop
+   </code>
+   is an interactive process viewer for Unix systems. It provides a dynamic, real-time view of system processes, usage, and performance metrics.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      -d &lt;delay&gt;
+     </td>
+     <td>
+      Set the delay between updates, in tenths of seconds.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -C
+     </td>
+     <td>
+      Start htop in monochrome mode.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -u &lt;username&gt;
+     </td>
+     <td>
+      Show only processes of a given user.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -s &lt;column&gt;
+     </td>
+     <td>
+      Sort processes by the specified column.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -p &lt;PIDs&gt;
+     </td>
+     <td>
+      Show only processes with specified PIDs.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Start htop with common settings
+htop
+
+# Update every 2 seconds
+htop -d 20
+
+# Show processes of user 'john'
+htop -u john
+
+# Start in monochrome mode
+htop -C
+
+# Sort by CPU usage
+htop -s PERCENT_CPU
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>/          : Search process
+F4         : Filter processes
+F6         : Sort by column
+Up/Down    : Navigate processes
+F9         : Kill process
+q          : Quit htop
+    </code></pre>
+ </body>
+</html>

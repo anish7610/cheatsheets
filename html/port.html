@@ -1,0 +1,108 @@
+<h1>
+ Linux Command: port
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  port
+ </code>
+ command is often associated with MacPorts on macOS, a package management system. It's not a standard Linux command. However, in a Linux context, it might refer to network port reference or commands that map to port management utilities.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     list
+    </code>
+   </td>
+   <td>
+    Lists available ports.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     install &lt;portname&gt;
+    </code>
+   </td>
+   <td>
+    Installs a specified port/package.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     search &lt;term&gt;
+    </code>
+   </td>
+   <td>
+    Searches for ports/packages matching the term.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     upgrade outdated
+    </code>
+   </td>
+   <td>
+    Upgrades all outdated ports/packages.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     uninstall &lt;portname&gt;
+    </code>
+   </td>
+   <td>
+    Uninstalls a specified port/package.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># List all available ports
+port list
+
+# Install a specific port/package
+port install <em>nginx</em>
+
+# Search for a port/package
+port search <em>python</em>
+
+# Upgrade all outdated ports/packages
+port upgrade outdated
+
+# Uninstall a specific port/package
+port uninstall <em>nginx</em>
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+port list
+port install <em>package</em>
+port search <em>term</em>
+port upgrade outdated
+port uninstall <em>package</em>
+</code></pre>

@@ -1,0 +1,107 @@
+<h1>
+ Timeshift Command Overview
+</h1>
+<p>
+ Timeshift is a Linux command-line utility designed to create and manage system snapshots. It allows users to easily restore their systems to a previous state, helping recover from system failures or unstable configurations.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     --create
+    </code>
+   </td>
+   <td>
+    Create a new snapshot.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --list
+    </code>
+   </td>
+   <td>
+    List all available snapshots.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --restore
+    </code>
+   </td>
+   <td>
+    Restore the system to a specified snapshot.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --delete
+    </code>
+   </td>
+   <td>
+    Delete a specified snapshot.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --check
+    </code>
+   </td>
+   <td>
+    Check for errors in snapshots.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --help
+    </code>
+   </td>
+   <td>
+    Display help information.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Create a snapshot
+sudo timeshift --create
+
+# List all snapshots
+sudo timeshift --list
+
+# Restore a specific snapshot
+sudo timeshift --restore --snapshot '2023-10-05_12-00-00'
+
+# Delete a snapshot
+sudo timeshift --delete --snapshot '2023-10-01_09-00-00'
+</code></pre>
+<h2>
+ Quick Reference Cheat Sheet
+</h2>
+<pre><code>
+# Create snapshot: sudo timeshift --create
+# List snapshots: sudo timeshift --list
+# Restore snapshot: sudo timeshift --restore --snapshot 'SNAPSHOT_ID'
+# Delete snapshot: sudo timeshift --delete --snapshot 'SNAPSHOT_ID'
+</code></pre>

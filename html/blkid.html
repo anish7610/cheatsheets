@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Linux blkid Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   Linux blkid Command
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    blkid
+   </code>
+   command is used to locate and print block device attributes. It provides information such as filesystem type and universally unique identifier (UUID).
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -o
+      </code>
+     </td>
+     <td>
+      Specify output format (e.g.,
+      <code>
+       udev
+      </code>
+      ,
+      <code>
+       full
+      </code>
+      ).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -p
+      </code>
+     </td>
+     <td>
+      Proceed even if the device is not initialized.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -s
+      </code>
+     </td>
+     <td>
+      Show only specified tags (e.g., TYPE, UUID).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -t
+      </code>
+     </td>
+     <td>
+      Search by specified tag (e.g., type, uuid).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -L
+      </code>
+     </td>
+     <td>
+      Follow symbolic links.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -V
+      </code>
+     </td>
+     <td>
+      Verbose output.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <h3>
+   Print all available block devices' information
+  </h3>
+  <pre><code>blkid</code></pre>
+  <h3>
+   Print information for a specific block device
+  </h3>
+  <pre><code>blkid /dev/sda1</code></pre>
+  <h3>
+   Display only UUID of a block device
+  </h3>
+  <pre><code>blkid -s UUID -o value /dev/sda1</code></pre>
+  <h3>
+   Search for devices by filesystem type (e.g., ext4)
+  </h3>
+  <pre><code>blkid -t TYPE=ext4</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>blkid
+blkid /dev/sda1
+blkid -s UUID -o value /dev/sda1
+blkid -t TYPE=ext4</code></pre>
+ </body>
+</html>

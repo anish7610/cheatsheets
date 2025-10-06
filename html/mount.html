@@ -1,0 +1,115 @@
+<h1>
+ Linux Mount Command
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  mount
+ </code>
+ command is used to attach filesystems and partitions to directories in the Linux file system hierarchy.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -t
+    </code>
+   </td>
+   <td>
+    Specifies the filesystem type (e.g., ext4, ntfs).
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -o
+    </code>
+   </td>
+   <td>
+    Specifies options, like
+    <code>
+     rw
+    </code>
+    (read-write),
+    <code>
+     ro
+    </code>
+    (read-only).
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -a
+    </code>
+   </td>
+   <td>
+    Mounts all filesystems listed in
+    <code>
+     /etc/fstab
+    </code>
+    .
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -v
+    </code>
+   </td>
+   <td>
+    Enables verbose mode, providing detailed output.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --bind
+    </code>
+   </td>
+   <td>
+    Mounts a subtree somewhere else.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Mount a USB drive with ext4 filesystem
+mount -t ext4 /dev/sdb1 /mnt/usb
+
+# Mount an ISO file
+mount -o loop /path/to/file.iso /mnt/iso
+
+# Mount all filesystems in /etc/fstab
+mount -a
+
+# Bind mount a directory to a different location
+mount --bind /home/user/data /mnt/data
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>mount -t [type] [device] [directory]
+mount -o [options] [device] [directory]
+mount -a
+mount --bind [source] [target]
+</code></pre>

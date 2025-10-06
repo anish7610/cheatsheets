@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Linux `pgrep` Command
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Linux `pgrep` Command
+   </h1>
+  </header>
+  <section>
+   <h2>
+    Description
+   </h2>
+   <p>
+    `pgrep` is a command-line utility that searches for processes running on a system based on a given pattern. It returns the process IDs (PIDs) of those processes.
+   </p>
+  </section>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       -f
+      </td>
+      <td>
+       Match against the full argument lists of processes.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       -l
+      </td>
+      <td>
+       Display the process name alongside the PID.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       -u
+      </td>
+      <td>
+       Match only processes whose effective user ID is listed.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       -v
+      </td>
+      <td>
+       Negate the match. Select non-matching processes.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       -x
+      </td>
+      <td>
+       Match exactly the pattern.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code># Find PIDs of all `ssh` processes
+pgrep ssh
+
+# Find PIDs and names of processes matching the full command line `java`
+pgrep -lf java
+
+# Find PIDs of processes belonging to the user `john`
+pgrep -u john
+
+# Get PIDs of processes not matching `nginx`
+pgrep -v nginx
+
+# Match exact process name `bash`
+pgrep -x bash
+        </code></pre>
+  </section>
+  <section>
+   <h2>
+    Quick Reference
+   </h2>
+   <pre><code>pgrep -f [pattern]       # Match full command line
+pgrep -l [pattern]       # Display PID and name
+pgrep -u [user]          # Match by user
+pgrep -v [pattern]       # Negate match
+pgrep -x [pattern]       # Exact match</code></pre>
+  </section>
+ </body>
+</html>

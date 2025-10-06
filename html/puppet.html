@@ -1,0 +1,101 @@
+<h1>
+ Puppet Command Overview
+</h1>
+<p>
+ Puppet is a configuration management tool used to automate the deployment, configuration, and management of servers.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     puppet apply
+    </code>
+   </td>
+   <td>
+    Apply Puppet manifests locally.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     puppet agent
+    </code>
+   </td>
+   <td>
+    Run the Puppet agent to apply configurations from the Puppet Master.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     puppet resource
+    </code>
+   </td>
+   <td>
+    Inspect and manipulate resources on a system.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --debug
+    </code>
+   </td>
+   <td>
+    Enable verbose logging for debugging purposes.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --test
+    </code>
+   </td>
+   <td>
+    Simulate applying changes without making them.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --noop
+    </code>
+   </td>
+   <td>
+    Preview changes and report without executing them.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code>puppet apply /path/to/manifest.pp
+# Apply a local manifest file.
+
+puppet agent --test --debug
+# Run the agent with test and debug output.
+
+puppet resource user
+# List all user resources managed by Puppet.</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>puppet apply <file>
+puppet agent --test
+puppet resource <type>
+--debug</type></file></code></pre>

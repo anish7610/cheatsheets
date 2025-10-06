@@ -1,0 +1,145 @@
+<h1>
+ Understanding the Linux `apt` Command
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The `apt` command is used on Debian-based systems to manage software packages. It simplifies common package management tasks.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     update
+    </code>
+   </td>
+   <td>
+    Refresh the package index.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     upgrade
+    </code>
+   </td>
+   <td>
+    Upgrade all the installed packages to the latest version.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     install [package]
+    </code>
+   </td>
+   <td>
+    Install a package by name.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     remove [package]
+    </code>
+   </td>
+   <td>
+    Uninstall a package but keep configuration files.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     purge [package]
+    </code>
+   </td>
+   <td>
+    Uninstall a package and remove configuration files.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     autoremove
+    </code>
+   </td>
+   <td>
+    Remove automatically installed packages that are no longer needed.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     search [term]
+    </code>
+   </td>
+   <td>
+    Search for a package by name.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     show [package]
+    </code>
+   </td>
+   <td>
+    Display detailed information about a package.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Update package index
+apt update
+
+# Upgrade all installed packages
+apt upgrade
+
+# Install a specific package
+apt install vim
+
+# Remove a specific package
+apt remove vim
+
+# Completely remove a package including configuration
+apt purge vim
+
+# Clean up unnecessary packages
+apt autoremove
+
+# Search for a package
+apt search apache
+
+# Show package details
+apt show curl
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>apt update
+apt upgrade
+apt install [package]
+apt remove [package]
+apt purge [package]
+apt autoremove
+apt search [term]
+apt show [package]
+</code></pre>

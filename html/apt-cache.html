@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   apt-cache Command Overview
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    apt-cache Command
+   </h1>
+   <p>
+    The
+    <code>
+     apt-cache
+    </code>
+    command is used in Debian-based systems to query and display information from the APT's package cache.
+   </p>
+  </header>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        search &lt;package&gt;
+       </code>
+      </td>
+      <td>
+       Searches for packages matching the specified term.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        show &lt;package&gt;
+       </code>
+      </td>
+      <td>
+       Displays detailed information about a specific package.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        depends &lt;package&gt;
+       </code>
+      </td>
+      <td>
+       Lists dependencies of a specified package.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        rdepends &lt;package&gt;
+       </code>
+      </td>
+      <td>
+       Lists reverse dependencies of a specified package.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        policy &lt;package&gt;
+       </code>
+      </td>
+      <td>
+       Shows priority and pinning details for a specified package.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code># Search for a package related to 'nginx'
+apt-cache search nginx
+
+# Show information about the 'curl' package
+apt-cache show curl
+
+# List dependencies for 'vim'
+apt-cache depends vim
+
+# List packages that depend on 'libc6'
+apt-cache rdepends libc6
+
+# Show policy details for 'apache2'
+apt-cache policy apache2</code></pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code># Search packages
+apt-cache search &lt;package&gt;
+
+# Show package details
+apt-cache show &lt;package&gt;
+
+# List dependencies
+apt-cache depends &lt;package&gt;
+
+# List reverse dependencies
+apt-cache rdepends &lt;package&gt;
+
+# Show package policy
+apt-cache policy &lt;package&gt;</code></pre>
+  </section>
+ </body>
+</html>

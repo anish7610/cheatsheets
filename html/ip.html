@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Linux 'ip' Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   Linux 'ip' Command
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    ip
+   </code>
+   command is used for network configuration. It allows manipulation of routing, devices, policy routing, and tunnels.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       addr
+      </code>
+     </td>
+     <td>
+      Display or manipulate IP addresses and their properties.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       link
+      </code>
+     </td>
+     <td>
+      Show and manipulate network devices and their properties.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       route
+      </code>
+     </td>
+     <td>
+      Show and manipulate the IP routing table.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       netns
+      </code>
+     </td>
+     <td>
+      Manage network namespaces.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       neigh
+      </code>
+     </td>
+     <td>
+      Show and manipulate neighbor objects (ARP table).
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <h3>
+   Display IP Addresses
+  </h3>
+  <pre><code>ip addr show</code></pre>
+  <h3>
+   Add an IP Address
+  </h3>
+  <pre><code>ip addr add 192.168.1.10/24 dev eth0</code></pre>
+  <h3>
+   Delete an IP Address
+  </h3>
+  <pre><code>ip addr del 192.168.1.10/24 dev eth0</code></pre>
+  <h3>
+   Show Network Interfaces
+  </h3>
+  <pre><code>ip link show</code></pre>
+  <h3>
+   Bring Interface Up
+  </h3>
+  <pre><code>ip link set dev eth0 up</code></pre>
+  <h3>
+   Bring Interface Down
+  </h3>
+  <pre><code>ip link set dev eth0 down</code></pre>
+  <h3>
+   Display Routing Table
+  </h3>
+  <pre><code>ip route show</code></pre>
+  <h3>
+   Add a Default Route
+  </h3>
+  <pre><code>ip route add default via 192.168.1.1</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+ip addr show
+ip addr add [IP]/[CIDR] dev [interface]
+ip addr del [IP]/[CIDR] dev [interface]
+ip link show
+ip link set dev [interface] up|down
+ip route show
+ip route add default via [gateway]
+    </code></pre>
+ </body>
+</html>

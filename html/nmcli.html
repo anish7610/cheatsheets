@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   nmcli Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   nmcli Command Overview
+  </h1>
+  <p>
+   <code>
+    nmcli
+   </code>
+   is a command-line tool for interacting with NetworkManager to manage network connections on Linux systems. It can control network interfaces, connections, and report on network status.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       nmcli general status
+      </code>
+     </td>
+     <td>
+      Show overall status of NetworkManager.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       nmcli device status
+      </code>
+     </td>
+     <td>
+      List all network interfaces and their status.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       nmcli connection show
+      </code>
+     </td>
+     <td>
+      Display active network connections.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       nmcli connection up &lt;name&gt;
+      </code>
+     </td>
+     <td>
+      Activate a network connection by name.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       nmcli connection down &lt;name&gt;
+      </code>
+     </td>
+     <td>
+      Deactivate a network connection by name.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <h3>
+   Check Network Status
+  </h3>
+  <pre><code>nmcli general status</code></pre>
+  <h3>
+   List All Devices
+  </h3>
+  <pre><code>nmcli device status</code></pre>
+  <h3>
+   Show Active Connections
+  </h3>
+  <pre><code>nmcli connection show --active</code></pre>
+  <h3>
+   Connect to a Wi-Fi Network
+  </h3>
+  <pre><code>nmcli device wifi connect "SSID" password "password"</code></pre>
+  <h3>
+   Bring Down an Active Connection
+  </h3>
+  <pre><code>nmcli connection down &lt;connection-name&gt;</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+# General Status
+nmcli general status
+
+# List Devices
+nmcli device status
+
+# Show Connections
+nmcli connection show
+
+# Activate a Connection
+nmcli connection up &lt;name&gt;
+
+# Deactivate a Connection
+nmcli connection down &lt;name&gt;
+
+# Connect to Wi-Fi
+nmcli device wifi connect "SSID" password "password"
+    </code></pre>
+ </body>
+</html>

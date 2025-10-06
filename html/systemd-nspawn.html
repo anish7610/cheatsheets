@@ -1,0 +1,130 @@
+<h1>
+ systemd-nspawn Command
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ <code>
+  systemd-nspawn
+ </code>
+ is a tool to run a command or OS in a light-weight container. It's useful for testing and building self-contained environments similar to chroot but with more isolation and security features.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -D, --directory=
+    </code>
+   </td>
+   <td>
+    Specify the directory to use as the container's root.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -b, --boot
+    </code>
+   </td>
+   <td>
+    Boot up the container image.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --machine=
+    </code>
+   </td>
+   <td>
+    Assign a hostname to the container.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --network-veth
+    </code>
+   </td>
+   <td>
+    Enable a virtual Ethernet link between host and container.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -n, --private-network
+    </code>
+   </td>
+   <td>
+    Disconnect networking of the container from the host.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --bind=
+    </code>
+   </td>
+   <td>
+    Bind mount a file or directory from the host to the container.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --read-only
+    </code>
+   </td>
+   <td>
+    Mount the container's root as read-only.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code>
+# Run a command in a light-weight container
+systemd-nspawn -D /srv/mycontainer /bin/bash
+
+# Boot a container
+systemd-nspawn -bD /srv/mycontainer
+
+# Assign a hostname
+systemd-nspawn -D /srv/mycontainer --machine=mycontainer
+
+# Create a container with a virtual Ethernet link
+systemd-nspawn -D /srv/mycontainer --network-veth
+
+# Run with read-only root
+systemd-nspawn -D /srv/mycontainer --read-only
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+-D, --directory=<dir>     # Set container root directory
+-b, --boot                # Boot container
+--machine=<name>          # Set container hostname
+--network-veth            # Create veth link
+-n, --private-network     # No host network
+--bind=<path>             # Bind mount host path
+--read-only               # Read-only container root
+</path></name></dir></code></pre>

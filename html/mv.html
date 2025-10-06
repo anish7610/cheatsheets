@@ -1,0 +1,102 @@
+<h1>
+ Linux Command:
+ <code>
+  mv
+ </code>
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  mv
+ </code>
+ command in Linux is used to move or rename files and directories.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -i
+    </code>
+   </td>
+   <td>
+    Prompts before overwriting files.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -f
+    </code>
+   </td>
+   <td>
+    Forces overwriting without prompting.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -n
+    </code>
+   </td>
+   <td>
+    Prevents overwriting of existing files.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -v
+    </code>
+   </td>
+   <td>
+    Displays the steps being executed.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code>
+# Move a file to another directory
+mv file.txt /path/to/directory/
+
+# Rename a file
+mv oldname.txt newname.txt
+
+# Move multiple files to another directory
+mv file1.txt file2.txt /path/to/directory/
+
+# Use interactive mode to prevent accidental overwrites
+mv -i file.txt /path/to/directory/
+
+# Use verbose mode to see the operations being performed
+mv -v file.txt /path/to/directory/
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+mv [options] source destination
+mv -i    Prompt before overwrite
+mv -f    Force overwrite without prompt
+mv -n    No overwrite
+mv -v    Verbose output
+</code></pre>

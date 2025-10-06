@@ -1,0 +1,119 @@
+<h1>
+ Linux `restore` Command
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  restore
+ </code>
+ command is used to restore files from a backup created using the
+ <code>
+  dump
+ </code>
+ command. It is primarily utilized for recovering data from backup tapes or files.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -i
+    </code>
+   </td>
+   <td>
+    Interactive mode: allows selecting specific files to restore.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -r
+    </code>
+   </td>
+   <td>
+    Restores the entire backup.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -t
+    </code>
+   </td>
+   <td>
+    Lists the files contained in the backup.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -x
+    </code>
+   </td>
+   <td>
+    Extracts specific files from the backup.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -f
+    </code>
+   </td>
+   <td>
+    Specifies the backup file or tape to restore from.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<h3>
+ Restore Entire Backup
+</h3>
+<pre><code>restore -rf /dev/st0</code></pre>
+<h3>
+ List Files in Backup
+</h3>
+<pre><code>restore -tf /backup/dumpfile</code></pre>
+<h3>
+ Interactive Restore of Specific Files
+</h3>
+<pre><code>restore -if /backup/dumpfile</code></pre>
+<h3>
+ Extract Specific File
+</h3>
+<pre><code>restore -xf /backup/dumpfile /path/to/file</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+  # Restore entire backup
+  restore -rf [device/file]
+
+  # List contents of backup
+  restore -tf [backup]
+
+  # Interactive restore
+  restore -if [backup]
+
+  # Extract specific file
+  restore -xf [backup] [file]
+</code></pre>

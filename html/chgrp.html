@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   chgrp Command Overview
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Linux Command: chgrp
+   </h1>
+  </header>
+  <section>
+   <h2>
+    Description
+   </h2>
+   <p>
+    The
+    <code>
+     chgrp
+    </code>
+    command is used to change the group ownership of files and directories in Linux.
+   </p>
+  </section>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        -c
+       </code>
+      </td>
+      <td>
+       Report changes that are made.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -f
+       </code>
+      </td>
+      <td>
+       Suppress most error messages.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -R
+       </code>
+      </td>
+      <td>
+       Recursively change group of directories and their contents.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        --preserve-root
+       </code>
+      </td>
+      <td>
+       Do not operate recursively on the root directory.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        --reference=FILE
+       </code>
+      </td>
+      <td>
+       Use group of the specified reference file.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code># Change group of a single file
+chgrp developers myfile.txt
+
+# Change group of a directory and its contents recursively
+chgrp -R admins /var/www
+
+# Change group and report changes
+chgrp -c marketing report.docx
+
+# Change group using a reference file
+chgrp --reference=example.txt newfile.txt</code></pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code>chgrp [options] GROUP FILE...
+chgrp -R GROUP DIRECTORY</code></pre>
+  </section>
+ </body>
+</html>

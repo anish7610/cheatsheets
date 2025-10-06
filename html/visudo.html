@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Visudo Command Overview
+  </title>
+ </head>
+ <body>
+  <h1>
+   Visudo Command Overview
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    visudo
+   </code>
+   command is a utility to safely edit the
+   <code>
+    /etc/sudoers
+   </code>
+   file. It locks the file and performs a syntax check to prevent mistakes.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -c
+      </code>
+     </td>
+     <td>
+      Check the syntax of the
+      <code>
+       /etc/sudoers
+      </code>
+      file.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -s
+      </code>
+     </td>
+     <td>
+      Enable strict checking of the
+      <code>
+       /etc/sudoers
+      </code>
+      file syntax.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -V
+      </code>
+     </td>
+     <td>
+      Display version information of
+      <code>
+       visudo
+      </code>
+      .
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -f &lt;file&gt;
+      </code>
+     </td>
+     <td>
+      Edit the specified sudoers file instead of the default.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Edit the default sudoers file with safety checks
+visudo
+
+# Check the syntax of the sudoers file
+visudo -c
+
+# Edit a custom sudoers file
+visudo -f /etc/custom_sudoers
+
+# Enable strict syntax checking
+visudo -s
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+# Quick edit
+visudo
+
+# Syntax check
+visudo -c
+
+# Custom file
+visudo -f /etc/custom_sudoers
+    </code></pre>
+ </body>
+</html>

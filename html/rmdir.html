@@ -1,0 +1,86 @@
+<h1>
+ Linux Command: rmdir
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  rmdir
+ </code>
+ command is used to remove empty directories in Linux.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     --ignore-fail-on-non-empty
+    </code>
+   </td>
+   <td>
+    Ignore errors for non-empty directories.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -p
+    </code>
+    <code>
+     --parents
+    </code>
+   </td>
+   <td>
+    Remove directory and its parent directories if they are empty.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --verbose
+    </code>
+   </td>
+   <td>
+    Output a message for each directory that is removed.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Examples
+</h2>
+<pre><code># Remove a single empty directory
+rmdir mydirectory
+
+# Remove a directory and its parent if empty
+rmdir -p parentdir/mydirectory
+
+# Remove directory and show verbose output
+rmdir --verbose mydirectory
+
+# Attempt to remove multiple directories
+rmdir dir1 dir2 dir3
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>rmdir [OPTION]... DIRECTORY...
+-p : Remove parents
+--ignore-fail-on-non-empty : Ignore non-empty errors
+--verbose : Verbose output
+</code></pre>

@@ -1,0 +1,93 @@
+<h1>
+ Linux Command: nice
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  nice
+ </code>
+ command in Linux sets the scheduling priority of a command, allowing you to run it with a modified niceness value. This affects the process's priority in using CPU resources.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -n, --adjustment=N
+    </code>
+   </td>
+   <td>
+    Sets the niceness to
+    <code>
+     N
+    </code>
+    . Positive values decrease priority, while negative ones increase it (superuser only).
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -h, --help
+    </code>
+   </td>
+   <td>
+    Displays help information about the
+    <code>
+     nice
+    </code>
+    command.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -V, --version
+    </code>
+   </td>
+   <td>
+    Shows the version of the
+    <code>
+     nice
+    </code>
+    package.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Run a command with a niceness of 10
+nice -n 10 myscript.sh
+
+# Increase priority of a command (superuser)
+sudo nice -n -5 myprogram
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code># Syntax
+nice [OPTION] [COMMAND]
+
+# Example: Lower priority
+nice -n 10 [COMMAND]
+
+# Example: Increase priority (root)
+sudo nice -n -5 [COMMAND]
+</code></pre>

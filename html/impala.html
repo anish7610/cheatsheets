@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   impala Command Overview
+  </title>
+ </head>
+ <body>
+  <h1>
+   Impala Command Overview
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    impala
+   </code>
+   command is used to interact with Cloudera Impala, a high-performance SQL engine for Hadoop, allowing users to execute SQL queries on data stored in HDFS or HBase.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -i
+      </code>
+      ,
+      <code>
+       --impalad=hostname:port
+      </code>
+     </td>
+     <td>
+      Specify the Impala daemon to connect to.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -f
+      </code>
+      ,
+      <code>
+       --query_file=file
+      </code>
+     </td>
+     <td>
+      Execute SQL queries from a specified file.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -q
+      </code>
+      ,
+      <code>
+       --query=query
+      </code>
+     </td>
+     <td>
+      Execute a specified SQL query directly.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -B
+      </code>
+      ,
+      <code>
+       --quiet
+      </code>
+     </td>
+     <td>
+      Suppress welcome messages and query output headers.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -o
+      </code>
+      ,
+      <code>
+       --output_file=file
+      </code>
+     </td>
+     <td>
+      Redirect the output to a specified file.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --print_header
+      </code>
+     </td>
+     <td>
+      Include column headers in the output.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Examples
+  </h2>
+  <pre><code># Connect to an Impala daemon and run a query
+impala-shell -i impala-server:21000 -q "SELECT * FROM my_table LIMIT 10;"
+
+# Execute queries from a file and save output to another file
+impala-shell -i impala-server:21000 -f queries.sql -o output.txt
+
+# Run a query quietly without headers and redirect output
+impala-shell -i impala-server:21000 -q "SELECT id, name FROM employees;" -B -o employees.txt
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>impala-shell -i host:port -q "SQL_QUERY"
+impala-shell -i host:port -f queries.sql -o output.txt
+impala-shell -i host:port -q "SQL_QUERY" -B -o result.txt
+    </code></pre>
+ </body>
+</html>

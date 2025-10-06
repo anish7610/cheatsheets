@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Linux `msgmerge` Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   Linux `msgmerge` Command
+  </h1>
+  <p>
+   The `msgmerge` command is used to update message catalogs by merging the textual translations from a portable object file (.po) with the new strings from a portable object template file (.pot).
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -U, --update
+      </code>
+     </td>
+     <td>
+      Update the existing PO file directly.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -o FILE, --output-file=FILE
+      </code>
+     </td>
+     <td>
+      Write output to specified file instead of standard output.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --backup=CONTROL
+      </code>
+     </td>
+     <td>
+      Make a backup before overwriting, using the specified method.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --previous
+      </code>
+     </td>
+     <td>
+      Keep previous strings of changed messages.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --no-wrap
+      </code>
+     </td>
+     <td>
+      Do not wrap long message lines.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code>msgmerge -U translations.po template.pot
+msgmerge -o new_translations.po translations.po template.pot
+msgmerge --backup=numbered translations.po template.pot
+msgmerge --previous translations.po template.pot</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>msgmerge -U [PO_FILE] [POT_FILE]
+msgmerge -o [OUT_FILE] [PO_FILE] [POT_FILE]
+msgmerge --backup=none [PO_FILE] [POT_FILE]
+msgmerge --no-wrap [PO_FILE] [POT_FILE]</code></pre>
+ </body>
+</html>

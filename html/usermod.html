@@ -1,0 +1,156 @@
+<html>
+ <body>
+  <h1>
+   Linux `usermod` Command
+  </h1>
+  <p>
+   The
+   <code>
+    usermod
+   </code>
+   command is used to modify user account properties in Linux systems.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -l
+      </code>
+      <em>
+       new_login
+      </em>
+     </td>
+     <td>
+      Change the username of the account.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -d
+      </code>
+      <em>
+       home_dir
+      </em>
+     </td>
+     <td>
+      Change the user's home directory.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -m
+      </code>
+     </td>
+     <td>
+      Move the contents of the home directory to a new location.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -G
+      </code>
+      <em>
+       group1,group2,...
+      </em>
+     </td>
+     <td>
+      Set additional groups for the user.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -a
+      </code>
+     </td>
+     <td>
+      Append the user to the supplementary groups.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -s
+      </code>
+      <em>
+       shell
+      </em>
+     </td>
+     <td>
+      Change the user's login shell.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -L
+      </code>
+     </td>
+     <td>
+      Lock the user account.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -U
+      </code>
+     </td>
+     <td>
+      Unlock the user account.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Change the username from 'oldname' to 'newname'
+usermod -l newname oldname
+
+# Change the home directory to '/home/newdir' and move contents
+usermod -d /home/newdir -m username
+
+# Add the user to 'sudo' group
+usermod -a -G sudo username
+
+# Change the user's login shell to '/bin/zsh'
+usermod -s /bin/zsh username
+
+# Lock the user account
+usermod -L username
+
+# Unlock the user account
+usermod -U username
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>-l  Change username
+-d  Change home directory
+-m  Move home directory contents
+-G  Set additional groups
+-a  Append to groups
+-s  Change login shell
+-L  Lock account
+-U  Unlock account
+    </code></pre>
+ </body>
+</html>

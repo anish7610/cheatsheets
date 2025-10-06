@@ -1,0 +1,96 @@
+<h1>
+ Linux Command: update-locale
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  update-locale
+ </code>
+ command is used to update or set the system's locale settings in
+ <code>
+  /etc/default/locale
+ </code>
+ . It helps manage language and regional settings for applications.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     LANG=&lt;locale&gt;
+    </code>
+   </td>
+   <td>
+    Sets the default system locale.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     LANGUAGE=&lt;language&gt;
+    </code>
+   </td>
+   <td>
+    Sets the preference for language messages.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     LC_*=&lt;locale&gt;
+    </code>
+   </td>
+   <td>
+    Sets specific locale variables like
+    <code>
+     LC_TIME
+    </code>
+    .
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<h3>
+ Set Default Locale to U.S. English
+</h3>
+<pre><code>sudo update-locale LANG=en_US.UTF-8</code></pre>
+<h3>
+ Set Language Preference to French
+</h3>
+<pre><code>sudo update-locale LANGUAGE=fr_FR</code></pre>
+<h3>
+ Set Date/Time Locale to British English
+</h3>
+<pre><code>sudo update-locale LC_TIME=en_GB.UTF-8</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+# Set full system locale
+sudo update-locale LANG=<locale>
+
+# Set message language priority
+sudo update-locale LANGUAGE=<language>
+
+# Set specific locale variables
+sudo update-locale LC_<category>=<locale>
+</locale></category></language></locale></code></pre>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Linux `dd` Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   Linux `dd` Command Guide
+  </h1>
+  <section>
+   <h2>
+    Description
+   </h2>
+   <p>
+    The `dd` command is a versatile tool used for low-level copy and conversion of raw data in Linux.
+   </p>
+  </section>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        if=
+       </code>
+      </td>
+      <td>
+       Input file (source)
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        of=
+       </code>
+      </td>
+      <td>
+       Output file (destination)
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        bs=
+       </code>
+      </td>
+      <td>
+       Block size (defines read/write chunk size)
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        count=
+       </code>
+      </td>
+      <td>
+       Number of blocks to copy
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        status=
+       </code>
+      </td>
+      <td>
+       Progress status reporting
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code># Create a bootable USB drive
+dd if=/path/to/iso of=/dev/sdX bs=4M status=progress
+
+# Backup an entire disk to a file
+dd if=/dev/sdX of=/path/to/backup.img bs=1M status=progress
+
+# Restore a disk from a backup file
+dd if=/path/to/backup.img of=/dev/sdX bs=1M status=progress
+
+# Wipe a disk with zeros
+dd if=/dev/zero of=/dev/sdX bs=1M status=progress
+
+# Clone a partition
+dd if=/dev/sdX1 of=/dev/sdY1 bs=1M status=progress</code></pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code>dd if=<source/> of=<dest> bs=<size> count=<num> status=progress</num></size></dest></code></pre>
+  </section>
+ </body>
+</html>

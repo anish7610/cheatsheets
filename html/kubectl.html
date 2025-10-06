@@ -1,0 +1,118 @@
+<h1>
+ kubectl Command Overview
+</h1>
+<p>
+ <code>
+  kubectl
+ </code>
+ is the command-line tool for controlling Kubernetes clusters. It allows you to deploy applications, inspect and manage cluster resources, and view logs.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     get
+    </code>
+   </td>
+   <td>
+    List resources
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     describe
+    </code>
+   </td>
+   <td>
+    Show detailed information about a resource
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     create
+    </code>
+   </td>
+   <td>
+    Create a resource from a file or stdin
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     delete
+    </code>
+   </td>
+   <td>
+    Delete resources by filenames, stdin, resources and names, or by resources and label selector
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     apply
+    </code>
+   </td>
+   <td>
+    Apply a configuration to a resource by filename or stdin
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     logs
+    </code>
+   </td>
+   <td>
+    Print the logs for a container in a pod
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -n
+    </code>
+   </td>
+   <td>
+    Specify a namespace
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code>kubectl get pods
+kubectl describe pod mypod
+kubectl create -f pod.yaml
+kubectl delete pod mypod
+kubectl apply -f deployment.yaml
+kubectl logs mypod
+kubectl get services -n mynamespace
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>kubectl get [resource]
+kubectl describe [resource] [name]
+kubectl create -f [file]
+kubectl delete [resource] [name]
+kubectl apply -f [file]
+kubectl logs [podname]
+kubectl [command] -n [namespace]
+</code></pre>

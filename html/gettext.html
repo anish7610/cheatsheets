@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Gettext Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   Gettext Command Guide
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    gettext
+   </code>
+   command retrieves translated messages from the compiled message catalogs for localization purposes.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -d, --domain
+      </code>
+     </td>
+     <td>
+      Use specified
+      <strong>
+       textdomain
+      </strong>
+      for message retrieval.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -e
+      </code>
+     </td>
+     <td>
+      Enable expansion of escape sequences.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -n
+      </code>
+     </td>
+     <td>
+      Suppress trailing newline.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -s, --style
+      </code>
+     </td>
+     <td>
+      Output style:
+      <code>
+       full
+      </code>
+      ,
+      <code>
+       auto
+      </code>
+      , or
+      <code>
+       plain
+      </code>
+      .
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --version
+      </code>
+     </td>
+     <td>
+      Show version information.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Retrieve translated message
+gettext "Hello, World!"
+
+# Retrieve message with a specific domain
+gettext -d my_app_domain "Hello, World!"
+
+# Output message without a newline
+gettext -n "Goodbye"</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>gettext "message"
+gettext -d domain "message"
+gettext -e "message\n"
+gettext -n "message"</code></pre>
+ </body>
+</html>

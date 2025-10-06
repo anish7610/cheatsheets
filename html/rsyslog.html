@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   rsyslog Command Overview
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    rsyslog Command
+   </h1>
+  </header>
+  <section>
+   <h2>
+    Description
+   </h2>
+   <p>
+    <code>
+     rsyslog
+    </code>
+    is a rocket-fast system for log processing. It can receive logs from various sources, transform them, and relay them to various destinations. It is a staple logging service in many Linux distributions.
+   </p>
+  </section>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        -i
+       </code>
+      </td>
+      <td>
+       Specifies the PID file to use.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -f
+       </code>
+      </td>
+      <td>
+       Specifies an alternative configuration file.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -n
+       </code>
+      </td>
+      <td>
+       Run in foreground, do not daemonize.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -c
+       </code>
+      </td>
+      <td>
+       Sets compatibility mode. Use '-c4' for legacy mode.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -d
+       </code>
+      </td>
+      <td>
+       Enable debugging output.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code># Start rsyslog with a specific configuration file
+rsyslogd -f /etc/rsyslog-custom.conf
+
+# Run rsyslog in the foreground for debugging
+rsyslogd -n -d
+
+# Restart rsyslog service on a typical Linux system
+sudo systemctl restart rsyslog
+
+# Check rsyslog status to ensure it's running
+sudo systemctl status rsyslog
+</code></pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code># Start with custom config: rsyslogd -f /path/to/config
+# Foreground and debug: rsyslogd -n -d
+# Restart service: sudo systemctl restart rsyslog
+# Check status: sudo systemctl status rsyslog
+</code></pre>
+  </section>
+ </body>
+</html>

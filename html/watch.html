@@ -1,0 +1,113 @@
+<h1>
+ Linux Command:
+ <code>
+  watch
+ </code>
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  watch
+ </code>
+ command in Linux is used to execute a program periodically, showing output in a fullscreen window.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -n
+    </code>
+    <em>
+     seconds
+    </em>
+   </td>
+   <td>
+    Specifies the interval in seconds between executions.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -d
+    </code>
+   </td>
+   <td>
+    Highlights the differences between updates.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -t
+    </code>
+   </td>
+   <td>
+    Turns off the header information at the top.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -p
+    </code>
+   </td>
+   <td>
+    Precise mode, tries to run commands at exact intervals.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -g
+    </code>
+   </td>
+   <td>
+    Stops the watch when output changes.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Monitor disk usage every 2 seconds
+watch -n 2 df -h
+
+# Display and highlight changes in network connections every 5 seconds
+watch -d -n 5 netstat -tuln
+
+# Check the number of users logged in, without header
+watch -t who
+
+# Monitor the contents of a directory and leave upon change
+watch -g ls -l
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code># Basic usage
+watch <em>command</em>
+
+# Set interval
+watch -n <em>seconds</em> <em>command</em>
+
+# Highlight differences
+watch -d <em>command</em>
+</code></pre>

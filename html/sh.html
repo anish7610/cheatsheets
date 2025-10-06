@@ -1,0 +1,107 @@
+<h1>
+ Linux Command:
+ <code>
+  sh
+ </code>
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  sh
+ </code>
+ command invokes the Bourne shell, a command interpreter that executes commands read from a command line string, file, or standard input.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -c
+    </code>
+   </td>
+   <td>
+    Read commands from the given string.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -s
+    </code>
+   </td>
+   <td>
+    Read commands from standard input.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -x
+    </code>
+   </td>
+   <td>
+    Print commands and their arguments as they are executed.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -v
+    </code>
+   </td>
+   <td>
+    Print shell input lines as they are read.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -n
+    </code>
+   </td>
+   <td>
+    Read commands but do not execute them (syntax check).
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Examples
+</h2>
+<pre><code># Execute a script file
+sh script.sh
+
+# Run a command using a string
+sh -c "echo 'Hello, World!'"
+
+# Debugging: print commands as they execute
+sh -x script.sh
+
+# Check syntax without execution
+sh -n script.sh
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>sh script.sh     # Execute script
+sh -c "cmd"       # Run command
+sh -x script.sh   # Debug mode
+sh -n script.sh   # Syntax check only
+sh -s             # Read from stdin
+</code></pre>

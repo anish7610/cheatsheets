@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Linux Snap Command
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Snap Command Overview
+   </h1>
+   <p>
+    The
+    <code>
+     snap
+    </code>
+    command is used to manage and install packages from the Snap Store, a modern application package format for Linux.
+   </p>
+  </header>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        install &lt;package&gt;
+       </code>
+      </td>
+      <td>
+       Installs a package from the Snap Store.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        remove &lt;package&gt;
+       </code>
+      </td>
+      <td>
+       Removes a package.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        refresh
+       </code>
+      </td>
+      <td>
+       Updates all installed snaps.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        list
+       </code>
+      </td>
+      <td>
+       Lists all installed snaps.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        info &lt;package&gt;
+       </code>
+      </td>
+      <td>
+       Displays details about the specified snap package.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code># Install a package
+sudo snap install vlc
+
+# Remove a package
+sudo snap remove vlc
+
+# Update all installed packages
+sudo snap refresh
+
+# List installed packages
+snap list
+
+# Get information about a specific package
+snap info vlc
+</code></pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code># Install: sudo snap install &lt;package&gt;
+# Remove: sudo snap remove &lt;package&gt;
+# Update: sudo snap refresh
+# List: snap list
+# Info: snap info &lt;package&gt;
+</code></pre>
+  </section>
+ </body>
+</html>

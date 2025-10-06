@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   dpkg-reconfigure Command Guide
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    dpkg-reconfigure Command Guide
+   </h1>
+  </header>
+  <section>
+   <h2>
+    Description
+   </h2>
+   <p>
+    The
+    <code>
+     dpkg-reconfigure
+    </code>
+    command is used to reconfigure an already installed package on Debian-based systems.
+   </p>
+  </section>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        -f
+       </code>
+      </td>
+      <td>
+       Specify the frontend to use (e.g.,
+       <code>
+        dialog
+       </code>
+       ,
+       <code>
+        readline
+       </code>
+       ).
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -p
+       </code>
+      </td>
+      <td>
+       Set the priority of the questions (e.g.,
+       <code>
+        low
+       </code>
+       ,
+       <code>
+        medium
+       </code>
+       ,
+       <code>
+        high
+       </code>
+       ,
+       <code>
+        critical
+       </code>
+       ).
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        --default-priority
+       </code>
+      </td>
+      <td>
+       Use the default priority set in the system.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Examples
+   </h2>
+   <pre><code># Reconfigure a specific package interactively
+sudo dpkg-reconfigure <package-name>
+
+# Use a specific frontend, like readline
+sudo dpkg-reconfigure -f readline <package-name>
+
+# Reconfigure with low priority questions
+sudo dpkg-reconfigure -p low <package-name>
+        </package-name></package-name></package-name></code></pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code># Basic usage
+sudo dpkg-reconfigure <package-name>
+
+# Frontend option
+-f <frontend>
+
+# Priority option
+-p <priority>
+        </priority></frontend></package-name></code></pre>
+  </section>
+ </body>
+</html>

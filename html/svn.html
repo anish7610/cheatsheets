@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   SVN Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   SVN Command Guide
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   <code>
+    svn
+   </code>
+   is a command line tool for interacting with Subversion, a version control system. It allows users to track changes, manage project versions, and collaborate effectively.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       svn checkout [URL]
+      </code>
+     </td>
+     <td>
+      Download a working copy from the repository.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       svn update
+      </code>
+     </td>
+     <td>
+      Bring changes from the repository into the working copy.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       svn commit -m "message"
+      </code>
+     </td>
+     <td>
+      Send changes from the working copy to the repository.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       svn status
+      </code>
+     </td>
+     <td>
+      Show the status of working copy files and directories.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       svn log
+      </code>
+     </td>
+     <td>
+      Display log messages from the repository.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       svn add [file]
+      </code>
+     </td>
+     <td>
+      Schedule a file or directory for addition to the repository.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       svn delete [file]
+      </code>
+     </td>
+     <td>
+      Schedule a file or directory for removal from the repository.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       svn revert
+      </code>
+     </td>
+     <td>
+      Undo changes in the working copy.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Examples
+  </h2>
+  <pre><code># Check out a repository
+svn checkout http://example.com/svn/myproject
+
+# Update the working copy
+svn update
+
+# Commit changes with a message
+svn commit -m "Fixed bugs and added features"
+
+# Add a new file for version control
+svn add newfile.txt
+
+# View the status of the working copy
+svn status
+
+# Revert changes in the working copy
+svn revert changedfile.txt
+</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>svn co [URL]        # Checkout
+svn up            # Update
+svn ci -m "msg"   # Commit
+svn st            # Status
+svn add [file]    # Add a file
+svn del [file]    # Delete a file
+svn revert        # Revert changes
+</code></pre>
+ </body>
+</html>

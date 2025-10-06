@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Linux Kill Command Cheat Sheet
+  </title>
+  <style>
+   body { font-family: Arial, sans-serif; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+  </style>
+ </head>
+ <body>
+  <h1>
+   Linux Kill Command
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    kill
+   </code>
+   command is used to send signals to processes. Most commonly, it's used to terminate a process.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -l
+      </code>
+     </td>
+     <td>
+      List all signal names.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -s &lt;signal&gt;
+      </code>
+     </td>
+     <td>
+      Send a specified signal instead of the default SIGTERM.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -9
+      </code>
+     </td>
+     <td>
+      Send the SIGKILL signal, forcibly terminating the process.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -15
+      </code>
+     </td>
+     <td>
+      Send the SIGTERM signal, gracefully terminating the process.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Terminate a process with PID 1234 using default signal (SIGTERM)
+kill 1234
+
+# Forcefully terminate a process with PID 1234
+kill -9 1234
+
+# Gracefully terminate a process with PID 1234
+kill -15 1234
+
+# List all available signals
+kill -l
+
+# Send a specific signal (e.g., SIGHUP) to process with PID 1234
+kill -s SIGHUP 1234
+</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>kill <pid>         # Default SIGTERM
+kill -9 <pid>      # Force kill
+kill -15 <pid>     # Graceful kill
+kill -l            # List signals
+kill -s <signal> <pid> # Send specific signal
+</pid></signal></pid></pid></pid></code></pre>
+ </body>
+</html>

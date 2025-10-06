@@ -1,0 +1,58 @@
+<h1>
+ setsebool Command
+</h1>
+<p>
+ The
+ <code>
+  setsebool
+ </code>
+ command is used to enable or disable SELinux boolean values, modifying SELinux policies temporarily or persistently.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -P
+    </code>
+   </td>
+   <td>
+    Make changes persistent across reboots.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Enable the httpd_can_network_connect boolean temporarily
+setsebool httpd_can_network_connect on
+
+# Enable the boolean persistently
+setsebool -P httpd_can_network_connect on
+
+# Disable a boolean temporarily
+setsebool httpd_can_sendmail off
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code># Enable or disable SELinux boolean
+setsebool <boolean_name> <on|off>
+
+# Persistent change
+setsebool -P <boolean_name> <on|off>
+</on|off></boolean_name></on|off></boolean_name></code></pre>

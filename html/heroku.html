@@ -1,0 +1,122 @@
+<h1>
+ Heroku Command in Linux
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  heroku
+ </code>
+ command is used to interact with Heroku's cloud platform for deploying, managing, and scaling applications.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     login
+    </code>
+   </td>
+   <td>
+    Log in to your Heroku account.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     create
+    </code>
+   </td>
+   <td>
+    Create a new Heroku app.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     push
+    </code>
+   </td>
+   <td>
+    Push code to Heroku for deployment.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     logs --tail
+    </code>
+   </td>
+   <td>
+    Stream the live logs of an app.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     open
+    </code>
+   </td>
+   <td>
+    Open the app in your default web browser.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     config:set
+    </code>
+   </td>
+   <td>
+    Set a configuration variable for the app.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     ps:scale
+    </code>
+   </td>
+   <td>
+    Scale the number of dynos for an app.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code>heroku login
+heroku create my-app
+git push heroku main
+heroku logs --tail
+heroku open
+heroku config:set DEBUG=True
+heroku ps:scale web=2
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>heroku login
+heroku create &lt;app-name&gt;
+git push heroku main
+heroku logs --tail
+heroku open
+heroku config:set &lt;KEY&gt;=&lt;VALUE&gt;
+heroku ps:scale web=&lt;N&gt;
+</code></pre>

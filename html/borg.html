@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   borg Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   Borg Command Guide
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   <code>
+    borg
+   </code>
+   is a powerful deduplicating backup tool that provides efficient and secure data backup solutions.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       init
+      </code>
+     </td>
+     <td>
+      Initialize a new backup repository.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       create
+      </code>
+     </td>
+     <td>
+      Create a new backup archive.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       extract
+      </code>
+     </td>
+     <td>
+      Restore files from an archive.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       list
+      </code>
+     </td>
+     <td>
+      List archives in a repository.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       prune
+      </code>
+     </td>
+     <td>
+      Delete old archives to free space.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       key
+      </code>
+     </td>
+     <td>
+      Manage repository keys.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <h3>
+   Initialize a Repository
+  </h3>
+  <pre><code>borg init /path/to/repo</code></pre>
+  <h3>
+   Create a Backup Archive
+  </h3>
+  <pre><code>borg create /path/to/repo::archive-name /path/to/data</code></pre>
+  <h3>
+   Extract an Archive
+  </h3>
+  <pre><code>borg extract /path/to/repo::archive-name</code></pre>
+  <h3>
+   List Archives
+  </h3>
+  <pre><code>borg list /path/to/repo</code></pre>
+  <h3>
+   Prune Old Archives
+  </h3>
+  <pre><code>borg prune -r /path/to/repo --keep-daily=7 --keep-weekly=4 --keep-monthly=6</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+# Initialize repository
+borg init /path/to/repo
+
+# Create backup
+borg create /repo::archive /data
+
+# Extract archive
+borg extract /repo::archive
+
+# List archives
+borg list /repo
+
+# Prune archives
+borg prune -r /repo --keep-daily=7 --keep-weekly=4 --keep-monthly=6
+    </code></pre>
+ </body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Linux `locate` Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   Linux
+   <code>
+    locate
+   </code>
+   Command
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    locate
+   </code>
+   command is used to find files by name quickly. It searches a pre-built database to perform fast file lookups.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -i
+      </code>
+     </td>
+     <td>
+      Ignore case distinctions in patterns and data.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -c
+      </code>
+     </td>
+     <td>
+      Display only the count of matching entries.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -r
+      </code>
+     </td>
+     <td>
+      Interpret pattern as a regular expression.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -n
+      </code>
+      <em>
+       NUM
+      </em>
+     </td>
+     <td>
+      Limit the number of results to NUM.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Find all files with "document" in the name
+locate document
+
+# Find all files with ".conf" extension, ignoring case
+locate -i .conf
+
+# Count files with "log" in the name
+locate -c log
+
+# Use a regular expression to find files starting with "test"
+locate -r '^test'
+
+# Limit results to 5 entries for "backup"
+locate -n 5 backup</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>locate [OPTION]... PATTERN...
+-i       # Ignore case
+-c       # Count matches
+-r       # Regex pattern
+-n NUM   # Limit results</code></pre>
+ </body>
+</html>

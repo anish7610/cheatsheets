@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   iperf Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   iperf Command Guide
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   <code>
+    iperf
+   </code>
+   is a tool for measuring and tuning network performance, by monitoring data transfer rates between hosts.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -s
+      </code>
+     </td>
+     <td>
+      Run in server mode.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -c &lt;host&gt;
+      </code>
+     </td>
+     <td>
+      Run in client mode, connecting to specified host.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -p &lt;port&gt;
+      </code>
+     </td>
+     <td>
+      Specify server port (default is 5201).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -t &lt;time&gt;
+      </code>
+     </td>
+     <td>
+      Time in seconds for which to transmit (default is 10 seconds).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -u
+      </code>
+     </td>
+     <td>
+      Use UDP instead of TCP.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Start iperf in server mode
+iperf -s
+
+# Run iperf client to connect to server at 192.168.1.1
+iperf -c 192.168.1.1
+
+# Run iperf client with UDP, connecting to server at 192.168.1.1
+iperf -c 192.168.1.1 -u
+
+# Run iperf client for 30 seconds duration
+iperf -c 192.168.1.1 -t 30
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+# Server mode
+iperf -s
+
+# Client mode
+iperf -c <host>
+
+# Specify port
+iperf -p <port>
+
+# UDP mode
+iperf -u
+
+# Duration in seconds
+iperf -t <time>
+    </time></port></host></code></pre>
+ </body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Linux Command: cat
+  </title>
+ </head>
+ <body>
+  <h1>
+   Linux Command:
+   <code>
+    cat
+   </code>
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    cat
+   </code>
+   command is used to concatenate and display the content of files in the terminal.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -n
+      </code>
+     </td>
+     <td>
+      Number all output lines.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -b
+      </code>
+     </td>
+     <td>
+      Number non-blank output lines.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -s
+      </code>
+     </td>
+     <td>
+      Squeeze multiple blank lines into one.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -E
+      </code>
+     </td>
+     <td>
+      Display a
+      <code>
+       $
+      </code>
+      at the end of each line.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Display the contents of a file
+cat filename.txt
+
+# Concatenate multiple files into a single file
+cat file1.txt file2.txt &gt; combined.txt
+
+# Number all lines in a file
+cat -n filename.txt
+
+# Number non-blank lines in a file
+cat -b filename.txt
+
+# Suppress repeated empty output lines
+cat -s filename.txt
+
+# Show ends of lines
+cat -E filename.txt</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>cat [options] [files...]
+-n: number all lines
+-b: number non-blank lines
+-s: squeeze blank lines
+-E: show $ at end of lines</code></pre>
+ </body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   vmstat Command Guide
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    vmstat Command Guide
+   </h1>
+  </header>
+  <section>
+   <h2>
+    Description
+   </h2>
+   <p>
+    The
+    <code>
+     vmstat
+    </code>
+    command reports virtual memory statistics, providing information about system processes, memory, paging, block IO, traps, and CPU activity.
+   </p>
+  </section>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        -a
+       </code>
+      </td>
+      <td>
+       Display active and inactive memory.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -s
+       </code>
+      </td>
+      <td>
+       Display a table of various event counters and memory statistics.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -d
+       </code>
+      </td>
+      <td>
+       Report disk statistics.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -p
+        <device>
+        </device>
+       </code>
+      </td>
+      <td>
+       Report disk statistics for a specified device.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -w
+       </code>
+      </td>
+      <td>
+       Display a table of system swap activity.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -f
+       </code>
+      </td>
+      <td>
+       Report the number of forks since boot.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code># Display system statistics every 2 seconds
+vmstat 2
+
+# Display memory statistics including active and inactive memory
+vmstat -a
+
+# Display the number of forks since system boot
+vmstat -f
+
+# Display disk statistics
+vmstat -d
+
+# Display statistics for a specific disk
+vmstat -p sda</code></pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code>vmstat [options] [delay [count]]
+-a : Active/inactive memory
+-s : Memory statistics
+-d : Disk statistics
+-p : Disk statistics for device
+-w : Swap activity
+-f : Fork count</code></pre>
+  </section>
+ </body>
+</html>

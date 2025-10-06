@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   AZ Command Cheat Sheet
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Linux `az` Command Guide
+   </h1>
+   <p>
+    The `az` command is the Azure CLI tool used to manage Azure resources from the command line.
+   </p>
+  </header>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       -h, --help
+      </td>
+      <td>
+       Show help information for commands and subcommands.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       --version
+      </td>
+      <td>
+       Display the version of the Azure CLI.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       --output &lt;format&gt;
+      </td>
+      <td>
+       Specify output format: json, table, tsv, yaml.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       --verbose
+      </td>
+      <td>
+       Increase logging verbosity for debug purposes.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       --query &lt;JMESPath&gt;
+      </td>
+      <td>
+       Filter results using JMESPath query.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code>az login
+# Authenticate with Azure
+
+az group create --name myResourceGroup --location eastus
+# Create a new resource group
+
+az vm create --resource-group myResourceGroup --name myVM --image UbuntuLTS
+# Create a new virtual machine with Ubuntu
+
+az resource list --output table
+# List all resources in the current subscription in a table format
+
+az account list --query "[].{Name:name, State:state}" --output table
+# List all accounts with name and state</code></pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code>az login
+az group create --name &lt;groupName&gt; --location &lt;location&gt;
+az vm create --resource-group &lt;groupName&gt; --name &lt;vmName&gt; --image &lt;image&gt;
+az resource list --output table
+az account list --query "[].{Name:name, State:state}"</code></pre>
+  </section>
+ </body>
+</html>

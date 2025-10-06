@@ -1,0 +1,90 @@
+<html>
+ <body>
+  <h1>
+   dbeaver Command
+  </h1>
+  <p>
+   DBeaver is a free, multi-platform database tool that supports various database management systems. It provides an SQL editor, data viewer, and management features for developers and database administrators.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      -con
+     </td>
+     <td>
+      Connects to a specified database.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -data
+     </td>
+     <td>
+      Specifies the workspace location.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -nosplash
+     </td>
+     <td>
+      Starts without the splash screen.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -exit
+     </td>
+     <td>
+      Exits after executing commands in the command line.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -nl
+     </td>
+     <td>
+      Launches with a specified locale.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Start DBeaver with a specified workspace
+dbeaver -data /path/to/workspace
+
+# Connect to a database and exit after execution
+dbeaver -con "mydatabase" -exit
+
+# Launch DBeaver without splash screen
+dbeaver -nosplash
+
+# Set locale to French
+dbeaver -nl fr_FR
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>-con "db"    # Connect to 'db'
+-data "/path"  # Set workspace
+-nosplash      # No splash screen
+-nl "locale"   # Set locale
+-exit          # Exit after running</code></pre>
+ </body>
+</html>

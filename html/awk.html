@@ -1,0 +1,100 @@
+<h1>
+ AWK Command in Linux
+</h1>
+<p>
+ <code>
+  awk
+ </code>
+ is a powerful text processing tool used for pattern scanning and processing. It operates on each line of input, making it ideal for extracting and analyzing data from files or streams.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -F
+    </code>
+   </td>
+   <td>
+    Sets the input field separator.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -f
+    </code>
+   </td>
+   <td>
+    Reads the AWK program from a file.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -v
+    </code>
+   </td>
+   <td>
+    Assigns a variable before program execution.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --help
+    </code>
+   </td>
+   <td>
+    Displays a help message and exits.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Examples
+</h2>
+<pre><code>awk '{print $1}' filename.txt
+# Prints the first column of each line in the file.
+
+awk -F: '{print $1, $3}' /etc/passwd
+# Uses colon as a separator and prints the first and third fields.
+
+echo "Hello World" | awk '{print toupper($0)}'
+# Converts the input text to uppercase.
+
+ps aux | awk '/username/ {print $1, $2, $11}'
+# Filters lines containing 'username' and prints specific columns.
+
+awk -v var="value" 'BEGIN {print var}'
+# Sets and prints a variable value.</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code># Field separator
+awk -F, '{print $1}'
+
+# Use a script file
+awk -f script.awk filename
+
+# Set a variable
+awk -v var=value '{print var}'
+
+# Execute an action for lines matching a pattern
+awk '/pattern/ {action}' file
+
+# Calculate sum of a column
+awk '{sum += $1} END {print sum}' file</code></pre>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Sqoop Command Reference
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Sqoop Command
+   </h1>
+  </header>
+  <section>
+   <h2>
+    Description
+   </h2>
+   <p>
+    Sqoop is a tool designed for efficiently transferring bulk data between Apache Hadoop and structured datastores such as relational databases.
+   </p>
+  </section>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       --connect
+      </td>
+      <td>
+       JDBC connection string for the database to connect.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       --username
+      </td>
+      <td>
+       Username to connect to the database.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       --password
+      </td>
+      <td>
+       Password to connect to the database.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       --table
+      </td>
+      <td>
+       Table to read from the database.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       --target-dir
+      </td>
+      <td>
+       HDFS destination directory for importing data.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       --export-dir
+      </td>
+      <td>
+       HDFS source directory for exporting data.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       --incremental
+      </td>
+      <td>
+       Mode for incremental imports (append, lastmodified).
+      </td>
+     </tr>
+     <tr>
+      <td>
+       --split-by
+      </td>
+      <td>
+       Column of the table used to split work units.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code>sqoop import \
+--connect jdbc:mysql://db.example.com/testdb \
+--username testuser \
+--password testpass \
+--table employees \
+--target-dir /user/hadoop/employees
+
+sqoop export \
+--connect jdbc:mysql://db.example.com/testdb \
+--username testuser \
+--password testpass \
+--table employees \
+--export-dir /user/hadoop/employees_export \
+--input-fields-terminated-by ','</code></pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code>Import Data:
+sqoop import --connect <jdbc-url> --username <user> --password <pass> --table <table> --target-dir <hdfs-dir>
+
+Export Data:
+sqoop export --connect <jdbc-url> --username <user> --password <pass> --table <table> --export-dir <hdfs-dir>
+
+Incremental Import:
+sqoop import --incremental append --check-column <column> --last-value <value></value></column></hdfs-dir></table></pass></user></jdbc-url></hdfs-dir></table></pass></user></jdbc-url></code></pre>
+  </section>
+ </body>
+</html>

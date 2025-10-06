@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Linux `cp` Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   Linux `cp` Command
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    cp
+   </code>
+   command is used to copy files and directories in Linux.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -r
+      </code>
+      or
+      <code>
+       --recursive
+      </code>
+     </td>
+     <td>
+      Copy directories recursively
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -i
+      </code>
+      or
+      <code>
+       --interactive
+      </code>
+     </td>
+     <td>
+      Prompt before overwriting
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -u
+      </code>
+      or
+      <code>
+       --update
+      </code>
+     </td>
+     <td>
+      Copy only when the SOURCE file is newer
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -v
+      </code>
+      or
+      <code>
+       --verbose
+      </code>
+     </td>
+     <td>
+      Explain what is being done
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -a
+      </code>
+      or
+      <code>
+       --archive
+      </code>
+     </td>
+     <td>
+      Preserve attributes and copy recursively (same as -dR --preserve=all)
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Copy a file to another directory
+cp file.txt /path/to/destination/
+
+# Copy a directory recursively
+cp -r /source/directory /destination/directory
+
+# Copy a file interactively (prompt before overwrite)
+cp -i file.txt /path/to/destination/
+
+# Copy a file and show detailed output
+cp -v file.txt /path/to/destination/
+
+# Copy only if the destination file is older
+cp -u file.txt /path/to/destination/
+</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>cp source_file destination_file
+cp -r source_dir destination_dir
+cp -i file destination
+cp -v file destination
+cp -u file destination</code></pre>
+ </body>
+</html>

@@ -1,0 +1,119 @@
+<h1>
+ Linux Command: killall
+</h1>
+<p>
+ The
+ <code>
+  killall
+ </code>
+ command is used to terminate processes by name. It sends signals to all processes running any of the specified commands.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -e
+    </code>
+   </td>
+   <td>
+    Exact match with the process name.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -i
+    </code>
+   </td>
+   <td>
+    Interactive mode; prompts for confirmation before killing each process.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -v
+    </code>
+   </td>
+   <td>
+    Verbose; reports if the signal has been successfully sent.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -u
+    </code>
+   </td>
+   <td>
+    Restrict to processes from a specified user.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -s
+    </code>
+   </td>
+   <td>
+    Specify a signal to send (e.g.,
+    <code>
+     SIGTERM
+    </code>
+    ,
+    <code>
+     SIGKILL
+    </code>
+    ).
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Terminate all instances of a program
+killall firefox
+
+# Terminate processes with confirmation
+killall -i firefox
+
+# Use verbose mode to confirm actions
+killall -v firefox
+
+# Send a specific signal (e.g., SIGKILL) to all instances
+killall -s SIGKILL firefox
+
+# Target processes of a specific user
+killall -u username firefox
+
+# Use exact match for the process name
+killall -e firefox</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code># Kill all processes by name
+killall <process_name>
+
+# Kill with confirmation
+killall -i <process_name>
+
+# Verbose mode
+killall -v <process_name>
+
+# Send specific signal
+killall -s <signal> <process_name></process_name></signal></process_name></process_name></process_name></code></pre>

@@ -1,0 +1,107 @@
+<h1>
+ Understanding the
+ <code>
+  less
+ </code>
+ Command
+</h1>
+<p>
+ The
+ <code>
+  less
+ </code>
+ command in Linux is a text file viewer that allows you to view the contents of a file one screen at a time. It is useful for reading long files without opening an editor and supports both forward and backward navigation.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -N
+    </code>
+   </td>
+   <td>
+    Show line numbers
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -S
+    </code>
+   </td>
+   <td>
+    Chop long lines instead of wrapping
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     +/search
+    </code>
+   </td>
+   <td>
+    Start at the first occurrence of "search"
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -F
+    </code>
+   </td>
+   <td>
+    Exit if the entire file fits on one screen
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -R
+    </code>
+   </td>
+   <td>
+    Display raw control characters
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code class="language-bash"># View a file with line numbers
+less -N filename.txt
+
+# Search for a term and start at its first occurrence
+less +/search-term filename.txt
+
+# View a file with lines chopped (horizontal scrolling)
+less -S filename.txt
+
+# Quickly view a file and exit if it fits on one screen
+less -F filename.txt
+
+# View a file with raw control characters
+less -R filename.txt</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+less -N filename     # Show line numbers
+less -S filename     # No wrap, chop lines
+less +/term filename # Search for 'term'
+less -F filename     # Auto-exit if fit
+less -R filename     # Raw chars</code></pre>

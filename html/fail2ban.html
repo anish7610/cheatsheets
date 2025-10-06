@@ -1,0 +1,125 @@
+<html>
+ <body>
+  <h1>
+   fail2ban Command
+  </h1>
+  <p>
+   Fail2ban is a security tool that monitors server logs for suspicious activity and bans offending IPs to protect systems from brute-force attacks.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      -h, --help
+     </td>
+     <td>
+      Display help information.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -b, --background
+     </td>
+     <td>
+      Run in the background.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -d, --debug
+     </td>
+     <td>
+      Enable debug mode for diagnostics.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -v, --verbose
+     </td>
+     <td>
+      Increase output verbosity.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -f, --force
+     </td>
+     <td>
+      Force action that may fail if unsuccessful.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -s, --start
+     </td>
+     <td>
+      Start the fail2ban server/process.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -u, --stop
+     </td>
+     <td>
+      Stop the fail2ban server/process.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -r, --restart
+     </td>
+     <td>
+      Restart the fail2ban server/process.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Start fail2ban in the background
+fail2ban-client start
+
+# Stop fail2ban service
+fail2ban-client stop
+
+# Restart fail2ban service with verbose output
+fail2ban-client -v restart
+
+# Check the status of the jail
+fail2ban-client status sshd
+
+# Unban an IP address
+fail2ban-client set sshd unbanip 192.168.1.100
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+# Start fail2ban
+fail2ban-client start
+
+# Stop fail2ban
+fail2ban-client stop
+
+# Status of a jail
+fail2ban-client status <jail>
+
+# Unban IP
+fail2ban-client set <jail> unbanip <ip>
+    </ip></jail></jail></code></pre>
+ </body>
+</html>

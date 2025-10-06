@@ -1,0 +1,101 @@
+<h1>
+ Minikube Command
+</h1>
+<p>
+ Minikube is a tool that enables running Kubernetes clusters locally, providing a local development environment for Kubernetes.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    -p &lt;name&gt;
+   </td>
+   <td>
+    Specify the profile name to use for the cluster.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    start
+   </td>
+   <td>
+    Start a local Kubernetes cluster.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    stop
+   </td>
+   <td>
+    Stop the local Kubernetes cluster.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    delete
+   </td>
+   <td>
+    Delete the local Kubernetes cluster.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    status
+   </td>
+   <td>
+    Get the status of the local Kubernetes cluster.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    dashboard
+   </td>
+   <td>
+    Access the Kubernetes dashboard running within the cluster.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Start a Minikube cluster
+minikube start
+
+# Stop the Minikube cluster
+minikube stop
+
+# Delete the Minikube cluster
+minikube delete
+
+# Check the status of the Minikube cluster
+minikube status
+
+# Open the Kubernetes dashboard
+minikube dashboard
+
+# Start a Minikube cluster with a specific profile
+minikube start -p mycluster
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>minikube start        # Start cluster
+minikube stop         # Stop cluster
+minikube delete       # Delete cluster
+minikube status       # Status check
+minikube dashboard    # Open dashboard
+</code></pre>

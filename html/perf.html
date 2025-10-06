@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Linux `perf` Command
+  </title>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+  </style>
+ </head>
+ <body>
+  <h1>
+   Linux `perf` Command
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    perf
+   </code>
+   command is a powerful tool for performance monitoring and analysis on Linux systems. It provides insight into system performance and can help diagnose performance-related issues.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      -e, --event
+     </td>
+     <td>
+      Specify the event to monitor, such as CPU cycles or cache misses.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      stat
+     </td>
+     <td>
+      Gather performance statistics on the specified command.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      record
+     </td>
+     <td>
+      Record performance data for later analysis.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      report
+     </td>
+     <td>
+      Generate a report from recorded performance data.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      top
+     </td>
+     <td>
+      Display a real-time view of performance counters.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code>perf stat ls
+# Collect statistics for the 'ls' command.
+
+perf record -e cpu-clock ls
+# Record 'ls' command with CPU clock event.
+
+perf report
+# Display a report of collected data.
+
+perf top
+# Show real-time system performance.</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>perf stat &lt;command&gt;
+perf record -e &lt;event&gt; &lt;command&gt;
+perf report
+perf top</code></pre>
+ </body>
+</html>

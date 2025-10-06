@@ -1,0 +1,114 @@
+<h1>
+ Cron Command in Linux
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  cron
+ </code>
+ command is a time-based job scheduler in Unix-like operating systems. It is used to schedule scripts or commands to run automatically at specified intervals.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -e
+    </code>
+   </td>
+   <td>
+    Edit the current user's
+    <code>
+     crontab
+    </code>
+    file.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -l
+    </code>
+   </td>
+   <td>
+    List the current user's
+    <code>
+     crontab
+    </code>
+    entries.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -r
+    </code>
+   </td>
+   <td>
+    Remove the current user's
+    <code>
+     crontab
+    </code>
+    .
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<h3>
+ 1. Schedule a Backup Script to Run Daily
+</h3>
+<pre><code>
+# Open crontab editor
+crontab -e
+
+# Add this line to run backup.sh every day at 2 AM
+0 2 * * * /path/to/backup.sh
+</code></pre>
+<h3>
+ 2. Run a Cleanup Script Every Sunday
+</h3>
+<pre><code>
+# Open crontab editor
+crontab -e
+
+# Add this line to run cleanup.sh every Sunday at 3 AM
+0 3 * * 0 /path/to/cleanup.sh
+</code></pre>
+<h3>
+ 3. List All Scheduled Jobs
+</h3>
+<pre><code>
+crontab -l
+</code></pre>
+<h2>
+ Cron Cheat Sheet
+</h2>
+<pre><code>
+# Edit crontab:
+crontab -e
+
+# List crontab:
+crontab -l
+
+# Remove crontab:
+crontab -r
+</code></pre>

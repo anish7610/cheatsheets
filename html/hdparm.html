@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   hdparm Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   hdparm Command
+  </h1>
+  <p>
+   hdparm is a command-line utility for Linux to set and view hardware parameters of hard disk drives.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -i
+      </code>
+     </td>
+     <td>
+      Display the drive's identification information.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -I
+      </code>
+     </td>
+     <td>
+      More detailed identification info from the drive.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -t
+      </code>
+     </td>
+     <td>
+      Benchmark device read speed (timed read).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -T
+      </code>
+     </td>
+     <td>
+      Test cached reads of the device.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -S
+      </code>
+     </td>
+     <td>
+      Set standby (spindown) timeout.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -y
+      </code>
+     </td>
+     <td>
+      Put drive into standby mode.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Y
+      </code>
+     </td>
+     <td>
+      Put drive into sleep mode.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Display drive identification
+sudo hdparm -i /dev/sda
+
+# Perform a read speed test
+sudo hdparm -t /dev/sda
+
+# Set drive to standby mode
+sudo hdparm -y /dev/sda
+
+# Read detailed drive info
+sudo hdparm -I /dev/sda
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+-i  : Basic info
+-I  : Detailed info
+-t  : Timed read
+-T  : Cached read
+-S  : Set spindown
+-y  : Standby mode
+-Y  : Sleep mode
+    </code></pre>
+ </body>
+</html>

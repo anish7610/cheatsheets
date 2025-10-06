@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   auditctl Command Guide
+  </title>
+  <style>
+   table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #cccccc;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+  </style>
+ </head>
+ <body>
+  <h1>
+   auditctl Command Guide
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    auditctl
+   </code>
+   command is used to control the Linux Audit daemon, allowing you to manage audit rules and settings.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -a
+      </code>
+     </td>
+     <td>
+      Add a rule to the end of a rule list.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -A
+      </code>
+     </td>
+     <td>
+      Add a rule to the beginning of a rule list.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -d
+      </code>
+     </td>
+     <td>
+      Delete a rule from the list.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -l
+      </code>
+     </td>
+     <td>
+      List all loaded audit rules.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -s
+      </code>
+     </td>
+     <td>
+      Show the status of the audit daemon.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Add a file watch for changes to /etc/passwd
+auditctl -a always,exit -F path=/etc/passwd -F perm=wa
+
+# List all current audit rules
+auditctl -l
+
+# Delete all audit rules
+auditctl -D
+
+# Add a system call audit rule
+auditctl -a always,exit -S open -F success=0
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code># Add to end: auditctl -a [type]
+# Add to begin: auditctl -A [type]
+# Delete rule: auditctl -d [rule]
+# List rules: auditctl -l
+# Show status: auditctl -s
+    </code></pre>
+ </body>
+</html>

@@ -1,0 +1,119 @@
+<h1>
+ Linux Command: mtr
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ <code>
+  mtr
+ </code>
+ (My Traceroute) is a network diagnostic tool that combines the functionality of
+ <code>
+  ping
+ </code>
+ and
+ <code>
+  traceroute
+ </code>
+ . It provides continuous, real-time analysis of the route packets take to a remote host.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -r
+    </code>
+   </td>
+   <td>
+    Generate a report without interactive output.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -c &lt;count&gt;
+    </code>
+   </td>
+   <td>
+    Set the number of cycles
+    <code>
+     mtr
+    </code>
+    will run.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -s &lt;packetsize&gt;
+    </code>
+   </td>
+   <td>
+    Specify the packet size to use.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --report-wide
+    </code>
+   </td>
+   <td>
+    Generate a wide-format report.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --xml
+    </code>
+   </td>
+   <td>
+    Output results in XML format.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Interactive traceroute to a host
+mtr example.com
+
+# Generate a report for 10 cycles
+mtr -r -c 10 example.com
+
+# Set packet size to 128 bytes and run 5 cycles
+mtr -c 5 -s 128 example.com
+
+# Generate a wide-format report
+mtr --report-wide example.com
+
+# Output in XML format for 8 cycles
+mtr -r -c 8 --xml example.com
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+mtr <host>                  # Interactive mode
+mtr -r <host>               # Report mode
+mtr -c <count> <host>       # Set run count
+mtr -s <size> <host>        # Set packet size
+mtr --report-wide <host>    # Wide report
+</host></host></size></host></count></host></host></code></pre>

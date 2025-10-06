@@ -1,0 +1,139 @@
+<html>
+ <body>
+  <h1>
+   Linux Command: lxc
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    lxc
+   </code>
+   command is a part of LXD, a system container manager for running Linux systems in containers. It allows management and operations on LXC containers efficiently.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       launch
+      </code>
+     </td>
+     <td>
+      Start a new container from a given image.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       start
+      </code>
+     </td>
+     <td>
+      Start an existing container.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       stop
+      </code>
+     </td>
+     <td>
+      Stop a running container.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       list
+      </code>
+     </td>
+     <td>
+      List all containers with their statuses.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       delete
+      </code>
+     </td>
+     <td>
+      Delete an existing container.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       exec
+      </code>
+     </td>
+     <td>
+      Execute a command in a running container.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       info
+      </code>
+     </td>
+     <td>
+      Get details about a container.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Launch a new Ubuntu container named "mycontainer"
+lxc launch ubuntu:22.04 mycontainer
+
+# Start an existing container
+lxc start mycontainer
+
+# Stop a running container
+lxc stop mycontainer
+
+# List all containers
+lxc list
+
+# Delete a container
+lxc delete mycontainer
+
+# Execute a command in a container
+lxc exec mycontainer -- bash
+
+# Get information about a container
+lxc info mycontainer
+</code></pre>
+  <h2>
+   Compact Cheat Sheet
+  </h2>
+  <pre><code>lxc launch IMAGE NAME  # Start NEW container
+lxc start NAME          # Start existing container
+lxc stop NAME           # Stop running container
+lxc list                # List containers
+lxc delete NAME         # Delete container
+lxc exec NAME -- CMD    # Execute CMD in container
+lxc info NAME           # Show container info
+</code></pre>
+ </body>
+</html>

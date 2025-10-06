@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   gsettings Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   gsettings Command
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    gsettings
+   </code>
+   command is used to interact with the dconf database, allowing users to get, set, and list application preference settings in GNOME-based environments.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       list-schemas
+      </code>
+     </td>
+     <td>
+      List all available schemas.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       list-keys
+      </code>
+     </td>
+     <td>
+      List all keys in a specified schema.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       get
+      </code>
+     </td>
+     <td>
+      Get the value of a specified key.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       set
+      </code>
+     </td>
+     <td>
+      Set the value of a key.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       reset
+      </code>
+     </td>
+     <td>
+      Reset a key to its default value.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <h3>
+   Get the current wallpaper URI
+  </h3>
+  <pre><code>gsettings get org.gnome.desktop.background picture-uri</code></pre>
+  <h3>
+   Set a new wallpaper
+  </h3>
+  <pre><code>gsettings set org.gnome.desktop.background picture-uri 'file:///home/user/Pictures/wallpaper.jpg'</code></pre>
+  <h3>
+   List all keys in a schema
+  </h3>
+  <pre><code>gsettings list-keys org.gnome.desktop.interface</code></pre>
+  <h3>
+   Reset the theme to default
+  </h3>
+  <pre><code>gsettings reset org.gnome.desktop.interface gtk-theme</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+    List schemas:   gsettings list-schemas
+    List keys:      gsettings list-keys <schema>
+    Get value:      gsettings get <schema> <key>
+    Set value:      gsettings set <schema> <key> <value>
+    Reset key:      gsettings reset <schema> <key>
+    </key></schema></value></key></schema></key></schema></schema></code></pre>
+ </body>
+</html>

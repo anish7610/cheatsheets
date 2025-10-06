@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Linux tcpdump Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   Linux tcpdump Command
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    tcpdump
+   </code>
+   command is a powerful network packet analyzer used to capture and display the traffic passing through a network interface.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -i [interface]
+      </code>
+     </td>
+     <td>
+      Specify network interface to listen on (e.g., eth0).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -n
+      </code>
+     </td>
+     <td>
+      Don't convert addresses to names.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -nn
+      </code>
+     </td>
+     <td>
+      Don't convert protocol and port numbers to names.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -w [file]
+      </code>
+     </td>
+     <td>
+      Write the captured packets to a file for later analysis.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -r [file]
+      </code>
+     </td>
+     <td>
+      Read packets from a file, instead of capturing live data.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -c [count]
+      </code>
+     </td>
+     <td>
+      Stop capturing after receiving the specified number of packets.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -v
+      </code>
+     </td>
+     <td>
+      Provide verbose output.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -vv
+      </code>
+     </td>
+     <td>
+      Provide even more verbose output.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -X
+      </code>
+     </td>
+     <td>
+      Show packet contents in both hex and ASCII.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Capture packets on interface eth0
+tcpdump -i eth0
+
+# Capture 10 packets on eth0 without resolving hostnames
+tcpdump -i eth0 -c 10 -n
+
+# Write captured packets to a file
+tcpdump -i eth0 -w capture.pcap
+
+# Read packets from a file
+tcpdump -r capture.pcap
+
+# Capture TCP traffic on the default interface
+tcpdump tcp
+
+# Capture packets to a specific host
+tcpdump host 192.168.1.1
+
+# Capture packets on port 80
+tcpdump port 80
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>tcpdump -i [interface] -n -c [count] -w [file] -r [file] -v -X
+    </code></pre>
+ </body>
+</html>

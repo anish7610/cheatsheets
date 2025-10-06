@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   fsarchiver Cheat Sheet
+  </title>
+ </head>
+ <body>
+  <h1>
+   fsarchiver
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   fsarchiver is a tool used to create backups of file systems as archives. It supports a variety of file systems and can perform compression and encryption.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       savefs
+      </code>
+     </td>
+     <td>
+      Creates an archive of a file system.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       restfs
+      </code>
+     </td>
+     <td>
+      Restores a file system from an archive.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -z, --compress
+      </code>
+     </td>
+     <td>
+      Sets compression level (1-9).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -e, --encrypt
+      </code>
+     </td>
+     <td>
+      Encrypts the archive with a password.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -j, --jobs
+      </code>
+     </td>
+     <td>
+      Specifies number of threads for compression.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -v, --verbose
+      </code>
+     </td>
+     <td>
+      Displays detailed operation messages.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Examples
+  </h2>
+  <pre><code># Backup a file system to an archive
+fsarchiver savefs /backup/system.fsa /dev/sda1
+
+# Restore a file system from an archive
+fsarchiver restfs /backup/system.fsa id=0,dest=/dev/sda1
+
+# Backup with compression and verbosity
+fsarchiver savefs -z 3 -v /backup/compressed.fsa /dev/sda2
+
+# Encrypt and backup a file system
+fsarchiver savefs -e password123 /backup/encrypted.fsa /dev/sda3
+</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>fsarchiver savefs [options] archive_path device
+fsarchiver restfs archive_path [options] destination</code></pre>
+ </body>
+</html>

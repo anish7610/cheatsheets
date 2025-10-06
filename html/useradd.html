@@ -1,0 +1,109 @@
+<html>
+ <body>
+  <h1>
+   Linux Command: useradd
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    useradd
+   </code>
+   command is used to create a new user account on a Linux system. It modifies system files and options related to user management.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      -m
+     </td>
+     <td>
+      Create the user's home directory.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -d
+     </td>
+     <td>
+      Specify the home directory path.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -s
+     </td>
+     <td>
+      Set the user's login shell.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -g
+     </td>
+     <td>
+      Assign the user to a group by name or GID.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -c
+     </td>
+     <td>
+      Add a comment (usually the user's full name).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -G
+     </td>
+     <td>
+      Specify additional groups for the user to join.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Create a user with a home directory
+useradd -m username
+
+# Create a user with a specific home directory
+useradd -m -d /custom/home username
+
+# Create a user with a specific shell and comment
+useradd -m -s /bin/bash -c "John Doe" username
+
+# Create a user and add to specific group
+useradd -m -g groupname username
+
+# Create a user with additional group memberships
+useradd -m -G group1,group2 username
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code># Add user with home, shell, and comment
+useradd -m -s /bin/bash -c "Full Name" username
+
+# Add user to primary and secondary groups
+useradd -m -g primary_group -G group1,group2 username
+    </code></pre>
+ </body>
+</html>

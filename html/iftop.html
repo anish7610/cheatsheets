@@ -1,0 +1,89 @@
+<h1>
+ Linux Command: iftop
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ iftop is a command-line tool that displays bandwidth usage on an interface by host. It provides a real-time overview of network traffic.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    -i &lt;interface&gt;
+   </td>
+   <td>
+    Select the network interface to monitor.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -n
+   </td>
+   <td>
+    Display numerical addresses instead of resolving hostnames.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -b
+   </td>
+   <td>
+    Display bandwidth in bytes instead of bits.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -f &lt;filter code&gt;
+   </td>
+   <td>
+    Use a filter to select specific traffic to monitor (e.g., ‘host 192.168.1.1’).
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -N
+   </td>
+   <td>
+    Suppress DNS lookups for hostnames.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Monitor traffic on the default interface
+iftop
+
+# Monitor traffic on eth0 in bytes
+iftop -i eth0 -b
+
+# Monitor traffic on eth0 without DNS lookups
+iftop -i eth0 -n
+
+# Use a filter to monitor traffic from a specific host
+iftop -f "host 192.168.1.1"
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>iftop -i <interface>    # Select interface
+iftop -n                # Disable hostname resolution
+iftop -b                # Display bytes
+iftop -f "<filter>"     # Apply a filter
+</filter></interface></code></pre>

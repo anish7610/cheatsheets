@@ -1,0 +1,135 @@
+<h1>
+ KVM Command Overview
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  kvm
+ </code>
+ command is a part of QEMU and is used to launch virtual machines using Kernel-based Virtual Machine (KVM). It allows for efficient virtualization by leveraging hardware extensions for virtualization.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -m
+    </code>
+   </td>
+   <td>
+    Allocate a specific amount of memory to the VM (e.g.,
+    <code>
+     -m 512M
+    </code>
+    for 512 MB).
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -smp
+    </code>
+   </td>
+   <td>
+    Set the number of CPUs for the virtual machine.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -hda
+    </code>
+   </td>
+   <td>
+    Specify the hard disk file to use as the primary drive.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -cdrom
+    </code>
+   </td>
+   <td>
+    Use an image file as the CD-ROM.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -boot
+    </code>
+   </td>
+   <td>
+    Specify boot order (e.g.,
+    <code>
+     -boot d
+    </code>
+    for booting from CD-ROM).
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -net
+    </code>
+   </td>
+   <td>
+    Configure network settings for the VM.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -display
+    </code>
+   </td>
+   <td>
+    Set the display option; often
+    <code>
+     -display none
+    </code>
+    for headless operation.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Start a VM with 1 GB RAM, 2 CPUs and a specific disk image
+kvm -m 1024 -smp 2 -hda /path/to/disk.img
+
+# Boot a VM from a CD-ROM image in a non-graphical mode
+kvm -cdrom /path/to/cdrom.iso -boot d -display none
+
+# Start a VM with a network configuration
+kvm -m 512 -hda /path/to/disk.img -net nic -net user
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+# Allocate memory: -m SIZE
+# Set CPUs: -smp NUM
+# Primary disk: -hda FILE
+# Boot from CD-ROM: -cdrom FILE -boot d
+# Network config: -net nic -net user
+# Headless mode: -display none
+</code></pre>

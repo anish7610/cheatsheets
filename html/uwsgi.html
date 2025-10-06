@@ -1,0 +1,128 @@
+<h1>
+ uwsgi Command Overview
+</h1>
+<p>
+ <code>
+  uwsgi
+ </code>
+ is a versatile application server for deploying web applications. It supports WSGI, FastCGI, and HTTP protocols, and is commonly used to host Python web applications.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     --http
+    </code>
+   </td>
+   <td>
+    Start a HTTP server on the specified address.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --wsgi-file
+    </code>
+   </td>
+   <td>
+    Load a WSGI file.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --module
+    </code>
+   </td>
+   <td>
+    Load a WSGI module.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --master
+    </code>
+   </td>
+   <td>
+    Enable the master process.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --processes
+    </code>
+   </td>
+   <td>
+    Number of worker processes to spawn.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --threads
+    </code>
+   </td>
+   <td>
+    Number of threads per worker.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --socket
+    </code>
+   </td>
+   <td>
+    Bind to a given UNIX/TCP socket.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --plugin
+    </code>
+   </td>
+   <td>
+    Load a specified plugin.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code>
+# Start a simple HTTP server on port 8080 with a specific WSGI file
+uwsgi --http :8080 --wsgi-file myapp.py
+
+# Run a WSGI application with 4 processes and 2 threads per process
+uwsgi --socket :3031 --wsgi-file myapp.py --processes 4 --threads 2
+
+# Use a WSGI module with a master process and 8 workers
+uwsgi --http :9090 --module myapp:app --master --processes 8
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+# Basic Structure: uwsgi [options]
+uwsgi --http :port --wsgi-file file.py
+uwsgi --socket :port --module module:app
+uwsgi --http :port --master --processes n --threads m --wsgi-file file.py
+</code></pre>

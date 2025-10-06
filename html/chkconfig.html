@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Linux chkconfig Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   Linux `chkconfig` Command
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    chkconfig
+   </code>
+   command is used to manage the runlevel settings of system services in Linux. It allows you to enable or disable services to start automatically at different runlevels.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       --list
+      </code>
+     </td>
+     <td>
+      Lists all services and their current runlevel status.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --level
+      </code>
+     </td>
+     <td>
+      Specifies the runlevel to configure (e.g.,
+      <code>
+       --level 345
+      </code>
+      ).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --add
+      </code>
+     </td>
+     <td>
+      Adds a new service to be managed by
+      <code>
+       chkconfig
+      </code>
+      .
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --del
+      </code>
+     </td>
+     <td>
+      Removes a service from
+      <code>
+       chkconfig
+      </code>
+      management.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <h3>
+   List all services and their runlevel settings
+  </h3>
+  <pre><code>chkconfig --list</code></pre>
+  <h3>
+   Enable a service to start at runlevels 3, 4, and 5
+  </h3>
+  <pre><code>chkconfig --level 345 httpd on</code></pre>
+  <h3>
+   Disable a service at all runlevels
+  </h3>
+  <pre><code>chkconfig httpd off</code></pre>
+  <h3>
+   Add a new service to chkconfig
+  </h3>
+  <pre><code>chkconfig --add customservice</code></pre>
+  <h3>
+   Remove a service from chkconfig
+  </h3>
+  <pre><code>chkconfig --del customservice</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+chkconfig --list
+chkconfig --level <levels> <service> on|off
+chkconfig --add <service>
+chkconfig --del <service>
+    </service></service></service></levels></code></pre>
+ </body>
+</html>

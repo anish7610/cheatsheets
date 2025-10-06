@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   lsblk Command Overview
+  </title>
+ </head>
+ <body>
+  <h1>
+   Linux Command: lsblk
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    lsblk
+   </code>
+   command lists block devices, showing detailed information about them. It provides a tree-like structure of all available or specified block devices.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -a
+      </code>
+     </td>
+     <td>
+      Include empty devices.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -f
+      </code>
+     </td>
+     <td>
+      Display file system information.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -l
+      </code>
+     </td>
+     <td>
+      Use a list format instead of the default tree view.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -m
+      </code>
+     </td>
+     <td>
+      Show owner, group, and mode in the listing.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -n
+      </code>
+     </td>
+     <td>
+      Do not print the header line.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -o
+      </code>
+     </td>
+     <td>
+      Specify output columns to display.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -r
+      </code>
+     </td>
+     <td>
+      Print in raw format.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -t
+      </code>
+     </td>
+     <td>
+      Print topology information.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <h3>
+   Basic Usage
+  </h3>
+  <pre><code>lsblk</code></pre>
+  <h3>
+   Show File System Information
+  </h3>
+  <pre><code>lsblk -f</code></pre>
+  <h3>
+   List Devices in a Flat Format
+  </h3>
+  <pre><code>lsblk -l</code></pre>
+  <h3>
+   Include Empty Devices
+  </h3>
+  <pre><code>lsblk -a</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+lsblk         # List all block devices in tree format
+lsblk -f      # Include file system information
+lsblk -l      # Use list format
+lsblk -a      # Include empty devices
+</code></pre>
+ </body>
+</html>

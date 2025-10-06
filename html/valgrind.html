@@ -1,0 +1,101 @@
+<html>
+ <body>
+  <h1>
+   Valgrind
+  </h1>
+  <p>
+   Valgrind is a programming tool for memory debugging, memory leak detection, and profiling.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       --tool=memcheck
+      </code>
+     </td>
+     <td>
+      Default tool for detecting memory errors.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --leak-check=yes
+      </code>
+     </td>
+     <td>
+      Enable detailed memory leak detection.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --track-origins=yes
+      </code>
+     </td>
+     <td>
+      Track the origins of uninitialized memory.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --log-file=
+       <em>
+        file
+       </em>
+      </code>
+     </td>
+     <td>
+      Write the log output to a specified file.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --show-reachable=yes
+      </code>
+     </td>
+     <td>
+      Show reachable memory in the leak report.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Basic memory check
+valgrind ./myprogram
+
+# Check for memory leaks with detailed info
+valgrind --leak-check=yes ./myprogram
+
+# Track origins of uninitialized memory
+valgrind --track-origins=yes ./myprogram
+
+# Write output to a log file
+valgrind --log-file=valgrind-out.txt ./myprogram</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>valgrind --tool=memcheck [options] ./program
+--leak-check=yes : Detailed leak info
+--track-origins=yes : Track uninit memory
+--log-file=file : Log output to file</code></pre>
+ </body>
+</html>

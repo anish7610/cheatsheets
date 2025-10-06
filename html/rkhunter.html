@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   rkhunter Command Overview
+  </title>
+ </head>
+ <body>
+  <h1>
+   rkhunter Command Overview
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   <code>
+    rkhunter
+   </code>
+   (Rootkit Hunter) is a Unix-based tool that scans for rootkits, backdoors, and possible local exploits.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -c
+      </code>
+      ,
+      <code>
+       --check
+      </code>
+     </td>
+     <td>
+      Performs a check of the local system.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --update
+      </code>
+     </td>
+     <td>
+      Updates the database files used by
+      <code>
+       rkhunter
+      </code>
+      .
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --versioncheck
+      </code>
+     </td>
+     <td>
+      Checks if a new version of
+      <code>
+       rkhunter
+      </code>
+      is available.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --report-warnings-only
+      </code>
+     </td>
+     <td>
+      Shows only warning messages in the output.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --propupd
+      </code>
+     </td>
+     <td>
+      Updates the file properties database.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Examples
+  </h2>
+  <pre>
+<code># Perform a full system check
+sudo rkhunter -c
+
+# Update rkhunter's database files
+sudo rkhunter --update
+
+# Check only for warnings to reduce noise
+sudo rkhunter --check --report-warnings-only
+    </code>
+    </pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre>
+<code>
+# Check system
+sudo rkhunter -c
+
+# Update database
+sudo rkhunter --update
+
+# Warnings only
+sudo rkhunter --check --report-warnings-only
+
+# Update file properties
+sudo rkhunter --propupd
+</code>
+    </pre>
+ </body>
+</html>

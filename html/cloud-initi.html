@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Cloud-Init Command Overview
+  </title>
+ </head>
+ <body>
+  <h1>
+   Cloud-Init Command
+  </h1>
+  <p>
+   <code>
+    cloud-init
+   </code>
+   is a command-line utility used to handle early initialization of cloud instances. It configures system settings, networking, and user data on first boot.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       status
+      </code>
+     </td>
+     <td>
+      Displays the status of cloud-init configuration.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       init
+      </code>
+     </td>
+     <td>
+      Initializes cloud-init stages: local, config, final.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       modules
+      </code>
+     </td>
+     <td>
+      Execute specific cloud-init modules.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       clean
+      </code>
+     </td>
+     <td>
+      Cleans cloud-init, removing instance data and logs.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       single
+      </code>
+     </td>
+     <td>
+      Runs a single cloud-init module.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       collect-logs
+      </code>
+     </td>
+     <td>
+      Collects cloud-init logs and system information.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Check cloud-init status
+cloud-init status
+
+# Re-run cloud-init initialization
+cloud-init init
+
+# Run specific modules for network setup
+cloud-init modules --mode=config
+
+# Clean instance-specific data and logs
+cloud-init clean
+
+# Collect logs for troubleshooting
+cloud-init collect-logs
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>cloud-init status
+cloud-init init
+cloud-init modules --mode=<stage>
+cloud-init clean
+cloud-init collect-logs
+    </stage></code></pre>
+ </body>
+</html>

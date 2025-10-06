@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Packer Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   Packer Command Overview
+  </h1>
+  <p>
+   Packer is a tool for creating machine images for multiple platforms from a single source configuration.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      -version
+     </td>
+     <td>
+      Display the version of Packer.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      build
+     </td>
+     <td>
+      Build an image from a template file.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -debug
+     </td>
+     <td>
+      Enable debug mode for verbose output.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      validate
+     </td>
+     <td>
+      Validate a template file for errors.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      inspect
+     </td>
+     <td>
+      Show components of a template file.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <h3>
+   Build an Image
+  </h3>
+  <pre><code>packer build template.json</code></pre>
+  <h3>
+   Debug Mode
+  </h3>
+  <pre><code>PACKER_LOG=1 packer build template.json</code></pre>
+  <h3>
+   Validate a Template
+  </h3>
+  <pre><code>packer validate template.json</code></pre>
+  <h3>
+   Inspect a Template
+  </h3>
+  <pre><code>packer inspect template.json</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+packer build template.json
+PACKER_LOG=1 packer build template.json
+packer validate template.json
+packer inspect template.json
+    </code></pre>
+ </body>
+</html>

@@ -1,0 +1,119 @@
+<h1>
+ Helm Command Overview
+</h1>
+<p>
+ The
+ <code>
+  helm
+ </code>
+ command is a package manager for Kubernetes, used to streamline installing and managing Kubernetes applications.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     install
+    </code>
+   </td>
+   <td>
+    Install a chart.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     upgrade
+    </code>
+   </td>
+   <td>
+    Upgrade a release to a new version of a chart.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     uninstall
+    </code>
+   </td>
+   <td>
+    Uninstall a release.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     list
+    </code>
+   </td>
+   <td>
+    List all deployed releases.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     repo add
+    </code>
+   </td>
+   <td>
+    Add a new Helm chart repository.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     repo update
+    </code>
+   </td>
+   <td>
+    Update information on available charts.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     get values
+    </code>
+   </td>
+   <td>
+    Download the values file for a given release.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code>helm repo add stable https://charts.helm.sh/stable
+helm repo update
+helm install my-release stable/mysql
+helm list
+helm upgrade my-release stable/mysql
+helm uninstall my-release
+helm get values my-release</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code># Add repo and update
+helm repo add [name] [url]
+helm repo update
+
+# Install and manage releases
+helm install [release-name] [chart]
+helm list
+helm upgrade [release-name] [chart]
+helm uninstall [release-name]</code></pre>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Linux `sar` Command Guide
+  </title>
+ </head>
+ <body>
+  <main>
+   <h1>
+    Linux `sar` Command
+   </h1>
+   <section>
+    <p>
+     The
+     <code>
+      sar
+     </code>
+     command (System Activity Report) is used to collect, report, or save system activity
+                information. It helps monitor system performance and provides insights into various system metrics.
+    </p>
+   </section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        -u
+       </code>
+      </td>
+      <td>
+       Report CPU utilization.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -r
+       </code>
+      </td>
+      <td>
+       Report memory usage.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -b
+       </code>
+      </td>
+      <td>
+       Report I/O and transfer rates.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -n ALL
+       </code>
+      </td>
+      <td>
+       Report network statistics.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -P ALL
+       </code>
+      </td>
+      <td>
+       Report statistics for all processors.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -f file
+       </code>
+      </td>
+      <td>
+       Read data from a specified file.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -s time
+       </code>
+      </td>
+      <td>
+       Set start time for data collection.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -e time
+       </code>
+      </td>
+      <td>
+       Set end time for data collection.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <h2>
+    Usage Examples
+   </h2>
+   <section>
+    <pre><code>
+1. Check CPU utilization every 5 seconds for 3 reports:
+   sar -u 5 3
+
+2. Monitor memory usage over a period:
+   sar -r 5 3
+
+3. Get network statistics:
+   sar -n ALL 5 3
+
+4. Save data to a file and read it later:
+   sar -o datafile 5 3
+   sar -f datafile
+            </code></pre>
+   </section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <section>
+    <pre><code>
+CPU      : sar -u
+Memory   : sar -r
+Network  : sar -n ALL
+Disk I/O : sar -b
+All CPUs : sar -P ALL
+            </code></pre>
+   </section>
+  </main>
+ </body>
+</html>

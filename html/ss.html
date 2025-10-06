@@ -1,0 +1,130 @@
+<h1>
+ Understanding the Linux
+ <code>
+  ss
+ </code>
+ Command
+</h1>
+<p>
+ The
+ <code>
+  ss
+ </code>
+ command is used to view network socket information in Linux. It is a powerful tool for network troubleshooting and monitoring, providing details about TCP, UDP, and other socket connections.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -t
+    </code>
+   </td>
+   <td>
+    Show TCP sockets.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -u
+    </code>
+   </td>
+   <td>
+    Show UDP sockets.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -l
+    </code>
+   </td>
+   <td>
+    Show listening sockets.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -p
+    </code>
+   </td>
+   <td>
+    Show process using socket.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -a
+    </code>
+   </td>
+   <td>
+    Show all sockets.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -n
+    </code>
+   </td>
+   <td>
+    Do not resolve service names.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -s
+    </code>
+   </td>
+   <td>
+    Show summary statistics.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Display all listening TCP sockets
+ss -tl
+
+# Display all listening UDP sockets
+ss -ul
+
+# Display all connections with process info
+ss -p
+
+# Show detailed statistics for each protocol
+ss -s
+
+# Show all TCP and UDP connections without resolving service names
+ss -tan
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>ss -t         # Show TCP sockets
+ss -u         # Show UDP sockets
+ss -l         # Show listening sockets
+ss -p         # Show sockets with process info
+ss -a         # Show all sockets
+ss -n         # Numeric addresses
+ss -s         # Summary stats
+</code></pre>

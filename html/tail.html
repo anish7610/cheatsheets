@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Linux `tail` Command Guide
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Linux `tail` Command
+   </h1>
+  </header>
+  <section>
+   <h2>
+    Description
+   </h2>
+   <p>
+    The
+    <code>
+     tail
+    </code>
+    command is used to display the end of a file or stream.
+   </p>
+  </section>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        -n
+       </code>
+       <em>
+        number
+       </em>
+      </td>
+      <td>
+       Show the last
+       <em>
+        number
+       </em>
+       of lines.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -f
+       </code>
+      </td>
+      <td>
+       Output appended data as the file grows.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -c
+       </code>
+       <em>
+        number
+       </em>
+      </td>
+      <td>
+       Show the last
+       <em>
+        number
+       </em>
+       of bytes.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        --help
+       </code>
+      </td>
+      <td>
+       Display help and exit.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code># Display the last 10 lines of a file
+tail example.txt
+
+# Display the last 20 lines of a file
+tail -n 20 example.txt
+
+# Follow a log file as it grows
+tail -f /var/log/syslog
+
+# Display the last 50 bytes of a file
+tail -c 50 example.txt
+        </code></pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code>tail [options] <file>
+-n <number>  # lines
+-c <number>  # bytes
+-f           # follow</number></number></file></code></pre>
+  </section>
+ </body>
+</html>

@@ -1,0 +1,112 @@
+<h1>
+ Linux Command: chkrootkit
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ <code>
+  chkrootkit
+ </code>
+ is a tool to locally check for signs of a rootkit infection on a Linux system. It scans system binaries and searches for known rootkit signatures.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -h
+    </code>
+   </td>
+   <td>
+    Display help information.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -q
+    </code>
+   </td>
+   <td>
+    Run in quiet mode (minimal output).
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -r
+     <em>
+      dir
+     </em>
+    </code>
+   </td>
+   <td>
+    Specify an alternate root directory to scan.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -x
+    </code>
+   </td>
+   <td>
+    Perform expert mode tests.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -V
+    </code>
+   </td>
+   <td>
+    Display the version of chkrootkit.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Check the system for rootkits
+sudo chkrootkit
+
+# Run chkrootkit with quiet output
+sudo chkrootkit -q
+
+# Scan an alternate root directory
+sudo chkrootkit -r /mnt/other_system
+
+# Expert mode scan
+sudo chkrootkit -x
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code># Check system
+sudo chkrootkit
+
+# Quiet mode
+sudo chkrootkit -q
+
+# Alternate root dir
+sudo chkrootkit -r <em>dir</em>
+
+# Expert mode
+sudo chkrootkit -x
+</code></pre>

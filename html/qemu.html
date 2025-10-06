@@ -1,0 +1,131 @@
+<h1>
+ QEMU Command Overview
+</h1>
+<p>
+ <code>
+  qemu
+ </code>
+ is a generic and open-source machine emulator and virtualizer, allowing you to run programs for one type of machine on a different one.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -hda &lt;file&gt;
+    </code>
+   </td>
+   <td>
+    Use the specified file as the first hard drive image.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -m &lt;size&gt;
+    </code>
+   </td>
+   <td>
+    Set the guest RAM size, e.g.,
+    <code>
+     -m 512
+    </code>
+    for 512 MB.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -cdrom &lt;file&gt;
+    </code>
+   </td>
+   <td>
+    Use the specified file as a virtual CD-ROM.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -boot order=&lt;order&gt;
+    </code>
+   </td>
+   <td>
+    Set boot order, e.g.,
+    <code>
+     -boot order=dc
+    </code>
+    for disk then CD-ROM.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -cpu &lt;model&gt;
+    </code>
+   </td>
+   <td>
+    Select CPU model and features.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -enable-kvm
+    </code>
+   </td>
+   <td>
+    Enable KVM full virtualization support.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -smp &lt;cpus&gt;
+    </code>
+   </td>
+   <td>
+    Set the number of CPUs for the guest system.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Start a VM with 1 GB RAM and a specified disk image
+qemu-system-x86_64 -hda /path/to/disk.img -m 1024
+
+# Boot from an ISO image with KVM support
+qemu-system-x86_64 -cdrom /path/to/os.iso -enable-kvm
+
+# Specify CPU model and multi-core support 
+qemu-system-x86_64 -cpu host -smp 4 -hda /path/to/disk.img
+
+# Boot with a specific order, disk then CD-ROM
+qemu-system-x86_64 -boot order=dc -hda /path/to/disk.img -cdrom /path/to/os.iso
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+-hda &lt;file&gt;       # Set hard drive image
+-m &lt;size&gt;         # RAM size in MB
+-cdrom &lt;file&gt;    # Set CD-ROM image
+-boot order=&lt;order&gt; # Boot order
+-enable-kvm        # KVM support
+-smp &lt;cpus&gt;       # Number of CPUs
+-cpu &lt;model&gt;      # CPU model
+</code></pre>

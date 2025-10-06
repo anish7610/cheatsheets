@@ -1,0 +1,107 @@
+<h1>
+ Understanding the Linux Command: getfacl
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  getfacl
+ </code>
+ command is used to display the Access Control Lists (ACLs) of files and directories in Linux, providing detailed permissions beyond the traditional owner-group-others model.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -a
+    </code>
+   </td>
+   <td>
+    Display the access ACL.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -d
+    </code>
+   </td>
+   <td>
+    Display the default ACL, if present.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -e
+    </code>
+   </td>
+   <td>
+    Display output in a more easily parsed format.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -R
+    </code>
+   </td>
+   <td>
+    Recursively display ACLs of all files and directories.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --version
+    </code>
+   </td>
+   <td>
+    Output version information and exit.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Display ACLs for a file
+getfacl filename.txt
+
+# Display ACLs for a directory
+getfacl /path/to/directory
+
+# Display default ACLs (if any) for a directory
+getfacl -d /path/to/directory
+
+# Recursively display ACLs for all files in a directory
+getfacl -R /path/to/directory
+
+# Use in a script with a parsable output
+getfacl -e filename.txt
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>getfacl [options] <file>
+-a    # Access ACL
+-d    # Default ACL
+-e    # Parsable output
+-R    # Recursive
+</file></code></pre>

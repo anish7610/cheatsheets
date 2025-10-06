@@ -1,0 +1,126 @@
+<h1>
+ Linux Command:
+ <code>
+  more
+ </code>
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  more
+ </code>
+ command is used to view the contents of a file one screen at a time, allowing easy navigation through large files.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -num
+    </code>
+   </td>
+   <td>
+    Lines per page. Displays
+    <code>
+     num
+    </code>
+    lines per screen.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     +num
+    </code>
+   </td>
+   <td>
+    Start displaying at line
+    <code>
+     num
+    </code>
+    .
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     +/string
+    </code>
+   </td>
+   <td>
+    Start displaying at the first occurrence of
+    <code>
+     string
+    </code>
+    .
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -d
+    </code>
+   </td>
+   <td>
+    Prompt for next page with instructions.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -c
+    </code>
+   </td>
+   <td>
+    Clear the screen before displaying the next page.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre>
+<code># View a file one screen at a time
+more filename.txt
+
+# Display 20 lines per page
+more -20 filename.txt
+
+# Start displaying from line 5
+more +5 filename.txt
+
+# Start displaying from the first occurrence of "error"
+more +/error filename.txt
+
+# Use a clearer display with prompts
+more -d -c filename.txt
+</code>
+</pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre>
+<code>
+more filename.txt      # View file page by page
+more -num filename.txt # Set custom lines per page
+more +num filename.txt # Start at specific line
+more +/string filename.txt # Start at search string
+</code>
+</pre>

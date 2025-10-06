@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Linux umount Command
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Linux
+    <code>
+     umount
+    </code>
+    Command
+   </h1>
+  </header>
+  <section>
+   <h2>
+    Description
+   </h2>
+   <p>
+    The
+    <code>
+     umount
+    </code>
+    command is used to unmount filesystems in Linux. It detaches the filesystem from the file hierarchy.
+   </p>
+  </section>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        -a
+       </code>
+      </td>
+      <td>
+       Unmount all filesystems mentioned in
+       <code>
+        /etc/mtab
+       </code>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -f
+       </code>
+      </td>
+      <td>
+       Force unmount (useful for unreachable NFS systems)
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -l
+       </code>
+      </td>
+      <td>
+       Lazy unmount (detach the filesystem now, clean up after)
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -v
+       </code>
+      </td>
+      <td>
+       Enable verbose mode
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code># Unmount a filesystem by specifying the directory
+umount /mnt/external_drive
+
+# Force unmount if the usual unmount fails
+umount -f /mnt/external_drive
+
+# Lazy unmount a remote NFS mount
+umount -l /mnt/remote_nfs
+
+# Unmount all filesystems from /etc/mtab
+umount -a</code></pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code>umount [options] <target>
+-a Unmount all
+-f Force
+-l Lazy
+-v Verbose</target></code></pre>
+  </section>
+ </body>
+</html>

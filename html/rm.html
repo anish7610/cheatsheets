@@ -1,0 +1,100 @@
+<h1>
+ Linux Command:
+ <code>
+  rm
+ </code>
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  rm
+ </code>
+ command is used to remove files or directories in a Linux system.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -i
+    </code>
+   </td>
+   <td>
+    Prompt before every removal.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -r
+    </code>
+   </td>
+   <td>
+    Remove directories and their contents recursively.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -f
+    </code>
+   </td>
+   <td>
+    Force removal without prompting for confirmation.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -v
+    </code>
+   </td>
+   <td>
+    Verbose output showing what is being done.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Remove a single file
+rm filename.txt
+
+# Remove a file with confirmation
+rm -i filename.txt
+
+# Remove a directory and its contents
+rm -r dirname/
+
+# Force remove a file without prompt
+rm -f importantfile.txt
+
+# Verbose removal of multiple files
+rm -v file1.txt file2.txt
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>rm file          # Remove file
+rm -i file       # Confirm remove
+rm -r dir        # Recursively remove directory
+rm -f file       # Force remove
+rm -v file       # Verbose remove
+</code></pre>

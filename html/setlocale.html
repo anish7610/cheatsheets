@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Linux setlocale Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   setlocale Command
+  </h1>
+  <p>
+   The
+   <code>
+    setlocale
+   </code>
+   command in Linux is used to modify or retrieve the current locale settings of an environment. It helps in setting language, currency, date format, and more.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       LC_CTYPE
+      </code>
+     </td>
+     <td>
+      Character classification and case conversion.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       LC_COLLATE
+      </code>
+     </td>
+     <td>
+      String comparison rules.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       LC_TIME
+      </code>
+     </td>
+     <td>
+      Date and time formatting.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       LC_NUMERIC
+      </code>
+     </td>
+     <td>
+      Numeric formatting (e.g., decimal point).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       LC_MONETARY
+      </code>
+     </td>
+     <td>
+      Currency formatting.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       LC_MESSAGES
+      </code>
+     </td>
+     <td>
+      Format and language of system messages.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Set locale for all categories
+export LANG=en_US.UTF-8
+
+# Set locale only for numeric formatting
+export LC_NUMERIC=de_DE.UTF-8
+
+# Display current locale settings
+locale
+</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code># Set locale
+export VARIABLE=locale_value
+
+# Check current locales
+locale
+</code></pre>
+ </body>
+</html>

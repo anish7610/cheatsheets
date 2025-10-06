@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Traceroute Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   Traceroute Command
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    traceroute
+   </code>
+   command is used to display the route and measure the transit delays of packets across a network.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -n
+      </code>
+     </td>
+     <td>
+      Display addresses numerically, without resolving hostnames.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -m
+      </code>
+      <em>
+       max_hops
+      </em>
+     </td>
+     <td>
+      Set the maximum number of hops (TTL) to the given
+      <em>
+       max_hops
+      </em>
+      .
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -p
+      </code>
+      <em>
+       port
+      </em>
+     </td>
+     <td>
+      Use the given
+      <em>
+       port
+      </em>
+      for the first test instead of the default port (33434).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -q
+      </code>
+      <em>
+       nqueries
+      </em>
+     </td>
+     <td>
+      Set the number of probe packets sent per hop.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -w
+      </code>
+      <em>
+       timeout
+      </em>
+     </td>
+     <td>
+      Specify the time (in seconds) to wait for a response to a probe.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <h3>
+   Basic Traceroute
+  </h3>
+  <pre><code>traceroute example.com</code></pre>
+  <h3>
+   Traceroute Without DNS Resolution
+  </h3>
+  <pre><code>traceroute -n example.com</code></pre>
+  <h3>
+   Set Maximum Hops
+  </h3>
+  <pre><code>traceroute -m 15 example.com</code></pre>
+  <h3>
+   Specify Number of Queries per Hop
+  </h3>
+  <pre><code>traceroute -q 1 example.com</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+traceroute [options] [destination]
+-n          # No DNS resolution
+-m <hops>   # Max hops
+-q <n>      # Number of queries
+-p <port>   # Initial destination port
+-w <time>   # Timeout per probe
+    </time></port></n></hops></code></pre>
+ </body>
+</html>

@@ -1,0 +1,153 @@
+<html>
+ <body>
+  <h1>
+   DNF Command Overview
+  </h1>
+  <p>
+   DNF (Dandified YUM) is a package manager for RPM-based distributions. It automatically resolves dependencies and maintains packages.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       install
+      </code>
+     </td>
+     <td>
+      Installs a package.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       remove
+      </code>
+     </td>
+     <td>
+      Uninstalls a package.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       update
+      </code>
+     </td>
+     <td>
+      Updates all packages or a specific package.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       search
+      </code>
+     </td>
+     <td>
+      Searches for a package by name.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       list
+      </code>
+     </td>
+     <td>
+      Lists available packages or installed packages.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       info
+      </code>
+     </td>
+     <td>
+      Displays information about a package.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       clean
+      </code>
+     </td>
+     <td>
+      Cleans cached metadata and packages.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <h3>
+   Install a Package
+  </h3>
+  <pre><code># dnf install httpd</code></pre>
+  <h3>
+   Remove a Package
+  </h3>
+  <pre><code># dnf remove httpd</code></pre>
+  <h3>
+   Update All Packages
+  </h3>
+  <pre><code># dnf update</code></pre>
+  <h3>
+   Search for a Package
+  </h3>
+  <pre><code># dnf search nginx</code></pre>
+  <h3>
+   List Installed Packages
+  </h3>
+  <pre><code># dnf list installed</code></pre>
+  <h3>
+   Get Package Info
+  </h3>
+  <pre><code># dnf info python</code></pre>
+  <h3>
+   Clean Metadata
+  </h3>
+  <pre><code># dnf clean all</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+# Install a package
+dnf install <package>
+
+# Remove a package
+dnf remove <package>
+
+# Update packages
+dnf update [<package>]
+
+# Search for a package
+dnf search <term>
+
+# List available/installed packages
+dnf list [installed]
+
+# Package information
+dnf info <package>
+
+# Clean cache
+dnf clean all
+    </package></term></package></package></package></code></pre>
+ </body>
+</html>

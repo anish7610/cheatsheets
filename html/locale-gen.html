@@ -1,0 +1,99 @@
+<h1>
+ Linux Command: locale-gen
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  locale-gen
+ </code>
+ command is used to compile and generate locale data files from the settings in
+ <code>
+  /etc/locale.gen
+ </code>
+ . It enables the system to support multiple languages and regional settings.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     --purge
+    </code>
+   </td>
+   <td>
+    Remove any locale data files not specified in
+    <code>
+     /etc/locale.gen
+    </code>
+    .
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -v
+    </code>
+    ,
+    <code>
+     --verbose
+    </code>
+   </td>
+   <td>
+    Provide detailed output during generation.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<h3>
+ Generate All Locales Specified in
+ <code>
+  /etc/locale.gen
+ </code>
+</h3>
+<pre><code>sudo locale-gen</code></pre>
+<h3>
+ Generate Specific Locale
+</h3>
+<p>
+ Edit
+ <code>
+  /etc/locale.gen
+ </code>
+ and uncomment the desired locale, then run:
+</p>
+<pre><code>sudo locale-gen</code></pre>
+<h3>
+ Purge Unspecified Locales
+</h3>
+<pre><code>sudo locale-gen --purge</code></pre>
+<h3>
+ Verbose Output
+</h3>
+<pre><code>sudo locale-gen --verbose</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+sudo locale-gen              // Generate locales from /etc/locale.gen
+sudo locale-gen --purge      // Remove unlisted locales
+sudo locale-gen --verbose    // Verbose output
+</code></pre>

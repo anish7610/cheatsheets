@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Linux Expect Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   Linux `expect` Command
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    expect
+   </code>
+   command automates interactions with programs that require user input. It scripts dialogue with other interactive applications like telnet, ftp, etc.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -c &lt;command&gt;
+      </code>
+     </td>
+     <td>
+      Execute a command in
+      <code>
+       expect
+      </code>
+      shell.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -d
+      </code>
+     </td>
+     <td>
+      Enable debug mode to display what
+      <code>
+       expect
+      </code>
+      is doing.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -f &lt;file&gt;
+      </code>
+     </td>
+     <td>
+      Run a script from a specified file.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -h
+      </code>
+     </td>
+     <td>
+      Display help information.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -v
+      </code>
+     </td>
+     <td>
+      Display version information.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code>
+#!/usr/bin/expect
+spawn ssh user@hostname
+expect "password:"
+send "your_password\r"
+interact
+    </code></pre>
+  <pre><code>
+#!/usr/bin/expect -f
+spawn ftp ftp.example.com
+expect "Name*:"
+send "username\r"
+expect "Password:"
+send "password\r"
+interact
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+# Autologin via SSH
+expect -c "
+   spawn ssh user@host
+   expect \"password:\"
+   send \"pass\r\"
+   interact
+"
+
+# Run Expect script from file
+expect -f script_file.exp
+    </code></pre>
+ </body>
+</html>

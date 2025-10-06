@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Node Command Guide
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Node Command in Linux
+   </h1>
+  </header>
+  <section>
+   <h2>
+    Description
+   </h2>
+   <p>
+    The
+    <code>
+     node
+    </code>
+    command runs Node.js, a JavaScript runtime built on Chrome's V8 JavaScript engine.
+   </p>
+  </section>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        -v
+       </code>
+       ,
+       <code>
+        --version
+       </code>
+      </td>
+      <td>
+       Outputs the Node.js version.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -e
+       </code>
+       ,
+       <code>
+        --eval
+       </code>
+      </td>
+      <td>
+       Evaluates JavaScript code from the command line.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -p
+       </code>
+       ,
+       <code>
+        --print
+       </code>
+      </td>
+      <td>
+       Evaluates and prints the result of JavaScript code.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        --check
+       </code>
+      </td>
+      <td>
+       Syntax check the script without executing.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        --inspect
+       </code>
+      </td>
+      <td>
+       Activates the inspector, for debugging.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code>node -v
+# Outputs the current Node.js version.
+
+node -e "console.log('Hello, World!')"
+# Runs a simple script to print "Hello, World!".
+
+node -p "1 + 1"
+# Prints the result of the expression, outputting "2".
+
+node script.js
+# Executes the JavaScript file <em>script.js</em>.
+
+node --check script.js
+# Checks <em>script.js</em> for syntax errors.</code></pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code>node -v             # Show version
+node -e "code"     # Eval code
+node script.js     # Run script
+node --check file  # Syntax check file</code></pre>
+  </section>
+ </body>
+</html>

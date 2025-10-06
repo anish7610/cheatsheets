@@ -1,0 +1,77 @@
+<h1>
+ Linux Command: tload
+</h1>
+<p>
+ The
+ <code>
+  tload
+ </code>
+ command displays a graph of system load average over time in the terminal.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    -d, --delay &lt;seconds&gt;
+   </td>
+   <td>
+    Set delay between updates (default is 1 second).
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -s, --scale &lt;value&gt;
+   </td>
+   <td>
+    Specify scaling value for the graph (auto if not provided).
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -V, --version
+   </td>
+   <td>
+    Display version information and exit.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    --help
+   </td>
+   <td>
+    Display help message and exit.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Display load average graph with default settings
+tload
+
+# Update every 2 seconds
+tload -d 2
+
+# Set scale value to 5
+tload -s 5
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code># tload: Display system load average
+tload [-d seconds] [-s value]
+</code></pre>

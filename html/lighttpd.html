@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Lighttpd Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   Lighttpd Command Guide
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    lighttpd
+   </code>
+   command is used to start and manage the Lighttpd web server, known for its speed and small footprint.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -f
+      </code>
+     </td>
+     <td>
+      Specifies an alternative configuration file to use instead of the default.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -m
+      </code>
+     </td>
+     <td>
+      Sets the base directory for modules.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -p
+      </code>
+     </td>
+     <td>
+      Prints the configuration file after reading it.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -t
+      </code>
+     </td>
+     <td>
+      Tests the configuration file for syntax errors.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -D
+      </code>
+     </td>
+     <td>
+      Runs in the foreground; useful for debugging.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -v
+      </code>
+     </td>
+     <td>
+      Displays version information.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Examples
+  </h2>
+  <pre><code># Start Lighttpd using a custom configuration
+lighttpd -f /path/to/config.conf
+
+# Test the configuration file for errors
+lighttpd -t -f /etc/lighttpd/lighttpd.conf
+
+# Run in the foreground for debugging
+lighttpd -D -f /etc/lighttpd/lighttpd.conf
+
+# Print the configuration file after processing
+lighttpd -p -f /etc/lighttpd/lighttpd.conf
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>Start    : lighttpd -f config.conf
+Test     : lighttpd -t -f config.conf
+Debug    : lighttpd -D -f config.conf
+Version  : lighttpd -v
+Print    : lighttpd -p -f config.conf
+    </code></pre>
+ </body>
+</html>

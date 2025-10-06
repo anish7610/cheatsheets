@@ -1,0 +1,84 @@
+<html>
+ <body>
+  <h1>
+   pgAdmin Command Overview
+  </h1>
+  <p>
+   pgAdmin is a popular open-source management tool for administering PostgreSQL and its related databases. It provides a graphical interface for database management and query execution.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      -h
+     </td>
+     <td>
+      Specify the host of the PostgreSQL server
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -p
+     </td>
+     <td>
+      Specify the port number (default is 5432)
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -U
+     </td>
+     <td>
+      Specify the username to connect with
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -d
+     </td>
+     <td>
+      Specify the database name
+     </td>
+    </tr>
+    <tr>
+     <td>
+      --version
+     </td>
+     <td>
+      Show the version number of pgAdmin
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code>
+# Connect to a PostgreSQL server on localhost
+pgAdmin -h localhost -p 5432 -U myusername -d mydatabase
+
+# Display pgAdmin version
+pgAdmin --version
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+# Connect: pgAdmin -h <host> -p <port> -U <username> -d <database>
+# Version: pgAdmin --version
+    </database></username></port></host></code></pre>
+ </body>
+</html>

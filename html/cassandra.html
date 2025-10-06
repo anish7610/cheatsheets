@@ -1,0 +1,92 @@
+<html>
+ <body>
+  <h1>
+   Linux `cassandra` Command
+  </h1>
+  <p>
+   The
+   <code>
+    cassandra
+   </code>
+   command is used to start the Apache Cassandra database server, a distributed NoSQL database management system.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -f
+      </code>
+     </td>
+     <td>
+      Runs Cassandra in the foreground.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -p &lt;file&gt;
+      </code>
+     </td>
+     <td>
+      Records the process ID in the specified file.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -R
+      </code>
+     </td>
+     <td>
+      Forces recovery on the commit logs.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -Dcassandra.config=&lt;url&gt;
+      </code>
+     </td>
+     <td>
+      Specifies the path to the configuration file.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Start Cassandra in the foreground
+cassandra -f
+
+# Start Cassandra and log the process ID
+cassandra -p /var/run/cassandra.pid
+
+# Start Cassandra with a specific configuration file
+cassandra -Dcassandra.config=file:///path/to/cassandra.yaml
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+cassandra -f                      # Run in foreground
+cassandra -p <file>               # Log PID to file
+cassandra -R                      # Force commit log recovery
+cassandra -Dcassandra.config=<url> # Specify config file
+    </url></file></code></pre>
+ </body>
+</html>

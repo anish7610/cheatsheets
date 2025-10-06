@@ -1,0 +1,103 @@
+<h1>
+ Linux `install` Command
+</h1>
+<p>
+ The
+ <code>
+  install
+ </code>
+ command is used to copy files and set attributes. It's commonly used to copy files to system directories, set file permissions, and attributes.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -d
+    </code>
+   </td>
+   <td>
+    Create directories instead of copying files.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -m
+    </code>
+   </td>
+   <td>
+    Set file mode (permissions), e.g.,
+    <code>
+     -m 755
+    </code>
+    .
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -o
+    </code>
+   </td>
+   <td>
+    Set owner of the files.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -g
+    </code>
+   </td>
+   <td>
+    Set group ownership.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -t
+    </code>
+   </td>
+   <td>
+    Specify target directory.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Copy a file with specific permissions
+install -m 644 example.txt /usr/local/share/
+
+# Create a directory and set permissions
+install -d -m 755 /usr/local/myapp/
+
+# Copy multiple files to a target directory
+install -t /usr/local/bin/ script1.sh script2.sh
+
+# Copy a file and set owner and group
+install -o user -g group example.txt /home/user/
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>install -m [mode] [source] [destination]
+install -d -m [mode] [directory]
+install -t [target] [source...]
+</code></pre>

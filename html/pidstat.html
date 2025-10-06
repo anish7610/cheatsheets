@@ -1,0 +1,124 @@
+<h1>
+ pidstat Command in Linux
+</h1>
+<p>
+ The
+ <code>
+  pidstat
+ </code>
+ command is used to monitor individual tasks managed by the Linux kernel. It provides statistics on CPU, memory usage, and I/O operations for specific processes.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -u
+    </code>
+   </td>
+   <td>
+    Reports CPU usage.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -r
+    </code>
+   </td>
+   <td>
+    Reports page faults and memory usage.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -d
+    </code>
+   </td>
+   <td>
+    Reports I/O statistics.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -p [PID]
+    </code>
+   </td>
+   <td>
+    Monitors a specific process by PID.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -t
+    </code>
+   </td>
+   <td>
+    Includes thread statistics.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -h
+    </code>
+   </td>
+   <td>
+    Displays the help information.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -V
+    </code>
+   </td>
+   <td>
+    Displays version information.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Monitor CPU usage for all processes
+pidstat -u
+
+# Monitor CPU usage for a specific PID
+pidstat -u -p 1234
+
+# Monitor memory usage
+pidstat -r
+
+# Monitor disk I/O statistics for a specific PID
+pidstat -d -p 1234
+
+# Display help information
+pidstat -h
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>pidstat -u        # CPU usage
+pidstat -r        # Memory usage
+pidstat -d        # I/O statistics
+pidstat -p [PID]  # Monitor specific PID
+pidstat -t        # Include threads
+</code></pre>

@@ -1,0 +1,76 @@
+<h1>
+ Linux Command: finger
+</h1>
+<p>
+ The
+ <code>
+  finger
+ </code>
+ command displays information about system users, including their login name, real name, terminal name, idle time, login time, office location, and office phone number.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -l
+    </code>
+   </td>
+   <td>
+    Provides a long format listing including detailed information.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -s
+    </code>
+   </td>
+   <td>
+    Displays information in a short format (default).
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -p
+    </code>
+   </td>
+   <td>
+    Suppresses the display of the user's .plan file.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Display information about all logged-in users
+finger
+
+# Display detailed information about a specific user
+finger -l username
+
+# List information without showing the user's .plan file
+finger -p username
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>finger           # List all current users
+finger username  # Info about a specific user
+finger -l        # Detailed info about all users
+finger -p user   # User info, no .plan file</code></pre>

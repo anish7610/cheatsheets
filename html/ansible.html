@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Ansible Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   Ansible Command Guide
+  </h1>
+  <section>
+   <h2>
+    Description
+   </h2>
+   <p>
+    The
+    <code>
+     ansible
+    </code>
+    command is a tool for managing and automating the configuration of remote systems. It uses SSH connections to communicate with hosts.
+   </p>
+  </section>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        -i
+       </code>
+       /
+       <code>
+        --inventory
+       </code>
+      </td>
+      <td>
+       Specify inventory host path or comma-separated host list.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -m
+       </code>
+       /
+       <code>
+        --module-name
+       </code>
+      </td>
+      <td>
+       Specify the module to run on host.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -a
+       </code>
+       /
+       <code>
+        --args
+       </code>
+      </td>
+      <td>
+       Arguments for the module.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -u
+       </code>
+       /
+       <code>
+        --user
+       </code>
+      </td>
+      <td>
+       Specify the SSH user name.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -k
+       </code>
+      </td>
+      <td>
+       Prompt for SSH password.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code># Ping all hosts in the inventory
+ansible all -i inventory.ini -m ping
+
+# Run a command on a specific host
+ansible myserver -i inventory.ini -m shell -a "uptime"
+
+# Copy a file to all hosts
+ansible all -i inventory.ini -m copy -a "src=/path/to/local/file dest=/path/to/remote/"
+
+# Install a package on all hosts
+ansible all -i inventory.ini -m apt -a "name=htop state=latest" -u root
+        </code></pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code># Inventory: -i
+# Module: -m
+# Args: -a
+# User: -u
+# Password: -k
+        </code></pre>
+  </section>
+ </body>
+</html>

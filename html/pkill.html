@@ -1,0 +1,109 @@
+<h1>
+ Linux `pkill` Command
+</h1>
+<p>
+ The
+ <code>
+  pkill
+ </code>
+ command is used to terminate processes based on name, user, group, or other attributes. It's an advanced tool for process management.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -u
+    </code>
+   </td>
+   <td>
+    Match processes by the effective user ID.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -g
+    </code>
+   </td>
+   <td>
+    Match processes by process group ID.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -x
+    </code>
+   </td>
+   <td>
+    Match the exact process name.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -c
+    </code>
+   </td>
+   <td>
+    Display the number of processes matched.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -signal
+    </code>
+   </td>
+   <td>
+    Send a specific signal to the processes (e.g.,
+    <code>
+     -9
+    </code>
+    for SIGKILL).
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<h3>
+ Terminate All Processes Named "firefox"
+</h3>
+<pre><code>pkill firefox</code></pre>
+<h3>
+ Terminate All Processes for a Specific User "john"
+</h3>
+<pre><code>pkill -u john</code></pre>
+<h3>
+ Send SIGKILL to Processes Named "gedit"
+</h3>
+<pre><code>pkill -9 gedit</code></pre>
+<h3>
+ Restrict Termination to Exact Match for "bash"
+</h3>
+<pre><code>pkill -x bash</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+pkill <process_name>
+pkill -u <user> <process_name>
+pkill -9 <process_name>
+pkill -x <exact_process_name>
+</exact_process_name></process_name></process_name></user></process_name></code></pre>

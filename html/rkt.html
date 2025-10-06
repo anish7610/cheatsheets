@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   rkt Command Overview
+  </title>
+ </head>
+ <body>
+  <h1>
+   rkt Command Overview
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    rkt
+   </code>
+   command is a container runtime designed for executing App Container (ACI) images.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       --insecure-options=all
+      </code>
+     </td>
+     <td>
+      Disables all security features for testing purposes.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --trust-keys-from-https
+      </code>
+     </td>
+     <td>
+      Automatically trust image keys from secure URLs.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --interactive
+      </code>
+     </td>
+     <td>
+      Runs the container interactively, similar to a shell.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --memory
+      </code>
+     </td>
+     <td>
+      Limits the container's memory usage.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --cpu
+      </code>
+     </td>
+     <td>
+      Limits the container's CPU usage.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Run a container interactively with all security features disabled
+rkt run --interactive --insecure-options=all example.com/myapp
+
+# Run a container with trusted keys and limited resources
+rkt run example.com/myapp \
+    --trust-keys-from-https \
+    --memory=512M \
+    --cpu=2
+
+# List all running pods
+rkt list</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code># Interactive run
+rkt run --interactive
+
+# Disable security
+rkt run --insecure-options=all
+
+# Auto-trust HTTPS keys
+rkt run --trust-keys-from-https
+
+# List running containers
+rkt list</code></pre>
+ </body>
+</html>

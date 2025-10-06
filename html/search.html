@@ -1,0 +1,122 @@
+<h1>
+ Linux `search` Command
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  search
+ </code>
+ command is not a standard command in Linux. You might mean
+ <code>
+  grep
+ </code>
+ , which is used to search text using patterns within files. It outputs lines that match a specified pattern.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -i
+    </code>
+   </td>
+   <td>
+    Ignore case distinctions in patterns and data.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -r
+    </code>
+   </td>
+   <td>
+    Recursively search directories.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -n
+    </code>
+   </td>
+   <td>
+    Display line numbers with output lines.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -l
+    </code>
+   </td>
+   <td>
+    Show filenames only, not the matching text.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -v
+    </code>
+   </td>
+   <td>
+    Invert the match, displaying non-matching lines.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -c
+    </code>
+   </td>
+   <td>
+    Count the number of matches.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Search for the word 'example' in a file
+grep 'example' filename.txt
+
+# Case-insensitive search for 'hello' in all .txt files
+grep -i 'hello' *.txt
+
+# Recursively search for 'error' in all files in a directory
+grep -r 'error' /path/to/directory
+
+# Display line numbers for matches in a file
+grep -n 'todo' filename.txt
+
+# Count occurrences of 'success' in a log file
+grep -c 'success' logfile.log
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+grep 'pattern' file        # Basic usage
+grep -i 'pattern' file     # Ignore case
+grep -r 'pattern' dir      # Recursive search
+grep -n 'pattern' file     # Show line numbers
+grep -l 'pattern' *        # List files with matches
+</code></pre>

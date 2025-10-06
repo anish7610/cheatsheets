@@ -1,0 +1,129 @@
+<h1>
+ Linux Command: sqlite3
+</h1>
+<p>
+ <code>
+  sqlite3
+ </code>
+ is a command-line interface for interacting with SQLite databases, allowing users to execute SQL commands directly on database files.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -init
+     <i>
+      file
+     </i>
+    </code>
+   </td>
+   <td>
+    Read and execute commands from a specified initialization file
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -batch
+    </code>
+   </td>
+   <td>
+    Stop interactive I/O and limit output for batch processing
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -echo
+    </code>
+   </td>
+   <td>
+    Display each command before execution
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -column
+    </code>
+   </td>
+   <td>
+    Format output in columns
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -csv
+    </code>
+   </td>
+   <td>
+    Output results in CSV format
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -separator
+     <i>
+      sep
+     </i>
+    </code>
+   </td>
+   <td>
+    Specify output field separator (default is '|')
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -version
+    </code>
+   </td>
+   <td>
+    Display the SQLite version
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code><b>Create a new database and table:</b>
+sqlite3 my_database.db "CREATE TABLE users (id INTEGER PRIMARY KEY, name TEXT, age INTEGER);"
+
+<b>Insert data into the table:</b>
+sqlite3 my_database.db "INSERT INTO users (name, age) VALUES ('Alice', 30);"
+
+<b>Display data in column format:</b>
+sqlite3 -column -header my_database.db "SELECT * FROM users;"
+
+<b>Export table data to CSV:</b>
+sqlite3 -csv my_database.db "SELECT * FROM users;" &gt; users.csv
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+sqlite3 database.db - Execute commands on a database file
+-init file         - Run commands from a file
+-batch             - Non-interactive mode
+-column            - Column output format
+-csv               - CSV output format
+-separator sep     - Set output field separator
+-version           - Show SQLite version
+</code></pre>

@@ -1,0 +1,130 @@
+<h1>
+ sftp Command in Linux
+</h1>
+<p>
+ The
+ <code>
+  sftp
+ </code>
+ command is used for secure file transfer over SSH. It supports various operations like file transfer, navigation, and renaming files.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    -b
+    <em>
+     batchfile
+    </em>
+   </td>
+   <td>
+    Run commands from a batchfile on start up.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -C
+   </td>
+   <td>
+    Enable compression.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -i
+    <em>
+     identity_file
+    </em>
+   </td>
+   <td>
+    Specifies the file from which the identity (private key) for public key authentication is read.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -o
+    <em>
+     option
+    </em>
+   </td>
+   <td>
+    Passes an option to SSH in the format used in
+    <code>
+     ssh_config
+    </code>
+    .
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -P
+    <em>
+     port
+    </em>
+   </td>
+   <td>
+    Port to connect to on the remote host.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -q
+   </td>
+   <td>
+    Quiet mode; suppresses the progress meter and non-error messages.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -r
+   </td>
+   <td>
+    Recursively copy entire directories.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Connect to a remote host
+sftp user@hostname
+
+# Connect using a specific port
+sftp -P 2222 user@hostname
+
+# Upload a file to the remote host
+put localfile.txt
+
+# Download a file from the remote host
+get remotefile.txt
+
+# Use a specific identity file for authentication
+sftp -i ~/.ssh/id_rsa user@hostname
+
+# Download an entire directory recursively
+sftp -r user@hostname:/path/to/remote_dir /path/to/local_dir
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+sftp user@hostname                # Connect to host
+sftp -P 2222 user@hostname        # Connect using port 2222
+sftp -i ~/.ssh/id_rsa user@host   # Use custom key
+put <local>                       # Upload file
+get <remote>                      # Download file
+</remote></local></code></pre>

@@ -1,0 +1,114 @@
+<h1>
+ Description of the
+ <code>
+  sudo
+ </code>
+ Command
+</h1>
+<p>
+ The
+ <code>
+  sudo
+ </code>
+ command allows a permitted user to execute a command as the superuser or another user, as specified by the security policy.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -u
+    </code>
+   </td>
+   <td>
+    Run command as a specified user.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -b
+    </code>
+   </td>
+   <td>
+    Run the command in the background.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -i
+    </code>
+   </td>
+   <td>
+    Run the shell as the login shell for the user.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -l
+    </code>
+    or
+    <code>
+     --list
+    </code>
+   </td>
+   <td>
+    List the allowed (and forbidden) commands.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -k
+    </code>
+    or
+    <code>
+     --reset-timestamp
+    </code>
+   </td>
+   <td>
+    Invalidate the user's timestamp.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Update package lists as superuser
+sudo apt update
+
+# Run a command as another user
+sudo -u username command
+
+# Open an interactive root shell
+sudo -i
+
+# Background execution of a command
+sudo -b command
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+sudo command       # Run command as superuser
+sudo -u user cmd   # Run as a specific user
+sudo -b cmd        # Run in background
+sudo -i            # Interactive shell as root
+sudo -l            # List allowed commands
+</code></pre>

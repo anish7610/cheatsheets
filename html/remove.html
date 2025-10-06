@@ -1,0 +1,105 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Linux `rm` Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   Linux `rm` Command
+  </h1>
+  <p>
+   The `rm` command is used to remove files or directories from the filesystem.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      -f, --force
+     </td>
+     <td>
+      Ignore nonexistent files and do not prompt.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -i
+     </td>
+     <td>
+      Prompt before every removal.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -r, -R, --recursive
+     </td>
+     <td>
+      Remove directories and their contents recursively.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -d, --dir
+     </td>
+     <td>
+      Remove empty directories.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      --help
+     </td>
+     <td>
+      Display help information about the `rm` command.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code>
+# Remove a file
+rm file.txt
+
+# Remove multiple files
+rm file1.txt file2.txt
+
+# Remove a directory and its contents recursively
+rm -r directory_name
+
+# Force remove a file without prompting
+rm -f file.txt
+
+# Prompt before removing each file
+rm -i file.txt
+
+# Remove an empty directory
+rm -d empty_directory
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+rm [OPTION]... FILE...
+rm -f filename          # Force remove
+rm -i filename          # Interactive remove
+rm -r directory         # Recursive remove
+rm -d directory         # Remove empty directory
+    </code></pre>
+ </body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   redis-cli Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   redis-cli Command Overview
+  </h1>
+  <p>
+   The
+   <code>
+    redis-cli
+   </code>
+   command-line interface is used to interact with Redis, a key-value store database. It allows users to execute commands, manage data, and retrieve information from a Redis server.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -h
+      </code>
+     </td>
+     <td>
+      Specify the Redis server hostname (default: 127.0.0.1).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -p
+      </code>
+     </td>
+     <td>
+      Specify the Redis server port (default: 6379).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -a
+      </code>
+     </td>
+     <td>
+      Authenticate with the specified password.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -n
+      </code>
+     </td>
+     <td>
+      Select the database number (default: 0).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -c
+      </code>
+     </td>
+     <td>
+      Enable command line history and completion features.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Connect to local Redis server
+redis-cli
+
+# Connect to Redis server with specific host and port
+redis-cli -h myredisserver.com -p 6380
+
+# Connect with authentication
+redis-cli -a mypassword
+
+# Select a different database
+redis-cli -n 2
+
+# Set and get a key-value pair
+redis-cli set mykey "Hello"
+redis-cli get mykey
+</code></pre>
+  <h2>
+   Quick Reference
+  </h2>
+  <pre><code>
+# Connect to Redis
+redis-cli -h [host] -p [port] -a [password] -n [db]
+
+# Common operations
+SET key value
+GET key
+DEL key
+KEYS pattern
+</code></pre>
+ </body>
+</html>

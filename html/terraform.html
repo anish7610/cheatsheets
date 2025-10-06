@@ -1,0 +1,117 @@
+<h1>
+ Linux Command: terraform
+</h1>
+<p>
+ <code>
+  terraform
+ </code>
+ is an open-source infrastructure as code software tool that provides a consistent CLI workflow to manage hundreds of cloud services. It allows users to define and provision data center infrastructure using a declarative configuration language.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     init
+    </code>
+   </td>
+   <td>
+    Initializes a new or existing Terraform configuration.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     plan
+    </code>
+   </td>
+   <td>
+    Creates an execution plan, showing what actions Terraform will take.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     apply
+    </code>
+   </td>
+   <td>
+    Applies the changes required to reach the desired state of the configuration.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     destroy
+    </code>
+   </td>
+   <td>
+    Removes infrastructure managed by Terraform.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     validate
+    </code>
+   </td>
+   <td>
+    Validates the Terraform files without applying any changes.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     output
+    </code>
+   </td>
+   <td>
+    Reads an output variable from a Terraform state file.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Initialize Terraform configuration
+terraform init
+
+# Create an execution plan
+terraform plan
+
+# Apply the changes to achieve desired state
+terraform apply
+
+# Destroy infrastructure managed by Terraform
+terraform destroy
+
+# Validate Terraform configuration
+terraform validate
+
+# Output a specific variable
+terraform output &lt;variable_name&gt;
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>terraform init - Reinitialize your working directory.
+terraform plan - Preview changes before applying.
+terraform apply - Enact configuration changes.
+terraform destroy - Tear down infrastructure.
+terraform validate - Check configuration syntax and validity.
+terraform output - Retrieve value from state. 
+</code></pre>

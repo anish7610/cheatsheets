@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   fdisk Command Overview
+  </title>
+ </head>
+ <body>
+  <h1>
+   fdisk Command Overview
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    fdisk
+   </code>
+   command is used to view and manage disk partitions on Linux systems. It allows you to create, delete, and modify partitions on a hard disk.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -l
+      </code>
+     </td>
+     <td>
+      List partition tables for specified devices.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -n
+      </code>
+     </td>
+     <td>
+      Create a new partition.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -d
+      </code>
+     </td>
+     <td>
+      Delete a partition.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -t
+      </code>
+     </td>
+     <td>
+      Change the partition type.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -v
+      </code>
+     </td>
+     <td>
+      Display version information.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -c
+      </code>
+     </td>
+     <td>
+      Switch to DOS compatibility mode.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># List all partitions on all devices
+fdisk -l
+
+# Create a new partition on /dev/sda
+fdisk /dev/sda
+# (Interactive menu will prompt for changes)
+
+# Delete a partition on /dev/sda
+fdisk /dev/sda
+# (Interactive menu will prompt, use 'd' for delete)</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>fdisk -l              # List partitions
+fdisk /dev/sda        # Start fdisk on /dev/sda
+Use 'n'               # Create new partition
+Use 'd'               # Delete partition
+Use 't'               # Change partition type
+Use 'w'               # Write changes</code></pre>
+ </body>
+</html>

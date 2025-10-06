@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Linux Locales Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   Linux `locales` Command
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    locales
+   </code>
+   command displays information about the current locale settings in Linux, which define region-specific formats for dates, times, numbers, and more.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <tr>
+    <th>
+     Option
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      -a
+     </code>
+    </td>
+    <td>
+     List all available locales.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>
+      -m
+     </code>
+    </td>
+    <td>
+     List available charmaps.
+    </td>
+   </tr>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># List all available locales
+locales -a
+
+# Display available charmaps
+locales -m
+
+# Check current locale settings
+locale
+</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code># List all locales
+locales -a
+
+# List charmaps
+locales -m
+
+# Show current locale settings
+locale
+</code></pre>
+ </body>
+</html>

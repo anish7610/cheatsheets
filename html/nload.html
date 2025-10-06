@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   nload Command
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    nload Command
+   </h1>
+  </header>
+  <section>
+   <h2>
+    Description
+   </h2>
+   <p>
+    <code>
+     nload
+    </code>
+    is a command-line tool for monitoring network traffic and bandwidth usage in real-time, displaying incoming and outgoing traffic separately.
+   </p>
+  </section>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        -a [time]
+       </code>
+      </td>
+      <td>
+       Sets the length of the average calculation period to [time] seconds.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -i [interval]
+       </code>
+      </td>
+      <td>
+       Determines the refresh interval for the display in milliseconds.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -u [unit]
+       </code>
+      </td>
+      <td>
+       Sets the display unit (H for auto, K for kBytes, M for MBytes).
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -m
+       </code>
+      </td>
+      <td>
+       Monitors all network devices instead of specifying one.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        --help
+       </code>
+      </td>
+      <td>
+       Displays help information.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code>
+# Monitor default network interface
+nload
+
+# Monitor a specific network interface, e.g., eth0
+nload eth0
+
+# Set the average calculation period to 5 seconds
+nload -a 5
+
+# Refresh display every 500 milliseconds
+nload -i 500
+
+# Display bandwidth in kilobytes
+nload -u K
+        </code></pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code>
+nload [interface]            # Monitor default or specified interface
+-a [time]                    # Set average period
+-i [interval]                # Set refresh interval
+-u [unit]                    # Set display unit
+-m                           # Monitor all devices
+        </code></pre>
+  </section>
+ </body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   HAProxy Command Overview
+  </title>
+ </head>
+ <body>
+  <h1>
+   HAProxy Command Overview
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   HAProxy is a high-performance TCP/HTTP load balancer used to distribute workloads across multiple servers.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      -f &lt;file&gt;
+     </td>
+     <td>
+      Specifies the configuration file to use.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -v
+     </td>
+     <td>
+      Displays the version and exits.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -c
+     </td>
+     <td>
+      Checks the configuration file for syntax errors.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -d
+     </td>
+     <td>
+      Starts in debug mode.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -q
+     </td>
+     <td>
+      Quiet mode, suppresses output at startup.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code>
+# Start HAProxy with a specific configuration file
+haproxy -f /etc/haproxy/haproxy.cfg
+
+# Check HAProxy configuration for errors
+haproxy -c -f /etc/haproxy/haproxy.cfg
+
+# Start HAProxy in debug mode
+haproxy -d -f /etc/haproxy/haproxy.cfg
+
+# Display HAProxy version
+haproxy -v
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+# Start with config:
+haproxy -f &lt;config_file&gt;
+
+# Check config:
+haproxy -c -f &lt;config_file&gt;
+
+# Debug mode:
+haproxy -d -f &lt;config_file&gt;
+
+# Version:
+haproxy -v
+    </code></pre>
+ </body>
+</html>

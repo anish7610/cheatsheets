@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Virsh Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   Virsh Command Guide
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   Virsh is a command-line interface tool for managing virtual machines and interacting with the virtualization layer of Linux systems. It primarily works with QEMU/KVM and libvirt.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table border="1" cellpadding="5" cellspacing="0">
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       list
+      </code>
+     </td>
+     <td>
+      List all running virtual machines.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       start &lt;vm-name&gt;
+      </code>
+     </td>
+     <td>
+      Start a specified virtual machine.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       shutdown &lt;vm-name&gt;
+      </code>
+     </td>
+     <td>
+      Shutdown a specified virtual machine gracefully.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       destroy &lt;vm-name&gt;
+      </code>
+     </td>
+     <td>
+      Forcefully stop a specified virtual machine.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       autostart &lt;vm-name&gt;
+      </code>
+     </td>
+     <td>
+      Set a virtual machine to start automatically at boot.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       undefine &lt;vm-name&gt;
+      </code>
+     </td>
+     <td>
+      Remove a virtual machine definition.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># List running VMs
+virsh list
+
+# Start a VM named 'my-vm'
+virsh start my-vm
+
+# Shutdown a VM named 'my-vm'
+virsh shutdown my-vm
+
+# Force stop a VM named 'my-vm'
+virsh destroy my-vm
+
+# Set 'my-vm' to autostart
+virsh autostart my-vm
+
+# Remove the VM definition of 'my-vm'
+virsh undefine my-vm
+</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>list         # List VMs
+start        # Start VM
+shutdown     # Shutdown VM
+destroy      # Force stop VM
+autostart    # Set VM to autostart
+undefine     # Remove VM definition
+</code></pre>
+ </body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   systemd-analyze Reference
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    systemd-analyze
+   </h1>
+  </header>
+  <section>
+   <h2>
+    Description
+   </h2>
+   <p>
+    The
+    <code>
+     systemd-analyze
+    </code>
+    command is used to analyze and debug performance issues with system boot-up and service loading times.
+   </p>
+  </section>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        blame
+       </code>
+      </td>
+      <td>
+       Lists system services ordered by the time they take to initialize.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        critical-chain
+       </code>
+      </td>
+      <td>
+       Shows the critical chain of units and their timings, highlighting the main performance bottlenecks.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        plot
+       </code>
+      </td>
+      <td>
+       Generates an SVG graphic illustrating the timing of the system boot-up.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        time
+       </code>
+      </td>
+      <td>
+       Prints basic startup timing data, including the kernel, initrd, and userspace times.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        verify
+       </code>
+      </td>
+      <td>
+       Checks unit files for correctness.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code># Analyze system boot-up time
+systemd-analyze time
+
+# List services by initialization time
+systemd-analyze blame
+
+# Display the critical chain of boot dependencies
+systemd-analyze critical-chain
+
+# Generate a graph of boot-up processes
+systemd-analyze plot &gt; boot-process.svg
+
+# Verify unit files for errors
+systemd-analyze verify my-service.service
+</code></pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code>systemd-analyze time
+systemd-analyze blame
+systemd-analyze critical-chain
+systemd-analyze plot &gt; boot.svg
+systemd-analyze verify [UNIT]</code></pre>
+  </section>
+ </body>
+</html>

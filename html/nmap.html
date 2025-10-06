@@ -1,0 +1,138 @@
+<h1>
+ Nmap Command Overview
+</h1>
+<p>
+ Nmap (Network Mapper) is a powerful open-source tool used for network discovery and security auditing. It's commonly utilized to discover hosts and services on a computer network, thus creating a "map" of the network.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    -sS
+   </td>
+   <td>
+    Perform a stealth SYN scan.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -sT
+   </td>
+   <td>
+    Perform a TCP connect scan.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -sU
+   </td>
+   <td>
+    Perform a UDP scan.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -p
+   </td>
+   <td>
+    Specify ports to scan.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -A
+   </td>
+   <td>
+    Enable OS detection, version detection, script scanning, and traceroute.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -O
+   </td>
+   <td>
+    Enable OS detection.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -Pn
+   </td>
+   <td>
+    Treat all hosts as online; skip host discovery.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -v
+   </td>
+   <td>
+    Increase verbosity level.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -oN
+   </td>
+   <td>
+    Output scan results in a normal human-readable format to a file.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Scan a single host using default options
+nmap 192.168.1.1
+
+# Perform a stealth SYN scan on hosts in a subnet
+nmap -sS 192.168.1.0/24
+
+# Scan specific ports on a host
+nmap -p 22,80,443 192.168.1.1
+
+# Enable OS and service detection
+nmap -A 192.168.1.1
+
+# Treat all hosts in the subnet as online
+nmap -Pn 192.168.1.0/24
+
+# Output results to a file
+nmap -oN scan_results.txt 192.168.1.1
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+# Quick scan host
+nmap [host]
+
+# Stealth scan subnet
+nmap -sS [subnet]
+
+# Scan specific ports
+nmap -p [ports] [host]
+
+# Full scan with OS detection
+nmap -A [host]
+
+# Skip host discovery
+nmap -Pn [subnet]
+
+# Save results
+nmap -oN [file] [host]
+</code></pre>

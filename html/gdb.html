@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   GDB Command Overview
+  </title>
+ </head>
+ <body>
+  <h1>
+   GDB Command Overview
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   GDB, the GNU Debugger, allows you to see what is happening inside your program while it runs, 
+        or what the program was doing before it crashed. It is a powerful tool for debugging applications 
+        written in languages such as C and C++.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -q
+      </code>
+     </td>
+     <td>
+      Run quietly, suppressing introductory messages.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -ex &lt;command&gt;
+      </code>
+     </td>
+     <td>
+      Execute the specified command at startup.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -tui
+      </code>
+     </td>
+     <td>
+      Enable the Text User Interface.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --args
+      </code>
+     </td>
+     <td>
+      Pass arguments to the program being debugged.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -p &lt;pid&gt;
+      </code>
+     </td>
+     <td>
+      Attach to a running process by its process ID.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code>
+# Start debugging a program
+gdb ./program
+
+# Run a program with arguments
+gdb --args ./program arg1 arg2
+
+# Run quietly and execute commands from a script
+gdb -q -x commands.txt ./program
+
+# Attach to a running process
+gdb -p 12345
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+# Basic usage
+gdb ./program
+
+# Pass arguments to program
+gdb --args ./program arg1 arg2
+
+# Attach to process
+gdb -p <pid>
+
+# Run TUI
+gdb -tui ./program
+
+# Suppress messages
+gdb -q ./program
+    </pid></code></pre>
+ </body>
+</html>

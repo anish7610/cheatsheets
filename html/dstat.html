@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   dstat Command Overview
+  </title>
+ </head>
+ <body>
+  <h1>
+   dstat Command
+  </h1>
+  <p>
+   The
+   <code>
+    dstat
+   </code>
+   command is a versatile and flexible tool for monitoring system performance in real-time, providing statistics on CPU, memory, I/O, network, and more.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -c
+      </code>
+     </td>
+     <td>
+      Show CPU usage
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -d
+      </code>
+     </td>
+     <td>
+      Show disk usage
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -n
+      </code>
+     </td>
+     <td>
+      Show network usage
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -m
+      </code>
+     </td>
+     <td>
+      Show memory usage
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --top-cpu
+      </code>
+     </td>
+     <td>
+      Display top processes by CPU usage
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --top-mem
+      </code>
+     </td>
+     <td>
+      Display top processes by memory usage
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -a
+      </code>
+     </td>
+     <td>
+      Show all statistics except
+      <code>
+       -f
+      </code>
+      and process stats
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --ipc
+      </code>
+     </td>
+     <td>
+      Show IPC statistics
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Monitor CPU and disk usage combined
+dstat -cd
+
+# Show all CPU, disk, and network statistics
+dstat -cdn
+
+# Monitor system including top memory-using processes
+dstat -m --top-mem
+
+# Monitor entire system excluding filesystem stats
+dstat -a</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>dstat -cd       # CPU and disk
+dstat -cdn      # CPU, disk, network
+dstat -m --top-mem # Memory and top memory processes
+dstat -a        # All except filesystem</code></pre>
+ </body>
+</html>

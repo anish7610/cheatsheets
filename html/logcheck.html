@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Logcheck Command Reference
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Logcheck Command Overview
+   </h1>
+  </header>
+  <section>
+   <h2>
+    Description
+   </h2>
+   <p>
+    <code>
+     logcheck
+    </code>
+    is a command-line utility for scanning system log files for unusual activity, sending reports via email based on predefined filters.
+   </p>
+  </section>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        -r
+       </code>
+      </td>
+      <td>
+       Run in "service" mode (daemon).
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -R
+       </code>
+      </td>
+      <td>
+       Debug runs, showing why lines are included or ignored.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -t
+       </code>
+      </td>
+      <td>
+       Test the alert filtering.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -a
+       </code>
+      </td>
+      <td>
+       Include all lines in the report.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -s
+       </code>
+      </td>
+      <td>
+       Silent mode, minimal output.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code># Run logcheck in normal mode and output the report
+logcheck
+
+# Test alert filtering rules without sending email
+logcheck -t
+
+# Run logcheck and include all log lines
+logcheck -a
+
+# Debug mode to see why certain lines are processed
+logcheck -R</code></pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code>logcheck          # Run normally
+logcheck -r       # Daemon mode
+logcheck -t       # Test filtering
+logcheck -a       # Include all logs
+logcheck -R       # Debug filtering</code></pre>
+  </section>
+ </body>
+</html>

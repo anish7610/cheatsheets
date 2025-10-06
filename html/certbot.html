@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Certbot Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   Certbot Command Guide
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   Certbot is a tool to automate the process of obtaining and renewing SSL certificates from Let's Encrypt, enhancing security and ensuring encrypted communication.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       renew
+      </code>
+     </td>
+     <td>
+      Automatically renew all installed certificates that are near expiry.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       certonly
+      </code>
+     </td>
+     <td>
+      Obtain a certificate without installing it.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --apache
+      </code>
+     </td>
+     <td>
+      Use the Apache plugin for certificate installation.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --nginx
+      </code>
+     </td>
+     <td>
+      Use the Nginx plugin for certificate installation.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --dry-run
+      </code>
+     </td>
+     <td>
+      Simulate obtaining a certificate, useful for testing.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --standalone
+      </code>
+     </td>
+     <td>
+      Run a standalone web server for obtaining a certificate.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --webroot
+      </code>
+     </td>
+     <td>
+      Use webroot to obtain a certificate.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code>sudo certbot --nginx -d example.com -d www.example.com
+sudo certbot certonly --webroot -w /var/www/html -d example.com -d www.example.com
+sudo certbot renew
+sudo certbot renew --dry-run</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>certbot renew
+certbot certonly --nginx -d example.com
+certbot --apache -d example.com
+certbot --dry-run</code></pre>
+ </body>
+</html>

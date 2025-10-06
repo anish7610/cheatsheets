@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   cqlsh Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   cqlsh Command Guide
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    cqlsh
+   </code>
+   command is a Python-based command-line interface for interacting with Apache Cassandra using CQL (Cassandra Query Language).
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -u, --username
+      </code>
+     </td>
+     <td>
+      Specify a username for authenticating with Cassandra.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -p, --password
+      </code>
+     </td>
+     <td>
+      Specify a password for authenticating with Cassandra.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -k, --keyspace
+      </code>
+     </td>
+     <td>
+      Connect to a specific keyspace automatically.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --ssl
+      </code>
+     </td>
+     <td>
+      Enable SSL for connecting to Cassandra.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -f, --file
+      </code>
+     </td>
+     <td>
+      Execute commands from a CQL script file.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --debug
+      </code>
+     </td>
+     <td>
+      Enable debugging mode for detailed logs.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Start cqlsh and connect to the default host and port
+cqlsh
+
+# Connect to a specific host on a specific port
+cqlsh 192.168.1.100 9042
+
+# Connect using username and password
+cqlsh -u myuser -p mypass
+
+# Connect directly to a specific keyspace
+cqlsh -k mykeyspace
+
+# Execute CQL commands from a script file
+cqlsh -f script.cql
+</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre>
+cqlsh [host [port]] [-u user] [-p pass] [-k keyspace] [--ssl] [-f file]
+</pre>
+ </body>
+</html>

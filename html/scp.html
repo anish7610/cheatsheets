@@ -1,0 +1,96 @@
+<h1>
+ Understanding the Linux Command: scp
+</h1>
+<h2>
+ Short Description
+</h2>
+<p>
+ The
+ <code>
+  scp
+ </code>
+ (Secure Copy Protocol) command is used to copy files and directories securely between hosts on a network. It uses SSH for data transfer, providing the same level of security and authentication.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -r
+    </code>
+   </td>
+   <td>
+    Recursively copy entire directories.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -P
+    </code>
+   </td>
+   <td>
+    Specify the port to connect to on the remote host.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -i
+    </code>
+   </td>
+   <td>
+    Specify identity file (private key) for authentication.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -C
+    </code>
+   </td>
+   <td>
+    Enable compression.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -v
+    </code>
+   </td>
+   <td>
+    Enable verbose mode to display debugging messages.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code>scp file.txt user@remotehost:/path/to/destination</code></pre>
+<pre><code>scp -r /local/dir user@remotehost:/remote/dir</code></pre>
+<pre><code>scp -P 2222 file.txt user@remotehost:/path/to/destination</code></pre>
+<pre><code>scp -i /path/to/key.pem file.txt user@remotehost:/path/to/destination</code></pre>
+<h2>
+ Compact Cheat Sheet
+</h2>
+<pre><code>
+scp source_file user@remote:/destination
+scp -r local_dir user@remote:/remote_dir
+scp -P port file user@remote:/path
+scp -i key.pem file user@remote:/path
+</code></pre>

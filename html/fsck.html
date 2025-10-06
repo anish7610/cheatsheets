@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   fsck Command Overview
+  </title>
+ </head>
+ <body>
+  <h1>
+   fsck Command Overview
+  </h1>
+  <p>
+   <code>
+    fsck
+   </code>
+   is a command-line utility used to check and repair filesystems in Linux. It stands for "File System Consistency Check".
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      -A
+     </td>
+     <td>
+      Check all filesystems listed in
+      <code>
+       /etc/fstab
+      </code>
+      .
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -C
+     </td>
+     <td>
+      Display a progress bar while checking.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -N
+     </td>
+     <td>
+      Perform a dry run without making any changes.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -R
+     </td>
+     <td>
+      Skip root filesystem when using with
+      <code>
+       -A
+      </code>
+      .
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -V
+     </td>
+     <td>
+      Verbose mode; show more detailed output.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -y
+     </td>
+     <td>
+      Automatically answer "yes" to prompts.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -n
+     </td>
+     <td>
+      Automatically answer "no" to prompts.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Check and repair all filesystems in /etc/fstab
+sudo fsck -A
+
+# Check specific filesystem by device
+sudo fsck /dev/sda1
+
+# Dry run to see what would be changed
+sudo fsck -N /dev/sda1
+
+# Automate repair process without prompts
+sudo fsck -y /dev/sda1
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+# Check all
+fsck -A
+
+# Check specific device
+fsck /dev/sdX
+
+# Dry run
+fsck -N /dev/sdX
+
+# Auto-repair
+fsck -y /dev/sdX
+    </code></pre>
+ </body>
+</html>

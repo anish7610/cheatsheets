@@ -1,0 +1,95 @@
+<h1>
+ Linux Command: vigr
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  vigr
+ </code>
+ command is used to safely edit the
+ <code>
+  /etc/group
+ </code>
+ and
+ <code>
+  /etc/gshadow
+ </code>
+ files with a text editor, ensuring file integrity during the editing process.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -d
+    </code>
+   </td>
+   <td>
+    Do not edit, but perform data validation of the files.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -s
+    </code>
+   </td>
+   <td>
+    Edit the
+    <code>
+     /etc/gshadow
+    </code>
+    file instead of
+    <code>
+     /etc/group
+    </code>
+    .
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -h
+    </code>
+   </td>
+   <td>
+    Display help message and exit.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Edit the /etc/group file
+sudo vigr
+
+# Edit the /etc/gshadow file
+sudo vigr -s
+
+# Validate group and gshadow files without editing
+sudo vigr -d
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>vigr          # Edit /etc/group
+vigr -s       # Edit /etc/gshadow
+vigr -d       # Validate files without editing
+</code></pre>

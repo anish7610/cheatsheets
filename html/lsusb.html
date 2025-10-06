@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   lsusb Command Overview
+  </title>
+  <style>
+   table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        code {
+            background-color: #f9f9f9;
+            padding: 4px;
+        }
+  </style>
+ </head>
+ <body>
+  <h1>
+   Linux Command:
+   <code>
+    lsusb
+   </code>
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    lsusb
+   </code>
+   command lists all USB devices connected to a Linux system. It provides detailed information about each device, including vendor and product IDs.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -v
+      </code>
+     </td>
+     <td>
+      Verbose output with detailed information about each device.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -s [bus]:[device]
+      </code>
+     </td>
+     <td>
+      Display only devices with specified bus and device numbers.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -d [vendor]:[product]
+      </code>
+     </td>
+     <td>
+      Show only devices with the specified vendor and product ID.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -t
+      </code>
+     </td>
+     <td>
+      Dump the physical USB hierarchy as a tree.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -D [device]
+      </code>
+     </td>
+     <td>
+      Retrieve detailed information from a specified device file.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># List all connected USB devices
+lsusb
+
+# Get detailed information about all USB devices
+lsusb -v
+
+# Show only the device with vendor ID 1234 and product ID 5678
+lsusb -d 1234:5678
+
+# Display USB devices as a hierarchy tree
+lsusb -t
+</code></pre>
+  <h2>
+   Quick Reference Cheat Sheet
+  </h2>
+  <pre><code>lsusb          # List USB devices
+lsusb -v       # Verbose details
+lsusb -d xxxx:yyyy  # Specific vendor:product
+lsusb -t       # Tree view hierarchy
+</code></pre>
+ </body>
+</html>

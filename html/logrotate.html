@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Logrotate Command Overview
+  </title>
+ </head>
+ <body>
+  <h1>
+   Logrotate Command Overview
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    logrotate
+   </code>
+   command is used to manage automatic rotation and compression of log files in Linux, preventing them from consuming excessive disk space.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       daily
+      </code>
+     </td>
+     <td>
+      Rotate logs daily.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       weekly
+      </code>
+     </td>
+     <td>
+      Rotate logs weekly.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       monthly
+      </code>
+     </td>
+     <td>
+      Rotate logs monthly.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       rotate
+       <em>
+        N
+       </em>
+      </code>
+     </td>
+     <td>
+      Keep
+      <em>
+       N
+      </em>
+      old log files.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       compress
+      </code>
+     </td>
+     <td>
+      Compress rotated logs.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       missingok
+      </code>
+     </td>
+     <td>
+      Do not issue an error if the log file is missing.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       notifempty
+      </code>
+     </td>
+     <td>
+      Do not rotate empty log files.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       create
+      </code>
+     </td>
+     <td>
+      Create new empty log files after rotation.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Examples
+  </h2>
+  <pre><code>
+# Rotate the log file daily and keep 7 days of logs
+/var/log/myapp.log {
+    daily
+    rotate 7
+    compress
+    notifempty
+    create
+    missingok
+}
+    </code></pre>
+  <pre><code>
+# Rotate weekly, compress old logs, and keep 4 weeks of logs
+/var/log/weekly.log {
+    weekly
+    rotate 4
+    compress
+    create
+}
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+# Basic logrotate config
+/path/to/logfile {
+    daily | weekly | monthly
+    rotate <num>
+    compress
+    create
+    missingok
+    notifempty
+}
+    </num></code></pre>
+ </body>
+</html>

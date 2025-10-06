@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   nohup Command Guide
+  </title>
+ </head>
+ <body>
+  <main>
+   <h1>
+    nohup Command
+   </h1>
+   <section>
+    <h2>
+     Description
+    </h2>
+    <p>
+     The
+     <code>
+      nohup
+     </code>
+     command allows a process to continue running in the background even after the user logs out. By default, it redirects the output to a file named
+     <code>
+      nohup.out
+     </code>
+     .
+    </p>
+   </section>
+   <section>
+    <h2>
+     Common Options
+    </h2>
+    <table>
+     <thead>
+      <tr>
+       <th>
+        Option
+       </th>
+       <th>
+        Description
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        <code>
+         nohup &lt;command&gt; &amp;
+        </code>
+       </td>
+       <td>
+        Run a command in the background.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <code>
+         nohup &lt;command&gt; &gt; output.log &amp;
+        </code>
+       </td>
+       <td>
+        Redirect output to a specific file.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <code>
+         nohup &lt;command&gt; &gt;/dev/null 2&gt;&amp;1 &amp;
+        </code>
+       </td>
+       <td>
+        Ignore all output, including errors.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </section>
+   <section>
+    <h2>
+     Usage Examples
+    </h2>
+    <pre><code># Run a script in the background
+nohup ./my_script.sh &gt; script.log &amp;
+
+# Start a Python server without hanging up
+nohup python3 -m http.server 8000 &amp;
+
+# Run a backup script and discard output
+nohup ./backup.sh &gt;/dev/null 2&gt;&amp;1 &amp;
+</code></pre>
+   </section>
+   <section>
+    <h2>
+     Cheat Sheet
+    </h2>
+    <pre><code># General syntax
+nohup &lt;command&gt; &amp;
+
+# Redirect output
+nohup &lt;command&gt; &gt; output.log &amp;
+
+# Silence output
+nohup &lt;command&gt; &gt;/dev/null 2&gt;&amp;1 &amp;
+</code></pre>
+   </section>
+  </main>
+ </body>
+</html>

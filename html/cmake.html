@@ -1,0 +1,137 @@
+<h1>
+ CMake Command Overview
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ CMake is a cross-platform build-system generator used to manage the build process of software projects. It generates native build files for different IDEs and compilers.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    -S &lt;path&gt;
+   </td>
+   <td>
+    Specifies the source directory.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -B &lt;path&gt;
+   </td>
+   <td>
+    Specifies the build directory.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -G &lt;generator&gt;
+   </td>
+   <td>
+    Selects the build system generator.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -D &lt;var&gt;=&lt;value&gt;
+   </td>
+   <td>
+    Defines a variable to be used in the CMake process.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    --build &lt;dir&gt;
+   </td>
+   <td>
+    Builds a project using the specified directory.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    --install &lt;dir&gt;
+   </td>
+   <td>
+    Installs a project from the specified directory.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<h3>
+ Basic Project Setup
+</h3>
+<pre><code class="language-bash">cmake -S . -B build/</code></pre>
+<p>
+ Configures the current directory as the source and
+ <code>
+  build/
+ </code>
+ as the build directory.
+</p>
+<h3>
+ Building a Project
+</h3>
+<pre><code class="language-bash">cmake --build build/</code></pre>
+<p>
+ Compiles the project in the
+ <code>
+  build/
+ </code>
+ directory.
+</p>
+<h3>
+ Specifying a Build Generator
+</h3>
+<pre><code class="language-bash">cmake -G "Unix Makefiles" -S . -B build/</code></pre>
+<p>
+ Uses "Unix Makefiles" as the build generator.
+</p>
+<h3>
+ Defining Variables
+</h3>
+<pre><code class="language-bash">cmake -D CMAKE_BUILD_TYPE=Release -S . -B build/</code></pre>
+<p>
+ Sets the
+ <code>
+  CMAKE_BUILD_TYPE
+ </code>
+ to
+ <code>
+  Release
+ </code>
+ .
+</p>
+<h2>
+ Quick Reference Cheat Sheet
+</h2>
+<pre><code class="language-bash">
+# Configure project
+cmake -S . -B build/
+
+# Build project
+cmake --build build/
+
+# Install project
+cmake --install build/
+
+# Set build type
+cmake -D CMAKE_BUILD_TYPE=Release -S . -B build/
+</code></pre>

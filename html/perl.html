@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Perl Command Guide
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Perl Command
+   </h1>
+   <p>
+    The
+    <code>
+     perl
+    </code>
+    command runs scripts and performs various text processing tasks using the Perl programming language.
+   </p>
+  </header>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        -e
+       </code>
+      </td>
+      <td>
+       Execute the provided Perl code.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -n
+       </code>
+      </td>
+      <td>
+       Iterate over lines of input, executing code for each line.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -p
+       </code>
+      </td>
+      <td>
+       Similar to
+       <code>
+        -n
+       </code>
+       , but also prints each line after processing.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -i
+       </code>
+      </td>
+      <td>
+       Edit files in-place (modify them directly).
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -l
+       </code>
+      </td>
+      <td>
+       Handle line-endings correctly, automating
+       <code>
+        chomp
+       </code>
+       and
+       <code>
+        print
+       </code>
+       .
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -w
+       </code>
+      </td>
+      <td>
+       Enable warnings.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code>perl -e 'print "Hello, World!\n"'</code></pre>
+   <p>
+    Print "Hello, World!"
+   </p>
+   <pre><code>perl -ne 'print if /pattern/' file.txt</code></pre>
+   <p>
+    Print lines matching "pattern" in
+    <code>
+     file.txt
+    </code>
+    .
+   </p>
+   <pre><code>perl -pi -e 's/old/new/g' file.txt</code></pre>
+   <p>
+    Replace "old" with "new" globally in
+    <code>
+     file.txt
+    </code>
+    in-place.
+   </p>
+   <pre><code>perl -ple '$_ = reverse' file.txt</code></pre>
+   <p>
+    Reverse each line in
+    <code>
+     file.txt
+    </code>
+    .
+   </p>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code>
+        # Print a message
+        perl -e 'print "Message\n"'
+
+        # Search for a pattern
+        perl -ne 'print if /pattern/' file.txt
+
+        # In-place substitution
+        perl -pi -e 's/old/new/g' file.txt
+
+        # Reverse lines
+        perl -ple '$_ = reverse' file.txt
+        </code></pre>
+  </section>
+ </body>
+</html>

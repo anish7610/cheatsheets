@@ -1,0 +1,111 @@
+<h1>
+ Linux Command:
+ <code>
+  who
+ </code>
+</h1>
+<p>
+ The
+ <code>
+  who
+ </code>
+ command in Linux displays information about users who are currently logged into the system.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -a
+    </code>
+   </td>
+   <td>
+    Display all information, including empty entries.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -b
+    </code>
+   </td>
+   <td>
+    Show the last system boot time.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -m
+    </code>
+   </td>
+   <td>
+    Show information about the current terminal session.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -q
+    </code>
+   </td>
+   <td>
+    Quickly display only the username and the number of users logged in.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -u
+    </code>
+   </td>
+   <td>
+    Display idle time for each user.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Display all logged-in users
+who
+
+# Show all information about logged-in users
+who -a
+
+# Display when the system was last booted
+who -b
+
+# Show current terminal session information
+who -m
+
+# Quickly show usernames and total count
+who -q
+
+# Include idle time for each user
+who -u
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>who          # Show logged-in users
+who -a       # All details
+who -b       # Last boot
+who -m       # Current terminal
+who -q       # Quick usernames &amp; count
+who -u       # Include idle time
+</code></pre>

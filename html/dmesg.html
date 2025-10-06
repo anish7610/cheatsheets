@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Linux `dmesg` Command Overview
+  </title>
+ </head>
+ <body>
+  <h1>
+   Linux
+   <code>
+    dmesg
+   </code>
+   Command
+  </h1>
+  <p>
+   The
+   <code>
+    dmesg
+   </code>
+   command is used to examine or control the kernel ring buffer, primarily for troubleshooting hardware and system-related issues.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -C
+      </code>
+     </td>
+     <td>
+      Clear the kernel ring buffer contents.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -c
+      </code>
+     </td>
+     <td>
+      Clear the buffer after printing.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -d
+      </code>
+     </td>
+     <td>
+      Show only messages regarding booting issues.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -f
+       <i>
+        facility
+       </i>
+      </code>
+     </td>
+     <td>
+      Show messages from a specific facility (e.g.,
+      <code>
+       kern
+      </code>
+      ).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -l
+       <i>
+        level
+       </i>
+      </code>
+     </td>
+     <td>
+      Filter messages by level (e.g.,
+      <code>
+       err
+      </code>
+      ,
+      <code>
+       warn
+      </code>
+      ).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -n
+       <i>
+        level
+       </i>
+      </code>
+     </td>
+     <td>
+      Set the level at which logging is done to the console.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --color
+      </code>
+     </td>
+     <td>
+      Highlight messages by their level.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Display recent kernel messages
+dmesg
+
+# Clear the kernel ring buffer
+dmesg -C
+
+# Show only error messages
+dmesg -l err
+
+# Print messages and clear the buffer
+dmesg -c
+
+# Highlight messages by severity
+dmesg --color</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>dmesg            # Show all messages
+dmesg -C         # Clear buffer
+dmesg -l warn    # Show warnings
+dmesg -c         # Print &amp; clear
+dmesg --color    # Highlight by level</code></pre>
+ </body>
+</html>

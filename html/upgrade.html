@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Linux `upgrade` Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   Linux `upgrade` Command
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The `upgrade` command is often used with package managers like
+   <code>
+    apt
+   </code>
+   to update installed packages to their latest versions.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -y
+      </code>
+     </td>
+     <td>
+      Automatically answer 'yes' to prompts
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --dry-run
+      </code>
+     </td>
+     <td>
+      Show what would be upgraded, but do not actually upgrade
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --with-new-pkgs
+      </code>
+     </td>
+     <td>
+      Install new packages in addition to upgrading existing ones
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --only-upgrade
+      </code>
+     </td>
+     <td>
+      Do not install new packages, only upgrade existing ones
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Upgrade all installed packages
+sudo apt upgrade
+
+# Upgrade all packages and assume "yes" to prompts
+sudo apt upgrade -y
+
+# Simulate an upgrade to see what will change
+sudo apt upgrade --dry-run
+
+# Upgrade all packages and include installing new packages
+sudo apt upgrade --with-new-pkgs
+
+# Only upgrade existing packages, do not install new ones
+sudo apt upgrade --only-upgrade
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code># Basic upgrade
+sudo apt upgrade
+
+# Automatic "yes"
+sudo apt upgrade -y
+
+# Simulate without action
+sudo apt upgrade --dry-run
+    </code></pre>
+ </body>
+</html>

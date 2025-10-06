@@ -1,0 +1,102 @@
+<h1>
+ Vagrant Command Overview
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ Vagrant is a command-line tool for building and managing virtualized development environments. It provides easy-to-configure, reproducible, and portable work environments.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     init
+    </code>
+   </td>
+   <td>
+    Initializes a new Vagrant environment by creating a Vagrantfile.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     up
+    </code>
+   </td>
+   <td>
+    Starts and provisions the Vagrant environment.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     ssh
+    </code>
+   </td>
+   <td>
+    Logs into the running Vagrant machine via SSH.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     halt
+    </code>
+   </td>
+   <td>
+    Stops the Vagrant machine.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     destroy
+    </code>
+   </td>
+   <td>
+    Stops and deletes all traces of the Vagrant machine.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     status
+    </code>
+   </td>
+   <td>
+    Shows the current state of the Vagrant environment.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code>vagrant init ubuntu/bionic64
+vagrant up
+vagrant ssh
+vagrant halt
+vagrant destroy</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>vagrant init [box_name]   # Initialize a new Vagrant environment
+vagrant up                # Start the environment
+vagrant ssh               # SSH into the machine
+vagrant halt              # Stop the machine
+vagrant destroy           # Delete the machine</code></pre>

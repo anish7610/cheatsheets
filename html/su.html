@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Linux "su" Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   Linux "su" Command
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    su
+   </code>
+   command is used to switch the current user identity to another user or to become root user (superuser) in Linux systems.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -
+      </code>
+      or
+      <code>
+       -l
+      </code>
+     </td>
+     <td>
+      Start a login shell with the environment of the target user.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -c
+      </code>
+     </td>
+     <td>
+      Specify a command to execute as the target user.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -s
+      </code>
+     </td>
+     <td>
+      Specify a shell to use.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -m
+      </code>
+      or
+      <code>
+       --preserve-environment
+      </code>
+     </td>
+     <td>
+      Preserve the current environment when switching users.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Switch to root user
+su
+
+# Switch to another user (e.g., alice)
+su alice
+
+# Execute a command as root
+su -c 'ls /root'
+
+# Switch to root and start a login shell
+su -
+    
+# Use a specific shell (e.g., bash)
+su -s /bin/bash alice</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>su       # Switch to root
+su USER  # Switch to USER
+su -     # Login shell as root
+su -c CMD # Run CMD as root
+su -s SHELL # Use SHELL</code></pre>
+ </body>
+</html>

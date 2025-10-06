@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   iptables Guide
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    iptables: Linux Firewall Utility
+   </h1>
+  </header>
+  <section>
+   <h2>
+    Description
+   </h2>
+   <p>
+    <code>
+     iptables
+    </code>
+    is a user-space utility program that allows a system administrator to configure the IP packet filter rules of the Linux kernel firewall, implemented as different Netfilter modules.
+   </p>
+  </section>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        -A
+       </code>
+      </td>
+      <td>
+       Append a rule to a chain.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -I
+       </code>
+      </td>
+      <td>
+       Insert a rule at a specific position in a chain.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -D
+       </code>
+      </td>
+      <td>
+       Delete a specific rule from a chain.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -L
+       </code>
+      </td>
+      <td>
+       List all rules in a chain.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -F
+       </code>
+      </td>
+      <td>
+       Flush all rules in a chain.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -P
+       </code>
+      </td>
+      <td>
+       Set the policy for a chain (ACCEPT, DROP).
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -t
+       </code>
+      </td>
+      <td>
+       Specify the table to use (e.g., filter, nat).
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code>
+# List all rules in the filter table
+iptables -t filter -L
+
+# Append a rule to drop all incoming traffic on port 22
+iptables -A INPUT -p tcp --dport 22 -j DROP
+
+# Allow outgoing HTTP traffic
+iptables -A OUTPUT -p tcp --dport 80 -j ACCEPT
+
+# Set default policy to drop for input chain
+iptables -P INPUT DROP
+
+# Flush all rules in the NAT table
+iptables -t nat -F
+        </code></pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code>
+iptables -A [chain] -p [protocol] --dport [port] -j [target]
+iptables -D [chain] [rule-number]
+iptables -L
+iptables -F
+iptables -P [chain] [policy]
+        </code></pre>
+  </section>
+ </body>
+</html>

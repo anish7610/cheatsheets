@@ -1,0 +1,123 @@
+<h1>
+ Linux Command:
+ <code>
+  mongod
+ </code>
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  mongod
+ </code>
+ command is the primary daemon process for MongoDB. It handles data requests, manages data access, and performs background management operations.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     --dbpath &lt;path&gt;
+    </code>
+   </td>
+   <td>
+    Specify the directory where MongoDB stores data.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --port &lt;number&gt;
+    </code>
+   </td>
+   <td>
+    Set the port on which MongoDB listens for connections (default is 27017).
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --logpath &lt;file&gt;
+    </code>
+   </td>
+   <td>
+    Specify the file where the log output is written.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --fork
+    </code>
+   </td>
+   <td>
+    Run
+    <code>
+     mongod
+    </code>
+    as a background process.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --auth
+    </code>
+   </td>
+   <td>
+    Enable authentication for connecting to the database.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --bind_ip &lt;IP&gt;
+    </code>
+   </td>
+   <td>
+    Set the IP address that MongoDB binds to (default is localhost).
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Start MongoDB with default settings
+mongod
+
+# Start MongoDB with a specific data directory
+mongod --dbpath /data/db
+
+# Start MongoDB on a different port
+mongod --port 28017
+
+# Start MongoDB and write logs to a specific file
+mongod --logpath /var/log/mongodb/mongod.log --fork
+
+# Start MongoDB with authentication enabled
+mongod --auth
+
+# Bind MongoDB to a specific IP address
+mongod --bind_ip 127.0.0.1
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>mongod --dbpath &lt;path&gt; --port &lt;number&gt; --logpath &lt;file&gt; --fork --auth --bind_ip &lt;IP&gt;
+</code></pre>

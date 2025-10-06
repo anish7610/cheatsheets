@@ -1,0 +1,94 @@
+<h1>
+ Understanding the
+ <code>
+  chroot
+ </code>
+ Command in Linux
+</h1>
+<p>
+ The
+ <code>
+  chroot
+ </code>
+ command changes the apparent root directory for the current running process and its children, creating an isolated environment.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     --userspec=USER:GROUP
+    </code>
+   </td>
+   <td>
+    Specify the user and group to use.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --skip-chdir
+    </code>
+   </td>
+   <td>
+    Do not change the working directory to "/".
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --help
+    </code>
+   </td>
+   <td>
+    Display help information.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --version
+    </code>
+   </td>
+   <td>
+    Display version information.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Create a chroot environment
+mkdir /mychroot
+
+# Add essential directories and files
+cp /bin/bash /mychroot/bin/
+cp -v /lib/x86_64-linux-gnu/{ld-linux-x86-64.so.2,libc.so.6} /mychroot/lib/x86_64-linux-gnu/
+
+# Use chroot to enter the environment
+chroot /mychroot /bin/bash
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+# Basic usage
+chroot NEWROOT [COMMAND...]
+
+# Specify user and group
+chroot --userspec=USER:GROUP /mychroot /command
+</code></pre>

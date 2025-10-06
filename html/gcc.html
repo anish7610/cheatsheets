@@ -1,0 +1,137 @@
+<h1>
+ GCC: GNU Compiler Collection
+</h1>
+<p>
+ The
+ <code>
+  gcc
+ </code>
+ command is used to compile C and C++ programs. It is part of the GNU Compiler Collection, supporting multiple languages. Commonly used to turn source code into executable files.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -o &lt;file&gt;
+    </code>
+   </td>
+   <td>
+    Specify the output file name for the executable.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -c
+    </code>
+   </td>
+   <td>
+    Compile the source file without linking.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -Wall
+    </code>
+   </td>
+   <td>
+    Enable most compiler warnings.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -O2
+    </code>
+   </td>
+   <td>
+    Optimize the code for speed.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -g
+    </code>
+   </td>
+   <td>
+    Include debugging information in the compiled file.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -I&lt;dir&gt;
+    </code>
+   </td>
+   <td>
+    Add directory to the list of include search paths.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -L&lt;dir&gt;
+    </code>
+   </td>
+   <td>
+    Add directory to the list of library search paths.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -l&lt;library&gt;
+    </code>
+   </td>
+   <td>
+    Link with the specified library.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Compile a single C file
+gcc -Wall -o hello hello.c
+
+# Compile with debugging information
+gcc -g -o debug_program program.c
+
+# Compile without linking
+gcc -c file.c
+
+# Compile with optimization
+gcc -O2 -o fast_program program.c
+
+# Include additional header file directories
+gcc -I/usr/local/include -o program program.c
+
+# Link with math library
+gcc -o calc calc.c -lm
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>gcc -o &lt;output&gt; &lt;source.c&gt;
+gcc -Wall -o &lt;output&gt; &lt;source.c&gt;
+gcc -g -o &lt;output&gt; &lt;source.c&gt;
+gcc -O2 -o &lt;output&gt; &lt;source.c&gt;
+gcc -I&lt;dir&gt; -L&lt;dir&gt; -l&lt;lib&gt; -o &lt;output&gt; &lt;source.c&gt;
+</code></pre>

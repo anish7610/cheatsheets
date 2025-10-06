@@ -1,0 +1,104 @@
+<h1>
+ Linux Command: head
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  head
+ </code>
+ command displays the first few lines of a file or standard input.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -n NUM
+    </code>
+   </td>
+   <td>
+    Show the first
+    <code>
+     NUM
+    </code>
+    lines of the file.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -c NUM
+    </code>
+   </td>
+   <td>
+    Show the first
+    <code>
+     NUM
+    </code>
+    bytes of the file.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -q
+    </code>
+   </td>
+   <td>
+    Suppress the header displaying filenames.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -v
+    </code>
+   </td>
+   <td>
+    Always show the header with filenames.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Display the first 10 lines of a file (default)
+head example.txt
+
+# Display the first 5 lines of a file
+head -n 5 example.txt
+
+# Display the first 20 bytes of a file
+head -c 20 example.txt
+
+# Display the first 10 lines of multiple files without headers
+head -q file1.txt file2.txt
+
+# Display the first 10 lines of multiple files with headers
+head -v file1.txt file2.txt
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>head [OPTION]... [FILE]...
+-n NUM  # Number of lines
+-c NUM  # Number of bytes
+-q      # Suppress headers
+-v      # Show headers</code></pre>

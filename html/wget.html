@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   wget Command
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Linux `wget` Command
+   </h1>
+  </header>
+  <section>
+   <h2>
+    Description
+   </h2>
+   <p>
+    The `wget` command is a free utility for downloading files from the web using HTTP, HTTPS, and FTP protocols. It is non-interactive, meaning it can work in the background, making it excellent for scheduled and automated tasks.
+   </p>
+  </section>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        -O &lt;file&gt;
+       </code>
+      </td>
+      <td>
+       Save downloaded file to the specified name.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -c
+       </code>
+      </td>
+      <td>
+       Continue getting a partially downloaded file.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -b
+       </code>
+      </td>
+      <td>
+       Run in the background.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -q
+       </code>
+      </td>
+      <td>
+       Turn off wget's output (quiet mode).
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -r
+       </code>
+      </td>
+      <td>
+       Recursive download.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -l &lt;depth&gt;
+       </code>
+      </td>
+      <td>
+       Specify recursion level depth.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        --limit-rate=&lt;rate&gt;
+       </code>
+      </td>
+      <td>
+       Limit download speed.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        --no-check-certificate
+       </code>
+      </td>
+      <td>
+       Do not validate the server's certificate.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code># Download a single file
+wget http://example.com/file.zip
+
+# Download a file and save it as a different name
+wget -O newname.zip http://example.com/file.zip
+
+# Resume a partially downloaded file
+wget -c http://example.com/largefile.zip
+
+# Download files in the background
+wget -b http://example.com/largefile.zip
+
+# Download an entire website
+wget -r http://example.com
+
+# Download files at a limited rate of 200kB/s
+wget --limit-rate=200k http://example.com/largefile.zip
+
+# Skip certificate check for an HTTPS download
+wget --no-check-certificate https://example.com/file.zip</code></pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code>wget URL
+wget -O filename URL
+wget -c URL
+wget -r URL
+wget --limit-rate=100k URL</code></pre>
+  </section>
+ </body>
+</html>

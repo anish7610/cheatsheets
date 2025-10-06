@@ -1,0 +1,82 @@
+<html>
+ <body>
+  <h1>
+   Understanding `update-rc.d`
+  </h1>
+  <p>
+   `update-rc.d` is a command used in Debian-based Linux systems to manage the start and stop behavior of services at boot and shutdown.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      defaults
+     </td>
+     <td>
+      Automatically set the default start/stop links for a service.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      remove
+     </td>
+     <td>
+      Remove all start/stop links for a service.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      start RUNLEVEL
+     </td>
+     <td>
+      Set up start links for specific runlevels.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      stop RUNLEVEL
+     </td>
+     <td>
+      Set up stop links for specific runlevels.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code>sudo update-rc.d apache2 defaults</code></pre>
+  <p>
+   Enable Apache2 service to start on boot with default runlevels.
+  </p>
+  <pre><code>sudo update-rc.d apache2 remove</code></pre>
+  <p>
+   Remove Apache2 service from all runlevels.
+  </p>
+  <pre><code>sudo update-rc.d apache2 start 2 3 4 5 . stop 0 1 6 .</code></pre>
+  <p>
+   Configure Apache2 to start in runlevels 2, 3, 4, and 5, and stop in 0, 1, and 6.
+  </p>
+  <h2>
+   Quick Reference Cheat Sheet
+  </h2>
+  <pre>
+<code>sudo update-rc.d &lt;service&gt; defaults
+sudo update-rc.d &lt;service&gt; remove
+sudo update-rc.d &lt;service&gt; start &lt;runlevels&gt; . stop &lt;runlevels&gt; .</code>
+    </pre>
+ </body>
+</html>

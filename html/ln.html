@@ -1,0 +1,89 @@
+<h1>
+ Linux Command: ln
+</h1>
+<p>
+ The
+ <code>
+  ln
+ </code>
+ command is used to create links between files. It supports both hard links and symbolic (soft) links.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -s
+    </code>
+   </td>
+   <td>
+    Create a symbolic link instead of a hard link.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -f
+    </code>
+   </td>
+   <td>
+    Force the creation of a link by removing any existing destination files.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -v
+    </code>
+   </td>
+   <td>
+    Enable verbose mode, showing files as they are processed.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -n
+    </code>
+   </td>
+   <td>
+    Do not overwrite an existing destination file.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Create a hard link
+ln source.txt link.txt
+
+# Create a symbolic link
+ln -s /path/to/source.txt /path/to/link.txt
+
+# Forcefully create a symbolic link, removing existing link
+ln -sf /new/source.txt /existing/link.txt
+
+# Verbose symbolic link creation
+ln -sv /path/to/source.txt /path/to/link.txt
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>ln source link             # Create hard link
+ln -s source link          # Create symbolic link
+ln -sf source link         # Force create symbolic link
+ln -v source link          # Verbose output</code></pre>

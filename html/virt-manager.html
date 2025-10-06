@@ -1,0 +1,110 @@
+<html>
+ <head>
+  <title>
+   Virt-Manager Command Overview
+  </title>
+ </head>
+ <body>
+  <h1>
+   Virt-Manager Command Overview
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   <code>
+    virt-manager
+   </code>
+   is a desktop user interface for managing virtual machines through
+   <code>
+    libvirt
+   </code>
+   . It supports the creation, configuration, and monitoring of virtual machines.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -h
+      </code>
+      ,
+      <code>
+       --help
+      </code>
+     </td>
+     <td>
+      Show help message and exit.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -c &lt;URI&gt;
+      </code>
+      ,
+      <code>
+       --connect &lt;URI&gt;
+      </code>
+     </td>
+     <td>
+      Specify the hypervisor connection URI.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --show-domain-console &lt;name&gt;
+      </code>
+     </td>
+     <td>
+      Open the console for the specified domain.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --no-fork
+      </code>
+     </td>
+     <td>
+      Run the application in the foreground.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Open the virt-manager interface
+virt-manager
+
+# Connect to a remote hypervisor and open console for a specified domain
+virt-manager -c qemu+ssh://user@remote/system --show-domain-console myvm
+
+# Run virt-manager without forking to the background
+virt-manager --no-fork
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>virt-manager               # Launch interface
+virt-manager -c URI        # Connect to URI
+virt-manager --show-domain-console NAME  # Open console for VM
+virt-manager --no-fork     # Run in foreground
+    </code></pre>
+ </body>
+</html>

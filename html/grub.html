@@ -1,0 +1,100 @@
+<h1>
+ Linux Command: grub
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  grub
+ </code>
+ command is used to manage the GRand Unified Bootloader (GRUB), which is the boot loader responsible for loading the Linux kernel and managing the boot process.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     install
+    </code>
+   </td>
+   <td>
+    Installs GRUB on a specified device.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     update
+    </code>
+   </td>
+   <td>
+    Updates the GRUB configuration file.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     reboot
+    </code>
+   </td>
+   <td>
+    Reboots the machine using GRUB.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     set-default
+    </code>
+   </td>
+   <td>
+    Sets the default boot entry for GRUB.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Install GRUB on /dev/sda
+grub-install /dev/sda
+
+# Update GRUB configuration
+grub-mkconfig -o /boot/grub/grub.cfg
+
+# Reboot system using GRUB
+grub-reboot 2
+
+# Set default boot entry
+grub-set-default 0
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code># Install GRUB
+grub-install [device]
+
+# Update config
+grub-mkconfig -o /boot/grub/grub.cfg
+
+# Reboot
+grub-reboot [entry]
+
+# Set default entry
+grub-set-default [entry]
+</code></pre>

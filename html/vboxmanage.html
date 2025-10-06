@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   VBoxManage Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   VBoxManage Command
+  </h1>
+  <p>
+   <code>
+    vboxmanage
+   </code>
+   is a command-line tool for managing VirtualBox virtual machines (VMs). It allows users to create, modify, start, stop, and control VMs and their settings.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <tr>
+    <th>
+     Option
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     createvm
+    </td>
+    <td>
+     Create a new VM.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     startvm
+    </td>
+    <td>
+     Start a VM.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     controlvm
+    </td>
+    <td>
+     Control running VMs (e.g., pause, reset).
+    </td>
+   </tr>
+   <tr>
+    <td>
+     modifyvm
+    </td>
+    <td>
+     Modify VM settings.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     list
+    </td>
+    <td>
+     List VMs and their details.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     showvminfo
+    </td>
+    <td>
+     Display detailed information about a VM.
+    </td>
+   </tr>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <h3>
+   Create a New VM
+  </h3>
+  <pre><code>vboxmanage createvm --name "MyVM" --register</code></pre>
+  <h3>
+   Start a VM
+  </h3>
+  <pre><code>vboxmanage startvm "MyVM" --type headless</code></pre>
+  <h3>
+   Modify VM Settings
+  </h3>
+  <pre><code>vboxmanage modifyvm "MyVM" --memory 2048 --cpus 2</code></pre>
+  <h3>
+   List All Registered VMs
+  </h3>
+  <pre><code>vboxmanage list vms</code></pre>
+  <h3>
+   Show VM Information
+  </h3>
+  <pre><code>vboxmanage showvminfo "MyVM"</code></pre>
+  <h2>
+   Quick Reference Cheat Sheet
+  </h2>
+  <pre>
+createvm --name <vmname> --register
+startvm <vmname> --type <type>
+modifyvm <vmname> --memory <size> --cpus <count>
+list vms
+showvminfo <vmname>
+    </vmname></count></size></vmname></type></vmname></vmname></pre>
+ </body>
+</html>

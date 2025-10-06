@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Linux `dump` Command Guide
+  </title>
+ </head>
+ <body>
+  <main>
+   <h1>
+    Linux `dump` Command
+   </h1>
+   <section>
+    <h2>
+     Description
+    </h2>
+    <p>
+     The `dump` command is used for backing up file systems on Unix/Linux systems. It creates a backup of an entire filesystem on a storage device or file.
+    </p>
+   </section>
+   <section>
+    <h2>
+     Common Options
+    </h2>
+    <table>
+     <thead>
+      <tr>
+       <th>
+        Option
+       </th>
+       <th>
+        Description
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        <code>
+         -0
+        </code>
+       </td>
+       <td>
+        Perform a full backup.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <code>
+         -1, -2, ..., -9
+        </code>
+       </td>
+       <td>
+        Perform an incremental backup of the specified level.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <code>
+         -f [file]
+        </code>
+       </td>
+       <td>
+        Write the backup to the specified file.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <code>
+         -u
+        </code>
+       </td>
+       <td>
+        Update the dump record file after completing the backup.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <code>
+         -v
+        </code>
+       </td>
+       <td>
+        Enable verbose mode, displaying detailed progress.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </section>
+   <section>
+    <h2>
+     Usage Examples
+    </h2>
+    <pre><code># Full backup of /dev/sda1 to a file
+dump -0 -f /backup/full_backup.dump /dev/sda1
+
+# Incremental backup (level 1) of /dev/sda1
+dump -1 -f /backup/incremental_backup.dump /dev/sda1
+
+# Full backup with verbose output and update record
+dump -0 -u -v -f /backup/full_backup_with_record.dump /dev/sda1
+            </code></pre>
+   </section>
+   <section>
+    <h2>
+     Cheat Sheet
+    </h2>
+    <pre><code>Full backup:      dump -0 -f [file] [filesystem]
+Incremental:     dump -[1-9] -f [file] [filesystem]
+Update record:   dump -0 -u -f [file] [filesystem]
+Verbose:         dump -0 -v -f [file] [filesystem]
+            </code></pre>
+   </section>
+  </main>
+ </body>
+</html>

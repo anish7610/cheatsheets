@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   apache2 Command Overview
+  </title>
+ </head>
+ <body>
+  <h1>
+   apache2 Command Overview
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    apache2
+   </code>
+   command is used to control the Apache HTTP Server. It allows starting, stopping, and managing the server's operations.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -k start
+      </code>
+     </td>
+     <td>
+      Start the Apache server.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -k stop
+      </code>
+     </td>
+     <td>
+      Stop the Apache server.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -k restart
+      </code>
+     </td>
+     <td>
+      Restart the Apache server.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -k graceful
+      </code>
+     </td>
+     <td>
+      Gracefully restart the server without dropping connections.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -v
+      </code>
+     </td>
+     <td>
+      Show the version number and exit.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -S
+      </code>
+     </td>
+     <td>
+      Show the settings and virtual host configuration.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -t
+      </code>
+     </td>
+     <td>
+      Test the configuration for syntax errors.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Start the Apache server
+sudo apache2 -k start
+
+# Stop the Apache server
+sudo apache2 -k stop
+
+# Restart the Apache server
+sudo apache2 -k restart
+
+# Gracefully restart the server
+sudo apache2 -k graceful
+
+# Check Apache version
+apache2 -v
+
+# Show configuration and virtual hosts
+sudo apache2 -S
+
+# Test configuration for syntax errors
+sudo apache2 -t
+</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>sudo apache2 -k start    # Start server
+sudo apache2 -k stop     # Stop server
+sudo apache2 -k restart  # Restart server
+sudo apache2 -k graceful # Graceful restart
+apache2 -v               # Version info
+sudo apache2 -S          # Show config
+sudo apache2 -t          # Test config
+</code></pre>
+ </body>
+</html>

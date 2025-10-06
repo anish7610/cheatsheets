@@ -1,0 +1,138 @@
+<h1>
+ Understanding the Linux Command:
+ <code>
+  ufw
+ </code>
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ <code>
+  ufw
+ </code>
+ (Uncomplicated Firewall) is a user-friendly interface to manage a Linux firewall. It streamlines the process of configuring firewall rules.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     enable
+    </code>
+   </td>
+   <td>
+    Activate the firewall.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     disable
+    </code>
+   </td>
+   <td>
+    Deactivate the firewall.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     status
+    </code>
+   </td>
+   <td>
+    Show the status of the firewall.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     allow [SERVICE|PORT]
+    </code>
+   </td>
+   <td>
+    Permit incoming connections on a specified service or port.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     deny [SERVICE|PORT]
+    </code>
+   </td>
+   <td>
+    Block incoming connections on a specified service or port.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     delete [RULE]
+    </code>
+   </td>
+   <td>
+    Remove a specific rule.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     reset
+    </code>
+   </td>
+   <td>
+    Revert to default settings.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Examples
+</h2>
+<pre><code># Enable the firewall
+sudo ufw enable
+
+# Allow SSH connections
+sudo ufw allow ssh
+
+# Allow HTTP traffic on port 80
+sudo ufw allow 80
+
+# Deny all incoming traffic on port 25
+sudo ufw deny 25
+
+# Show current firewall status and rules
+sudo ufw status
+
+# Disable the firewall
+sudo ufw disable
+
+# Delete a rule allowing traffic on port 80
+sudo ufw delete allow 80
+</code></pre>
+<h2>
+ Quick Reference Cheat Sheet
+</h2>
+<pre><code>
+sudo ufw enable           # Start firewall
+sudo ufw disable          # Stop firewall
+sudo ufw status           # Show status
+sudo ufw allow [PORT]     # Allow port
+sudo ufw deny [PORT]      # Deny port
+sudo ufw delete [RULE]    # Delete rule
+sudo ufw reset            # Reset firewall
+</code></pre>

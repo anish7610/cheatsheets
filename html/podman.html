@@ -1,0 +1,119 @@
+<html>
+ <body>
+  <h1>
+   Podman Command Overview
+  </h1>
+  <p>
+   Podman is a tool for managing containers and images, offering a command-line interface similar to Docker.
+  </p>
+  <h2>
+   Common Podman Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      -d, --detach
+     </td>
+     <td>
+      Run container in background and print container ID.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      --name
+     </td>
+     <td>
+      Assign a name to the container.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -p, --publish
+     </td>
+     <td>
+      Publish a container's port to the host.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -v, --volume
+     </td>
+     <td>
+      Bind mount a volume.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      --rm
+     </td>
+     <td>
+      Automatically remove the container when it exits.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <h3>
+   Run a Container
+  </h3>
+  <pre>
+      <code>podman run --name my-container -d my-image</code>
+    </pre>
+  <h3>
+   List Running Containers
+  </h3>
+  <pre>
+      <code>podman ps</code>
+    </pre>
+  <h3>
+   Stop a Container
+  </h3>
+  <pre>
+      <code>podman stop my-container</code>
+    </pre>
+  <h3>
+   Remove a Container
+  </h3>
+  <pre>
+      <code>podman rm my-container</code>
+    </pre>
+  <h3>
+   Build an Image
+  </h3>
+  <pre>
+      <code>podman build -t my-image .</code>
+    </pre>
+  <h3>
+   Pull an Image
+  </h3>
+  <pre>
+      <code>podman pull nginx:latest</code>
+    </pre>
+  <h2>
+   Podman Cheat Sheet
+  </h2>
+  <pre>
+      <code>
+Run: podman run [options] IMAGE
+Ps: podman ps
+Stop: podman stop CONTAINER
+Rm: podman rm CONTAINER
+Build: podman build -t IMAGE_NAME .
+Pull: podman pull IMAGE
+      </code>
+    </pre>
+ </body>
+</html>

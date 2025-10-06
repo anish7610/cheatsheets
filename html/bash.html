@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Linux Bash Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   Bash Command Guide
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   Bash is a Unix shell and command language, often used as the default login shell for Linux. It provides a command-line interface for running scripts and managing system tasks.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -c "string"
+      </code>
+     </td>
+     <td>
+      Run the commands in
+      <code>
+       "string"
+      </code>
+      .
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --version
+      </code>
+     </td>
+     <td>
+      Display version information and exit.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -x
+      </code>
+     </td>
+     <td>
+      Print commands and their arguments as they are executed.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --login
+      </code>
+     </td>
+     <td>
+      Start a login shell.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -i
+      </code>
+     </td>
+     <td>
+      Run an interactive shell session.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Run a simple command
+bash -c "echo Hello World"
+
+# Start an interactive session
+bash -i
+
+# Debug a script
+bash -x script.sh
+
+# Get version info
+bash --version
+</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>-c "string" : Run command
+--version     : Show version
+-x            : Debug
+--login       : Login shell
+-i            : Interactive shell
+</code></pre>
+ </body>
+</html>

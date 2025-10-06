@@ -1,0 +1,131 @@
+<html>
+ <body>
+  <h1>
+   Linux `chmod` Command
+  </h1>
+  <p>
+   The `chmod` command changes the file mode (permissions) of files and directories.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      +r
+     </td>
+     <td>
+      Add read permission
+     </td>
+    </tr>
+    <tr>
+     <td>
+      +w
+     </td>
+     <td>
+      Add write permission
+     </td>
+    </tr>
+    <tr>
+     <td>
+      +x
+     </td>
+     <td>
+      Add execute permission
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -r
+     </td>
+     <td>
+      Remove read permission
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -w
+     </td>
+     <td>
+      Remove write permission
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -x
+     </td>
+     <td>
+      Remove execute permission
+     </td>
+    </tr>
+    <tr>
+     <td>
+      u
+     </td>
+     <td>
+      User (owner) permissions
+     </td>
+    </tr>
+    <tr>
+     <td>
+      g
+     </td>
+     <td>
+      Group permissions
+     </td>
+    </tr>
+    <tr>
+     <td>
+      o
+     </td>
+     <td>
+      Other users' permissions
+     </td>
+    </tr>
+    <tr>
+     <td>
+      a
+     </td>
+     <td>
+      All users' permissions
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Give the owner executable permission on a script
+chmod u+x script.sh
+
+# Remove write permission from others on a file
+chmod o-w file.txt
+
+# Allow everyone to read a document
+chmod a+r document.pdf
+
+# Change permissions for a directory recursively
+chmod -R 755 /path/to/directory
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>chmod ### file.txt      # Set numeric permissions
+chmod u+x file.txt     # Add execute for owner
+chmod g-w file.txt     # Remove write for group
+chmod o-r file.txt     # Remove read for others
+chmod a+w file.txt     # Add write for all
+    </code></pre>
+ </body>
+</html>

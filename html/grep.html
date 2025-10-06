@@ -1,0 +1,139 @@
+<h1>
+ Linux Command: grep
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  grep
+ </code>
+ command is used in Linux to search for a specific pattern of text within files. It stands for "global regular expression print" and is commonly used to filter output or find specific information.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -i
+    </code>
+   </td>
+   <td>
+    Ignore case distinctions in patterns and data.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -r
+    </code>
+    /
+    <code>
+     -R
+    </code>
+   </td>
+   <td>
+    Recursively search directories.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -n
+    </code>
+   </td>
+   <td>
+    Prefix each line of output with the line number.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -v
+    </code>
+   </td>
+   <td>
+    Invert the match to select non-matching lines.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -l
+    </code>
+   </td>
+   <td>
+    List file names with matching lines (once per file).
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -c
+    </code>
+   </td>
+   <td>
+    Count the number of matching lines per file.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --color
+    </code>
+   </td>
+   <td>
+    Highlight the matching text.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Search for 'error' in a file, ignoring case
+grep -i 'error' file.txt
+
+# Recursively search for 'TODO' in the current directory
+grep -r 'TODO' .
+
+# Show line numbers for matches
+grep -n 'function' file.c
+
+# Find files not containing 'success'
+grep -v 'success' file.txt
+
+# List files that contain 'main'
+grep -l 'main' *.c
+
+# Count occurrences of 'function'
+grep -c 'function' file.c
+
+# Search with highlighted matches
+grep --color 'pattern' file.txt
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>grep -i 'pattern' file        # Ignore case
+grep -r 'pattern' dir           # Recursive search
+grep -n 'pattern' file          # Show line numbers
+grep -v 'pattern' file          # Invert match
+grep -l 'pattern' files         # List matching files
+grep -c 'pattern' file          # Count matches
+grep --color 'pattern' file     # Highlight matches
+</code></pre>

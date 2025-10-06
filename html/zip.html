@@ -1,0 +1,106 @@
+<h1>
+ Linux Command: zip
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  zip
+ </code>
+ command is used to create compressed archives, combining multiple files into a single file with compression to save space.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    -r
+   </td>
+   <td>
+    Recursively include files in subdirectories.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -d
+   </td>
+   <td>
+    Delete files from the archive.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -u
+   </td>
+   <td>
+    Update existing files in the archive and add new ones.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -l
+   </td>
+   <td>
+    Show the archive contents without extracting.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -e
+   </td>
+   <td>
+    Encrypt the zip file with a password.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -q
+   </td>
+   <td>
+    Quiet mode. Suppress output.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code>
+<!-- Create a zip archive of a directory -->
+zip -r archive.zip /path/to/directory
+
+<!-- Add files to an existing archive -->
+zip archive.zip file1.txt file2.txt
+
+<!-- Update existing files in an archive -->
+zip -u archive.zip file1.txt
+
+<!-- Delete a file from an archive -->
+zip -d archive.zip file2.txt
+
+<!-- Encrypt a zip archive -->
+zip -e secure.zip /path/to/files
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+zip -r archive.zip /path/to/dir    <!-- Compress a directory -->
+zip archive.zip file1.txt          <!-- Add a file to an archive -->
+zip -d archive.zip file.txt        <!-- Delete a file from archive -->
+zip -e secure.zip files...         <!-- Encrypt a zip file -->
+</code></pre>

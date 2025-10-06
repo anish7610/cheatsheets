@@ -1,0 +1,76 @@
+<h1>
+ Linux `insmod` Command
+</h1>
+<p>
+ The
+ <code>
+  insmod
+ </code>
+ command is used to insert a module into the Linux kernel. It's typically employed to add functionality to the kernel, such as drivers or other extensions.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     [MODULE]
+    </code>
+   </td>
+   <td>
+    The module file to insert into the kernel (required).
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     [module_options]
+    </code>
+   </td>
+   <td>
+    Optional parameters to pass to the module on insertion.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code>sudo insmod /path/to/module.ko</code></pre>
+<p>
+ Insert a module named
+ <code>
+  module.ko
+ </code>
+ into the kernel.
+</p>
+<pre><code>sudo insmod /path/to/module.ko option1=value1 option2=value2</code></pre>
+<p>
+ Insert a module with parameters
+ <code>
+  option1
+ </code>
+ and
+ <code>
+  option2
+ </code>
+ set.
+</p>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+insmod [MODULE] [module_options]
+</code></pre>

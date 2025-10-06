@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Deja Dup Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   Deja Dup Command Guide
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   <code>
+    deja-dup
+   </code>
+   is a simple backup tool in Linux that provides a user-friendly way to back up and restore files. It supports scheduling, incremental backups, encryption, and cloud storage.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       --backup
+      </code>
+     </td>
+     <td>
+      Start a backup process immediately.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --restore
+      </code>
+     </td>
+     <td>
+      Begin the restore process for files.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --prompt
+      </code>
+     </td>
+     <td>
+      Show a prompt for further actions if necessary.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --display=DISPLAY
+      </code>
+     </td>
+     <td>
+      Set the X display to use.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --version
+      </code>
+     </td>
+     <td>
+      Display the version of Deja Dup.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Start a backup immediately
+deja-dup --backup
+
+# Restore files from the latest backup
+deja-dup --restore
+
+# Start a backup with prompts for user input
+deja-dup --backup --prompt
+</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>deja-dup --backup         # Start immediate backup
+deja-dup --restore        # Restore from backup
+deja-dup --prompt         # Interactive mode</code></pre>
+ </body>
+</html>

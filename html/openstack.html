@@ -1,0 +1,119 @@
+<h1>
+ OpenStack Command
+</h1>
+<p>
+ The
+ <code>
+  openstack
+ </code>
+ command is a command-line client for interacting with OpenStack services. It allows users to manage resources like instances, networks, volumes, and more in an OpenStack cloud environment.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     --os-cloud &lt;cloud&gt;
+    </code>
+   </td>
+   <td>
+    Specifies the cloud configuration to use.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --os-project-name &lt;project&gt;
+    </code>
+   </td>
+   <td>
+    Sets the project name for the command.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --os-username &lt;username&gt;
+    </code>
+   </td>
+   <td>
+    Specifies the username for authentication.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --os-password &lt;password&gt;
+    </code>
+   </td>
+   <td>
+    Sets the password for authentication.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --os-auth-url &lt;auth url&gt;
+    </code>
+   </td>
+   <td>
+    Provides the authentication URL.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --debug
+    </code>
+   </td>
+   <td>
+    Enables debug output.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># List all instances
+openstack server list
+
+# Create a new instance
+openstack server create --flavor m1.small --image cirros --network private my-instance
+
+# Delete an instance
+openstack server delete my-instance
+
+# List available flavors
+openstack flavor list
+
+# List all networks
+openstack network list
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code># Quick reference for common tasks
+
+# List servers
+openstack server list
+
+# Create server
+openstack server create --flavor <flavor> --image <image/> --network <network> <name>
+
+# Delete server
+openstack server delete <name>
+</name></name></network></flavor></code></pre>

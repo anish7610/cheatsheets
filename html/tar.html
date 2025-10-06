@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Linux `tar` Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   Linux `tar` Command Guide
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    tar
+   </code>
+   command is used for archiving and compressing files. It creates and extracts
+   <code>
+    .tar
+   </code>
+   archives, and can handle special file types and attributes.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -c
+      </code>
+     </td>
+     <td>
+      Create a new archive
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -x
+      </code>
+     </td>
+     <td>
+      Extract files from an archive
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -v
+      </code>
+     </td>
+     <td>
+      Display progress in the terminal
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -f
+      </code>
+     </td>
+     <td>
+      Use archive file or device (specifies filename)
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -z
+      </code>
+     </td>
+     <td>
+      Compress the archive with gzip
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -j
+      </code>
+     </td>
+     <td>
+      Compress the archive with bzip2
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -t
+      </code>
+     </td>
+     <td>
+      List the contents of an archive
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <h3>
+   Create a tar.gz archive
+  </h3>
+  <pre><code>tar -cvzf archive.tar.gz /path/to/directory</code></pre>
+  <h3>
+   Extract a tar.gz archive
+  </h3>
+  <pre><code>tar -xvzf archive.tar.gz</code></pre>
+  <h3>
+   List contents of a tar file
+  </h3>
+  <pre><code>tar -tvf archive.tar</code></pre>
+  <h3>
+   Create a tar.bz2 archive
+  </h3>
+  <pre><code>tar -cvjf archive.tar.bz2 /path/to/directory</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+Create:   tar -cvf archive.tar /path
+Extract:  tar -xvf archive.tar
+Gzip:     tar -cvzf archive.tar.gz /path
+List:     tar -tvf archive.tar
+    </code></pre>
+ </body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   smartctl Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   smartctl Command Guide
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   <code>
+    smartctl
+   </code>
+   is a command-line utility to control and monitor storage systems using the SMART (Self-Monitoring, Analysis and Reporting Technology) system built into most modern ATA/SATA/SCSI/NVMe drives.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -i
+      </code>
+     </td>
+     <td>
+      Show device information.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -a
+      </code>
+     </td>
+     <td>
+      Display all SMART information for the device.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -H
+      </code>
+     </td>
+     <td>
+      Show SMART health status.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -t short
+      </code>
+     </td>
+     <td>
+      Initiate a short self-test.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -t long
+      </code>
+     </td>
+     <td>
+      Initiate a long self-test.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -l error
+      </code>
+     </td>
+     <td>
+      Display the device error log.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -x
+      </code>
+     </td>
+     <td>
+      Show extended SMART information.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <h3>
+   Show Device Information
+  </h3>
+  <pre><code>smartctl -i /dev/sdX</code></pre>
+  <h3>
+   Check Overall Health Status
+  </h3>
+  <pre><code>smartctl -H /dev/sdX</code></pre>
+  <h3>
+   Display All SMART Information
+  </h3>
+  <pre><code>smartctl -a /dev/sdX</code></pre>
+  <h3>
+   Run a Short Self-Test
+  </h3>
+  <pre><code>smartctl -t short /dev/sdX</code></pre>
+  <h3>
+   View Error Log
+  </h3>
+  <pre><code>smartctl -l error /dev/sdX</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre>
+<code>
+smartctl -i /dev/sdX     # Device Information
+smartctl -H /dev/sdX     # Health Status
+smartctl -a /dev/sdX     # All Info
+smartctl -t short /dev/sdX # Short Test
+smartctl -l error /dev/sdX # View Errors
+</code>
+    </pre>
+ </body>
+</html>

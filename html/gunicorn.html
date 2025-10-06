@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Gunicorn Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   Gunicorn Command Overview
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   Gunicorn, short for "Green Unicorn," is a Python WSGI HTTP Server for UNIX. It is a pre-fork worker model, which means it creates multiple worker processes to handle requests, allowing for efficient load handling in Python web applications.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      -w
+     </td>
+     <td>
+      Number of worker processes for handling requests.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -b
+     </td>
+     <td>
+      Bind to a specific HOST:PORT.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -t
+     </td>
+     <td>
+      Worker timeout in seconds.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      --log-level
+     </td>
+     <td>
+      Defines logging level (e.g., debug, info, warning).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      --access-logfile
+     </td>
+     <td>
+      Specifies access log file path.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      --daemon
+     </td>
+     <td>
+      Run Gunicorn as a background process.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Run a simple application with default settings
+gunicorn myapp:app
+
+# Specify number of workers and binding address
+gunicorn -w 4 -b 127.0.0.1:8000 myapp:app
+
+# Set a timeout and logging level
+gunicorn -t 120 --log-level=info myapp:app
+
+# Run as a daemon with access log
+gunicorn --daemon --access-logfile /var/log/gunicorn/access.log myapp:app
+</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code># Basic run
+gunicorn myapp:app
+
+# With options
+gunicorn -w <workers> -b <host>:<port> myapp:app
+</port></host></workers></code></pre>
+ </body>
+</html>

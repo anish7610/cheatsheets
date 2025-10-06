@@ -1,0 +1,99 @@
+<h1>
+ Bacula Command Overview
+</h1>
+<p>
+ Bacula is an open-source backup solution that allows for the management and automation of backup, recovery, and verification of data across a network of computers.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    -c, --config
+   </td>
+   <td>
+    Specify configuration file.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -d, --daemon
+   </td>
+   <td>
+    Start the Bacula daemon.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -t, --test
+   </td>
+   <td>
+    Test configuration for errors.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -u, --user
+   </td>
+   <td>
+    Specify the user to run as.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -g, --group
+   </td>
+   <td>
+    Specify the group to run as.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    -s, --simulate
+   </td>
+   <td>
+    Simulate the execution without actual data transfer.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Start Bacula daemon with specified config
+bacula -d -c /etc/bacula/bacula-dir.conf
+
+# Test configuration file for errors
+bacula -t -c /etc/bacula/bacula-dir.conf
+
+# Simulate a backup job
+bacula -s -c /etc/bacula/bacula-dir.conf
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+# Start daemons
+bacula -d
+
+# Specify config file
+bacula -c [file]
+
+# Test config
+bacula -t
+
+# Simulate job
+bacula -s
+</code></pre>

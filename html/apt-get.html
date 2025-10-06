@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Apt-get Command Overview
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Understanding the `apt-get` Command
+   </h1>
+   <p>
+    `apt-get` is a command-line tool for handling packages in Debian-based Linux distributions. It is used for installing, upgrading, and removing software packages.
+   </p>
+  </header>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       update
+      </td>
+      <td>
+       Update package index files from their sources.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       upgrade
+      </td>
+      <td>
+       Install the latest versions of all installed packages.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       install [package]
+      </td>
+      <td>
+       Install the specified package(s).
+      </td>
+     </tr>
+     <tr>
+      <td>
+       remove [package]
+      </td>
+      <td>
+       Remove the specified package(s), but not configuration files.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       purge [package]
+      </td>
+      <td>
+       Remove the specified package(s), including configuration files.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       autoremove
+      </td>
+      <td>
+       Remove automatically installed packages that are no longer needed.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       clean
+      </td>
+      <td>
+       Clean out the local repository of retrieved package files.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code>sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install vim
+sudo apt-get remove firefox
+sudo apt-get purge apache2
+sudo apt-get autoremove
+sudo apt-get clean
+        </code></pre>
+  </section>
+  <section>
+   <h2>
+    Quick Cheat Sheet
+   </h2>
+   <pre><code>update     - Refresh package lists
+upgrade    - Update all packages
+install    - Add new packages
+remove     - Remove packages
+purge      - Remove packages and configs
+autoremove - Clean up unused packages
+clean      - Clear cache</code></pre>
+  </section>
+ </body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Docker Command Overview
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Docker Command Overview
+   </h1>
+   <p>
+    The
+    <code>
+     docker
+    </code>
+    command is used to manage containers in Linux, allowing you to create, deploy, and run applications in containers.
+   </p>
+  </header>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        docker run
+       </code>
+      </td>
+      <td>
+       Run a command in a new container.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        docker ps
+       </code>
+      </td>
+      <td>
+       List running containers.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        docker pull
+       </code>
+      </td>
+      <td>
+       Download an image from a registry.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        docker build
+       </code>
+      </td>
+      <td>
+       Build an image from a Dockerfile.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        docker exec
+       </code>
+      </td>
+      <td>
+       Run a command in a running container.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        docker stop
+       </code>
+      </td>
+      <td>
+       Stop a running container.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code># Run a container from an image
+docker run -d -p 80:80 nginx
+
+# List all running containers
+docker ps
+
+# Pull the latest Ubuntu image
+docker pull ubuntu:latest
+
+# Build an image from a Dockerfile in the current directory
+docker build -t myimage .
+
+# Execute a command inside a running container
+docker exec -it mycontainer /bin/bash
+
+# Stop a running container
+docker stop mycontainer
+        </code></pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code>docker run IMAGE    # Run container
+docker ps             # List containers
+docker pull IMAGE     # Pull image
+docker build PATH     # Build image
+docker exec CONTAINER # Exec in container
+docker stop CONTAINER # Stop container
+        </code></pre>
+  </section>
+ </body>
+</html>

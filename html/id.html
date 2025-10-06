@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Linux `id` Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   Linux `id` Command
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    id
+   </code>
+   command is used to display the user and group information for the specified user or the current user if no username is provided.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -u
+      </code>
+     </td>
+     <td>
+      Display only the user ID.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -g
+      </code>
+     </td>
+     <td>
+      Display only the group ID.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -G
+      </code>
+     </td>
+     <td>
+      Display all group IDs.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -n
+      </code>
+     </td>
+     <td>
+      Display the name instead of numeric IDs (used with
+      <code>
+       -u
+      </code>
+      ,
+      <code>
+       -g
+      </code>
+      , or
+      <code>
+       -G
+      </code>
+      ).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --help
+      </code>
+     </td>
+     <td>
+      Display help message and exit.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <h3>
+   Display Current User Information
+  </h3>
+  <pre><code>id</code></pre>
+  <h3>
+   Display Only User ID for Current User
+  </h3>
+  <pre><code>id -u</code></pre>
+  <h3>
+   Display Only Group ID for Current User
+  </h3>
+  <pre><code>id -g</code></pre>
+  <h3>
+   Display All Group IDs for Current User
+  </h3>
+  <pre><code>id -G</code></pre>
+  <h3>
+   Display User and Group Names for a Specific User
+  </h3>
+  <pre><code>id -nu <username></username></code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+id          # Show user and group info
+id -u       # Show only user ID
+id -g       # Show only group ID
+id -G       # Show all group IDs
+id -nu      # Show user name
+id -ng      # Show group name
+    </code></pre>
+ </body>
+</html>

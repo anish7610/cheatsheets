@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   PHP Command Cheat Sheet
+  </title>
+ </head>
+ <body>
+  <h1>
+   PHP Command Overview
+  </h1>
+  <p>
+   The
+   <code>
+    php
+   </code>
+   command is used to execute PHP scripts from the command line.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -r
+      </code>
+     </td>
+     <td>
+      Run PHP code without using script tags &lt;?php ?&gt;.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -f
+      </code>
+     </td>
+     <td>
+      Parse and execute a file.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -l
+      </code>
+     </td>
+     <td>
+      Check the syntax of a PHP file (lint).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -a
+      </code>
+     </td>
+     <td>
+      Run the interactive mode shell.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -i
+      </code>
+     </td>
+     <td>
+      Display PHP information (equivalent to phpinfo()).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -m
+      </code>
+     </td>
+     <td>
+      Show compiled in PHP modules.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Run a PHP script file
+php -f script.php
+
+# Execute PHP code directly
+php -r 'echo "Hello, World!\n";'
+
+# Syntax check for a PHP file
+php -l script.php
+
+# Interactive shell
+php -a
+
+# Display PHP configuration info
+php -i
+
+# List all loaded PHP modules
+php -m
+</code></pre>
+  <h2>
+   PHP Command Cheat Sheet
+  </h2>
+  <pre><code>php -f [file]    # Run script with file
+php -r [code]    # Run code directly
+php -l [file]    # Lint check for file
+php -a           # Interactive mode
+php -i           # PHP info
+php -m           # List modules
+</code></pre>
+ </body>
+</html>

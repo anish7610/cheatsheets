@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   hostnamectl Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   hostnamectl Command Guide
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    hostnamectl
+   </code>
+   command is used to query and change the system hostname and related settings on a Linux system.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       status
+      </code>
+     </td>
+     <td>
+      Display current hostname and related system information.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       set-hostname [name]
+      </code>
+     </td>
+     <td>
+      Set the system's transient and static hostnames.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       set-icon-name [name]
+      </code>
+     </td>
+     <td>
+      Set an icon name for the system.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       set-chassis [type]
+      </code>
+     </td>
+     <td>
+      Set the chassis type (e.g., desktop, laptop).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       set-deployment [name]
+      </code>
+     </td>
+     <td>
+      Set the deployment environment (e.g., development, production).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       set-location [name]
+      </code>
+     </td>
+     <td>
+      Set the location for the system.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Examples
+  </h2>
+  <pre><code># Display current hostname and system info
+hostnamectl status
+
+# Change the system hostname to "mynewhost"
+hostnamectl set-hostname mynewhost
+
+# Set the chassis type to "laptop"
+hostnamectl set-chassis laptop
+
+# Set the deployment environment to "production"
+hostnamectl set-deployment production
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>hostnamectl status
+hostnamectl set-hostname [name]
+hostnamectl set-icon-name [name]
+hostnamectl set-chassis [type]
+hostnamectl set-deployment [name]
+hostnamectl set-location [name]
+    </code></pre>
+ </body>
+</html>

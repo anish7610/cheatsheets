@@ -1,0 +1,128 @@
+<h1>
+ Linux Command:
+ <code>
+  depmod
+ </code>
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  depmod
+ </code>
+ command is used to generate modules' dependency files for the Linux kernel. It analyzes the kernel modules in the specified directory and outputs a dependency file.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -a
+    </code>
+    ,
+    <code>
+     --all
+    </code>
+   </td>
+   <td>
+    Consider all modules in the directory (default).
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -n
+    </code>
+    ,
+    <code>
+     --dry-run
+    </code>
+   </td>
+   <td>
+    Perform a dry run without making any changes.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -v
+    </code>
+    ,
+    <code>
+     --verbose
+    </code>
+   </td>
+   <td>
+    Provide verbose output.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -F
+    </code>
+    <code>
+     System.map
+    </code>
+   </td>
+   <td>
+    Use the specified System.map file.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -b
+    </code>
+    ,
+    <code>
+     --basedir
+    </code>
+    <code>
+     DIR
+    </code>
+   </td>
+   <td>
+    Use a directory as the base for module paths.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Generate dependencies for all modules
+depmod
+
+# Verbose output for debugging purposes
+depmod -v
+
+# Perform a dry run to see changes without applying them
+depmod -n
+
+# Specify a different base directory for module paths
+depmod -b /alt/modules
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>depmod        # Generate dependency files
+depmod -v     # Verbose mode
+depmod -n     # Dry run
+depmod -b DIR # Base directory
+</code></pre>

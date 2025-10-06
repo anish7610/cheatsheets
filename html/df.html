@@ -1,0 +1,124 @@
+<h1>
+ Linux Command:
+ <code>
+  df
+ </code>
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  df
+ </code>
+ command displays the amount of disk space available on file systems, along with other relevant information.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -h
+    </code>
+   </td>
+   <td>
+    Displays sizes in a human-readable format (e.g., KB, MB).
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -a
+    </code>
+   </td>
+   <td>
+    Includes dummy file systems.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -T
+    </code>
+   </td>
+   <td>
+    Shows the file system type.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -i
+    </code>
+   </td>
+   <td>
+    Displays inode usage instead of block usage.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --total
+    </code>
+   </td>
+   <td>
+    Produces a grand total at the end of the output.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<h3>
+ Basic Disk Usage
+</h3>
+<pre><code>df -h</code></pre>
+<p>
+ Displays disk space in a human-readable format.
+</p>
+<h3>
+ Include All File Systems
+</h3>
+<pre><code>df -a</code></pre>
+<p>
+ Shows all file systems, including dummy ones.
+</p>
+<h3>
+ File System Types
+</h3>
+<pre><code>df -T</code></pre>
+<p>
+ Includes the type of each file system in the output.
+</p>
+<h3>
+ Inode Usage Information
+</h3>
+<pre><code>df -i</code></pre>
+<p>
+ Displays inode usage for each file system.
+</p>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+df -h          # Human-readable disk usage
+df -a          # All file systems
+df -T          # Show file system types
+df -i          # Inode usage
+df --total     # grand total
+</code></pre>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Linux `unzip` Command Guide
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Linux `unzip` Command
+   </h1>
+   <p>
+    The `unzip` command is used to extract files from a ZIP archive.
+   </p>
+  </header>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       -l
+      </td>
+      <td>
+       List contents of ZIP archive without extracting.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       -d
+       <em>
+        directory
+       </em>
+      </td>
+      <td>
+       Extract files into the specified directory.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       -n
+      </td>
+      <td>
+       Never overwrite existing files.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       -o
+      </td>
+      <td>
+       Overwrite existing files without prompting.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       -q
+      </td>
+      <td>
+       Quiet mode; minimal output.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       -x
+       <em>
+        pattern
+       </em>
+      </td>
+      <td>
+       Exclude files that match the pattern.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code># Extract all files from archive.zip
+unzip archive.zip
+
+# List contents without extracting
+unzip -l archive.zip
+
+# Extract to a specific directory
+unzip archive.zip -d /path/to/directory
+
+# Overwrite files without confirmation
+unzip -o archive.zip
+
+# Extract while excluding certain files
+unzip archive.zip -x "*.txt"</code></pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code>unzip file.zip          # Extract all
+unzip -l file.zip      # List contents
+unzip -d dir file.zip  # Extract to dir
+unzip -n file.zip      # Never overwrite
+unzip -o file.zip      # Overwrite without prompt
+unzip -q file.zip      # Quiet mode</code></pre>
+  </section>
+ </body>
+</html>

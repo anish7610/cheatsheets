@@ -1,0 +1,97 @@
+<h1>
+ Traefik Command Overview
+</h1>
+<p>
+ <code>
+  traefik
+ </code>
+ is an open-source edge router that makes deploying microservices easy. It is designed to automatically manage the routing of requests and integrates seamlessly with various service discovery backends.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -c, --configFile
+    </code>
+   </td>
+   <td>
+    Specifies the path to the Traefik configuration file.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --log.level
+    </code>
+   </td>
+   <td>
+    Sets the log level (e.g., "DEBUG", "INFO").
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --api
+    </code>
+   </td>
+   <td>
+    Enables the Traefik API and monitoring dashboard.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --providers.docker
+    </code>
+   </td>
+   <td>
+    Enables Docker as a provider for service discovery.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --entrypoints.web.address
+    </code>
+   </td>
+   <td>
+    Defines the address to listen on for the web entry point.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Start Traefik with a specific configuration file
+traefik -c /path/to/traefik.yml
+
+# Run Traefik with Docker provider and web entrypoint
+traefik --providers.docker --entrypoints.web.address=:80
+
+# Enable API and set log level to DEBUG
+traefik --api --log.level=DEBUG
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>traefik -c &lt;configFile&gt;         # Set config file
+traefik --log.level=DEBUG          # Set log level
+traefik --api                      # Enable API/dashboard
+traefik --providers.docker         # Use Docker for discovery
+traefik --entrypoints.web.address  # Listen on web port
+</code></pre>

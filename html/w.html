@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Linux `w` Command Guide
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Linux `w` Command Guide
+   </h1>
+  </header>
+  <section>
+   <h2>
+    Description
+   </h2>
+   <p>
+    The
+    <code>
+     w
+    </code>
+    command displays information about users currently logged into the system and their activities.
+   </p>
+  </section>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        -h
+       </code>
+      </td>
+      <td>
+       Omit the header in the output.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -s
+       </code>
+      </td>
+      <td>
+       Short format, skipping the login name and from fields.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -f
+       </code>
+      </td>
+      <td>
+       Toggle printing of the from (remote hostname) field.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -i
+       </code>
+      </td>
+      <td>
+       Display IP addresses instead of hostnames.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        -u
+       </code>
+      </td>
+      <td>
+       Ignore the idle time.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code># Display all user activities
+w
+
+# Display user activities without header
+w -h
+
+# Display in shorter format
+w -s
+
+# Display with IP addresses instead of hostnames
+w -i
+</code></pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code>w       # Show all user activities
+w -h    # No header
+w -s    # Short format
+w -i    # Show IP addresses
+</code></pre>
+  </section>
+ </body>
+</html>

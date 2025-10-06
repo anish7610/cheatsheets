@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Linux `top` Command
+  </title>
+ </head>
+ <body>
+  <h1>
+   Linux
+   <code>
+    top
+   </code>
+   Command
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    top
+   </code>
+   command provides a dynamic, real-time view of system processes, showing key performance statistics such as CPU and memory usage.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -d seconds
+      </code>
+     </td>
+     <td>
+      Set the delay between updates (default is 3 seconds).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -b
+      </code>
+     </td>
+     <td>
+      Run in batch mode for easier parsing by other programs or scripts.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -n number
+      </code>
+     </td>
+     <td>
+      Limit the number of iterations; useful with
+      <code>
+       -b
+      </code>
+      option.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -u user
+      </code>
+     </td>
+     <td>
+      Show only processes for a specific user.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Start top with a 5-second delay between updates
+top -d 5
+
+# Run top in batch mode, displaying only two iterations
+top -b -n 2
+
+# Display processes for a specific user
+top -u alice
+</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code># Start top with default settings
+top
+
+# Set refresh delay
+top -d 3
+
+# Batch mode
+top -b
+
+# Limit iterations
+top -n 5
+
+# Filter by user
+top -u username
+</code></pre>
+ </body>
+</html>

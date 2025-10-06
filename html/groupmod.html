@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Linux groupmod Command
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Linux
+    <code>
+     groupmod
+    </code>
+    Command
+   </h1>
+   <p>
+    <code>
+     groupmod
+    </code>
+    is used to modify existing group definitions on Linux systems.
+   </p>
+  </header>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       -g, --gid
+      </td>
+      <td>
+       Change the Group ID (GID) to the specified value.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       -n, --new-name
+      </td>
+      <td>
+       Rename the group to a new group name.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       -o, --non-unique
+      </td>
+      <td>
+       Allow the GID to be non-unique.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code># Change the GID of the group "developers" to 1001
+groupmod -g 1001 developers
+
+# Rename the group "staff" to "team"
+groupmod -n team staff
+
+# Allow a duplicate GID for the group "admins" to 1002
+groupmod -o -g 1002 admins
+        </code></pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code>groupmod -g GID groupName          # Change GID
+groupmod -n newGroupName groupName  # Rename group
+groupmod -o -g GID groupName        # Allow non-unique GID
+        </code></pre>
+  </section>
+ </body>
+</html>

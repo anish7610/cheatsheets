@@ -1,0 +1,112 @@
+<h1>
+ gcloud Command Overview
+</h1>
+<p>
+ The
+ <code>
+  gcloud
+ </code>
+ command is a powerful CLI tool used to manage resources on Google Cloud Platform (GCP), such as Compute Engine, Cloud Storage, and Kubernetes Engine.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <tr>
+  <th>
+   Option
+  </th>
+  <th>
+   Description
+  </th>
+ </tr>
+ <tr>
+  <td>
+   <code>
+    --project
+   </code>
+  </td>
+  <td>
+   Specify the Google Cloud project to use.
+  </td>
+ </tr>
+ <tr>
+  <td>
+   <code>
+    --zone
+   </code>
+  </td>
+  <td>
+   Specify the zone for regional resources.
+  </td>
+ </tr>
+ <tr>
+  <td>
+   <code>
+    --quiet
+   </code>
+  </td>
+  <td>
+   Disable all interactive prompts.
+  </td>
+ </tr>
+ <tr>
+  <td>
+   <code>
+    --format
+   </code>
+  </td>
+  <td>
+   Set the output format (e.g., json, yaml, text).
+  </td>
+ </tr>
+ <tr>
+  <td>
+   <code>
+    --help
+   </code>
+  </td>
+  <td>
+   Display help information about the command.
+  </td>
+ </tr>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># List all projects
+gcloud projects list
+
+# Set a default project
+gcloud config set project [PROJECT_ID]
+
+# Create a new Compute Engine instance
+gcloud compute instances create [INSTANCE_NAME] --zone=[ZONE]
+
+# Deploy an app to App Engine
+gcloud app deploy
+
+# List all Compute Engine instances
+gcloud compute instances list
+
+# Delete a specific Compute Engine instance
+gcloud compute instances delete [INSTANCE_NAME] --zone=[ZONE] --quiet
+</code></pre>
+<h2>
+ Compact Cheat Sheet
+</h2>
+<pre><code># List projects
+gcloud projects list
+
+# Set default project
+gcloud config set project [PROJECT_ID]
+
+# Create instance
+gcloud compute instances create [INSTANCE_NAME] --zone=[ZONE]
+
+# Deploy app
+gcloud app deploy
+
+# List instances
+gcloud compute instances list
+</code></pre>

@@ -1,0 +1,108 @@
+<html>
+ <body>
+  <h1>
+   Linux `at` Command Overview
+  </h1>
+  <p>
+   The
+   <code>
+    at
+   </code>
+   command is used to schedule one-time execution of a command or script at a later time.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -f file
+      </code>
+     </td>
+     <td>
+      Read the job from a file instead of standard input.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -m
+      </code>
+     </td>
+     <td>
+      Send mail to the user when the job is done, even if there was no output.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -l
+      </code>
+     </td>
+     <td>
+      List the user's pending jobs. Equivalent to
+      <code>
+       atq
+      </code>
+      .
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -d
+      </code>
+      or
+      <code>
+       -r
+      </code>
+     </td>
+     <td>
+      Delete a job, identified by its job number. Equivalent to
+      <code>
+       atrm
+      </code>
+      .
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code>
+# Schedule a job to run at a specific time
+echo "backup.sh" | at 02:00
+
+# Using a file to schedule multiple commands
+at -f backup_tasks.txt now + 1 day
+
+# Listing pending jobs
+at -l
+
+# Removing a specific job by job number
+at -r 5
+    </code></pre>
+  <h2>
+   Compact Cheat Sheet
+  </h2>
+  <pre><code>
+at TIME             # Schedule a command
+at -f FILE TIME     # Schedule commands from a file
+at -l               # List jobs
+at -r JOB_NUMBER    # Remove a job
+    </code></pre>
+ </body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Let's Encrypt Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   Let's Encrypt Command Guide
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    letsencrypt
+   </code>
+   command is a client for the Let's Encrypt Certificate Authority (CA). It automates the process of obtaining and renewing SSL/TLS certificates for your web server.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       certonly
+      </code>
+     </td>
+     <td>
+      Obtain or renew a certificate without installing it.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       renew
+      </code>
+     </td>
+     <td>
+      Renew all previously obtained certificates that are near expiry.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --apache
+      </code>
+     </td>
+     <td>
+      Use the Apache plugin for certificate installation.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --nginx
+      </code>
+     </td>
+     <td>
+      Use the Nginx plugin for certificate installation.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --webroot
+      </code>
+     </td>
+     <td>
+      Use the webroot plugin for authentication.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --dry-run
+      </code>
+     </td>
+     <td>
+      Perform a test run of the issuance process.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -d
+      </code>
+     </td>
+     <td>
+      Specify the domain names for the certificate.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Obtain a certificate for example.com using Apache
+letsencrypt --apache -d example.com
+
+# Obtain a certificate using webroot for two domains
+letsencrypt certonly --webroot -w /var/www/html -d example.com -d www.example.com
+
+# Renew all certificates
+letsencrypt renew
+
+# Test obtaining a certificate (without affecting existing certs)
+letsencrypt certonly --webroot -w /var/www/html -d example.com --dry-run
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code># Apache installation
+letsencrypt --apache -d domain.com
+
+# Nginx installation
+letsencrypt --nginx -d domain.com
+
+# Webroot authentication
+letsencrypt certonly --webroot -w /path/to/webroot -d domain.com
+
+# Renew certificates
+letsencrypt renew
+    </code></pre>
+ </body>
+</html>

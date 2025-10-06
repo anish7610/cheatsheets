@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Linux `httpd` Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   Linux `httpd` Command Guide
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The `httpd` command starts the Apache HTTP Server, an open-source web server used to serve web content. It is a key component of web hosting services.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      -k start
+     </td>
+     <td>
+      Starts the Apache HTTP server.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -k stop
+     </td>
+     <td>
+      Stops the Apache HTTP server.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -k restart
+     </td>
+     <td>
+      Restarts the Apache HTTP server.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -k graceful
+     </td>
+     <td>
+      Gracefully restarts the server, allowing ongoing requests to finish.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -f &lt;file&gt;
+     </td>
+     <td>
+      Uses the specified configuration file.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -v
+     </td>
+     <td>
+      Displays the version information.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Start the Apache HTTP server
+httpd -k start
+
+# Stop the server
+httpd -k stop
+
+# Restart the server
+httpd -k restart
+
+# Gracefully restart with a specific config file
+httpd -k graceful -f /path/to/httpd.conf
+
+# Check version
+httpd -v
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>Start: httpd -k start
+Stop: httpd -k stop
+Restart: httpd -k restart
+Graceful restart: httpd -k graceful
+Version: httpd -v
+Config: httpd -f &lt;file&gt;</code></pre>
+ </body>
+</html>

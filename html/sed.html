@@ -1,0 +1,113 @@
+<html>
+ <body>
+  <h1>
+   Understanding the `sed` Command
+  </h1>
+  <p>
+   <code>
+    sed
+   </code>
+   is a stream editor used to perform basic text transformations on an input stream (a file or input from a pipeline).
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -e
+      </code>
+     </td>
+     <td>
+      Add the script to the commands to be executed.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -i
+      </code>
+     </td>
+     <td>
+      Edit files in place (overwrite).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -n
+      </code>
+     </td>
+     <td>
+      Suppress automatic printing of pattern space.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -f
+      </code>
+     </td>
+     <td>
+      Read commands from a file.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -r
+      </code>
+     </td>
+     <td>
+      Use extended regular expressions.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Replace 'old' with 'new' in a file and print to stdout
+sed 's/old/new/' file.txt
+
+# Replace 'old' with 'new' in a file in-place
+sed -i 's/old/new/' file.txt
+
+# Print lines 1 to 10 from a file
+sed -n '1,10p' file.txt
+
+# Delete lines containing a specific word
+sed '/word/d' file.txt
+
+# Read commands from a script file
+sed -f script.sed file.txt
+</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code># Basic substitution
+sed 's/find/replace/'
+
+# In-place editing
+sed -i 's/find/replace/'
+
+# Print specific lines
+sed -n 'Np'
+
+# Delete lines
+sed '/pattern/d'
+</code></pre>
+ </body>
+</html>

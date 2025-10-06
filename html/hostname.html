@@ -1,0 +1,113 @@
+<h1>
+ Linux Command: hostname
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  hostname
+ </code>
+ command is used to display or set the system's host name.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -s
+    </code>
+   </td>
+   <td>
+    Display the short hostname (up to the first dot).
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -f
+    </code>
+   </td>
+   <td>
+    Display the full hostname, including the domain.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -i
+    </code>
+   </td>
+   <td>
+    Display the network address(es) of the host.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -I
+    </code>
+   </td>
+   <td>
+    Display all network addresses of the host.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --help
+    </code>
+   </td>
+   <td>
+    Display help information.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Display the system's current hostname
+hostname
+
+# Set the hostname to 'myserver'
+sudo hostname myserver
+
+# Display the short hostname
+hostname -s
+
+# Display the full hostname
+hostname -f
+
+# Display the IP address of the current host
+hostname -i
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code># Display current hostname
+hostname
+
+# Set a new hostname (requires root)
+sudo hostname [newname]
+
+# Display short / full hostname
+hostname -s / hostname -f
+
+# Display IP address(es)
+hostname -i / hostname -I
+</code></pre>

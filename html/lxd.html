@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   LXD Command Guide
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    LXD Command Guide
+   </h1>
+   <p>
+    LXD is a next-generation system container manager.
+   </p>
+  </header>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <code>
+        init
+       </code>
+      </td>
+      <td>
+       Initialize LXD with default settings or a configuration file.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        launch
+       </code>
+      </td>
+      <td>
+       Launch a new container from an image.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        start
+       </code>
+      </td>
+      <td>
+       Start an existing container.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        stop
+       </code>
+      </td>
+      <td>
+       Stop a running container.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        list
+       </code>
+      </td>
+      <td>
+       List all containers and their status.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        delete
+       </code>
+      </td>
+      <td>
+       Delete an existing container.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <code>
+        exec
+       </code>
+      </td>
+      <td>
+       Execute a command inside a running container.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Usage Examples
+   </h2>
+   <pre><code>
+# Initialize LXD
+lxd init
+
+# Launch a new Ubuntu container
+lxd launch ubuntu:20.04 my-container
+
+# List all containers
+lxd list
+
+# Start a container
+lxd start my-container
+
+# Execute a command inside a container
+lxd exec my-container -- /bin/bash
+
+# Stop a container
+lxd stop my-container
+
+# Delete a container
+lxd delete my-container
+        </code></pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code>
+# Initialize LXD
+lxd init
+
+# Launch container
+lxd launch <image/> <name>
+
+# List containers
+lxd list
+
+# Start/Stop/Delete container
+lxd start|stop|delete <name>
+
+# Exec command
+lxd exec <name> -- <command/>
+        </name></name></name></code></pre>
+  </section>
+ </body>
+</html>

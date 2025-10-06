@@ -1,0 +1,188 @@
+<h1>
+ Git Command Overview
+</h1>
+<p>
+ The
+ <code>
+  git
+ </code>
+ command is a distributed version control system used to track changes in source code during software development. It allows multiple developers to work on a project simultaneously and efficiently.
+</p>
+<h2>
+ Common Git Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     init
+    </code>
+   </td>
+   <td>
+    Initialize a new Git repository.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     clone &lt;url&gt;
+    </code>
+   </td>
+   <td>
+    Clone a repository from a URL.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     status
+    </code>
+   </td>
+   <td>
+    Show the working tree status.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     add &lt;file&gt;
+    </code>
+   </td>
+   <td>
+    Add file contents to the index.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     commit -m "message"
+    </code>
+   </td>
+   <td>
+    Record changes to the repository with a message.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     push
+    </code>
+   </td>
+   <td>
+    Update remote refs along with associated objects.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     pull
+    </code>
+   </td>
+   <td>
+    Fetch from and integrate with another repository or branch.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     branch
+    </code>
+   </td>
+   <td>
+    List, create, or delete branches.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     checkout &lt;branch&gt;
+    </code>
+   </td>
+   <td>
+    Switch branches or restore working tree files.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     merge &lt;branch&gt;
+    </code>
+   </td>
+   <td>
+    Join two or more development histories together.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     log
+    </code>
+   </td>
+   <td>
+    Show commit logs.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Initialize a new repository
+git init
+
+# Clone a repository
+git clone https://github.com/user/repo.git
+
+# Check the status of your files
+git status
+
+# Stage a file for commit
+git add file.txt
+
+# Commit changes with a message
+git commit -m "Add new feature"
+
+# Push changes to the remote repository
+git push origin main
+
+# Pull changes from the remote repository
+git pull origin main
+
+# Create a new branch
+git branch new-feature
+
+# Switch to a branch
+git checkout new-feature
+
+# Merge a branch into the current branch
+git merge new-feature
+
+# View the commit history
+git log
+</code></pre>
+<h2>
+ Git Cheat Sheet
+</h2>
+<pre><code>git init
+git clone &lt;url&gt;
+git status
+git add &lt;file&gt;
+git commit -m "message"
+git push
+git pull
+git branch
+git checkout &lt;branch&gt;
+git merge &lt;branch&gt;
+git log
+</code></pre>

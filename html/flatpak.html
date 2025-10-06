@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Flatpak Command Overview
+  </title>
+ </head>
+ <body>
+  <h1>
+   Flatpak Command Overview
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   Flatpak is a software utility for software deployment, application virtualization, and package management. It provides a sandbox environment in which users can run application software in isolation from the rest of the system.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       install
+      </code>
+     </td>
+     <td>
+      Install a Flatpak application or runtime.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       uninstall
+      </code>
+     </td>
+     <td>
+      Remove an installed application or runtime.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       list
+      </code>
+     </td>
+     <td>
+      List installed apps and/or runtimes.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       run
+      </code>
+     </td>
+     <td>
+      Run an installed application.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       search
+      </code>
+     </td>
+     <td>
+      Search for an app in the repositories.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       update
+      </code>
+     </td>
+     <td>
+      Update one or more applications or runtimes.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       info
+      </code>
+     </td>
+     <td>
+      Show information about an app or runtime.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Install an application
+flatpak install flathub org.mozilla.firefox
+
+# Uninstall an application
+flatpak uninstall org.mozilla.firefox
+
+# List all installed applications
+flatpak list
+
+# Run an application
+flatpak run org.mozilla.firefox
+
+# Search for an application in the repository
+flatpak search vlc
+
+# Update all installed applications
+flatpak update
+
+# Show information about an installed application
+flatpak info org.mozilla.firefox
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>flatpak install [repo] [package]  # Install app
+flatpak uninstall [package]      # Uninstall app
+flatpak list                     # List apps
+flatpak run [package]            # Run app
+flatpak search [term]            # Search app
+flatpak update                   # Update apps
+flatpak info [package]           # App info
+    </code></pre>
+ </body>
+</html>

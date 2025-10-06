@@ -1,0 +1,101 @@
+<h1>
+ Linux Command: dmidecode
+</h1>
+<p>
+ The
+ <code>
+  dmidecode
+ </code>
+ command retrieves detailed information about a computer's hardware, as described in the system's DMI (Desktop Management Interface) table.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -t, --type
+    </code>
+   </td>
+   <td>
+    Filter output by hardware type, e.g., 'memory', 'processor'.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -s, --string
+    </code>
+   </td>
+   <td>
+    Show specific information, e.g., 'bios-vendor'.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -q, --quiet
+    </code>
+   </td>
+   <td>
+    Less verbose output.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -u, --dump
+    </code>
+   </td>
+   <td>
+    Dump the DMI data in a binary format.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -h, --help
+    </code>
+   </td>
+   <td>
+    Display help information.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Get BIOS information
+dmidecode -t bios
+
+# Get processor details
+dmidecode -t processor
+
+# Retrieve memory device details
+dmidecode -t memory
+
+# Show system manufacturer
+dmidecode -s system-manufacturer
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+dmidecode -t <type>      # Filter by hardware type
+dmidecode -s <string>    # Specific DMI string info
+dmidecode -q             # Quiet mode
+dmidecode -u             # Dump binary data
+</string></type></code></pre>

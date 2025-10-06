@@ -1,0 +1,104 @@
+<h1>
+ Linux Command: aws
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  aws
+ </code>
+ command-line interface (CLI) is a unified tool to manage your AWS services. With just one tool, you can control multiple AWS services from the command line and automate them through scripts.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     --region
+    </code>
+   </td>
+   <td>
+    Specify the AWS region to interact with.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --output
+    </code>
+   </td>
+   <td>
+    Set the format for command output (e.g., json, text, table).
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --profile
+    </code>
+   </td>
+   <td>
+    Select a specific profile to use from the AWS credentials file.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --help
+    </code>
+   </td>
+   <td>
+    Show help for any command or subcommand.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># List all S3 buckets
+aws s3 ls
+
+# Start an EC2 instance
+aws ec2 start-instances --instance-ids i-0abcd1234efgh5678
+
+# Describe RDS instances with JSON output
+aws rds describe-db-instances --output json
+
+# Configure AWS CLI with a wizard
+aws configure
+
+# Use a specific profile to list S3 buckets in a region
+aws s3 ls --region us-west-2 --profile myprofile
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code># General AWS CLI command format
+aws <service> <operation> [options]
+
+# List S3 buckets
+aws s3 ls
+
+# Manage EC2 instances
+aws ec2 start-instances --instance-ids <id>
+aws ec2 stop-instances --instance-ids <id>
+
+# Describe resources
+aws <service> describe-<resource>
+</resource></service></id></id></operation></service></code></pre>

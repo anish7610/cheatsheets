@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Linux dpkg Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   Linux dpkg Command
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    dpkg
+   </code>
+   command is a low-level package manager for Debian-based systems, used to install, remove, and manage `.deb` packages.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -i, --install
+      </code>
+     </td>
+     <td>
+      Install a package.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -r, --remove
+      </code>
+     </td>
+     <td>
+      Remove a package.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -P, --purge
+      </code>
+     </td>
+     <td>
+      Remove a package and its configuration files.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -l, --list
+      </code>
+     </td>
+     <td>
+      List all installed packages.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -L, --listfiles
+      </code>
+     </td>
+     <td>
+      List files installed by a package.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -s, --status
+      </code>
+     </td>
+     <td>
+      Show the status of a package.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -S, --search
+      </code>
+     </td>
+     <td>
+      Search for files that belong to a package.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Install a package
+sudo dpkg -i package.deb
+
+# Remove a package
+sudo dpkg -r package_name
+
+# Purge a package
+sudo dpkg -P package_name
+
+# List all installed packages
+dpkg -l
+
+# List files installed by a package
+dpkg -L package_name
+
+# Show package status
+dpkg -s package_name
+
+# Search for a file in installed packages
+dpkg -S /path/to/file</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>Install: sudo dpkg -i package.deb
+Remove: sudo dpkg -r package_name
+Purge: sudo dpkg -P package_name
+List: dpkg -l
+List Files: dpkg -L package_name
+Status: dpkg -s package_name
+Search: dpkg -S /path/to/file</code></pre>
+ </body>
+</html>

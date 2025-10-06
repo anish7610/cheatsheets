@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Linux RPM Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   Linux Command: rpm
+  </h1>
+  <p>
+   The
+   <code>
+    rpm
+   </code>
+   command is used for managing packages on RPM-based Linux distributions. It can install, update, remove, and query packages.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      -i, --install
+     </td>
+     <td>
+      Install a package
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -U, --upgrade
+     </td>
+     <td>
+      Upgrade a package
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -e, --erase
+     </td>
+     <td>
+      Uninstall a package
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -q, --query
+     </td>
+     <td>
+      Query package information
+     </td>
+    </tr>
+    <tr>
+     <td>
+      -V, --verify
+     </td>
+     <td>
+      Verify a package
+     </td>
+    </tr>
+    <tr>
+     <td>
+      --rebuilddb
+     </td>
+     <td>
+      Rebuild the RPM database
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Examples
+  </h2>
+  <pre><code># Install a package
+rpm -i package.rpm
+
+# Upgrade a package
+rpm -U package.rpm
+
+# Uninstall a package
+rpm -e package_name
+
+# Query if a package is installed
+rpm -q package_name
+
+# Verify a package
+rpm -V package_name
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>rpm -i [package]     # Install
+rpm -U [package]     # Upgrade
+rpm -e [package]     # Erase
+rpm -q [package]     # Query
+rpm -V [package]     # Verify
+rpm --rebuilddb      # Rebuild DB
+    </code></pre>
+ </body>
+</html>

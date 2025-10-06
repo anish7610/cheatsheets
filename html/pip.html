@@ -1,0 +1,124 @@
+<html>
+ <body>
+  <h1>
+   Linux Command: pip
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   <code>
+    pip
+   </code>
+   is a package management system used to install and manage software packages written in Python.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       install &lt;package&gt;
+      </code>
+     </td>
+     <td>
+      Installs the specified package.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       uninstall &lt;package&gt;
+      </code>
+     </td>
+     <td>
+      Uninstalls the specified package.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       list
+      </code>
+     </td>
+     <td>
+      Lists installed packages.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       show &lt;package&gt;
+      </code>
+     </td>
+     <td>
+      Displays information about a package.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       freeze
+      </code>
+     </td>
+     <td>
+      Outputs installed packages in requirements format.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       install -r &lt;file&gt;
+      </code>
+     </td>
+     <td>
+      Installs all packages listed in the requirements file.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Install a package
+pip install requests
+
+# Uninstall a package
+pip uninstall numpy
+
+# List installed packages
+pip list
+
+# Show package information
+pip show flask
+
+# Freeze installed packages to a file
+pip freeze &gt; requirements.txt
+
+# Install packages from a requirements file
+pip install -r requirements.txt
+</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>pip install &lt;package&gt;     # Install package
+pip uninstall &lt;package&gt;   # Remove package
+pip list                  # List packages
+pip show &lt;package&gt;       # Info on package
+pip freeze &gt; req.txt      # Export to file
+pip install -r req.txt    # Install from file
+</code></pre>
+ </body>
+</html>

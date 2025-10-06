@@ -1,0 +1,113 @@
+<h1>
+ Chef Command in Linux
+</h1>
+<p>
+ The
+ <code>
+  chef
+ </code>
+ command is a configuration management tool that automates infrastructure provisioning and management using a coding approach.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     chef-client
+    </code>
+   </td>
+   <td>
+    Executes chef recipes on a node to ensure it is in the desired state.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     chef-server-ctl
+    </code>
+   </td>
+   <td>
+    Manages the Chef server with various subcommands.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     knife
+    </code>
+   </td>
+   <td>
+    CLI tool to interact with the Chef server or local chef-repo.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     chef-solo
+    </code>
+   </td>
+   <td>
+    Runs Chef in a standalone mode without requiring a Chef server.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     chef-shell
+    </code>
+   </td>
+   <td>
+    Opens an interactive Ruby shell with Chef configuration context.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Run chef-client to apply cookbooks to a node
+chef-client
+
+# Use knife to list all nodes
+knife node list
+
+# Manage the Chef server
+chef-server-ctl status
+
+# Run a recipe locally with chef-solo
+chef-solo -c solo.rb -o 'recipe[my_cookbook::my_recipe]'
+
+# Open the Chef interactive shell
+chef-shell
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code># Apply configurations
+chef-client
+
+# Server management
+chef-server-ctl COMMAND
+
+# Interact with server/repo
+knife COMMAND
+
+# Standalone execution
+chef-solo -c CONFIG -o RECIPE
+
+# Interactive shell
+chef-shell
+</code></pre>

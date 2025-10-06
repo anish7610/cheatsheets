@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   systemd Cheat Sheet
+  </title>
+ </head>
+ <body>
+  <h1>
+   systemd Command Overview
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   Systemd is a system and service manager for Linux operating systems, providing a way to manage system processes after booting.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       start
+      </code>
+     </td>
+     <td>
+      Start a service
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       stop
+      </code>
+     </td>
+     <td>
+      Stop a service
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       restart
+      </code>
+     </td>
+     <td>
+      Restart a service
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       enable
+      </code>
+     </td>
+     <td>
+      Enable a service to start on boot
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       disable
+      </code>
+     </td>
+     <td>
+      Disable a service from starting on boot
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       status
+      </code>
+     </td>
+     <td>
+      Show the status of a service
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code>systemctl start nginx.service</code></pre>
+  <pre><code>systemctl stop apache2.service</code></pre>
+  <pre><code>systemctl restart sshd.service</code></pre>
+  <pre><code>systemctl enable docker.service</code></pre>
+  <pre><code>systemctl disable mysql.service</code></pre>
+  <pre><code>systemctl status cron.service</code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>systemctl start <service>
+systemctl stop <service>
+systemctl restart <service>
+systemctl enable <service>
+systemctl disable <service>
+systemctl status <service></service></service></service></service></service></service></code></pre>
+ </body>
+</html>

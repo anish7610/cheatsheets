@@ -1,0 +1,100 @@
+<html>
+ <body>
+  <h1>
+   Linux `chown` Command
+  </h1>
+  <p>
+   The
+   <code>
+    chown
+   </code>
+   command changes the owner and group of files and directories.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -R
+      </code>
+     </td>
+     <td>
+      Recursively change ownership of directories and their contents.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --reference=file
+      </code>
+     </td>
+     <td>
+      Use the owner and group of the specified file.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -v
+      </code>
+     </td>
+     <td>
+      Output a diagnostic for every file processed.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -c
+      </code>
+     </td>
+     <td>
+      Like verbose but reports only when a change is made.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre>
+      <code>
+# Change owner to 'user' and group to 'group' for a file
+chown user:group filename
+
+# Recursively change owner and group for a directory
+chown -R user:group directory/
+
+# Change owner to match that of another file
+chown --reference=referencefile targetfile
+
+# Verbosely change owner to 'user'
+chown -v user filename
+      </code>
+    </pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre>
+      <code>
+chown user:group file          # Change owner and group
+chown -R user:group dir/       # Recursive change
+chown --reference=file target  # Use reference
+chown -v user file             # Verbose output
+      </code>
+    </pre>
+ </body>
+</html>

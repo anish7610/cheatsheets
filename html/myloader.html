@@ -1,0 +1,158 @@
+<h1>
+ myloader Command in Linux
+</h1>
+<p>
+ The
+ <code>
+  myloader
+ </code>
+ command is a multi-threaded tool used for restoring MySQL database dumps created by
+ <code>
+  mydumper
+ </code>
+ .
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -d
+    </code>
+    ,
+    <code>
+     --directory
+    </code>
+   </td>
+   <td>
+    Specify the directory of the dump files created by mydumper.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -h
+    </code>
+    ,
+    <code>
+     --host
+    </code>
+   </td>
+   <td>
+    MySQL database host to connect to.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -u
+    </code>
+    ,
+    <code>
+     --user
+    </code>
+   </td>
+   <td>
+    Username for connecting to the database.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -p
+    </code>
+    ,
+    <code>
+     --password
+    </code>
+   </td>
+   <td>
+    Password for the database user.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -P
+    </code>
+    ,
+    <code>
+     --port
+    </code>
+   </td>
+   <td>
+    Port number for connecting to the database.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -t
+    </code>
+    ,
+    <code>
+     --threads
+    </code>
+   </td>
+   <td>
+    Number of threads to use for restoring the dump.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -B
+    </code>
+    ,
+    <code>
+     --database
+    </code>
+   </td>
+   <td>
+    Restore only the specified database.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     --overwrite-tables
+    </code>
+   </td>
+   <td>
+    Overwrite existing tables during restore.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Restore a dump using 4 threads
+myloader -d /path/to/dump -h localhost -u user -p password -t 4
+
+# Restore a specific database
+myloader -d /path/to/dump -h localhost -u user -p password -B database_name
+
+# Restore and overwrite existing tables
+myloader -d /path/to/dump -h localhost -u user -p password --overwrite-tables
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>myloader -d [dir] -h [host] -u [user] -p [password] -t [threads]
+myloader -B [db]
+myloader --overwrite-tables
+</code></pre>

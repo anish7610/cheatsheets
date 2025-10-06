@@ -1,0 +1,111 @@
+<html>
+ <body>
+  <h1>
+   rmmod Command in Linux
+  </h1>
+  <p>
+   The
+   <code>
+    rmmod
+   </code>
+   command is used to remove a module from the Linux kernel. It helps manage kernel modules by unloading them when they are no longer needed.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -f
+      </code>
+      ,
+      <code>
+       --force
+      </code>
+     </td>
+     <td>
+      Forcefully remove a module, even if it is in use or does not have a
+      <code>
+       rmmod
+      </code>
+      function (not recommended).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -s
+      </code>
+      ,
+      <code>
+       --syslog
+      </code>
+     </td>
+     <td>
+      Send messages to the syslog instead of standard output.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -v
+      </code>
+      ,
+      <code>
+       --verbose
+      </code>
+     </td>
+     <td>
+      Provide detailed information during execution.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --wait
+      </code>
+     </td>
+     <td>
+      Wait until the module is no longer busy before removing it.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code># Remove a module named 'module_name'
+rmmod module_name
+
+# Forcefully remove an in-use module
+rmmod -f module_name
+
+# Verbosely remove a module and log to syslog
+rmmod -v -s module_name
+
+# Remove a module and wait if it is currently busy
+rmmod --wait module_name
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>rmmod [options] module_name
+-f: Force removal
+-s: Use syslog
+-v: Verbose output
+--wait: Wait if busy
+    </code></pre>
+ </body>
+</html>

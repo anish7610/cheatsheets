@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   passwd Command Guide
+  </title>
+ </head>
+ <body>
+  <h1>
+   passwd Command Guide
+  </h1>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <code>
+    passwd
+   </code>
+   command is used to change user passwords in Linux. It can also update password attributes and lock or unlock user accounts.
+  </p>
+  <h2>
+   Common Options
+  </h2>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Option
+     </th>
+     <th>
+      Description
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <code>
+       -l
+      </code>
+     </td>
+     <td>
+      Lock the specified user's account.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -u
+      </code>
+     </td>
+     <td>
+      Unlock the specified user's account.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -d
+      </code>
+     </td>
+     <td>
+      Delete the user's password (disable account access).
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       -S
+      </code>
+     </td>
+     <td>
+      Display account status information.
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <code>
+       --stdin
+      </code>
+     </td>
+     <td>
+      Read password from standard input (useful for scripting).
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2>
+   Usage Examples
+  </h2>
+  <pre><code>
+# Change the current user's password
+passwd
+
+# Lock a user's account
+passwd -l username
+
+# Unlock a user's account
+passwd -u username
+
+# Delete a user's password
+passwd -d username
+
+# Display user account status
+passwd -S username
+
+# Change password using a script
+echo "newpassword" | passwd --stdin username
+    </code></pre>
+  <h2>
+   Cheat Sheet
+  </h2>
+  <pre><code>
+passwd             # Change password
+passwd -l user     # Lock account
+passwd -u user     # Unlock account
+passwd -d user     # Delete password
+passwd -S user     # Show account status
+    </code></pre>
+ </body>
+</html>

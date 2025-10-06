@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   psql Command Guide
+  </title>
+ </head>
+ <body>
+  <header>
+   <h1>
+    psql Command Guide
+   </h1>
+  </header>
+  <section>
+   <h2>
+    Description
+   </h2>
+   <p>
+    The
+    <code>
+     psql
+    </code>
+    command is a terminal-based front-end to PostgreSQL. It allows you to interact with the PostgreSQL database server using SQL queries and commands.
+   </p>
+  </section>
+  <section>
+   <h2>
+    Common Options
+   </h2>
+   <table>
+    <thead>
+     <tr>
+      <th>
+       Option
+      </th>
+      <th>
+       Description
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       -d
+       <em>
+        dbname
+       </em>
+      </td>
+      <td>
+       Specifies the name of the database to connect to.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       -U
+       <em>
+        username
+       </em>
+      </td>
+      <td>
+       Connects using the specified username.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       -h
+       <em>
+        host
+       </em>
+      </td>
+      <td>
+       Specifies the database server host.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       -p
+       <em>
+        port
+       </em>
+      </td>
+      <td>
+       Specifies the port on which the server is listening.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       -c
+       <em>
+        command
+       </em>
+      </td>
+      <td>
+       Executes a single command and exits.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       -f
+       <em>
+        filename
+       </em>
+      </td>
+      <td>
+       Executes commands from a file.
+      </td>
+     </tr>
+     <tr>
+      <td>
+       -l
+      </td>
+      <td>
+       Lists all available databases.
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section>
+   <h2>
+    Usage Examples
+   </h2>
+   <h3>
+    Connect to a Database
+   </h3>
+   <pre><code>psql -d mydatabase -U myuser</code></pre>
+   <h3>
+    Execute a Command
+   </h3>
+   <pre><code>psql -d mydatabase -c "SELECT * FROM mytable;"</code></pre>
+   <h3>
+    Execute Commands from a File
+   </h3>
+   <pre><code>psql -d mydatabase -U myuser -f commands.sql</code></pre>
+   <h3>
+    List All Databases
+   </h3>
+   <pre><code>psql -l</code></pre>
+  </section>
+  <section>
+   <h2>
+    Cheat Sheet
+   </h2>
+   <pre><code>
+# Connect to a database:
+psql -d <dbname> -U <username>
+
+# Execute SQL command:
+psql -d <dbname> -c "<command/>"
+
+# Execute commands from file:
+psql -d <dbname> -f <file.sql>
+
+# List all databases:
+psql -l
+        </file.sql></dbname></dbname></username></dbname></code></pre>
+  </section>
+ </body>
+</html>

@@ -1,0 +1,88 @@
+<h1>
+ Linux Command: syslog
+</h1>
+<h2>
+ Description
+</h2>
+<p>
+ The
+ <code>
+  syslog
+ </code>
+ command is used for logging system messages. It outputs to the system log files managed by the syslogd or rsyslogd service.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <thead>
+  <tr>
+   <th>
+    Option
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     -s
+    </code>
+   </td>
+   <td>
+    Log a message to the system logger.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -p
+    </code>
+   </td>
+   <td>
+    Specifies the priority of the message (e.g.,
+    <code>
+     user.info
+    </code>
+    ).
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     -t
+    </code>
+   </td>
+   <td>
+    Tag the message with a specific identifier.
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2>
+ Usage Examples
+</h2>
+<pre><code># Log a simple message
+logger -s "System update completed"
+
+# Log a message with a specific priority
+logger -p local0.notice "Backup completed successfully"
+
+# Log a message with a specific tag
+logger -t BACKUP "Backup finished at $(date)"
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code># Simple log
+logger -s "Message"
+
+# Log with priority
+logger -p [facility.level] "Message"
+
+# Log with a tag
+logger -t [tag] "Message"
+</code></pre>

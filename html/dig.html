@@ -1,0 +1,130 @@
+<h1>
+ Linux Command: dig
+</h1>
+<p>
+ <code>
+  dig
+ </code>
+ (Domain Information Groper) is a flexible command-line tool used for querying DNS name servers to retrieve information about host addresses, mail exchanges, name servers, and related DNS records.
+</p>
+<h2>
+ Common Options
+</h2>
+<table>
+ <tr>
+  <th>
+   Option
+  </th>
+  <th>
+   Description
+  </th>
+ </tr>
+ <tr>
+  <td>
+   <code>
+    -t [type]
+   </code>
+  </td>
+  <td>
+   Specify the type of DNS record to query (e.g.,
+   <code>
+    A
+   </code>
+   ,
+   <code>
+    MX
+   </code>
+   ,
+   <code>
+    NS
+   </code>
+   ,
+   <code>
+    TXT
+   </code>
+   ).
+  </td>
+ </tr>
+ <tr>
+  <td>
+   <code>
+    +short
+   </code>
+  </td>
+  <td>
+   Provide a concise output, displaying just the answer to the query.
+  </td>
+ </tr>
+ <tr>
+  <td>
+   <code>
+    +nocmd
+   </code>
+  </td>
+  <td>
+   Suppress the initial query output (useful for cleaner outputs).
+  </td>
+ </tr>
+ <tr>
+  <td>
+   <code>
+    +noall +answer
+   </code>
+  </td>
+  <td>
+   Display only the answer section in the output.
+  </td>
+ </tr>
+ <tr>
+  <td>
+   <code>
+    @server
+   </code>
+  </td>
+  <td>
+   Specify a DNS server to query instead of using the default resolver.
+  </td>
+ </tr>
+ <tr>
+  <td>
+   <code>
+    -x [address]
+   </code>
+  </td>
+  <td>
+   Perform a reverse DNS lookup on an IP address.
+  </td>
+ </tr>
+</table>
+<h2>
+ Example Usage
+</h2>
+<pre><code># Query the A record for a domain
+dig example.com
+
+# Query the MX (Mail Exchange) record for a domain
+dig -t MX example.com
+
+# Get a concise output of the A record
+dig +short example.com
+
+# Query a specific DNS server
+dig @8.8.8.8 example.com
+
+# Perform a reverse DNS lookup
+dig -x 93.184.216.34
+
+# Query and display only the answer section
+dig +noall +answer example.com
+</code></pre>
+<h2>
+ Cheat Sheet
+</h2>
+<pre><code>
+dig example.com              # Default query
+dig -t MX example.com        # Query MX records
+dig +short example.com       # Short answer
+dig @8.8.8.8 example.com     # Use specific DNS server
+dig -x 93.184.216.34         # Reverse DNS lookup
+dig +noall +answer example.com # Answer only
+</code></pre>
